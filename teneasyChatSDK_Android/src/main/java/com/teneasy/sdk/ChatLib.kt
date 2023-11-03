@@ -69,7 +69,7 @@ class ChatLib {
 
     private lateinit var socket: WebSocketClient
     var listener: TeneasySDKDelegate? = null
-    private var payloadId = 1111
+    private var payloadId = 0L
 
     /**
      * 启动socket连接
@@ -253,8 +253,8 @@ class ChatLib {
         payload.data = cSendMsgData
         payload.act = GAction.Action.ActionCSSendMsg
         payloadId += 1
-        payload.id = cMsg.chatId
-
+        payload.id = payloadId
+        Log.i(TAG, "send payloadId: ${payloadId}")
         socket.send(payload.build().toByteArray())
     }
 
@@ -278,8 +278,8 @@ class ChatLib {
         else {
             val payLoad = GPayload.Payload.parseFrom(data)
             val msgData = payLoad.data
-            val payloadId = payLoad.id
-
+             payloadId = payLoad.id
+            Log.i(TAG, "payloadId: ${payloadId}")
             //收到消息
             if(payLoad.act == GAction.Action.ActionSCRecvMsg) {
                 val recvMsg = GGateway.SCRecvMessage.parseFrom(msgData)
@@ -307,7 +307,7 @@ class ChatLib {
                 if (sendingMessage != null){
                     listener?.msgReceipt(sendingMessage!!, payloadId, scMsg.msgId)
                 }
-                Log.i(TAG, "消息回执: ${scMsg.msgId}")
+                Log.i(TAG, "消息ID: ${scMsg.msgId}")
             } else
                 Log.i(TAG, "received data: $data")
         }

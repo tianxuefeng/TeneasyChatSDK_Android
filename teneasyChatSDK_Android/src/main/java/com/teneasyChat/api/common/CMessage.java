@@ -775,11 +775,6 @@ public final class CMessage {
       return new MessageContent();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.common.CMessage.internal_static_api_common_MessageContent_descriptor;
@@ -948,11 +943,13 @@ public final class CMessage {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.common.CMessage.MessageContent parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.common.CMessage.MessageContent parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1374,11 +1371,6 @@ public final class CMessage {
       return new MessageImage();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.common.CMessage.internal_static_api_common_MessageImage_descriptor;
@@ -1547,11 +1539,13 @@ public final class CMessage {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.common.CMessage.MessageImage parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.common.CMessage.MessageImage parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1973,11 +1967,6 @@ public final class CMessage {
       return new MessageAudio();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.common.CMessage.internal_static_api_common_MessageAudio_descriptor;
@@ -2146,11 +2135,13 @@ public final class CMessage {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.common.CMessage.MessageAudio parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.common.CMessage.MessageAudio parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2572,11 +2563,6 @@ public final class CMessage {
       return new MessageVideo();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.common.CMessage.internal_static_api_common_MessageVideo_descriptor;
@@ -2745,11 +2731,13 @@ public final class CMessage {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.common.CMessage.MessageVideo parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.common.CMessage.MessageVideo parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3176,11 +3164,6 @@ public final class CMessage {
       return new MessageGeo();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.common.CMessage.internal_static_api_common_MessageGeo_descriptor;
@@ -3390,11 +3373,13 @@ public final class CMessage {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.common.CMessage.MessageGeo parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.common.CMessage.MessageGeo parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3913,11 +3898,6 @@ public final class CMessage {
       return new MessageFile();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.common.CMessage.internal_static_api_common_MessageFile_descriptor;
@@ -4169,11 +4149,13 @@ public final class CMessage {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.common.CMessage.MessageFile parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.common.CMessage.MessageFile parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4622,7 +4604,7 @@ public final class CMessage {
        * @return This builder for chaining.
        */
       public Builder setSize(int value) {
-        
+
         size_ = value;
         bitField0_ |= 0x00000004;
         onChanged();
@@ -4744,11 +4726,6 @@ public final class CMessage {
       return new MessageKey();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.common.CMessage.internal_static_api_common_MessageKey_descriptor;
@@ -4906,11 +4883,13 @@ public final class CMessage {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.common.CMessage.MessageKey parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.common.CMessage.MessageKey parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -5147,7 +5126,7 @@ public final class CMessage {
        * @return This builder for chaining.
        */
       public Builder setChatId(long value) {
-        
+
         chatId_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -5179,7 +5158,7 @@ public final class CMessage {
        * @return This builder for chaining.
        */
       public Builder setMsgId(long value) {
-        
+
         msgId_ = value;
         bitField0_ |= 0x00000002;
         onChanged();
@@ -5305,11 +5284,6 @@ public final class CMessage {
       return new MessageAutoReplyFlag();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.common.CMessage.internal_static_api_common_MessageAutoReplyFlag_descriptor;
@@ -5474,11 +5448,13 @@ public final class CMessage {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.common.CMessage.MessageAutoReplyFlag parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.common.CMessage.MessageAutoReplyFlag parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -5723,7 +5699,7 @@ public final class CMessage {
        * @return This builder for chaining.
        */
       public Builder setId(long value) {
-        
+
         id_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -5767,7 +5743,7 @@ public final class CMessage {
        * @return This builder for chaining.
        */
       public Builder setQaId(int value) {
-        
+
         qaId_ = value;
         bitField0_ |= 0x00000002;
         onChanged();
@@ -6154,7 +6130,7 @@ public final class CMessage {
      */
     com.teneasyChat.api.common.CMessage.BlackListConfirmOrBuilder getBlacklistConfirmOrBuilder();
 
-    public com.teneasyChat.api.common.CMessage.Message.PayloadCase getPayloadCase();
+    com.teneasyChat.api.common.CMessage.Message.PayloadCase getPayloadCase();
   }
   /**
    * Protobuf type {@code api.common.Message}
@@ -6179,11 +6155,6 @@ public final class CMessage {
       return new Message();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.common.CMessage.internal_static_api_common_Message_descriptor;
@@ -6198,6 +6169,7 @@ public final class CMessage {
     }
 
     private int payloadCase_ = 0;
+    @SuppressWarnings("serial")
     private java.lang.Object payload_;
     public enum PayloadCase
         implements com.google.protobuf.Internal.EnumLite,
@@ -7092,11 +7064,13 @@ public final class CMessage {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.common.CMessage.Message parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.common.CMessage.Message parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -7627,7 +7601,7 @@ public final class CMessage {
        * @return This builder for chaining.
        */
       public Builder setChatId(long value) {
-        
+
         chatId_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -7675,7 +7649,7 @@ public final class CMessage {
        * @return This builder for chaining.
        */
       public Builder setMsgId(long value) {
-        
+
         msgId_ = value;
         bitField0_ |= 0x00000002;
         onChanged();
@@ -7876,7 +7850,7 @@ public final class CMessage {
        * @return This builder for chaining.
        */
       public Builder setSender(long value) {
-        
+
         sender_ = value;
         bitField0_ |= 0x00000008;
         onChanged();
@@ -7921,7 +7895,7 @@ public final class CMessage {
        * @return This builder for chaining.
        */
       public Builder setReplyMsgId(long value) {
-        
+
         replyMsgId_ = value;
         bitField0_ |= 0x00000010;
         onChanged();
@@ -8038,7 +8012,7 @@ public final class CMessage {
        * @return This builder for chaining.
        */
       public Builder setWorker(int value) {
-        
+
         worker_ = value;
         bitField0_ |= 0x00000040;
         onChanged();
@@ -9721,11 +9695,6 @@ public final class CMessage {
       return new WorkerTransfer();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.common.CMessage.internal_static_api_common_WorkerTransfer_descriptor;
@@ -9957,11 +9926,13 @@ public final class CMessage {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.common.CMessage.WorkerTransfer parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.common.CMessage.WorkerTransfer parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -10214,7 +10185,7 @@ public final class CMessage {
        * @return This builder for chaining.
        */
       public Builder setWorkerId(int value) {
-        
+
         workerId_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -10479,11 +10450,6 @@ public final class CMessage {
       return new BlackListApply();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.common.CMessage.internal_static_api_common_BlackListApply_descriptor;
@@ -10622,11 +10588,13 @@ public final class CMessage {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.common.CMessage.BlackListApply parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.common.CMessage.BlackListApply parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -10865,7 +10833,7 @@ public final class CMessage {
        * @return This builder for chaining.
        */
       public Builder setWorkerId(int value) {
-        
+
         workerId_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -10990,11 +10958,6 @@ public final class CMessage {
       return new BlackListConfirm();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.common.CMessage.internal_static_api_common_BlackListConfirm_descriptor;
@@ -11132,11 +11095,13 @@ public final class CMessage {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.common.CMessage.BlackListConfirm parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.common.CMessage.BlackListConfirm parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -11373,7 +11338,7 @@ public final class CMessage {
        * @return This builder for chaining.
        */
       public Builder setWorkerId(int value) {
-        
+
         workerId_ = value;
         bitField0_ |= 0x00000001;
         onChanged();

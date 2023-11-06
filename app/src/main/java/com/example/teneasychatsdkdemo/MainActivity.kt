@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity(), TeneasySDKDelegate {
 
         chatLib = ChatLib()
         chatLib.listener = this
-        chatLib?.makeConnect()
+        chatLib.makeConnect()
 
 
 
@@ -32,11 +32,11 @@ class MainActivity : AppCompatActivity(), TeneasySDKDelegate {
 
     private fun sendMsg(){
         val sayHello = "你好！"
-        val msgItem = chatLib.composeALocalMessage(sayHello)
+        //val msgItem = chatLib.composeALocalMessage(sayHello)
         //addMsgItem(msgItem)
         chatLib.sendMessage(sayHello, CMessage.MessageFormat.MSG_TEXT)
 
-        chatLib.sendMessage("https://www.video.123", CMessage.MessageFormat.MSG_VIDEO)
+        chatLib.sendMessage("https://www.bing.com/th?id=OHR.SilencioSpain_ROW8301480487_1920x1200.jpg&rf=LaDigue_1920x1200.jpg", CMessage.MessageFormat.MSG_VIDEO)
     }
 
     override fun receivedMsg(msg: CMessage.Message) {
@@ -54,7 +54,9 @@ class MainActivity : AppCompatActivity(), TeneasySDKDelegate {
         Log.i("MainAct systemMsg", msg)
     }
 
+    //成功连接，并返回相关信息，例如workerId
     override fun connected(c: GGateway.SCHi) {
+        val workerId = c.workerId
         Log.i("MainAct connected", "成功连接")
     }
 

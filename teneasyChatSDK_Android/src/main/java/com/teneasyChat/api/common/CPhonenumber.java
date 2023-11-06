@@ -85,11 +85,6 @@ public final class CPhonenumber {
       return new PhoneNumber();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.common.CPhonenumber.internal_static_api_common_PhoneNumber_descriptor;
@@ -315,11 +310,13 @@ public final class CPhonenumber {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.common.CPhonenumber.PhoneNumber parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.common.CPhonenumber.PhoneNumber parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -578,7 +575,7 @@ public final class CPhonenumber {
        * @return This builder for chaining.
        */
       public Builder setCountryCode(int value) {
-        
+
         countryCode_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -622,7 +619,7 @@ public final class CPhonenumber {
        * @return This builder for chaining.
        */
       public Builder setNationalNumber(long value) {
-        
+
         nationalNumber_ = value;
         bitField0_ |= 0x00000002;
         onChanged();

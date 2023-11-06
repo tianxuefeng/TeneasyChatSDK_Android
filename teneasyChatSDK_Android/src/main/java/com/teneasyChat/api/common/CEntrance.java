@@ -531,7 +531,8 @@ public final class CEntrance {
       appParameters_ = "";
       accessLink_ = "";
       certificate_ = "";
-      workerName_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      workerName_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
     }
 
     @java.lang.Override
@@ -541,11 +542,6 @@ public final class CEntrance {
       return new Entrance();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.common.CEntrance.internal_static_api_common_Entrance_descriptor;
@@ -1149,7 +1145,8 @@ public final class CEntrance {
 
     public static final int WORKER_NAME_FIELD_NUMBER = 15;
     @SuppressWarnings("serial")
-    private com.google.protobuf.LazyStringList workerName_;
+    private com.google.protobuf.LazyStringArrayList workerName_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     /**
      * <pre>
      * 分配一线客服
@@ -1474,11 +1471,13 @@ public final class CEntrance {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.common.CEntrance.Entrance parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.common.CEntrance.Entrance parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1568,8 +1567,8 @@ public final class CEntrance {
         accessLink_ = "";
         defaultConsultId_ = 0;
         certificate_ = "";
-        workerName_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00004000);
+        workerName_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
         return this;
       }
 
@@ -1608,11 +1607,6 @@ public final class CEntrance {
           bitField0_ = (bitField0_ & ~0x00000020);
         }
         result.consultIds_ = consultIds_;
-        if (((bitField0_ & 0x00004000) != 0)) {
-          workerName_ = workerName_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00004000);
-        }
-        result.workerName_ = workerName_;
       }
 
       private void buildPartial0(com.teneasyChat.api.common.CEntrance.Entrance result) {
@@ -1655,6 +1649,10 @@ public final class CEntrance {
         }
         if (((from_bitField0_ & 0x00002000) != 0)) {
           result.certificate_ = certificate_;
+        }
+        if (((from_bitField0_ & 0x00004000) != 0)) {
+          workerName_.makeImmutable();
+          result.workerName_ = workerName_;
         }
       }
 
@@ -1776,7 +1774,7 @@ public final class CEntrance {
         if (!other.workerName_.isEmpty()) {
           if (workerName_.isEmpty()) {
             workerName_ = other.workerName_;
-            bitField0_ = (bitField0_ & ~0x00004000);
+            bitField0_ |= 0x00004000;
           } else {
             ensureWorkerNameIsMutable();
             workerName_.addAll(other.workerName_);
@@ -1936,7 +1934,7 @@ public final class CEntrance {
        * @return This builder for chaining.
        */
       public Builder setEntranceId(int value) {
-        
+
         entranceId_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -2380,7 +2378,7 @@ public final class CEntrance {
        */
       public Builder setConsultIds(
           int index, int value) {
-        
+
         ensureConsultIdsIsMutable();
         consultIds_.setInt(index, value);
         onChanged();
@@ -2396,7 +2394,7 @@ public final class CEntrance {
        * @return This builder for chaining.
        */
       public Builder addConsultIds(int value) {
-        
+
         ensureConsultIdsIsMutable();
         consultIds_.addInt(value);
         onChanged();
@@ -3009,7 +3007,7 @@ public final class CEntrance {
        * @return This builder for chaining.
        */
       public Builder setDefaultConsultId(int value) {
-        
+
         defaultConsultId_ = value;
         bitField0_ |= 0x00001000;
         onChanged();
@@ -3122,12 +3120,13 @@ public final class CEntrance {
         return this;
       }
 
-      private com.google.protobuf.LazyStringList workerName_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private com.google.protobuf.LazyStringArrayList workerName_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       private void ensureWorkerNameIsMutable() {
-        if (!((bitField0_ & 0x00004000) != 0)) {
+        if (!workerName_.isModifiable()) {
           workerName_ = new com.google.protobuf.LazyStringArrayList(workerName_);
-          bitField0_ |= 0x00004000;
-         }
+        }
+        bitField0_ |= 0x00004000;
       }
       /**
        * <pre>
@@ -3139,7 +3138,8 @@ public final class CEntrance {
        */
       public com.google.protobuf.ProtocolStringList
           getWorkerNameList() {
-        return workerName_.getUnmodifiableView();
+        workerName_.makeImmutable();
+        return workerName_;
       }
       /**
        * <pre>
@@ -3192,6 +3192,7 @@ public final class CEntrance {
         if (value == null) { throw new NullPointerException(); }
         ensureWorkerNameIsMutable();
         workerName_.set(index, value);
+        bitField0_ |= 0x00004000;
         onChanged();
         return this;
       }
@@ -3209,6 +3210,7 @@ public final class CEntrance {
         if (value == null) { throw new NullPointerException(); }
         ensureWorkerNameIsMutable();
         workerName_.add(value);
+        bitField0_ |= 0x00004000;
         onChanged();
         return this;
       }
@@ -3226,6 +3228,7 @@ public final class CEntrance {
         ensureWorkerNameIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, workerName_);
+        bitField0_ |= 0x00004000;
         onChanged();
         return this;
       }
@@ -3238,8 +3241,9 @@ public final class CEntrance {
        * @return This builder for chaining.
        */
       public Builder clearWorkerName() {
-        workerName_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00004000);
+        workerName_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00004000);;
         onChanged();
         return this;
       }
@@ -3258,6 +3262,7 @@ public final class CEntrance {
         checkByteStringIsUtf8(value);
         ensureWorkerNameIsMutable();
         workerName_.add(value);
+        bitField0_ |= 0x00004000;
         onChanged();
         return this;
       }
@@ -3505,11 +3510,6 @@ public final class CEntrance {
       return new Consult();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.common.CEntrance.internal_static_api_common_Consult_descriptor;
@@ -4012,11 +4012,13 @@ public final class CEntrance {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.common.CEntrance.Consult parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.common.CEntrance.Consult parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4373,7 +4375,7 @@ public final class CEntrance {
        * @return This builder for chaining.
        */
       public Builder setConsultId(int value) {
-        
+
         consultId_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -4633,7 +4635,7 @@ public final class CEntrance {
        */
       public Builder setWorkerGroupIds(
           int index, long value) {
-        
+
         ensureWorkerGroupIdsIsMutable();
         workerGroupIds_.setLong(index, value);
         onChanged();
@@ -4649,7 +4651,7 @@ public final class CEntrance {
        * @return This builder for chaining.
        */
       public Builder addWorkerGroupIds(long value) {
-        
+
         ensureWorkerGroupIdsIsMutable();
         workerGroupIds_.addLong(value);
         onChanged();
@@ -4742,7 +4744,7 @@ public final class CEntrance {
        */
       public Builder setWorkerIds(
           int index, int value) {
-        
+
         ensureWorkerIdsIsMutable();
         workerIds_.setInt(index, value);
         onChanged();
@@ -4758,7 +4760,7 @@ public final class CEntrance {
        * @return This builder for chaining.
        */
       public Builder addWorkerIds(int value) {
-        
+
         ensureWorkerIdsIsMutable();
         workerIds_.addInt(value);
         onChanged();
@@ -5091,7 +5093,7 @@ public final class CEntrance {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.teneasyChat.api.common.CDevice.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
-          com.teneasyChat.validate.Validate.getDescriptor(),
+          io.envoyproxy.pgv.validate.Validate.getDescriptor(),
         });
     internal_static_api_common_Entrance_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -5107,12 +5109,12 @@ public final class CEntrance {
         new java.lang.String[] { "ConsultId", "Name", "Guide", "WorkerGroupIds", "WorkerIds", "WorkerGroupNames", "WorkerNames", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(com.teneasyChat.validate.Validate.rules);
+    registry.add(io.envoyproxy.pgv.validate.Validate.rules);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.teneasyChat.api.common.CDevice.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
-    com.teneasyChat.validate.Validate.getDescriptor();
+    io.envoyproxy.pgv.validate.Validate.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -284,11 +284,6 @@ public final class CChat {
       return new ChatDetail();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.common.CChat.internal_static_api_common_ChatDetail_descriptor;
@@ -1010,11 +1005,13 @@ public final class CChat {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.common.CChat.ChatDetail parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.common.CChat.ChatDetail parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1409,7 +1406,7 @@ public final class CChat {
        * @return This builder for chaining.
        */
       public Builder setChatId(long value) {
-        
+
         chatId_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -1449,7 +1446,7 @@ public final class CChat {
        * @return This builder for chaining.
        */
       public Builder setEntranceId(int value) {
-        
+
         entranceId_ = value;
         bitField0_ |= 0x00000002;
         onChanged();
@@ -2815,11 +2812,6 @@ public final class CChat {
       return new ChatItem();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.common.CChat.internal_static_api_common_ChatItem_descriptor;
@@ -3262,11 +3254,13 @@ public final class CChat {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.common.CChat.ChatItem parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.common.CChat.ChatItem parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3615,7 +3609,7 @@ public final class CChat {
        * @return This builder for chaining.
        */
       public Builder setChatId(long value) {
-        
+
         chatId_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -3700,7 +3694,7 @@ public final class CChat {
        * @return This builder for chaining.
        */
       public Builder setUnread(int value) {
-        
+
         unread_ = value;
         bitField0_ |= 0x00000004;
         onChanged();
@@ -4563,7 +4557,7 @@ public final class CChat {
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.teneasyChat.validate.Validate.getDescriptor(),
+          io.envoyproxy.pgv.validate.Validate.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
           com.teneasyChat.api.common.CWorker.getDescriptor(),
           com.teneasyChat.api.common.CMessage.getDescriptor(),
@@ -4580,7 +4574,7 @@ public final class CChat {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_common_ChatItem_descriptor,
         new java.lang.String[] { "ChatId", "State", "Unread", "LatestMsg", "CreateAt", "ServiceAt", "Detail", "ResetAt", });
-    com.teneasyChat.validate.Validate.getDescriptor();
+    io.envoyproxy.pgv.validate.Validate.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
     com.teneasyChat.api.common.CWorker.getDescriptor();
     com.teneasyChat.api.common.CMessage.getDescriptor();

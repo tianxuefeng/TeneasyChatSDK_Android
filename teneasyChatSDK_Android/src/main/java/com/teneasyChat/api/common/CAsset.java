@@ -741,11 +741,6 @@ public final class CAsset {
       return new Asset();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.common.CAsset.internal_static_api_common_Asset_descriptor;
@@ -914,11 +909,13 @@ public final class CAsset {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.common.CAsset.Asset parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.common.CAsset.Asset parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1323,7 +1320,7 @@ public final class CAsset {
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.teneasyChat.validate.Validate.getDescriptor(),
+          io.envoyproxy.pgv.validate.Validate.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
         });
     internal_static_api_common_Asset_descriptor =
@@ -1334,10 +1331,10 @@ public final class CAsset {
         new java.lang.String[] { "Uri", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(com.teneasyChat.validate.Validate.rules);
+    registry.add(io.envoyproxy.pgv.validate.Validate.rules);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    com.teneasyChat.validate.Validate.getDescriptor();
+    io.envoyproxy.pgv.validate.Validate.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
   }
 

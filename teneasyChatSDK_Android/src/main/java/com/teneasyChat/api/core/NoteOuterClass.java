@@ -105,11 +105,6 @@ public final class NoteOuterClass {
       return new NoteItem();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.core.NoteOuterClass.internal_static_api_core_NoteItem_descriptor;
@@ -388,11 +383,13 @@ public final class NoteOuterClass {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.core.NoteOuterClass.NoteItem parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.core.NoteOuterClass.NoteItem parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -675,7 +672,7 @@ public final class NoteOuterClass {
        * @return This builder for chaining.
        */
       public Builder setWorkerId(int value) {
-        
+
         workerId_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -1173,11 +1170,6 @@ public final class NoteOuterClass {
       return new Note();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.core.NoteOuterClass.internal_static_api_core_Note_descriptor;
@@ -1408,11 +1400,13 @@ public final class NoteOuterClass {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.core.NoteOuterClass.Note parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.core.NoteOuterClass.Note parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1716,7 +1710,7 @@ public final class NoteOuterClass {
        * @return This builder for chaining.
        */
       public Builder setChatNoteMsgId(long value) {
-        
+
         chatNoteMsgId_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -2202,11 +2196,6 @@ public final class NoteOuterClass {
       return new QueryNoteRequest();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.core.NoteOuterClass.internal_static_api_core_QueryNoteRequest_descriptor;
@@ -2383,11 +2372,13 @@ public final class NoteOuterClass {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.core.NoteOuterClass.QueryNoteRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.core.NoteOuterClass.QueryNoteRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2632,7 +2623,7 @@ public final class NoteOuterClass {
        * @return This builder for chaining.
        */
       public Builder setChatId(long value) {
-        
+
         chatId_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -2842,40 +2833,46 @@ public final class NoteOuterClass {
     long getChatId();
 
     /**
-     * <code>.api.common.Batch batch = 2;</code>
+     * <code>int64 total = 2;</code>
+     * @return The total.
+     */
+    long getTotal();
+
+    /**
+     * <code>.api.common.Batch batch = 3;</code>
      * @return Whether the batch field is set.
      */
     boolean hasBatch();
     /**
-     * <code>.api.common.Batch batch = 2;</code>
+     * <code>.api.common.Batch batch = 3;</code>
      * @return The batch.
      */
     com.teneasyChat.api.common.CBase.Batch getBatch();
     /**
-     * <code>.api.common.Batch batch = 2;</code>
+     * <code>.api.common.Batch batch = 3;</code>
      */
     com.teneasyChat.api.common.CBase.BatchOrBuilder getBatchOrBuilder();
 
     /**
-     * <code>repeated .api.core.Note notes = 3;</code>
+     * <code>repeated .api.core.Note notes = 4;</code>
      */
     java.util.List<com.teneasyChat.api.core.NoteOuterClass.Note> 
         getNotesList();
     /**
-     * <code>repeated .api.core.Note notes = 3;</code>
+     * <code>repeated .api.core.Note notes = 4;</code>
      */
     com.teneasyChat.api.core.NoteOuterClass.Note getNotes(int index);
     /**
-     * <code>repeated .api.core.Note notes = 3;</code>
+     * <code>repeated .api.core.Note notes = 4;</code>
      */
     int getNotesCount();
     /**
-     * <code>repeated .api.core.Note notes = 3;</code>
+     * <code>repeated .api.core.Note notes = 4;</code>
      */
     java.util.List<? extends com.teneasyChat.api.core.NoteOuterClass.NoteOrBuilder> 
         getNotesOrBuilderList();
     /**
-     * <code>repeated .api.core.Note notes = 3;</code>
+     * <code>repeated .api.core.Note notes = 4;</code>
      */
     com.teneasyChat.api.core.NoteOuterClass.NoteOrBuilder getNotesOrBuilder(
         int index);
@@ -2903,11 +2900,6 @@ public final class NoteOuterClass {
       return new QueryNoteResponse();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.core.NoteOuterClass.internal_static_api_core_QueryNoteResponse_descriptor;
@@ -2932,10 +2924,21 @@ public final class NoteOuterClass {
       return chatId_;
     }
 
-    public static final int BATCH_FIELD_NUMBER = 2;
+    public static final int TOTAL_FIELD_NUMBER = 2;
+    private long total_ = 0L;
+    /**
+     * <code>int64 total = 2;</code>
+     * @return The total.
+     */
+    @java.lang.Override
+    public long getTotal() {
+      return total_;
+    }
+
+    public static final int BATCH_FIELD_NUMBER = 3;
     private com.teneasyChat.api.common.CBase.Batch batch_;
     /**
-     * <code>.api.common.Batch batch = 2;</code>
+     * <code>.api.common.Batch batch = 3;</code>
      * @return Whether the batch field is set.
      */
     @java.lang.Override
@@ -2943,7 +2946,7 @@ public final class NoteOuterClass {
       return batch_ != null;
     }
     /**
-     * <code>.api.common.Batch batch = 2;</code>
+     * <code>.api.common.Batch batch = 3;</code>
      * @return The batch.
      */
     @java.lang.Override
@@ -2951,25 +2954,25 @@ public final class NoteOuterClass {
       return batch_ == null ? com.teneasyChat.api.common.CBase.Batch.getDefaultInstance() : batch_;
     }
     /**
-     * <code>.api.common.Batch batch = 2;</code>
+     * <code>.api.common.Batch batch = 3;</code>
      */
     @java.lang.Override
     public com.teneasyChat.api.common.CBase.BatchOrBuilder getBatchOrBuilder() {
       return batch_ == null ? com.teneasyChat.api.common.CBase.Batch.getDefaultInstance() : batch_;
     }
 
-    public static final int NOTES_FIELD_NUMBER = 3;
+    public static final int NOTES_FIELD_NUMBER = 4;
     @SuppressWarnings("serial")
     private java.util.List<com.teneasyChat.api.core.NoteOuterClass.Note> notes_;
     /**
-     * <code>repeated .api.core.Note notes = 3;</code>
+     * <code>repeated .api.core.Note notes = 4;</code>
      */
     @java.lang.Override
     public java.util.List<com.teneasyChat.api.core.NoteOuterClass.Note> getNotesList() {
       return notes_;
     }
     /**
-     * <code>repeated .api.core.Note notes = 3;</code>
+     * <code>repeated .api.core.Note notes = 4;</code>
      */
     @java.lang.Override
     public java.util.List<? extends com.teneasyChat.api.core.NoteOuterClass.NoteOrBuilder> 
@@ -2977,21 +2980,21 @@ public final class NoteOuterClass {
       return notes_;
     }
     /**
-     * <code>repeated .api.core.Note notes = 3;</code>
+     * <code>repeated .api.core.Note notes = 4;</code>
      */
     @java.lang.Override
     public int getNotesCount() {
       return notes_.size();
     }
     /**
-     * <code>repeated .api.core.Note notes = 3;</code>
+     * <code>repeated .api.core.Note notes = 4;</code>
      */
     @java.lang.Override
     public com.teneasyChat.api.core.NoteOuterClass.Note getNotes(int index) {
       return notes_.get(index);
     }
     /**
-     * <code>repeated .api.core.Note notes = 3;</code>
+     * <code>repeated .api.core.Note notes = 4;</code>
      */
     @java.lang.Override
     public com.teneasyChat.api.core.NoteOuterClass.NoteOrBuilder getNotesOrBuilder(
@@ -3016,11 +3019,14 @@ public final class NoteOuterClass {
       if (chatId_ != 0L) {
         output.writeInt64(1, chatId_);
       }
+      if (total_ != 0L) {
+        output.writeInt64(2, total_);
+      }
       if (batch_ != null) {
-        output.writeMessage(2, getBatch());
+        output.writeMessage(3, getBatch());
       }
       for (int i = 0; i < notes_.size(); i++) {
-        output.writeMessage(3, notes_.get(i));
+        output.writeMessage(4, notes_.get(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -3035,13 +3041,17 @@ public final class NoteOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(1, chatId_);
       }
+      if (total_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, total_);
+      }
       if (batch_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getBatch());
+          .computeMessageSize(3, getBatch());
       }
       for (int i = 0; i < notes_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, notes_.get(i));
+          .computeMessageSize(4, notes_.get(i));
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -3060,6 +3070,8 @@ public final class NoteOuterClass {
 
       if (getChatId()
           != other.getChatId()) return false;
+      if (getTotal()
+          != other.getTotal()) return false;
       if (hasBatch() != other.hasBatch()) return false;
       if (hasBatch()) {
         if (!getBatch()
@@ -3081,6 +3093,9 @@ public final class NoteOuterClass {
       hash = (37 * hash) + CHAT_ID_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getChatId());
+      hash = (37 * hash) + TOTAL_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getTotal());
       if (hasBatch()) {
         hash = (37 * hash) + BATCH_FIELD_NUMBER;
         hash = (53 * hash) + getBatch().hashCode();
@@ -3138,11 +3153,13 @@ public final class NoteOuterClass {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.core.NoteOuterClass.QueryNoteResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.core.NoteOuterClass.QueryNoteResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3219,6 +3236,7 @@ public final class NoteOuterClass {
         super.clear();
         bitField0_ = 0;
         chatId_ = 0L;
+        total_ = 0L;
         batch_ = null;
         if (batchBuilder_ != null) {
           batchBuilder_.dispose();
@@ -3230,7 +3248,7 @@ public final class NoteOuterClass {
           notes_ = null;
           notesBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000008);
         return this;
       }
 
@@ -3265,9 +3283,9 @@ public final class NoteOuterClass {
 
       private void buildPartialRepeatedFields(com.teneasyChat.api.core.NoteOuterClass.QueryNoteResponse result) {
         if (notesBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0)) {
+          if (((bitField0_ & 0x00000008) != 0)) {
             notes_ = java.util.Collections.unmodifiableList(notes_);
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000008);
           }
           result.notes_ = notes_;
         } else {
@@ -3281,6 +3299,9 @@ public final class NoteOuterClass {
           result.chatId_ = chatId_;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.total_ = total_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
           result.batch_ = batchBuilder_ == null
               ? batch_
               : batchBuilder_.build();
@@ -3334,6 +3355,9 @@ public final class NoteOuterClass {
         if (other.getChatId() != 0L) {
           setChatId(other.getChatId());
         }
+        if (other.getTotal() != 0L) {
+          setTotal(other.getTotal());
+        }
         if (other.hasBatch()) {
           mergeBatch(other.getBatch());
         }
@@ -3341,7 +3365,7 @@ public final class NoteOuterClass {
           if (!other.notes_.isEmpty()) {
             if (notes_.isEmpty()) {
               notes_ = other.notes_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000008);
             } else {
               ensureNotesIsMutable();
               notes_.addAll(other.notes_);
@@ -3354,7 +3378,7 @@ public final class NoteOuterClass {
               notesBuilder_.dispose();
               notesBuilder_ = null;
               notes_ = other.notes_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000008);
               notesBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getNotesFieldBuilder() : null;
@@ -3394,14 +3418,19 @@ public final class NoteOuterClass {
                 bitField0_ |= 0x00000001;
                 break;
               } // case 8
-              case 18: {
+              case 16: {
+                total_ = input.readInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
                 input.readMessage(
                     getBatchFieldBuilder().getBuilder(),
                     extensionRegistry);
-                bitField0_ |= 0x00000002;
+                bitField0_ |= 0x00000004;
                 break;
-              } // case 18
-              case 26: {
+              } // case 26
+              case 34: {
                 com.teneasyChat.api.core.NoteOuterClass.Note m =
                     input.readMessage(
                         com.teneasyChat.api.core.NoteOuterClass.Note.parser(),
@@ -3413,7 +3442,7 @@ public final class NoteOuterClass {
                   notesBuilder_.addMessage(m);
                 }
                 break;
-              } // case 26
+              } // case 34
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -3446,7 +3475,7 @@ public final class NoteOuterClass {
        * @return This builder for chaining.
        */
       public Builder setChatId(long value) {
-        
+
         chatId_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -3463,18 +3492,50 @@ public final class NoteOuterClass {
         return this;
       }
 
+      private long total_ ;
+      /**
+       * <code>int64 total = 2;</code>
+       * @return The total.
+       */
+      @java.lang.Override
+      public long getTotal() {
+        return total_;
+      }
+      /**
+       * <code>int64 total = 2;</code>
+       * @param value The total to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotal(long value) {
+
+        total_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 total = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTotal() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        total_ = 0L;
+        onChanged();
+        return this;
+      }
+
       private com.teneasyChat.api.common.CBase.Batch batch_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.teneasyChat.api.common.CBase.Batch, com.teneasyChat.api.common.CBase.Batch.Builder, com.teneasyChat.api.common.CBase.BatchOrBuilder> batchBuilder_;
       /**
-       * <code>.api.common.Batch batch = 2;</code>
+       * <code>.api.common.Batch batch = 3;</code>
        * @return Whether the batch field is set.
        */
       public boolean hasBatch() {
-        return ((bitField0_ & 0x00000002) != 0);
+        return ((bitField0_ & 0x00000004) != 0);
       }
       /**
-       * <code>.api.common.Batch batch = 2;</code>
+       * <code>.api.common.Batch batch = 3;</code>
        * @return The batch.
        */
       public com.teneasyChat.api.common.CBase.Batch getBatch() {
@@ -3485,7 +3546,7 @@ public final class NoteOuterClass {
         }
       }
       /**
-       * <code>.api.common.Batch batch = 2;</code>
+       * <code>.api.common.Batch batch = 3;</code>
        */
       public Builder setBatch(com.teneasyChat.api.common.CBase.Batch value) {
         if (batchBuilder_ == null) {
@@ -3496,12 +3557,12 @@ public final class NoteOuterClass {
         } else {
           batchBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
       /**
-       * <code>.api.common.Batch batch = 2;</code>
+       * <code>.api.common.Batch batch = 3;</code>
        */
       public Builder setBatch(
           com.teneasyChat.api.common.CBase.Batch.Builder builderForValue) {
@@ -3510,16 +3571,16 @@ public final class NoteOuterClass {
         } else {
           batchBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
       /**
-       * <code>.api.common.Batch batch = 2;</code>
+       * <code>.api.common.Batch batch = 3;</code>
        */
       public Builder mergeBatch(com.teneasyChat.api.common.CBase.Batch value) {
         if (batchBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0) &&
+          if (((bitField0_ & 0x00000004) != 0) &&
             batch_ != null &&
             batch_ != com.teneasyChat.api.common.CBase.Batch.getDefaultInstance()) {
             getBatchBuilder().mergeFrom(value);
@@ -3529,15 +3590,15 @@ public final class NoteOuterClass {
         } else {
           batchBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
       /**
-       * <code>.api.common.Batch batch = 2;</code>
+       * <code>.api.common.Batch batch = 3;</code>
        */
       public Builder clearBatch() {
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000004);
         batch_ = null;
         if (batchBuilder_ != null) {
           batchBuilder_.dispose();
@@ -3547,15 +3608,15 @@ public final class NoteOuterClass {
         return this;
       }
       /**
-       * <code>.api.common.Batch batch = 2;</code>
+       * <code>.api.common.Batch batch = 3;</code>
        */
       public com.teneasyChat.api.common.CBase.Batch.Builder getBatchBuilder() {
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000004;
         onChanged();
         return getBatchFieldBuilder().getBuilder();
       }
       /**
-       * <code>.api.common.Batch batch = 2;</code>
+       * <code>.api.common.Batch batch = 3;</code>
        */
       public com.teneasyChat.api.common.CBase.BatchOrBuilder getBatchOrBuilder() {
         if (batchBuilder_ != null) {
@@ -3566,7 +3627,7 @@ public final class NoteOuterClass {
         }
       }
       /**
-       * <code>.api.common.Batch batch = 2;</code>
+       * <code>.api.common.Batch batch = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.teneasyChat.api.common.CBase.Batch, com.teneasyChat.api.common.CBase.Batch.Builder, com.teneasyChat.api.common.CBase.BatchOrBuilder> 
@@ -3585,9 +3646,9 @@ public final class NoteOuterClass {
       private java.util.List<com.teneasyChat.api.core.NoteOuterClass.Note> notes_ =
         java.util.Collections.emptyList();
       private void ensureNotesIsMutable() {
-        if (!((bitField0_ & 0x00000004) != 0)) {
+        if (!((bitField0_ & 0x00000008) != 0)) {
           notes_ = new java.util.ArrayList<com.teneasyChat.api.core.NoteOuterClass.Note>(notes_);
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000008;
          }
       }
 
@@ -3595,7 +3656,7 @@ public final class NoteOuterClass {
           com.teneasyChat.api.core.NoteOuterClass.Note, com.teneasyChat.api.core.NoteOuterClass.Note.Builder, com.teneasyChat.api.core.NoteOuterClass.NoteOrBuilder> notesBuilder_;
 
       /**
-       * <code>repeated .api.core.Note notes = 3;</code>
+       * <code>repeated .api.core.Note notes = 4;</code>
        */
       public java.util.List<com.teneasyChat.api.core.NoteOuterClass.Note> getNotesList() {
         if (notesBuilder_ == null) {
@@ -3605,7 +3666,7 @@ public final class NoteOuterClass {
         }
       }
       /**
-       * <code>repeated .api.core.Note notes = 3;</code>
+       * <code>repeated .api.core.Note notes = 4;</code>
        */
       public int getNotesCount() {
         if (notesBuilder_ == null) {
@@ -3615,7 +3676,7 @@ public final class NoteOuterClass {
         }
       }
       /**
-       * <code>repeated .api.core.Note notes = 3;</code>
+       * <code>repeated .api.core.Note notes = 4;</code>
        */
       public com.teneasyChat.api.core.NoteOuterClass.Note getNotes(int index) {
         if (notesBuilder_ == null) {
@@ -3625,7 +3686,7 @@ public final class NoteOuterClass {
         }
       }
       /**
-       * <code>repeated .api.core.Note notes = 3;</code>
+       * <code>repeated .api.core.Note notes = 4;</code>
        */
       public Builder setNotes(
           int index, com.teneasyChat.api.core.NoteOuterClass.Note value) {
@@ -3642,7 +3703,7 @@ public final class NoteOuterClass {
         return this;
       }
       /**
-       * <code>repeated .api.core.Note notes = 3;</code>
+       * <code>repeated .api.core.Note notes = 4;</code>
        */
       public Builder setNotes(
           int index, com.teneasyChat.api.core.NoteOuterClass.Note.Builder builderForValue) {
@@ -3656,7 +3717,7 @@ public final class NoteOuterClass {
         return this;
       }
       /**
-       * <code>repeated .api.core.Note notes = 3;</code>
+       * <code>repeated .api.core.Note notes = 4;</code>
        */
       public Builder addNotes(com.teneasyChat.api.core.NoteOuterClass.Note value) {
         if (notesBuilder_ == null) {
@@ -3672,7 +3733,7 @@ public final class NoteOuterClass {
         return this;
       }
       /**
-       * <code>repeated .api.core.Note notes = 3;</code>
+       * <code>repeated .api.core.Note notes = 4;</code>
        */
       public Builder addNotes(
           int index, com.teneasyChat.api.core.NoteOuterClass.Note value) {
@@ -3689,7 +3750,7 @@ public final class NoteOuterClass {
         return this;
       }
       /**
-       * <code>repeated .api.core.Note notes = 3;</code>
+       * <code>repeated .api.core.Note notes = 4;</code>
        */
       public Builder addNotes(
           com.teneasyChat.api.core.NoteOuterClass.Note.Builder builderForValue) {
@@ -3703,7 +3764,7 @@ public final class NoteOuterClass {
         return this;
       }
       /**
-       * <code>repeated .api.core.Note notes = 3;</code>
+       * <code>repeated .api.core.Note notes = 4;</code>
        */
       public Builder addNotes(
           int index, com.teneasyChat.api.core.NoteOuterClass.Note.Builder builderForValue) {
@@ -3717,7 +3778,7 @@ public final class NoteOuterClass {
         return this;
       }
       /**
-       * <code>repeated .api.core.Note notes = 3;</code>
+       * <code>repeated .api.core.Note notes = 4;</code>
        */
       public Builder addAllNotes(
           java.lang.Iterable<? extends com.teneasyChat.api.core.NoteOuterClass.Note> values) {
@@ -3732,12 +3793,12 @@ public final class NoteOuterClass {
         return this;
       }
       /**
-       * <code>repeated .api.core.Note notes = 3;</code>
+       * <code>repeated .api.core.Note notes = 4;</code>
        */
       public Builder clearNotes() {
         if (notesBuilder_ == null) {
           notes_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000008);
           onChanged();
         } else {
           notesBuilder_.clear();
@@ -3745,7 +3806,7 @@ public final class NoteOuterClass {
         return this;
       }
       /**
-       * <code>repeated .api.core.Note notes = 3;</code>
+       * <code>repeated .api.core.Note notes = 4;</code>
        */
       public Builder removeNotes(int index) {
         if (notesBuilder_ == null) {
@@ -3758,14 +3819,14 @@ public final class NoteOuterClass {
         return this;
       }
       /**
-       * <code>repeated .api.core.Note notes = 3;</code>
+       * <code>repeated .api.core.Note notes = 4;</code>
        */
       public com.teneasyChat.api.core.NoteOuterClass.Note.Builder getNotesBuilder(
           int index) {
         return getNotesFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .api.core.Note notes = 3;</code>
+       * <code>repeated .api.core.Note notes = 4;</code>
        */
       public com.teneasyChat.api.core.NoteOuterClass.NoteOrBuilder getNotesOrBuilder(
           int index) {
@@ -3775,7 +3836,7 @@ public final class NoteOuterClass {
         }
       }
       /**
-       * <code>repeated .api.core.Note notes = 3;</code>
+       * <code>repeated .api.core.Note notes = 4;</code>
        */
       public java.util.List<? extends com.teneasyChat.api.core.NoteOuterClass.NoteOrBuilder> 
            getNotesOrBuilderList() {
@@ -3786,14 +3847,14 @@ public final class NoteOuterClass {
         }
       }
       /**
-       * <code>repeated .api.core.Note notes = 3;</code>
+       * <code>repeated .api.core.Note notes = 4;</code>
        */
       public com.teneasyChat.api.core.NoteOuterClass.Note.Builder addNotesBuilder() {
         return getNotesFieldBuilder().addBuilder(
             com.teneasyChat.api.core.NoteOuterClass.Note.getDefaultInstance());
       }
       /**
-       * <code>repeated .api.core.Note notes = 3;</code>
+       * <code>repeated .api.core.Note notes = 4;</code>
        */
       public com.teneasyChat.api.core.NoteOuterClass.Note.Builder addNotesBuilder(
           int index) {
@@ -3801,7 +3862,7 @@ public final class NoteOuterClass {
             index, com.teneasyChat.api.core.NoteOuterClass.Note.getDefaultInstance());
       }
       /**
-       * <code>repeated .api.core.Note notes = 3;</code>
+       * <code>repeated .api.core.Note notes = 4;</code>
        */
       public java.util.List<com.teneasyChat.api.core.NoteOuterClass.Note.Builder> 
            getNotesBuilderList() {
@@ -3814,7 +3875,7 @@ public final class NoteOuterClass {
           notesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.teneasyChat.api.core.NoteOuterClass.Note, com.teneasyChat.api.core.NoteOuterClass.Note.Builder, com.teneasyChat.api.core.NoteOuterClass.NoteOrBuilder>(
                   notes_,
-                  ((bitField0_ & 0x00000004) != 0),
+                  ((bitField0_ & 0x00000008) != 0),
                   getParentForChildren(),
                   isClean());
           notes_ = null;
@@ -3947,11 +4008,6 @@ public final class NoteOuterClass {
       return new CreateNoteRequest();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.core.NoteOuterClass.internal_static_api_core_CreateNoteRequest_descriptor;
@@ -4170,11 +4226,13 @@ public final class NoteOuterClass {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.core.NoteOuterClass.CreateNoteRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.core.NoteOuterClass.CreateNoteRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4439,7 +4497,7 @@ public final class NoteOuterClass {
        * @return This builder for chaining.
        */
       public Builder setChatId(long value) {
-        
+
         chatId_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -4810,11 +4868,6 @@ public final class NoteOuterClass {
       return new CreateNoteResponse();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.core.NoteOuterClass.internal_static_api_core_CreateNoteResponse_descriptor;
@@ -4980,11 +5033,13 @@ public final class NoteOuterClass {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.core.NoteOuterClass.CreateNoteResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.core.NoteOuterClass.CreateNoteResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -5488,11 +5543,6 @@ public final class NoteOuterClass {
       return new UpdateNoteRequest();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.core.NoteOuterClass.internal_static_api_core_UpdateNoteRequest_descriptor;
@@ -5734,11 +5784,13 @@ public final class NoteOuterClass {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.core.NoteOuterClass.UpdateNoteRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.core.NoteOuterClass.UpdateNoteRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -6015,7 +6067,7 @@ public final class NoteOuterClass {
        * @return This builder for chaining.
        */
       public Builder setChatId(long value) {
-        
+
         chatId_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -6047,7 +6099,7 @@ public final class NoteOuterClass {
        * @return This builder for chaining.
        */
       public Builder setChatNoteMsgId(long value) {
-        
+
         chatNoteMsgId_ = value;
         bitField0_ |= 0x00000002;
         onChanged();
@@ -6418,11 +6470,6 @@ public final class NoteOuterClass {
       return new UpdateNoteResponse();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.core.NoteOuterClass.internal_static_api_core_UpdateNoteResponse_descriptor;
@@ -6588,11 +6635,13 @@ public final class NoteOuterClass {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.core.NoteOuterClass.UpdateNoteResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.core.NoteOuterClass.UpdateNoteResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -7081,11 +7130,6 @@ public final class NoteOuterClass {
       return new DeleteNoteRequest();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.core.NoteOuterClass.internal_static_api_core_DeleteNoteRequest_descriptor;
@@ -7285,11 +7329,13 @@ public final class NoteOuterClass {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.core.NoteOuterClass.DeleteNoteRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.core.NoteOuterClass.DeleteNoteRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -7546,7 +7592,7 @@ public final class NoteOuterClass {
        * @return This builder for chaining.
        */
       public Builder setChatId(long value) {
-        
+
         chatId_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -7578,7 +7624,7 @@ public final class NoteOuterClass {
        * @return This builder for chaining.
        */
       public Builder setChatNoteMsgId(long value) {
-        
+
         chatNoteMsgId_ = value;
         bitField0_ |= 0x00000002;
         onChanged();
@@ -7844,36 +7890,36 @@ public final class NoteOuterClass {
       "notes\030\003 \003(\0132\022.api.core.NoteItem\"X\n\020Query" +
       "NoteRequest\022\030\n\007chat_id\030\001 \001(\003B\007\372B\004\"\002 \000\022*\n" +
       "\005batch\030\002 \001(\0132\021.api.common.BatchB\010\372B\005\212\001\002\020" +
-      "\001\"e\n\021QueryNoteResponse\022\017\n\007chat_id\030\001 \001(\003\022" +
-      " \n\005batch\030\002 \001(\0132\021.api.common.Batch\022\035\n\005not" +
-      "es\030\003 \003(\0132\016.api.core.Note\"\212\001\n\021CreateNoteR" +
-      "equest\022\030\n\007chat_id\030\001 \001(\003B\007\372B\004\"\002 \000\022*\n\003src\030" +
-      "\002 \001(\0132\023.api.common.MessageB\010\372B\005\212\001\002\020\001\022/\n\010" +
-      "note_msg\030\003 \001(\0132\023.api.common.MessageB\010\372B\005" +
-      "\212\001\002\020\001\"2\n\022CreateNoteResponse\022\034\n\004note\030\001 \001(" +
-      "\0132\016.api.core.Note\"\272\001\n\021UpdateNoteRequest\022" +
-      "\030\n\007chat_id\030\001 \001(\003B\007\372B\004\"\002 \000\022!\n\020chat_note_m" +
-      "sg_id\030\002 \001(\003B\007\372B\004\"\002 \000\0227\n\tcreate_at\030\003 \001(\0132" +
-      "\032.google.protobuf.TimestampB\010\372B\005\262\001\002\010\001\022/\n" +
-      "\010note_msg\030\004 \001(\0132\023.api.common.MessageB\010\372B" +
-      "\005\212\001\002\020\001\"2\n\022UpdateNoteResponse\022\034\n\004note\030\001 \001" +
-      "(\0132\016.api.core.Note\"\211\001\n\021DeleteNoteRequest" +
-      "\022\030\n\007chat_id\030\001 \001(\003B\007\372B\004\"\002 \000\022!\n\020chat_note_" +
-      "msg_id\030\002 \001(\003B\007\372B\004\"\002 \000\0227\n\tcreate_at\030\003 \001(\013" +
-      "2\032.google.protobuf.TimestampB\010\372B\005\262\001\002\010\0012\223" +
-      "\003\n\007NoteSrv\022W\n\tQueryNote\022\032.api.core.Query" +
-      "NoteRequest\032\033.api.core.QueryNoteResponse" +
-      "\"\021\272\276\031\r\010\274\005\030\001\322\014\005query\022[\n\nCreateNote\022\033.api." +
-      "core.CreateNoteRequest\032\034.api.core.Create" +
-      "NoteResponse\"\022\272\276\031\016\010\275\005\030\001\322\014\006create\022[\n\nUpda" +
-      "teNote\022\033.api.core.UpdateNoteRequest\032\034.ap" +
-      "i.core.UpdateNoteResponse\"\022\272\276\031\016\010\276\005\030\001\322\014\006u" +
-      "pdate\022U\n\nDeleteNote\022\033.api.core.DeleteNot" +
-      "eRequest\032\026.google.protobuf.Empty\"\022\272\276\031\016\010\277" +
-      "\005\030\001\322\014\006delete\032\036\272\276\031\032\272\006\004note\312\014\002\020\004\322\014\013tenant/" +
-      "noteBE\n\030com.teneasyChat.api.coreZ\021wcs/ap" +
-      "i/core;core\272\276\031\024\242\006\004jeff\262\006\n2023-02-07b\006pro" +
-      "to3"
+      "\001\"t\n\021QueryNoteResponse\022\017\n\007chat_id\030\001 \001(\003\022" +
+      "\r\n\005total\030\002 \001(\003\022 \n\005batch\030\003 \001(\0132\021.api.comm" +
+      "on.Batch\022\035\n\005notes\030\004 \003(\0132\016.api.core.Note\"" +
+      "\212\001\n\021CreateNoteRequest\022\030\n\007chat_id\030\001 \001(\003B\007" +
+      "\372B\004\"\002 \000\022*\n\003src\030\002 \001(\0132\023.api.common.Messag" +
+      "eB\010\372B\005\212\001\002\020\001\022/\n\010note_msg\030\003 \001(\0132\023.api.comm" +
+      "on.MessageB\010\372B\005\212\001\002\020\001\"2\n\022CreateNoteRespon" +
+      "se\022\034\n\004note\030\001 \001(\0132\016.api.core.Note\"\272\001\n\021Upd" +
+      "ateNoteRequest\022\030\n\007chat_id\030\001 \001(\003B\007\372B\004\"\002 \000" +
+      "\022!\n\020chat_note_msg_id\030\002 \001(\003B\007\372B\004\"\002 \000\0227\n\tc" +
+      "reate_at\030\003 \001(\0132\032.google.protobuf.Timesta" +
+      "mpB\010\372B\005\262\001\002\010\001\022/\n\010note_msg\030\004 \001(\0132\023.api.com" +
+      "mon.MessageB\010\372B\005\212\001\002\020\001\"2\n\022UpdateNoteRespo" +
+      "nse\022\034\n\004note\030\001 \001(\0132\016.api.core.Note\"\211\001\n\021De" +
+      "leteNoteRequest\022\030\n\007chat_id\030\001 \001(\003B\007\372B\004\"\002 " +
+      "\000\022!\n\020chat_note_msg_id\030\002 \001(\003B\007\372B\004\"\002 \000\0227\n\t" +
+      "create_at\030\003 \001(\0132\032.google.protobuf.Timest" +
+      "ampB\010\372B\005\262\001\002\010\0012\223\003\n\007NoteSrv\022W\n\tQueryNote\022\032" +
+      ".api.core.QueryNoteRequest\032\033.api.core.Qu" +
+      "eryNoteResponse\"\021\272\276\031\r\010\274\005\030\001\322\014\005query\022[\n\nCr" +
+      "eateNote\022\033.api.core.CreateNoteRequest\032\034." +
+      "api.core.CreateNoteResponse\"\022\272\276\031\016\010\275\005\030\001\322\014" +
+      "\006create\022[\n\nUpdateNote\022\033.api.core.UpdateN" +
+      "oteRequest\032\034.api.core.UpdateNoteResponse" +
+      "\"\022\272\276\031\016\010\276\005\030\001\322\014\006update\022U\n\nDeleteNote\022\033.api" +
+      ".core.DeleteNoteRequest\032\026.google.protobu" +
+      "f.Empty\"\022\272\276\031\016\010\277\005\030\001\322\014\006delete\032\036\272\276\031\032\272\006\004note" +
+      "\312\014\002\020\004\322\014\013tenant/noteBE\n\030com.teneasyChat.a" +
+      "pi.coreZ\021wcs/api/core;core\272\276\031\024\242\006\004jeff\262\006\n" +
+      "2023-02-07b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -7881,7 +7927,7 @@ public final class NoteOuterClass {
           com.teneasyChat.api.Option.getDescriptor(),
           com.google.protobuf.EmptyProto.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
-          com.teneasyChat.validate.Validate.getDescriptor(),
+          io.envoyproxy.pgv.validate.Validate.getDescriptor(),
           com.teneasyChat.api.common.CBase.getDescriptor(),
           com.teneasyChat.api.common.CMessage.getDescriptor(),
         });
@@ -7908,7 +7954,7 @@ public final class NoteOuterClass {
     internal_static_api_core_QueryNoteResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_core_QueryNoteResponse_descriptor,
-        new java.lang.String[] { "ChatId", "Batch", "Notes", });
+        new java.lang.String[] { "ChatId", "Total", "Batch", "Notes", });
     internal_static_api_core_CreateNoteRequest_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_api_core_CreateNoteRequest_fieldAccessorTable = new
@@ -7944,13 +7990,13 @@ public final class NoteOuterClass {
     registry.add(com.teneasyChat.api.Option.info);
     registry.add(com.teneasyChat.api.Option.method);
     registry.add(com.teneasyChat.api.Option.service);
-    registry.add(com.teneasyChat.validate.Validate.rules);
+    registry.add(io.envoyproxy.pgv.validate.Validate.rules);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.teneasyChat.api.Option.getDescriptor();
     com.google.protobuf.EmptyProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
-    com.teneasyChat.validate.Validate.getDescriptor();
+    io.envoyproxy.pgv.validate.Validate.getDescriptor();
     com.teneasyChat.api.common.CBase.getDescriptor();
     com.teneasyChat.api.common.CMessage.getDescriptor();
   }

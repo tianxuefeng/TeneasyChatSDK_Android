@@ -65,11 +65,6 @@ public final class EntranceOuterClass {
       return new EntranceQueryResponse();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.core.EntranceOuterClass.internal_static_api_core_EntranceQueryResponse_descriptor;
@@ -235,11 +230,13 @@ public final class EntranceOuterClass {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.core.EntranceOuterClass.EntranceQueryResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.core.EntranceOuterClass.EntranceQueryResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -838,11 +835,6 @@ public final class EntranceOuterClass {
       return new DomainItem();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.core.EntranceOuterClass.internal_static_api_core_DomainItem_descriptor;
@@ -1003,11 +995,13 @@ public final class EntranceOuterClass {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.core.EntranceOuterClass.DomainItem parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.core.EntranceOuterClass.DomainItem parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1405,11 +1399,6 @@ public final class EntranceOuterClass {
       return new DownloadDomainResponse();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.core.EntranceOuterClass.internal_static_api_core_DownloadDomainResponse_descriptor;
@@ -1575,11 +1564,13 @@ public final class EntranceOuterClass {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.core.EntranceOuterClass.DownloadDomainResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.core.EntranceOuterClass.DownloadDomainResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2180,11 +2171,6 @@ public final class EntranceOuterClass {
       return new CreateEntranceRequest();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.core.EntranceOuterClass.internal_static_api_core_CreateEntranceRequest_descriptor;
@@ -2338,11 +2324,13 @@ public final class EntranceOuterClass {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.core.EntranceOuterClass.CreateEntranceRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.core.EntranceOuterClass.CreateEntranceRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2774,11 +2762,6 @@ public final class EntranceOuterClass {
       return new CreateEntranceResponse();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.core.EntranceOuterClass.internal_static_api_core_CreateEntranceResponse_descriptor;
@@ -2912,11 +2895,13 @@ public final class EntranceOuterClass {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.core.EntranceOuterClass.CreateEntranceResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.core.EntranceOuterClass.CreateEntranceResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3141,7 +3126,7 @@ public final class EntranceOuterClass {
        * @return This builder for chaining.
        */
       public Builder setId(int value) {
-        
+
         id_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -3262,11 +3247,6 @@ public final class EntranceOuterClass {
       return new UpdateEntranceRequest();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.core.EntranceOuterClass.internal_static_api_core_UpdateEntranceRequest_descriptor;
@@ -3420,11 +3400,13 @@ public final class EntranceOuterClass {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.core.EntranceOuterClass.UpdateEntranceRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.core.EntranceOuterClass.UpdateEntranceRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3856,11 +3838,6 @@ public final class EntranceOuterClass {
       return new DeleteEntranceRequest();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.core.EntranceOuterClass.internal_static_api_core_DeleteEntranceRequest_descriptor;
@@ -3994,11 +3971,13 @@ public final class EntranceOuterClass {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.core.EntranceOuterClass.DeleteEntranceRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.core.EntranceOuterClass.DeleteEntranceRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4223,7 +4202,7 @@ public final class EntranceOuterClass {
        * @return This builder for chaining.
        */
       public Builder setId(int value) {
-        
+
         id_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -4348,11 +4327,6 @@ public final class EntranceOuterClass {
       return new GetDistributionResponse();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.core.EntranceOuterClass.internal_static_api_core_GetDistributionResponse_descriptor;
@@ -4535,11 +4509,13 @@ public final class EntranceOuterClass {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.core.EntranceOuterClass.GetDistributionResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.core.EntranceOuterClass.GetDistributionResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4778,7 +4754,7 @@ public final class EntranceOuterClass {
        * @return This builder for chaining.
        */
       public Builder setTenantId(int value) {
-        
+
         tenantId_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -4986,11 +4962,6 @@ public final class EntranceOuterClass {
       return new SaveDistributionRequest();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.core.EntranceOuterClass.internal_static_api_core_SaveDistributionRequest_descriptor;
@@ -5185,11 +5156,13 @@ public final class EntranceOuterClass {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.core.EntranceOuterClass.SaveDistributionRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.core.EntranceOuterClass.SaveDistributionRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -5628,6 +5601,692 @@ public final class EntranceOuterClass {
 
   }
 
+  public interface EntranceExistsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:api.core.EntranceExistsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int32 entrance_id = 1;</code>
+     * @return Whether the entranceId field is set.
+     */
+    boolean hasEntranceId();
+    /**
+     * <code>int32 entrance_id = 1;</code>
+     * @return The entranceId.
+     */
+    int getEntranceId();
+
+    /**
+     * <code>int64 client_id = 2;</code>
+     * @return Whether the clientId field is set.
+     */
+    boolean hasClientId();
+    /**
+     * <code>int64 client_id = 2;</code>
+     * @return The clientId.
+     */
+    long getClientId();
+
+    com.teneasyChat.api.core.EntranceOuterClass.EntranceExistsRequest.BasedCase getBasedCase();
+  }
+  /**
+   * Protobuf type {@code api.core.EntranceExistsRequest}
+   */
+  public static final class EntranceExistsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:api.core.EntranceExistsRequest)
+      EntranceExistsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EntranceExistsRequest.newBuilder() to construct.
+    private EntranceExistsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EntranceExistsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EntranceExistsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.teneasyChat.api.core.EntranceOuterClass.internal_static_api_core_EntranceExistsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.teneasyChat.api.core.EntranceOuterClass.internal_static_api_core_EntranceExistsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.teneasyChat.api.core.EntranceOuterClass.EntranceExistsRequest.class, com.teneasyChat.api.core.EntranceOuterClass.EntranceExistsRequest.Builder.class);
+    }
+
+    private int basedCase_ = 0;
+    @SuppressWarnings("serial")
+    private java.lang.Object based_;
+    public enum BasedCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      ENTRANCE_ID(1),
+      CLIENT_ID(2),
+      BASED_NOT_SET(0);
+      private final int value;
+      private BasedCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static BasedCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static BasedCase forNumber(int value) {
+        switch (value) {
+          case 1: return ENTRANCE_ID;
+          case 2: return CLIENT_ID;
+          case 0: return BASED_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public BasedCase
+    getBasedCase() {
+      return BasedCase.forNumber(
+          basedCase_);
+    }
+
+    public static final int ENTRANCE_ID_FIELD_NUMBER = 1;
+    /**
+     * <code>int32 entrance_id = 1;</code>
+     * @return Whether the entranceId field is set.
+     */
+    @java.lang.Override
+    public boolean hasEntranceId() {
+      return basedCase_ == 1;
+    }
+    /**
+     * <code>int32 entrance_id = 1;</code>
+     * @return The entranceId.
+     */
+    @java.lang.Override
+    public int getEntranceId() {
+      if (basedCase_ == 1) {
+        return (java.lang.Integer) based_;
+      }
+      return 0;
+    }
+
+    public static final int CLIENT_ID_FIELD_NUMBER = 2;
+    /**
+     * <code>int64 client_id = 2;</code>
+     * @return Whether the clientId field is set.
+     */
+    @java.lang.Override
+    public boolean hasClientId() {
+      return basedCase_ == 2;
+    }
+    /**
+     * <code>int64 client_id = 2;</code>
+     * @return The clientId.
+     */
+    @java.lang.Override
+    public long getClientId() {
+      if (basedCase_ == 2) {
+        return (java.lang.Long) based_;
+      }
+      return 0L;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (basedCase_ == 1) {
+        output.writeInt32(
+            1, (int)((java.lang.Integer) based_));
+      }
+      if (basedCase_ == 2) {
+        output.writeInt64(
+            2, (long)((java.lang.Long) based_));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (basedCase_ == 1) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(
+              1, (int)((java.lang.Integer) based_));
+      }
+      if (basedCase_ == 2) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(
+              2, (long)((java.lang.Long) based_));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.teneasyChat.api.core.EntranceOuterClass.EntranceExistsRequest)) {
+        return super.equals(obj);
+      }
+      com.teneasyChat.api.core.EntranceOuterClass.EntranceExistsRequest other = (com.teneasyChat.api.core.EntranceOuterClass.EntranceExistsRequest) obj;
+
+      if (!getBasedCase().equals(other.getBasedCase())) return false;
+      switch (basedCase_) {
+        case 1:
+          if (getEntranceId()
+              != other.getEntranceId()) return false;
+          break;
+        case 2:
+          if (getClientId()
+              != other.getClientId()) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      switch (basedCase_) {
+        case 1:
+          hash = (37 * hash) + ENTRANCE_ID_FIELD_NUMBER;
+          hash = (53 * hash) + getEntranceId();
+          break;
+        case 2:
+          hash = (37 * hash) + CLIENT_ID_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+              getClientId());
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.teneasyChat.api.core.EntranceOuterClass.EntranceExistsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teneasyChat.api.core.EntranceOuterClass.EntranceExistsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teneasyChat.api.core.EntranceOuterClass.EntranceExistsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teneasyChat.api.core.EntranceOuterClass.EntranceExistsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teneasyChat.api.core.EntranceOuterClass.EntranceExistsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teneasyChat.api.core.EntranceOuterClass.EntranceExistsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teneasyChat.api.core.EntranceOuterClass.EntranceExistsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.teneasyChat.api.core.EntranceOuterClass.EntranceExistsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.teneasyChat.api.core.EntranceOuterClass.EntranceExistsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.teneasyChat.api.core.EntranceOuterClass.EntranceExistsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.teneasyChat.api.core.EntranceOuterClass.EntranceExistsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.teneasyChat.api.core.EntranceOuterClass.EntranceExistsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.teneasyChat.api.core.EntranceOuterClass.EntranceExistsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code api.core.EntranceExistsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:api.core.EntranceExistsRequest)
+        com.teneasyChat.api.core.EntranceOuterClass.EntranceExistsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.teneasyChat.api.core.EntranceOuterClass.internal_static_api_core_EntranceExistsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.teneasyChat.api.core.EntranceOuterClass.internal_static_api_core_EntranceExistsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.teneasyChat.api.core.EntranceOuterClass.EntranceExistsRequest.class, com.teneasyChat.api.core.EntranceOuterClass.EntranceExistsRequest.Builder.class);
+      }
+
+      // Construct using com.teneasyChat.api.core.EntranceOuterClass.EntranceExistsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        basedCase_ = 0;
+        based_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.teneasyChat.api.core.EntranceOuterClass.internal_static_api_core_EntranceExistsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.teneasyChat.api.core.EntranceOuterClass.EntranceExistsRequest getDefaultInstanceForType() {
+        return com.teneasyChat.api.core.EntranceOuterClass.EntranceExistsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.teneasyChat.api.core.EntranceOuterClass.EntranceExistsRequest build() {
+        com.teneasyChat.api.core.EntranceOuterClass.EntranceExistsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.teneasyChat.api.core.EntranceOuterClass.EntranceExistsRequest buildPartial() {
+        com.teneasyChat.api.core.EntranceOuterClass.EntranceExistsRequest result = new com.teneasyChat.api.core.EntranceOuterClass.EntranceExistsRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        buildPartialOneofs(result);
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.teneasyChat.api.core.EntranceOuterClass.EntranceExistsRequest result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      private void buildPartialOneofs(com.teneasyChat.api.core.EntranceOuterClass.EntranceExistsRequest result) {
+        result.basedCase_ = basedCase_;
+        result.based_ = this.based_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.teneasyChat.api.core.EntranceOuterClass.EntranceExistsRequest) {
+          return mergeFrom((com.teneasyChat.api.core.EntranceOuterClass.EntranceExistsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.teneasyChat.api.core.EntranceOuterClass.EntranceExistsRequest other) {
+        if (other == com.teneasyChat.api.core.EntranceOuterClass.EntranceExistsRequest.getDefaultInstance()) return this;
+        switch (other.getBasedCase()) {
+          case ENTRANCE_ID: {
+            setEntranceId(other.getEntranceId());
+            break;
+          }
+          case CLIENT_ID: {
+            setClientId(other.getClientId());
+            break;
+          }
+          case BASED_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                based_ = input.readInt32();
+                basedCase_ = 1;
+                break;
+              } // case 8
+              case 16: {
+                based_ = input.readInt64();
+                basedCase_ = 2;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int basedCase_ = 0;
+      private java.lang.Object based_;
+      public BasedCase
+          getBasedCase() {
+        return BasedCase.forNumber(
+            basedCase_);
+      }
+
+      public Builder clearBased() {
+        basedCase_ = 0;
+        based_ = null;
+        onChanged();
+        return this;
+      }
+
+      private int bitField0_;
+
+      /**
+       * <code>int32 entrance_id = 1;</code>
+       * @return Whether the entranceId field is set.
+       */
+      public boolean hasEntranceId() {
+        return basedCase_ == 1;
+      }
+      /**
+       * <code>int32 entrance_id = 1;</code>
+       * @return The entranceId.
+       */
+      public int getEntranceId() {
+        if (basedCase_ == 1) {
+          return (java.lang.Integer) based_;
+        }
+        return 0;
+      }
+      /**
+       * <code>int32 entrance_id = 1;</code>
+       * @param value The entranceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEntranceId(int value) {
+
+        basedCase_ = 1;
+        based_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 entrance_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEntranceId() {
+        if (basedCase_ == 1) {
+          basedCase_ = 0;
+          based_ = null;
+          onChanged();
+        }
+        return this;
+      }
+
+      /**
+       * <code>int64 client_id = 2;</code>
+       * @return Whether the clientId field is set.
+       */
+      public boolean hasClientId() {
+        return basedCase_ == 2;
+      }
+      /**
+       * <code>int64 client_id = 2;</code>
+       * @return The clientId.
+       */
+      public long getClientId() {
+        if (basedCase_ == 2) {
+          return (java.lang.Long) based_;
+        }
+        return 0L;
+      }
+      /**
+       * <code>int64 client_id = 2;</code>
+       * @param value The clientId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClientId(long value) {
+
+        basedCase_ = 2;
+        based_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 client_id = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClientId() {
+        if (basedCase_ == 2) {
+          basedCase_ = 0;
+          based_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:api.core.EntranceExistsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:api.core.EntranceExistsRequest)
+    private static final com.teneasyChat.api.core.EntranceOuterClass.EntranceExistsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.teneasyChat.api.core.EntranceOuterClass.EntranceExistsRequest();
+    }
+
+    public static com.teneasyChat.api.core.EntranceOuterClass.EntranceExistsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EntranceExistsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<EntranceExistsRequest>() {
+      @java.lang.Override
+      public EntranceExistsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EntranceExistsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EntranceExistsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.teneasyChat.api.core.EntranceOuterClass.EntranceExistsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_core_EntranceQueryResponse_descriptor;
   private static final 
@@ -5673,6 +6332,11 @@ public final class EntranceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_core_SaveDistributionRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_core_EntranceExistsRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_core_EntranceExistsRequest_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -5700,38 +6364,42 @@ public final class EntranceOuterClass {
       "etDistributionResponse\022\021\n\ttenant_id\030\001 \001(" +
       "\005\022\031\n\021distribution_type\030\002 \001(\t\"R\n\027SaveDist" +
       "ributionRequest\0227\n\021distribution_type\030\003 \003" +
-      "(\0162\034.api.common.DistributionType2\315\006\n\010Ent" +
-      "rance\022}\n\030GetDistributionMechanism\022\026.goog" +
-      "le.protobuf.Empty\032!.api.core.GetDistribu" +
-      "tionResponse\"&\272\276\031\"\010\334\004\030\001\322\014\032get-distributi" +
-      "on-mechanism\022\211\001\n\031SaveDistributionMechani" +
-      "sm\022!.api.core.SaveDistributionRequest\032 ." +
-      "api.core.DownloadDomainResponse\"\'\272\276\031#\010\334\004" +
-      "\030\001\322\014\033save-distribution-mechanism\022g\n\016Down" +
-      "loadDomain\022\026.google.protobuf.Empty\032 .api" +
-      ".core.DownloadDomainResponse\"\033\272\276\031\027\010\334\004\030\001\322" +
-      "\014\017download-domain\022d\n\rQueryEntrance\022\026.goo" +
-      "gle.protobuf.Empty\032\037.api.core.EntranceQu" +
-      "eryResponse\"\032\272\276\031\026\010\330\004\030\001\322\014\016query-entrance\022" +
-      "p\n\016CreateEntrance\022\037.api.core.CreateEntra" +
-      "nceRequest\032 .api.core.CreateEntranceResp" +
-      "onse\"\033\272\276\031\027\010\331\004\030\001\322\014\017create-entrance\022f\n\016Upd" +
-      "ateEntrance\022\037.api.core.UpdateEntranceReq" +
-      "uest\032\026.google.protobuf.Empty\"\033\272\276\031\027\010\332\004\030\001\322" +
-      "\014\017update-entrance\022f\n\016DeleteEntrance\022\037.ap" +
-      "i.core.DeleteEntranceRequest\032\026.google.pr" +
-      "otobuf.Empty\"\033\272\276\031\027\010\333\004\030\001\322\014\017delete-entranc" +
-      "e\032%\272\276\031!\272\006\010entrance\312\014\001\020\322\014\017tenant/entrance" +
-      "BL\n\030com.teneasyChat.api.coreZ\021wcs/api/co" +
-      "re;core\272\276\031\033\242\006\013mango,bland\262\006\n2022-12-12b\006" +
-      "proto3"
+      "(\0162\034.api.common.DistributionType\"L\n\025Entr" +
+      "anceExistsRequest\022\025\n\013entrance_id\030\001 \001(\005H\000" +
+      "\022\023\n\tclient_id\030\002 \001(\003H\000B\007\n\005based2\250\007\n\010Entra" +
+      "nce\022}\n\030GetDistributionMechanism\022\026.google" +
+      ".protobuf.Empty\032!.api.core.GetDistributi" +
+      "onResponse\"&\272\276\031\"\010\334\004\030\001\322\014\032get-distribution" +
+      "-mechanism\022\211\001\n\031SaveDistributionMechanism" +
+      "\022!.api.core.SaveDistributionRequest\032 .ap" +
+      "i.core.DownloadDomainResponse\"\'\272\276\031#\010\334\004\030\001" +
+      "\322\014\033save-distribution-mechanism\022g\n\016Downlo" +
+      "adDomain\022\026.google.protobuf.Empty\032 .api.c" +
+      "ore.DownloadDomainResponse\"\033\272\276\031\027\010\334\004\030\001\322\014\017" +
+      "download-domain\022d\n\rQueryEntrance\022\026.googl" +
+      "e.protobuf.Empty\032\037.api.core.EntranceQuer" +
+      "yResponse\"\032\272\276\031\026\010\330\004\030\001\322\014\016query-entrance\022p\n" +
+      "\016CreateEntrance\022\037.api.core.CreateEntranc" +
+      "eRequest\032 .api.core.CreateEntranceRespon" +
+      "se\"\033\272\276\031\027\010\331\004\030\001\322\014\017create-entrance\022f\n\016Updat" +
+      "eEntrance\022\037.api.core.UpdateEntranceReque" +
+      "st\032\026.google.protobuf.Empty\"\033\272\276\031\027\010\332\004\030\001\322\014\017" +
+      "update-entrance\022f\n\016DeleteEntrance\022\037.api." +
+      "core.DeleteEntranceRequest\032\026.google.prot" +
+      "obuf.Empty\"\033\272\276\031\027\010\333\004\030\001\322\014\017delete-entrance\022" +
+      "Y\n\006Exists\022\037.api.core.EntranceExistsReque" +
+      "st\032\026.google.protobuf.Empty\"\026\272\276\031\022\010\334\004\030\001\312\014\001" +
+      "\004\322\014\006exists\032%\272\276\031!\272\006\010entrance\312\014\001\020\322\014\017tenant" +
+      "/entranceBL\n\030com.teneasyChat.api.coreZ\021w" +
+      "cs/api/core;core\272\276\031\033\242\006\013mango,bland\262\006\n202" +
+      "2-12-12b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.teneasyChat.api.Option.getDescriptor(),
           com.google.protobuf.EmptyProto.getDescriptor(),
-          com.teneasyChat.validate.Validate.getDescriptor(),
+          io.envoyproxy.pgv.validate.Validate.getDescriptor(),
           com.teneasyChat.api.common.CEntrance.getDescriptor(),
           com.teneasyChat.api.common.CWorker.getDescriptor(),
           com.teneasyChat.api.common.CReply.getDescriptor(),
@@ -5790,17 +6458,23 @@ public final class EntranceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_core_SaveDistributionRequest_descriptor,
         new java.lang.String[] { "DistributionType", });
+    internal_static_api_core_EntranceExistsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_api_core_EntranceExistsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_core_EntranceExistsRequest_descriptor,
+        new java.lang.String[] { "EntranceId", "ClientId", "Based", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.teneasyChat.api.Option.info);
     registry.add(com.teneasyChat.api.Option.method);
     registry.add(com.teneasyChat.api.Option.service);
-    registry.add(com.teneasyChat.validate.Validate.rules);
+    registry.add(io.envoyproxy.pgv.validate.Validate.rules);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.teneasyChat.api.Option.getDescriptor();
     com.google.protobuf.EmptyProto.getDescriptor();
-    com.teneasyChat.validate.Validate.getDescriptor();
+    io.envoyproxy.pgv.validate.Validate.getDescriptor();
     com.teneasyChat.api.common.CEntrance.getDescriptor();
     com.teneasyChat.api.common.CWorker.getDescriptor();
     com.teneasyChat.api.common.CReply.getDescriptor();

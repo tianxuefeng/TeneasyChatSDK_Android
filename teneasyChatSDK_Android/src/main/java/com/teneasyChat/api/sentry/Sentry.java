@@ -323,11 +323,6 @@ public final class Sentry {
       return new AuthToken();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.sentry.Sentry.internal_static_api_sentry_AuthToken_descriptor;
@@ -607,11 +602,13 @@ public final class Sentry {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.sentry.Sentry.AuthToken parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.sentry.Sentry.AuthToken parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -904,7 +901,7 @@ public final class Sentry {
        * @return This builder for chaining.
        */
       public Builder setTenantId(int value) {
-        
+
         tenantId_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -1021,7 +1018,7 @@ public final class Sentry {
        * @return This builder for chaining.
        */
       public Builder setOwnerId(int value) {
-        
+
         ownerId_ = value;
         bitField0_ |= 0x00000004;
         onChanged();
@@ -1065,7 +1062,7 @@ public final class Sentry {
        * @return This builder for chaining.
        */
       public Builder setOwnerSession(int value) {
-        
+
         ownerSession_ = value;
         bitField0_ |= 0x00000008;
         onChanged();
@@ -1109,7 +1106,7 @@ public final class Sentry {
        * @return This builder for chaining.
        */
       public Builder setOwnerSessionTime(long value) {
-        
+
         ownerSessionTime_ = value;
         bitField0_ |= 0x00000010;
         onChanged();
@@ -1153,7 +1150,7 @@ public final class Sentry {
        * @return This builder for chaining.
        */
       public Builder setOwnerDevice(long value) {
-        
+
         ownerDevice_ = value;
         bitField0_ |= 0x00000020;
         onChanged();
@@ -1320,11 +1317,6 @@ public final class Sentry {
       return new AuthRequest();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.sentry.Sentry.internal_static_api_sentry_AuthRequest_descriptor;
@@ -1650,11 +1642,13 @@ public final class Sentry {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.sentry.Sentry.AuthRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.sentry.Sentry.AuthRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2161,7 +2155,7 @@ public final class Sentry {
        * @return This builder for chaining.
        */
       public Builder setAuth(int value) {
-        
+
         auth_ = value;
         bitField0_ |= 0x00000008;
         onChanged();
@@ -2193,7 +2187,7 @@ public final class Sentry {
        * @return This builder for chaining.
        */
       public Builder setReadonly(boolean value) {
-        
+
         readonly_ = value;
         bitField0_ |= 0x00000010;
         onChanged();
@@ -2225,7 +2219,7 @@ public final class Sentry {
        * @return This builder for chaining.
        */
       public Builder setQos(int value) {
-        
+
         qos_ = value;
         bitField0_ |= 0x00000020;
         onChanged();
@@ -2452,11 +2446,6 @@ public final class Sentry {
       return new AuthResponse();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.sentry.Sentry.internal_static_api_sentry_AuthResponse_descriptor;
@@ -2978,11 +2967,13 @@ public final class Sentry {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.sentry.Sentry.AuthResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.sentry.Sentry.AuthResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3412,7 +3403,7 @@ public final class Sentry {
        * @return This builder for chaining.
        */
       public Builder setUserId(int value) {
-        
+
         userId_ = value;
         bitField0_ |= 0x00000002;
         onChanged();
@@ -3444,7 +3435,7 @@ public final class Sentry {
        * @return This builder for chaining.
        */
       public Builder setSessionId(int value) {
-        
+
         sessionId_ = value;
         bitField0_ |= 0x00000004;
         onChanged();
@@ -3476,7 +3467,7 @@ public final class Sentry {
        * @return This builder for chaining.
        */
       public Builder setDeviceId(int value) {
-        
+
         deviceId_ = value;
         bitField0_ |= 0x00000008;
         onChanged();
@@ -3508,7 +3499,7 @@ public final class Sentry {
        * @return This builder for chaining.
        */
       public Builder setExternalId(int value) {
-        
+
         externalId_ = value;
         bitField0_ |= 0x00000010;
         onChanged();
@@ -3540,7 +3531,7 @@ public final class Sentry {
        * @return This builder for chaining.
        */
       public Builder setUniqueId(long value) {
-        
+
         uniqueId_ = value;
         bitField0_ |= 0x00000020;
         onChanged();
@@ -3604,7 +3595,7 @@ public final class Sentry {
        * @return This builder for chaining.
        */
       public Builder setIsCommand(boolean value) {
-        
+
         isCommand_ = value;
         bitField0_ |= 0x00000080;
         onChanged();
@@ -3636,7 +3627,7 @@ public final class Sentry {
        * @return This builder for chaining.
        */
       public Builder setErrCode(int value) {
-        
+
         errCode_ = value;
         bitField0_ |= 0x00000100;
         onChanged();

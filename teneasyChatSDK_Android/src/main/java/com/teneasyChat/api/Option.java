@@ -77,6 +77,14 @@ public final class Option {
      * <code>AUTH_ROLE_ADMIN = 32;</code>
      */
     AUTH_ROLE_ADMIN(32),
+    /**
+     * <pre>
+     * call from not trusted public source
+     * </pre>
+     *
+     * <code>AUTH_ROLE_PUBLIC = 64;</code>
+     */
+    AUTH_ROLE_PUBLIC(64),
     UNRECOGNIZED(-1),
     ;
 
@@ -132,6 +140,14 @@ public final class Option {
      * <code>AUTH_ROLE_ADMIN = 32;</code>
      */
     public static final int AUTH_ROLE_ADMIN_VALUE = 32;
+    /**
+     * <pre>
+     * call from not trusted public source
+     * </pre>
+     *
+     * <code>AUTH_ROLE_PUBLIC = 64;</code>
+     */
+    public static final int AUTH_ROLE_PUBLIC_VALUE = 64;
 
 
     public final int getNumber() {
@@ -165,6 +181,7 @@ public final class Option {
         case 8: return AUTH_ROLE_EXTERNAL;
         case 16: return AUTH_ROLE_TENANT;
         case 32: return AUTH_ROLE_ADMIN;
+        case 64: return AUTH_ROLE_PUBLIC;
         default: return null;
       }
     }
@@ -392,11 +409,6 @@ public final class Option {
       return new Payload();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.Option.internal_static_api_Payload_descriptor;
@@ -590,11 +602,13 @@ public final class Option {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.Option.Payload parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.Option.Payload parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1281,11 +1295,6 @@ public final class Option {
       return new ExternalDocumentation();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.Option.internal_static_api_ExternalDocumentation_descriptor;
@@ -1522,11 +1531,13 @@ public final class Option {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.Option.ExternalDocumentation parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.Option.ExternalDocumentation parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2075,11 +2086,6 @@ public final class Option {
       return new Example();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.Option.internal_static_api_Example_descriptor;
@@ -2440,11 +2446,13 @@ public final class Option {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.Option.Example parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.Option.Example parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3203,11 +3211,6 @@ public final class Option {
       return new MessageCache();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.Option.internal_static_api_MessageCache_descriptor;
@@ -3542,11 +3545,13 @@ public final class Option {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.Option.MessageCache parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.Option.MessageCache parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4337,9 +4342,11 @@ public final class Option {
     }
     private InfoOptions() {
       appId_ = "";
-      authors_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      authors_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       date_ = "";
-      tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      tags_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       auth_ = java.util.Collections.emptyList();
       path_ = "";
     }
@@ -4351,11 +4358,6 @@ public final class Option {
       return new InfoOptions();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.Option.internal_static_api_InfoOptions_descriptor;
@@ -4419,7 +4421,8 @@ public final class Option {
 
     public static final int AUTHORS_FIELD_NUMBER = 100;
     @SuppressWarnings("serial")
-    private com.google.protobuf.LazyStringList authors_;
+    private com.google.protobuf.LazyStringArrayList authors_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     /**
      * <code>repeated string authors = 100;</code>
      * @return A list containing the authors.
@@ -4521,7 +4524,8 @@ public final class Option {
 
     public static final int TAGS_FIELD_NUMBER = 103;
     @SuppressWarnings("serial")
-    private com.google.protobuf.LazyStringList tags_;
+    private com.google.protobuf.LazyStringArrayList tags_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     /**
      * <code>repeated string tags = 103;</code>
      * @return A list containing the tags.
@@ -4914,11 +4918,13 @@ public final class Option {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.Option.InfoOptions parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.Option.InfoOptions parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4995,12 +5001,12 @@ public final class Option {
         super.clear();
         bitField0_ = 0;
         appId_ = "";
-        authors_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        authors_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
         inheritAuthors_ = false;
         date_ = "";
-        tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000010);
+        tags_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
         auth_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000020);
         path_ = "";
@@ -5038,16 +5044,6 @@ public final class Option {
       }
 
       private void buildPartialRepeatedFields(com.teneasyChat.api.Option.InfoOptions result) {
-        if (((bitField0_ & 0x00000002) != 0)) {
-          authors_ = authors_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000002);
-        }
-        result.authors_ = authors_;
-        if (((bitField0_ & 0x00000010) != 0)) {
-          tags_ = tags_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000010);
-        }
-        result.tags_ = tags_;
         if (((bitField0_ & 0x00000020) != 0)) {
           auth_ = java.util.Collections.unmodifiableList(auth_);
           bitField0_ = (bitField0_ & ~0x00000020);
@@ -5062,6 +5058,10 @@ public final class Option {
           result.appId_ = appId_;
           to_bitField0_ |= 0x00000001;
         }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          authors_.makeImmutable();
+          result.authors_ = authors_;
+        }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.inheritAuthors_ = inheritAuthors_;
           to_bitField0_ |= 0x00000002;
@@ -5069,6 +5069,10 @@ public final class Option {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.date_ = date_;
           to_bitField0_ |= 0x00000004;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          tags_.makeImmutable();
+          result.tags_ = tags_;
         }
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.path_ = path_;
@@ -5133,7 +5137,7 @@ public final class Option {
         if (!other.authors_.isEmpty()) {
           if (authors_.isEmpty()) {
             authors_ = other.authors_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ |= 0x00000002;
           } else {
             ensureAuthorsIsMutable();
             authors_.addAll(other.authors_);
@@ -5151,7 +5155,7 @@ public final class Option {
         if (!other.tags_.isEmpty()) {
           if (tags_.isEmpty()) {
             tags_ = other.tags_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ |= 0x00000010;
           } else {
             ensureTagsIsMutable();
             tags_.addAll(other.tags_);
@@ -5352,12 +5356,13 @@ public final class Option {
         return this;
       }
 
-      private com.google.protobuf.LazyStringList authors_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private com.google.protobuf.LazyStringArrayList authors_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       private void ensureAuthorsIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
+        if (!authors_.isModifiable()) {
           authors_ = new com.google.protobuf.LazyStringArrayList(authors_);
-          bitField0_ |= 0x00000002;
-         }
+        }
+        bitField0_ |= 0x00000002;
       }
       /**
        * <code>repeated string authors = 100;</code>
@@ -5365,7 +5370,8 @@ public final class Option {
        */
       public com.google.protobuf.ProtocolStringList
           getAuthorsList() {
-        return authors_.getUnmodifiableView();
+        authors_.makeImmutable();
+        return authors_;
       }
       /**
        * <code>repeated string authors = 100;</code>
@@ -5402,6 +5408,7 @@ public final class Option {
         if (value == null) { throw new NullPointerException(); }
         ensureAuthorsIsMutable();
         authors_.set(index, value);
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -5415,6 +5422,7 @@ public final class Option {
         if (value == null) { throw new NullPointerException(); }
         ensureAuthorsIsMutable();
         authors_.add(value);
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -5428,6 +5436,7 @@ public final class Option {
         ensureAuthorsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, authors_);
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -5436,8 +5445,9 @@ public final class Option {
        * @return This builder for chaining.
        */
       public Builder clearAuthors() {
-        authors_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        authors_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);;
         onChanged();
         return this;
       }
@@ -5452,6 +5462,7 @@ public final class Option {
         checkByteStringIsUtf8(value);
         ensureAuthorsIsMutable();
         authors_.add(value);
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -5479,7 +5490,7 @@ public final class Option {
        * @return This builder for chaining.
        */
       public Builder setInheritAuthors(boolean value) {
-        
+
         inheritAuthors_ = value;
         bitField0_ |= 0x00000004;
         onChanged();
@@ -5575,12 +5586,13 @@ public final class Option {
         return this;
       }
 
-      private com.google.protobuf.LazyStringList tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private com.google.protobuf.LazyStringArrayList tags_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       private void ensureTagsIsMutable() {
-        if (!((bitField0_ & 0x00000010) != 0)) {
+        if (!tags_.isModifiable()) {
           tags_ = new com.google.protobuf.LazyStringArrayList(tags_);
-          bitField0_ |= 0x00000010;
-         }
+        }
+        bitField0_ |= 0x00000010;
       }
       /**
        * <code>repeated string tags = 103;</code>
@@ -5588,7 +5600,8 @@ public final class Option {
        */
       public com.google.protobuf.ProtocolStringList
           getTagsList() {
-        return tags_.getUnmodifiableView();
+        tags_.makeImmutable();
+        return tags_;
       }
       /**
        * <code>repeated string tags = 103;</code>
@@ -5625,6 +5638,7 @@ public final class Option {
         if (value == null) { throw new NullPointerException(); }
         ensureTagsIsMutable();
         tags_.set(index, value);
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -5638,6 +5652,7 @@ public final class Option {
         if (value == null) { throw new NullPointerException(); }
         ensureTagsIsMutable();
         tags_.add(value);
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -5651,6 +5666,7 @@ public final class Option {
         ensureTagsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, tags_);
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -5659,8 +5675,9 @@ public final class Option {
        * @return This builder for chaining.
        */
       public Builder clearTags() {
-        tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000010);
+        tags_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000010);;
         onChanged();
         return this;
       }
@@ -5675,6 +5692,7 @@ public final class Option {
         checkByteStringIsUtf8(value);
         ensureTagsIsMutable();
         tags_.add(value);
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -5921,7 +5939,7 @@ public final class Option {
        * @return This builder for chaining.
        */
       public Builder setQos(int value) {
-        
+
         qos_ = value;
         bitField0_ |= 0x00000080;
         onChanged();
@@ -6186,9 +6204,11 @@ public final class Option {
     }
     private ServiceOptions() {
       summary_ = "";
-      authors_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      authors_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       date_ = "";
-      tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      tags_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       auth_ = java.util.Collections.emptyList();
       path_ = "";
     }
@@ -6200,11 +6220,6 @@ public final class Option {
       return new ServiceOptions();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.Option.internal_static_api_ServiceOptions_descriptor;
@@ -6268,7 +6283,8 @@ public final class Option {
 
     public static final int AUTHORS_FIELD_NUMBER = 100;
     @SuppressWarnings("serial")
-    private com.google.protobuf.LazyStringList authors_;
+    private com.google.protobuf.LazyStringArrayList authors_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     /**
      * <code>repeated string authors = 100;</code>
      * @return A list containing the authors.
@@ -6370,7 +6386,8 @@ public final class Option {
 
     public static final int TAGS_FIELD_NUMBER = 103;
     @SuppressWarnings("serial")
-    private com.google.protobuf.LazyStringList tags_;
+    private com.google.protobuf.LazyStringArrayList tags_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     /**
      * <code>repeated string tags = 103;</code>
      * @return A list containing the tags.
@@ -6805,11 +6822,13 @@ public final class Option {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.Option.ServiceOptions parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.Option.ServiceOptions parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -6892,12 +6911,12 @@ public final class Option {
         super.clear();
         bitField0_ = 0;
         summary_ = "";
-        authors_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        authors_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
         inheritAuthors_ = false;
         date_ = "";
-        tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000010);
+        tags_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
         auth_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000020);
         path_ = "";
@@ -6940,16 +6959,6 @@ public final class Option {
       }
 
       private void buildPartialRepeatedFields(com.teneasyChat.api.Option.ServiceOptions result) {
-        if (((bitField0_ & 0x00000002) != 0)) {
-          authors_ = authors_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000002);
-        }
-        result.authors_ = authors_;
-        if (((bitField0_ & 0x00000010) != 0)) {
-          tags_ = tags_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000010);
-        }
-        result.tags_ = tags_;
         if (((bitField0_ & 0x00000020) != 0)) {
           auth_ = java.util.Collections.unmodifiableList(auth_);
           bitField0_ = (bitField0_ & ~0x00000020);
@@ -6964,6 +6973,10 @@ public final class Option {
           result.summary_ = summary_;
           to_bitField0_ |= 0x00000001;
         }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          authors_.makeImmutable();
+          result.authors_ = authors_;
+        }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.inheritAuthors_ = inheritAuthors_;
           to_bitField0_ |= 0x00000002;
@@ -6971,6 +6984,10 @@ public final class Option {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.date_ = date_;
           to_bitField0_ |= 0x00000004;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          tags_.makeImmutable();
+          result.tags_ = tags_;
         }
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.path_ = path_;
@@ -7041,7 +7058,7 @@ public final class Option {
         if (!other.authors_.isEmpty()) {
           if (authors_.isEmpty()) {
             authors_ = other.authors_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ |= 0x00000002;
           } else {
             ensureAuthorsIsMutable();
             authors_.addAll(other.authors_);
@@ -7059,7 +7076,7 @@ public final class Option {
         if (!other.tags_.isEmpty()) {
           if (tags_.isEmpty()) {
             tags_ = other.tags_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ |= 0x00000010;
           } else {
             ensureTagsIsMutable();
             tags_.addAll(other.tags_);
@@ -7270,12 +7287,13 @@ public final class Option {
         return this;
       }
 
-      private com.google.protobuf.LazyStringList authors_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private com.google.protobuf.LazyStringArrayList authors_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       private void ensureAuthorsIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
+        if (!authors_.isModifiable()) {
           authors_ = new com.google.protobuf.LazyStringArrayList(authors_);
-          bitField0_ |= 0x00000002;
-         }
+        }
+        bitField0_ |= 0x00000002;
       }
       /**
        * <code>repeated string authors = 100;</code>
@@ -7283,7 +7301,8 @@ public final class Option {
        */
       public com.google.protobuf.ProtocolStringList
           getAuthorsList() {
-        return authors_.getUnmodifiableView();
+        authors_.makeImmutable();
+        return authors_;
       }
       /**
        * <code>repeated string authors = 100;</code>
@@ -7320,6 +7339,7 @@ public final class Option {
         if (value == null) { throw new NullPointerException(); }
         ensureAuthorsIsMutable();
         authors_.set(index, value);
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -7333,6 +7353,7 @@ public final class Option {
         if (value == null) { throw new NullPointerException(); }
         ensureAuthorsIsMutable();
         authors_.add(value);
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -7346,6 +7367,7 @@ public final class Option {
         ensureAuthorsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, authors_);
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -7354,8 +7376,9 @@ public final class Option {
        * @return This builder for chaining.
        */
       public Builder clearAuthors() {
-        authors_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        authors_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);;
         onChanged();
         return this;
       }
@@ -7370,6 +7393,7 @@ public final class Option {
         checkByteStringIsUtf8(value);
         ensureAuthorsIsMutable();
         authors_.add(value);
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -7397,7 +7421,7 @@ public final class Option {
        * @return This builder for chaining.
        */
       public Builder setInheritAuthors(boolean value) {
-        
+
         inheritAuthors_ = value;
         bitField0_ |= 0x00000004;
         onChanged();
@@ -7493,12 +7517,13 @@ public final class Option {
         return this;
       }
 
-      private com.google.protobuf.LazyStringList tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private com.google.protobuf.LazyStringArrayList tags_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       private void ensureTagsIsMutable() {
-        if (!((bitField0_ & 0x00000010) != 0)) {
+        if (!tags_.isModifiable()) {
           tags_ = new com.google.protobuf.LazyStringArrayList(tags_);
-          bitField0_ |= 0x00000010;
-         }
+        }
+        bitField0_ |= 0x00000010;
       }
       /**
        * <code>repeated string tags = 103;</code>
@@ -7506,7 +7531,8 @@ public final class Option {
        */
       public com.google.protobuf.ProtocolStringList
           getTagsList() {
-        return tags_.getUnmodifiableView();
+        tags_.makeImmutable();
+        return tags_;
       }
       /**
        * <code>repeated string tags = 103;</code>
@@ -7543,6 +7569,7 @@ public final class Option {
         if (value == null) { throw new NullPointerException(); }
         ensureTagsIsMutable();
         tags_.set(index, value);
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -7556,6 +7583,7 @@ public final class Option {
         if (value == null) { throw new NullPointerException(); }
         ensureTagsIsMutable();
         tags_.add(value);
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -7569,6 +7597,7 @@ public final class Option {
         ensureTagsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, tags_);
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -7577,8 +7606,9 @@ public final class Option {
        * @return This builder for chaining.
        */
       public Builder clearTags() {
-        tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000010);
+        tags_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000010);;
         onChanged();
         return this;
       }
@@ -7593,6 +7623,7 @@ public final class Option {
         checkByteStringIsUtf8(value);
         ensureTagsIsMutable();
         tags_.add(value);
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -7839,7 +7870,7 @@ public final class Option {
        * @return This builder for chaining.
        */
       public Builder setQos(int value) {
-        
+
         qos_ = value;
         bitField0_ |= 0x00000080;
         onChanged();
@@ -8317,9 +8348,11 @@ public final class Option {
     }
     private MethodOptions() {
       summary_ = "";
-      authors_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      authors_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       date_ = "";
-      tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      tags_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       auth_ = java.util.Collections.emptyList();
       path_ = "";
       docs_ = java.util.Collections.emptyList();
@@ -8332,11 +8365,6 @@ public final class Option {
       return new MethodOptions();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.Option.internal_static_api_MethodOptions_descriptor;
@@ -8442,7 +8470,8 @@ public final class Option {
 
     public static final int AUTHORS_FIELD_NUMBER = 100;
     @SuppressWarnings("serial")
-    private com.google.protobuf.LazyStringList authors_;
+    private com.google.protobuf.LazyStringArrayList authors_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     /**
      * <code>repeated string authors = 100;</code>
      * @return A list containing the authors.
@@ -8544,7 +8573,8 @@ public final class Option {
 
     public static final int TAGS_FIELD_NUMBER = 103;
     @SuppressWarnings("serial")
-    private com.google.protobuf.LazyStringList tags_;
+    private com.google.protobuf.LazyStringArrayList tags_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     /**
      * <code>repeated string tags = 103;</code>
      * @return A list containing the tags.
@@ -9181,11 +9211,13 @@ public final class Option {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.Option.MethodOptions parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.Option.MethodOptions parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -9273,12 +9305,12 @@ public final class Option {
         id_ = 0;
         summary_ = "";
         ready_ = false;
-        authors_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000008);
+        authors_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
         inheritAuthors_ = false;
         date_ = "";
-        tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000040);
+        tags_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
         auth_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000080);
         path_ = "";
@@ -9339,16 +9371,6 @@ public final class Option {
       }
 
       private void buildPartialRepeatedFields(com.teneasyChat.api.Option.MethodOptions result) {
-        if (((bitField0_ & 0x00000008) != 0)) {
-          authors_ = authors_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000008);
-        }
-        result.authors_ = authors_;
-        if (((bitField0_ & 0x00000040) != 0)) {
-          tags_ = tags_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000040);
-        }
-        result.tags_ = tags_;
         if (((bitField0_ & 0x00000080) != 0)) {
           auth_ = java.util.Collections.unmodifiableList(auth_);
           bitField0_ = (bitField0_ & ~0x00000080);
@@ -9379,6 +9401,10 @@ public final class Option {
           result.ready_ = ready_;
           to_bitField0_ |= 0x00000002;
         }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          authors_.makeImmutable();
+          result.authors_ = authors_;
+        }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.inheritAuthors_ = inheritAuthors_;
           to_bitField0_ |= 0x00000004;
@@ -9386,6 +9412,10 @@ public final class Option {
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.date_ = date_;
           to_bitField0_ |= 0x00000008;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          tags_.makeImmutable();
+          result.tags_ = tags_;
         }
         if (((from_bitField0_ & 0x00000100) != 0)) {
           result.path_ = path_;
@@ -9478,7 +9508,7 @@ public final class Option {
         if (!other.authors_.isEmpty()) {
           if (authors_.isEmpty()) {
             authors_ = other.authors_;
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ |= 0x00000008;
           } else {
             ensureAuthorsIsMutable();
             authors_.addAll(other.authors_);
@@ -9496,7 +9526,7 @@ public final class Option {
         if (!other.tags_.isEmpty()) {
           if (tags_.isEmpty()) {
             tags_ = other.tags_;
-            bitField0_ = (bitField0_ & ~0x00000040);
+            bitField0_ |= 0x00000040;
           } else {
             ensureTagsIsMutable();
             tags_.addAll(other.tags_);
@@ -9728,7 +9758,7 @@ public final class Option {
        * @return This builder for chaining.
        */
       public Builder setId(int value) {
-        
+
         id_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -9863,7 +9893,7 @@ public final class Option {
        * @return This builder for chaining.
        */
       public Builder setReady(boolean value) {
-        
+
         ready_ = value;
         bitField0_ |= 0x00000004;
         onChanged();
@@ -9884,12 +9914,13 @@ public final class Option {
         return this;
       }
 
-      private com.google.protobuf.LazyStringList authors_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private com.google.protobuf.LazyStringArrayList authors_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       private void ensureAuthorsIsMutable() {
-        if (!((bitField0_ & 0x00000008) != 0)) {
+        if (!authors_.isModifiable()) {
           authors_ = new com.google.protobuf.LazyStringArrayList(authors_);
-          bitField0_ |= 0x00000008;
-         }
+        }
+        bitField0_ |= 0x00000008;
       }
       /**
        * <code>repeated string authors = 100;</code>
@@ -9897,7 +9928,8 @@ public final class Option {
        */
       public com.google.protobuf.ProtocolStringList
           getAuthorsList() {
-        return authors_.getUnmodifiableView();
+        authors_.makeImmutable();
+        return authors_;
       }
       /**
        * <code>repeated string authors = 100;</code>
@@ -9934,6 +9966,7 @@ public final class Option {
         if (value == null) { throw new NullPointerException(); }
         ensureAuthorsIsMutable();
         authors_.set(index, value);
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -9947,6 +9980,7 @@ public final class Option {
         if (value == null) { throw new NullPointerException(); }
         ensureAuthorsIsMutable();
         authors_.add(value);
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -9960,6 +9994,7 @@ public final class Option {
         ensureAuthorsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, authors_);
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -9968,8 +10003,9 @@ public final class Option {
        * @return This builder for chaining.
        */
       public Builder clearAuthors() {
-        authors_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000008);
+        authors_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000008);;
         onChanged();
         return this;
       }
@@ -9984,6 +10020,7 @@ public final class Option {
         checkByteStringIsUtf8(value);
         ensureAuthorsIsMutable();
         authors_.add(value);
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -10011,7 +10048,7 @@ public final class Option {
        * @return This builder for chaining.
        */
       public Builder setInheritAuthors(boolean value) {
-        
+
         inheritAuthors_ = value;
         bitField0_ |= 0x00000010;
         onChanged();
@@ -10107,12 +10144,13 @@ public final class Option {
         return this;
       }
 
-      private com.google.protobuf.LazyStringList tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private com.google.protobuf.LazyStringArrayList tags_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       private void ensureTagsIsMutable() {
-        if (!((bitField0_ & 0x00000040) != 0)) {
+        if (!tags_.isModifiable()) {
           tags_ = new com.google.protobuf.LazyStringArrayList(tags_);
-          bitField0_ |= 0x00000040;
-         }
+        }
+        bitField0_ |= 0x00000040;
       }
       /**
        * <code>repeated string tags = 103;</code>
@@ -10120,7 +10158,8 @@ public final class Option {
        */
       public com.google.protobuf.ProtocolStringList
           getTagsList() {
-        return tags_.getUnmodifiableView();
+        tags_.makeImmutable();
+        return tags_;
       }
       /**
        * <code>repeated string tags = 103;</code>
@@ -10157,6 +10196,7 @@ public final class Option {
         if (value == null) { throw new NullPointerException(); }
         ensureTagsIsMutable();
         tags_.set(index, value);
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -10170,6 +10210,7 @@ public final class Option {
         if (value == null) { throw new NullPointerException(); }
         ensureTagsIsMutable();
         tags_.add(value);
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -10183,6 +10224,7 @@ public final class Option {
         ensureTagsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, tags_);
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -10191,8 +10233,9 @@ public final class Option {
        * @return This builder for chaining.
        */
       public Builder clearTags() {
-        tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000040);
+        tags_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000040);;
         onChanged();
         return this;
       }
@@ -10207,6 +10250,7 @@ public final class Option {
         checkByteStringIsUtf8(value);
         ensureTagsIsMutable();
         tags_.add(value);
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -10453,7 +10497,7 @@ public final class Option {
        * @return This builder for chaining.
        */
       public Builder setQos(int value) {
-        
+
         qos_ = value;
         bitField0_ |= 0x00000200;
         onChanged();
@@ -10612,7 +10656,7 @@ public final class Option {
        * @return This builder for chaining.
        */
       public Builder setReadonly(boolean value) {
-        
+
         readonly_ = value;
         bitField0_ |= 0x00000800;
         onChanged();
@@ -11333,11 +11377,6 @@ public final class Option {
       return new PubSubOptions();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.Option.internal_static_api_PubSubOptions_descriptor;
@@ -11816,11 +11855,13 @@ public final class Option {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.Option.PubSubOptions parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.Option.PubSubOptions parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -12428,7 +12469,7 @@ public final class Option {
        * @return This builder for chaining.
        */
       public Builder setRetry(boolean value) {
-        
+
         retry_ = value;
         bitField0_ |= 0x00000008;
         onChanged();
@@ -12656,7 +12697,7 @@ public final class Option {
        * @return This builder for chaining.
        */
       public Builder setPriority(int value) {
-        
+
         priority_ = value;
         bitField0_ |= 0x00000040;
         onChanged();
@@ -12700,7 +12741,7 @@ public final class Option {
        * @return This builder for chaining.
        */
       public Builder setDisableTopicValidation(boolean value) {
-        
+
         disableTopicValidation_ = value;
         bitField0_ |= 0x00000080;
         onChanged();
@@ -12828,11 +12869,6 @@ public final class Option {
       return new MessageOptions();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.Option.internal_static_api_MessageOptions_descriptor;
@@ -13007,11 +13043,13 @@ public final class Option {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.Option.MessageOptions parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.Option.MessageOptions parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -13611,11 +13649,6 @@ public final class Option {
       return new FieldOptions();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.Option.internal_static_api_FieldOptions_descriptor;
@@ -14398,11 +14431,13 @@ public final class Option {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.Option.FieldOptions parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.Option.FieldOptions parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -14918,7 +14953,7 @@ public final class Option {
        * @return This builder for chaining.
        */
       public Builder setIn(boolean value) {
-        
+
         in_ = value;
         bitField0_ |= 0x00000002;
         onChanged();
@@ -14958,7 +14993,7 @@ public final class Option {
        * @return This builder for chaining.
        */
       public Builder setOut(boolean value) {
-        
+
         out_ = value;
         bitField0_ |= 0x00000004;
         onChanged();
@@ -14998,7 +15033,7 @@ public final class Option {
        * @return This builder for chaining.
        */
       public Builder setRequired(boolean value) {
-        
+
         required_ = value;
         bitField0_ |= 0x00000008;
         onChanged();
@@ -15129,7 +15164,7 @@ public final class Option {
        * @return This builder for chaining.
        */
       public Builder setMinimum(long value) {
-        
+
         minimum_ = value;
         bitField0_ |= 0x00000020;
         onChanged();
@@ -15173,7 +15208,7 @@ public final class Option {
        * @return This builder for chaining.
        */
       public Builder setExclusiveMinimum(boolean value) {
-        
+
         exclusiveMinimum_ = value;
         bitField0_ |= 0x00000040;
         onChanged();
@@ -15213,7 +15248,7 @@ public final class Option {
        * @return This builder for chaining.
        */
       public Builder setMaximum(long value) {
-        
+
         maximum_ = value;
         bitField0_ |= 0x00000080;
         onChanged();
@@ -15253,7 +15288,7 @@ public final class Option {
        * @return This builder for chaining.
        */
       public Builder setExclusiveMaximum(boolean value) {
-        
+
         exclusiveMaximum_ = value;
         bitField0_ |= 0x00000100;
         onChanged();
@@ -15293,7 +15328,7 @@ public final class Option {
        * @return This builder for chaining.
        */
       public Builder setMultipleOf(long value) {
-        
+
         multipleOf_ = value;
         bitField0_ |= 0x00000200;
         onChanged();
@@ -15333,7 +15368,7 @@ public final class Option {
        * @return This builder for chaining.
        */
       public Builder setMaxLength(int value) {
-        
+
         maxLength_ = value;
         bitField0_ |= 0x00000400;
         onChanged();
@@ -15373,7 +15408,7 @@ public final class Option {
        * @return This builder for chaining.
        */
       public Builder setMinLength(int value) {
-        
+
         minLength_ = value;
         bitField0_ |= 0x00000800;
         onChanged();
@@ -15516,7 +15551,7 @@ public final class Option {
        * @return This builder for chaining.
        */
       public Builder setMaxItems(int value) {
-        
+
         maxItems_ = value;
         bitField0_ |= 0x00002000;
         onChanged();
@@ -15556,7 +15591,7 @@ public final class Option {
        * @return This builder for chaining.
        */
       public Builder setMinItems(int value) {
-        
+
         minItems_ = value;
         bitField0_ |= 0x00004000;
         onChanged();
@@ -15596,7 +15631,7 @@ public final class Option {
        * @return This builder for chaining.
        */
       public Builder setUniqueItems(boolean value) {
-        
+
         uniqueItems_ = value;
         bitField0_ |= 0x00008000;
         onChanged();
@@ -15860,25 +15895,25 @@ public final class Option {
       "imumB\n\n\010_maximumB\023\n\021_exclusiveMaximumB\r\n" +
       "\013_multipleOfB\014\n\n_maxLengthB\014\n\n_minLength" +
       "B\n\n\010_patternB\013\n\t_maxItemsB\013\n\t_minItemsB\016" +
-      "\n\014_uniqueItems*\257\001\n\022AuthenticationRole\022\022\n" +
+      "\n\014_uniqueItems*\305\001\n\022AuthenticationRole\022\022\n" +
       "\016AUTH_ROLE_NONE\020\000\022\025\n\021AUTH_ROLE_ACCOUNT\020\001" +
       "\022\024\n\020AUTH_ROLE_DEVICE\020\002\022\025\n\021AUTH_ROLE_SERV" +
       "ICE\020\004\022\026\n\022AUTH_ROLE_EXTERNAL\020\010\022\024\n\020AUTH_RO" +
-      "LE_TENANT\020\020\022\023\n\017AUTH_ROLE_ADMIN\020 *3\n\013Payl" +
-      "oadType\022\020\n\014JSON_PAYLOAD\020\000\022\022\n\016BINARY_PAYL" +
-      "OAD\020\001:A\n\004info\022\034.google.protobuf.FileOpti" +
-      "ons\030\347\227\003 \001(\0132\020.api.InfoOptions\210\001\001:J\n\007serv" +
-      "ice\022\037.google.protobuf.ServiceOptions\030\347\227\003" +
-      " \001(\0132\023.api.ServiceOptions\210\001\001:G\n\006method\022\036" +
-      ".google.protobuf.MethodOptions\030\347\227\003 \001(\0132\022" +
-      ".api.MethodOptions\210\001\001:H\n\007pub_sub\022\036.googl" +
-      "e.protobuf.MethodOptions\030\350\227\003 \001(\0132\022.api.P" +
-      "ubSubOptions\210\001\001:L\n\tcomponent\022\037.google.pr" +
-      "otobuf.MessageOptions\030\346\227\003 \001(\0132\023.api.Mess" +
-      "ageOptions\210\001\001:E\n\006schema\022\035.google.protobu" +
-      "f.FieldOptions\030\347\227\003 \001(\0132\021.api.FieldOption" +
-      "s\210\001\001B\036\n\023com.teneasyChat.apiZ\007wcs/apib\006pr" +
-      "oto3"
+      "LE_TENANT\020\020\022\023\n\017AUTH_ROLE_ADMIN\020 \022\024\n\020AUTH" +
+      "_ROLE_PUBLIC\020@*3\n\013PayloadType\022\020\n\014JSON_PA" +
+      "YLOAD\020\000\022\022\n\016BINARY_PAYLOAD\020\001:A\n\004info\022\034.go" +
+      "ogle.protobuf.FileOptions\030\347\227\003 \001(\0132\020.api." +
+      "InfoOptions\210\001\001:J\n\007service\022\037.google.proto" +
+      "buf.ServiceOptions\030\347\227\003 \001(\0132\023.api.Service" +
+      "Options\210\001\001:G\n\006method\022\036.google.protobuf.M" +
+      "ethodOptions\030\347\227\003 \001(\0132\022.api.MethodOptions" +
+      "\210\001\001:H\n\007pub_sub\022\036.google.protobuf.MethodO" +
+      "ptions\030\350\227\003 \001(\0132\022.api.PubSubOptions\210\001\001:L\n" +
+      "\tcomponent\022\037.google.protobuf.MessageOpti" +
+      "ons\030\346\227\003 \001(\0132\023.api.MessageOptions\210\001\001:E\n\006s" +
+      "chema\022\035.google.protobuf.FieldOptions\030\347\227\003" +
+      " \001(\0132\021.api.FieldOptions\210\001\001B\036\n\023com.teneas" +
+      "yChat.apiZ\007wcs/apib\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

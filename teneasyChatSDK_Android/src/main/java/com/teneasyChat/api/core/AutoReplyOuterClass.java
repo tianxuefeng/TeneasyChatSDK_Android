@@ -189,11 +189,6 @@ public final class AutoReplyOuterClass {
       return new AutoReplyTenantResponse();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.core.AutoReplyOuterClass.internal_static_api_core_AutoReplyTenantResponse_descriptor;
@@ -359,11 +354,13 @@ public final class AutoReplyOuterClass {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.core.AutoReplyOuterClass.AutoReplyTenantResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.core.AutoReplyOuterClass.AutoReplyTenantResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1007,11 +1004,6 @@ public final class AutoReplyOuterClass {
       return new AutoReplyWorkerRequest();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.core.AutoReplyOuterClass.internal_static_api_core_AutoReplyWorkerRequest_descriptor;
@@ -1228,11 +1220,13 @@ public final class AutoReplyOuterClass {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.core.AutoReplyOuterClass.AutoReplyWorkerRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.core.AutoReplyOuterClass.AutoReplyWorkerRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1610,7 +1604,7 @@ public final class AutoReplyOuterClass {
        */
       public Builder setWorkerId(
           int index, int value) {
-        
+
         ensureWorkerIdIsMutable();
         workerId_.setInt(index, value);
         onChanged();
@@ -1626,7 +1620,7 @@ public final class AutoReplyOuterClass {
        * @return This builder for chaining.
        */
       public Builder addWorkerId(int value) {
-        
+
         ensureWorkerIdIsMutable();
         workerId_.addInt(value);
         onChanged();
@@ -1827,11 +1821,6 @@ com.teneasyChat.api.common.CReply.AutoReplyItem defaultValue);
       return new AutoReplyWorkerResponse();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.core.AutoReplyOuterClass.internal_static_api_core_AutoReplyWorkerResponse_descriptor;
@@ -1919,7 +1908,7 @@ com.teneasyChat.api.common.CReply.AutoReplyItem defaultValue);
     @java.lang.Override
     public boolean containsItems(
         int key) {
-      
+
       return internalGetItems().getMap().containsKey(key);
     }
     /**
@@ -1954,7 +1943,7 @@ com.teneasyChat.api.common.CReply.AutoReplyItem getItemsOrDefault(
         int key,
         /* nullable */
 com.teneasyChat.api.common.CReply.AutoReplyItem defaultValue) {
-      
+
       java.util.Map<java.lang.Integer, com.teneasyChat.api.common.CReply.AutoReplyItem> map =
           internalGetItems().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -1969,7 +1958,7 @@ com.teneasyChat.api.common.CReply.AutoReplyItem defaultValue) {
     @java.lang.Override
     public com.teneasyChat.api.common.CReply.AutoReplyItem getItemsOrThrow(
         int key) {
-      
+
       java.util.Map<java.lang.Integer, com.teneasyChat.api.common.CReply.AutoReplyItem> map =
           internalGetItems().getMap();
       if (!map.containsKey(key)) {
@@ -2108,11 +2097,13 @@ com.teneasyChat.api.common.CReply.AutoReplyItem defaultValue) {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.core.AutoReplyOuterClass.AutoReplyWorkerResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.core.AutoReplyOuterClass.AutoReplyWorkerResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2470,7 +2461,7 @@ com.teneasyChat.api.common.CReply.AutoReplyItem defaultValue) {
       @java.lang.Override
       public boolean containsItems(
           int key) {
-        
+
         return internalGetItems().getMap().containsKey(key);
       }
       /**
@@ -2505,7 +2496,7 @@ com.teneasyChat.api.common.CReply.AutoReplyItem getItemsOrDefault(
           int key,
           /* nullable */
 com.teneasyChat.api.common.CReply.AutoReplyItem defaultValue) {
-        
+
         java.util.Map<java.lang.Integer, com.teneasyChat.api.common.CReply.AutoReplyItem> map =
             internalGetItems().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -2520,7 +2511,7 @@ com.teneasyChat.api.common.CReply.AutoReplyItem defaultValue) {
       @java.lang.Override
       public com.teneasyChat.api.common.CReply.AutoReplyItem getItemsOrThrow(
           int key) {
-        
+
         java.util.Map<java.lang.Integer, com.teneasyChat.api.common.CReply.AutoReplyItem> map =
             internalGetItems().getMap();
         if (!map.containsKey(key)) {
@@ -2543,7 +2534,7 @@ com.teneasyChat.api.common.CReply.AutoReplyItem defaultValue) {
        */
       public Builder removeItems(
           int key) {
-        
+
         internalGetMutableItems().getMutableMap()
             .remove(key);
         return this;
@@ -2567,7 +2558,7 @@ com.teneasyChat.api.common.CReply.AutoReplyItem defaultValue) {
       public Builder putItems(
           int key,
           com.teneasyChat.api.common.CReply.AutoReplyItem value) {
-        
+
         if (value == null) { throw new NullPointerException("map value"); }
         internalGetMutableItems().getMutableMap()
             .put(key, value);
@@ -2727,11 +2718,6 @@ com.teneasyChat.api.common.CReply.AutoReplyItem defaultValue) {
       return new AutoReplyCreateRequest();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.core.AutoReplyOuterClass.internal_static_api_core_AutoReplyCreateRequest_descriptor;
@@ -2954,11 +2940,13 @@ com.teneasyChat.api.common.CReply.AutoReplyItem defaultValue) {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.core.AutoReplyOuterClass.AutoReplyCreateRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.core.AutoReplyOuterClass.AutoReplyCreateRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3390,7 +3378,7 @@ com.teneasyChat.api.common.CReply.AutoReplyItem defaultValue) {
        */
       public Builder setWorkerId(
           int index, int value) {
-        
+
         ensureWorkerIdIsMutable();
         workerId_.setInt(index, value);
         onChanged();
@@ -3406,7 +3394,7 @@ com.teneasyChat.api.common.CReply.AutoReplyItem defaultValue) {
        * @return This builder for chaining.
        */
       public Builder addWorkerId(int value) {
-        
+
         ensureWorkerIdIsMutable();
         workerId_.addInt(value);
         onChanged();
@@ -3539,11 +3527,6 @@ com.teneasyChat.api.common.CReply.AutoReplyItem defaultValue) {
       return new AutoReplyCreateResponse();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.core.AutoReplyOuterClass.internal_static_api_core_AutoReplyCreateResponse_descriptor;
@@ -3678,11 +3661,13 @@ com.teneasyChat.api.common.CReply.AutoReplyItem defaultValue) {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.core.AutoReplyOuterClass.AutoReplyCreateResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.core.AutoReplyOuterClass.AutoReplyCreateResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3907,7 +3892,7 @@ com.teneasyChat.api.common.CReply.AutoReplyItem defaultValue) {
        * @return This builder for chaining.
        */
       public Builder setId(long value) {
-        
+
         id_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -4023,11 +4008,6 @@ com.teneasyChat.api.common.CReply.AutoReplyItem defaultValue) {
       return new AutoReplyDeleteRequest();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.core.AutoReplyOuterClass.internal_static_api_core_AutoReplyDeleteRequest_descriptor;
@@ -4162,11 +4142,13 @@ com.teneasyChat.api.common.CReply.AutoReplyItem defaultValue) {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.core.AutoReplyOuterClass.AutoReplyDeleteRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.core.AutoReplyOuterClass.AutoReplyDeleteRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4395,7 +4377,7 @@ com.teneasyChat.api.common.CReply.AutoReplyItem defaultValue) {
        * @return This builder for chaining.
        */
       public Builder setId(long value) {
-        
+
         id_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -4550,11 +4532,6 @@ com.teneasyChat.api.common.CReply.AutoReplyItem defaultValue) {
       return new AutoReplyUpdateRequest();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.core.AutoReplyOuterClass.internal_static_api_core_AutoReplyUpdateRequest_descriptor;
@@ -4777,11 +4754,13 @@ com.teneasyChat.api.common.CReply.AutoReplyItem defaultValue) {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.core.AutoReplyOuterClass.AutoReplyUpdateRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.core.AutoReplyOuterClass.AutoReplyUpdateRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -5213,7 +5192,7 @@ com.teneasyChat.api.common.CReply.AutoReplyItem defaultValue) {
        */
       public Builder setWorkerId(
           int index, int value) {
-        
+
         ensureWorkerIdIsMutable();
         workerId_.setInt(index, value);
         onChanged();
@@ -5229,7 +5208,7 @@ com.teneasyChat.api.common.CReply.AutoReplyItem defaultValue) {
        * @return This builder for chaining.
        */
       public Builder addWorkerId(int value) {
-        
+
         ensureWorkerIdIsMutable();
         workerId_.addInt(value);
         onChanged();
@@ -5423,7 +5402,7 @@ com.teneasyChat.api.common.CReply.AutoReplyItem defaultValue) {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.teneasyChat.api.Option.getDescriptor(),
           com.google.protobuf.EmptyProto.getDescriptor(),
-          com.teneasyChat.validate.Validate.getDescriptor(),
+          io.envoyproxy.pgv.validate.Validate.getDescriptor(),
           com.teneasyChat.api.common.CReply.getDescriptor(),
         });
     internal_static_api_core_AutoReplyTenantResponse_descriptor =
@@ -5479,12 +5458,12 @@ com.teneasyChat.api.common.CReply.AutoReplyItem defaultValue) {
     registry.add(com.teneasyChat.api.Option.info);
     registry.add(com.teneasyChat.api.Option.method);
     registry.add(com.teneasyChat.api.Option.service);
-    registry.add(com.teneasyChat.validate.Validate.rules);
+    registry.add(io.envoyproxy.pgv.validate.Validate.rules);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.teneasyChat.api.Option.getDescriptor();
     com.google.protobuf.EmptyProto.getDescriptor();
-    com.teneasyChat.validate.Validate.getDescriptor();
+    io.envoyproxy.pgv.validate.Validate.getDescriptor();
     com.teneasyChat.api.common.CReply.getDescriptor();
   }
 

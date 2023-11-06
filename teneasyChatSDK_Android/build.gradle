@@ -66,11 +66,10 @@ dependencies {
     implementation 'org.java-websocket:Java-WebSocket:1.5.3'
     implementation 'org.jetbrains.kotlinx:kotlinx-serialization-json:1.2.1'
     //implementation 'com.google.protobuf:protobuf-kotlin:3.21.12'
-//    implementation 'com.google.protobuf:protobuf-lite:3.0.0'
 //    implementation 'com.google.protobuf:protobuf-javalite:3.21.12'
-    implementation 'com.google.protobuf:protobuf-java:3.21.12'
+    implementation 'com.google.protobuf:protobuf-java:3.22.2'
+    //implementation 'com.google.protobuf:protobuf-javalite:3.14.0'
     implementation("org.greenrobot:eventbus:3.3.1")
-
 }
 
 /*

@@ -50,11 +50,6 @@ public final class FrontOuterClass {
       return new AssignWorkerRequest();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.core.FrontOuterClass.internal_static_api_core_AssignWorkerRequest_descriptor;
@@ -192,11 +187,13 @@ public final class FrontOuterClass {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.core.FrontOuterClass.AssignWorkerRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.core.FrontOuterClass.AssignWorkerRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -429,7 +426,7 @@ public final class FrontOuterClass {
        * @return This builder for chaining.
        */
       public Builder setConsultId(int value) {
-        
+
         consultId_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -591,11 +588,6 @@ public final class FrontOuterClass {
       return new AssignWorkerResponse();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.core.FrontOuterClass.internal_static_api_core_AssignWorkerResponse_descriptor;
@@ -847,11 +839,13 @@ public final class FrontOuterClass {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.core.FrontOuterClass.AssignWorkerResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.core.FrontOuterClass.AssignWorkerResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1296,7 +1290,7 @@ public final class FrontOuterClass {
        * @return This builder for chaining.
        */
       public Builder setWorkerId(int value) {
-        
+
         workerId_ = value;
         bitField0_ |= 0x00000004;
         onChanged();
@@ -1566,11 +1560,6 @@ public final class FrontOuterClass {
       return new QueryEntranceResponse();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.core.FrontOuterClass.internal_static_api_core_QueryEntranceResponse_descriptor;
@@ -2067,11 +2056,13 @@ public final class FrontOuterClass {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.core.FrontOuterClass.QueryEntranceResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.core.FrontOuterClass.QueryEntranceResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2801,7 +2792,7 @@ public final class FrontOuterClass {
        * @return This builder for chaining.
        */
       public Builder setDefaultConsultId(int value) {
-        
+
         defaultConsultId_ = value;
         bitField0_ |= 0x00000010;
         onChanged();
@@ -3330,11 +3321,6 @@ public final class FrontOuterClass {
       return new QueryAutoReplyResponse();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.core.FrontOuterClass.internal_static_api_core_QueryAutoReplyResponse_descriptor;
@@ -3488,11 +3474,13 @@ public final class FrontOuterClass {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.core.FrontOuterClass.QueryAutoReplyResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.core.FrontOuterClass.QueryAutoReplyResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3970,11 +3958,6 @@ public final class FrontOuterClass {
       return new BindWorkerResponse();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.core.FrontOuterClass.internal_static_api_core_BindWorkerResponse_descriptor;
@@ -4226,11 +4209,13 @@ public final class FrontOuterClass {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.core.FrontOuterClass.BindWorkerResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.core.FrontOuterClass.BindWorkerResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4675,7 +4660,7 @@ public final class FrontOuterClass {
        * @return This builder for chaining.
        */
       public Builder setWorkerId(int value) {
-        
+
         workerId_ = value;
         bitField0_ |= 0x00000004;
         onChanged();
@@ -4837,11 +4822,6 @@ public final class FrontOuterClass {
       return new ConsultItem();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.core.FrontOuterClass.internal_static_api_core_ConsultItem_descriptor;
@@ -5093,11 +5073,13 @@ public final class FrontOuterClass {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.core.FrontOuterClass.ConsultItem parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.core.FrontOuterClass.ConsultItem parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -5358,7 +5340,7 @@ public final class FrontOuterClass {
        * @return This builder for chaining.
        */
       public Builder setConsultId(int value) {
-        
+
         consultId_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -5682,11 +5664,6 @@ public final class FrontOuterClass {
       return new CreateAnonUserRequest();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.core.FrontOuterClass.internal_static_api_core_CreateAnonUserRequest_descriptor;
@@ -5891,11 +5868,13 @@ public final class FrontOuterClass {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.core.FrontOuterClass.CreateAnonUserRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.core.FrontOuterClass.CreateAnonUserRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -6151,7 +6130,7 @@ public final class FrontOuterClass {
        * @return This builder for chaining.
        */
       public Builder setTenantId(int value) {
-        
+
         tenantId_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -6183,7 +6162,7 @@ public final class FrontOuterClass {
        * @return This builder for chaining.
        */
       public Builder setEntranceId(int value) {
-        
+
         entranceId_ = value;
         bitField0_ |= 0x00000002;
         onChanged();
@@ -6400,11 +6379,6 @@ public final class FrontOuterClass {
       return new CreateAnonUserResponse();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.core.FrontOuterClass.internal_static_api_core_CreateAnonUserResponse_descriptor;
@@ -6663,11 +6637,13 @@ public final class FrontOuterClass {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.core.FrontOuterClass.CreateAnonUserResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.core.FrontOuterClass.CreateAnonUserResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -7222,11 +7198,6 @@ public final class FrontOuterClass {
       return new CustomerDataRequest();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.core.FrontOuterClass.internal_static_api_core_CustomerDataRequest_descriptor;
@@ -7365,11 +7336,13 @@ public final class FrontOuterClass {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.core.FrontOuterClass.CustomerDataRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.core.FrontOuterClass.CustomerDataRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -7602,7 +7575,7 @@ public final class FrontOuterClass {
        * @return This builder for chaining.
        */
       public Builder setChatId(long value) {
-        
+
         chatId_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -7875,11 +7848,6 @@ public final class FrontOuterClass {
       return new CustomerDataResponse();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.core.FrontOuterClass.internal_static_api_core_CustomerDataResponse_descriptor;
@@ -8384,11 +8352,13 @@ public final class FrontOuterClass {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.core.FrontOuterClass.CustomerDataResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.core.FrontOuterClass.CustomerDataResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -9565,11 +9535,6 @@ public final class FrontOuterClass {
       return new QueryWorkerRequest();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.core.FrontOuterClass.internal_static_api_core_QueryWorkerRequest_descriptor;
@@ -9703,11 +9668,13 @@ public final class FrontOuterClass {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.core.FrontOuterClass.QueryWorkerRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.core.FrontOuterClass.QueryWorkerRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -9932,7 +9899,7 @@ public final class FrontOuterClass {
        * @return This builder for chaining.
        */
       public Builder setWorkerId(int value) {
-        
+
         workerId_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -10064,11 +10031,6 @@ public final class FrontOuterClass {
       return new QueryWorkerResponse();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.core.FrontOuterClass.internal_static_api_core_QueryWorkerResponse_descriptor;
@@ -10278,11 +10240,13 @@ public final class FrontOuterClass {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.core.FrontOuterClass.QueryWorkerResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.core.FrontOuterClass.QueryWorkerResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -10759,11 +10723,6 @@ public final class FrontOuterClass {
       return new QueryChatRequest();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.core.FrontOuterClass.internal_static_api_core_QueryChatRequest_descriptor;
@@ -10932,11 +10891,13 @@ public final class FrontOuterClass {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.core.FrontOuterClass.QueryChatRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.core.FrontOuterClass.QueryChatRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -11209,7 +11170,7 @@ public final class FrontOuterClass {
        */
       public Builder setChatId(
           int index, long value) {
-        
+
         ensureChatIdIsMutable();
         chatId_.setLong(index, value);
         onChanged();
@@ -11221,7 +11182,7 @@ public final class FrontOuterClass {
        * @return This builder for chaining.
        */
       public Builder addChatId(long value) {
-        
+
         ensureChatIdIsMutable();
         chatId_.addLong(value);
         onChanged();
@@ -11365,11 +11326,6 @@ public final class FrontOuterClass {
       return new QueryChatResponse();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.core.FrontOuterClass.internal_static_api_core_QueryChatResponse_descriptor;
@@ -11535,11 +11491,13 @@ public final class FrontOuterClass {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.core.FrontOuterClass.QueryChatResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.core.FrontOuterClass.QueryChatResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -12157,11 +12115,6 @@ public final class FrontOuterClass {
       return new UpdateUserAppealRequest();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.core.FrontOuterClass.internal_static_api_core_UpdateUserAppealRequest_descriptor;
@@ -12394,11 +12347,13 @@ public final class FrontOuterClass {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.core.FrontOuterClass.UpdateUserAppealRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.core.FrontOuterClass.UpdateUserAppealRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -12651,7 +12606,7 @@ public final class FrontOuterClass {
        * @return This builder for chaining.
        */
       public Builder setChatId(long value) {
-        
+
         chatId_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -12907,11 +12862,6 @@ public final class FrontOuterClass {
       return new PingPongRequest();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.core.FrontOuterClass.internal_static_api_core_PingPongRequest_descriptor;
@@ -13046,11 +12996,13 @@ public final class FrontOuterClass {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.core.FrontOuterClass.PingPongRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.core.FrontOuterClass.PingPongRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -13275,7 +13227,7 @@ public final class FrontOuterClass {
        * @return This builder for chaining.
        */
       public Builder setLocal(long value) {
-        
+
         local_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -13387,11 +13339,6 @@ public final class FrontOuterClass {
       return new PingPongResponse();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.core.FrontOuterClass.internal_static_api_core_PingPongResponse_descriptor;
@@ -13526,11 +13473,13 @@ public final class FrontOuterClass {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.core.FrontOuterClass.PingPongResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.core.FrontOuterClass.PingPongResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -13755,7 +13704,7 @@ public final class FrontOuterClass {
        * @return This builder for chaining.
        */
       public Builder setLocal(long value) {
-        
+
         local_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -13867,11 +13816,6 @@ public final class FrontOuterClass {
       return new ReplyRequest();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.core.FrontOuterClass.internal_static_api_core_ReplyRequest_descriptor;
@@ -14006,11 +13950,13 @@ public final class FrontOuterClass {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.core.FrontOuterClass.ReplyRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.core.FrontOuterClass.ReplyRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -14235,7 +14181,7 @@ public final class FrontOuterClass {
        * @return This builder for chaining.
        */
       public Builder setMsgId(long value) {
-        
+
         msgId_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -14453,7 +14399,7 @@ public final class FrontOuterClass {
       "r_appeal\030\003 \001(\t\" \n\017PingPongRequest\022\r\n\005loc" +
       "al\030\001 \001(\003\"!\n\020PingPongResponse\022\r\n\005local\030\001 " +
       "\001(\003\"\'\n\014ReplyRequest\022\027\n\006msg_id\030\001 \001(\003B\007\372B\004" +
-      "\"\002 \0002\325\t\n\005Front\022h\n\014CustomerInfo\022\035.api.cor" +
+      "\"\002 \0002\321\t\n\005Front\022h\n\014CustomerInfo\022\035.api.cor" +
       "e.CustomerDataRequest\032\036.api.core.Custome" +
       "rDataResponse\"\031\272\276\031\025\010\211\007\030\001\322\014\rcustomer-info" +
       "\022h\n\014AssignWorker\022\035.api.core.AssignWorker" +
@@ -14469,31 +14415,30 @@ public final class FrontOuterClass {
       "-worker\022\202\001\n\016CreateAnonUser\022\037.api.core.Cr" +
       "eateAnonUserRequest\032 .api.core.CreateAno" +
       "nUserResponse\"-\272\276\031)\010\211\007\030\001\262\006\n2022-12-31\312\014\001" +
-      "\004\322\014\020create-anon-user\022u\n\013QueryWorker\022\034.ap" +
+      "\004\322\014\020create-anon-user\022q\n\013QueryWorker\022\034.ap" +
       "i.core.QueryWorkerRequest\032\035.api.core.Que" +
-      "ryWorkerResponse\")\272\276\031%\010\212\007\030\001\262\006\n2023-01-05" +
-      "\312\014\001\004\322\014\014query-worker\022n\n\tQueryChat\022\032.api.c" +
-      "ore.QueryChatRequest\032\033.api.core.QueryCha" +
-      "tResponse\"(\272\276\031$\010\213\007\030\001\262\006\n2023-01-05\312\014\002\004\020\322\014" +
-      "\nquery-chat\022\177\n\020UpdateUserAppeal\022!.api.co" +
-      "re.UpdateUserAppealRequest\032\026.google.prot" +
-      "obuf.Empty\"0\272\276\031,\010\213\007\030\001\262\006\n2023-01-05\312\014\002\004\020\322" +
-      "\014\022update-user-appeal\022i\n\010PingPong\022\031.api.c" +
-      "ore.PingPongRequest\032\032.api.core.PingPongR" +
-      "esponse\"&\272\276\031\"\010\214\007\030\001\262\006\n2023-02-08\312\014\001\002\322\014\tpi" +
-      "ng-pong\022Z\n\010ReplyPls\022\026.api.core.ReplyRequ" +
-      "est\032\026.google.protobuf.Empty\"\036\272\276\031\032\010\215\007\030\001\262\006" +
-      "\n2023-02-15\322\014\005reply\032\027\272\276\031\023\272\006\005front\312\014\002\001\004\322\014" +
-      "\003apiBF\n\030com.teneasyChat.api.coreZ\021wcs/ap" +
-      "i/core;core\272\276\031\025\242\006\005mango\262\006\n2022-12-12b\006pr" +
-      "oto3"
+      "ryWorkerResponse\"%\272\276\031!\010\212\007\030\001\262\006\n2023-01-05" +
+      "\322\014\014query-worker\022n\n\tQueryChat\022\032.api.core." +
+      "QueryChatRequest\032\033.api.core.QueryChatRes" +
+      "ponse\"(\272\276\031$\010\213\007\030\001\262\006\n2023-01-05\312\014\002\004\020\322\014\nque" +
+      "ry-chat\022\177\n\020UpdateUserAppeal\022!.api.core.U" +
+      "pdateUserAppealRequest\032\026.google.protobuf" +
+      ".Empty\"0\272\276\031,\010\213\007\030\001\262\006\n2023-01-05\312\014\002\004\020\322\014\022up" +
+      "date-user-appeal\022i\n\010PingPong\022\031.api.core." +
+      "PingPongRequest\032\032.api.core.PingPongRespo" +
+      "nse\"&\272\276\031\"\010\214\007\030\001\262\006\n2023-02-08\312\014\001\002\322\014\tping-p" +
+      "ong\022Z\n\010ReplyPls\022\026.api.core.ReplyRequest\032" +
+      "\026.google.protobuf.Empty\"\036\272\276\031\032\010\215\007\030\001\262\006\n202" +
+      "3-02-15\322\014\005reply\032\027\272\276\031\023\272\006\005front\312\014\002\001\004\322\014\003api" +
+      "BF\n\030com.teneasyChat.api.coreZ\021wcs/api/co" +
+      "re;core\272\276\031\025\242\006\005mango\262\006\n2022-12-12b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.teneasyChat.api.Option.getDescriptor(),
           com.google.protobuf.EmptyProto.getDescriptor(),
-          com.teneasyChat.validate.Validate.getDescriptor(),
+          io.envoyproxy.pgv.validate.Validate.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
           com.teneasyChat.api.common.CEntrance.getDescriptor(),
           com.teneasyChat.api.common.CReply.getDescriptor(),
@@ -14612,12 +14557,12 @@ public final class FrontOuterClass {
     registry.add(com.teneasyChat.api.Option.info);
     registry.add(com.teneasyChat.api.Option.method);
     registry.add(com.teneasyChat.api.Option.service);
-    registry.add(com.teneasyChat.validate.Validate.rules);
+    registry.add(io.envoyproxy.pgv.validate.Validate.rules);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.teneasyChat.api.Option.getDescriptor();
     com.google.protobuf.EmptyProto.getDescriptor();
-    com.teneasyChat.validate.Validate.getDescriptor();
+    io.envoyproxy.pgv.validate.Validate.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
     com.teneasyChat.api.common.CEntrance.getDescriptor();
     com.teneasyChat.api.common.CReply.getDescriptor();

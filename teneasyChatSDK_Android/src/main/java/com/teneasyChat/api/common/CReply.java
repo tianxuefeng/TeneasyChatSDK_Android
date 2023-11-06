@@ -137,11 +137,6 @@ public final class CReply {
       return new QuickReply();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.common.CReply.internal_static_api_common_QuickReply_descriptor;
@@ -467,11 +462,13 @@ public final class CReply {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.common.CReply.QuickReply parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.common.CReply.QuickReply parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -883,7 +880,7 @@ public final class CReply {
        * @return This builder for chaining.
        */
       public Builder setPriority(int value) {
-        
+
         priority_ = value;
         bitField0_ |= 0x00000002;
         onChanged();
@@ -1466,11 +1463,6 @@ java.lang.String defaultValue);
       return new QuickReplyWorkerStore();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.common.CReply.internal_static_api_common_QuickReplyWorkerStore_descriptor;
@@ -1535,7 +1527,7 @@ java.lang.String defaultValue);
     @java.lang.Override
     public boolean containsQuickReplyId(
         long key) {
-      
+
       return internalGetQuickReplyId().getMap().containsKey(key);
     }
     /**
@@ -1576,7 +1568,7 @@ java.lang.String getQuickReplyIdOrDefault(
         long key,
         /* nullable */
 java.lang.String defaultValue) {
-      
+
       java.util.Map<java.lang.Long, java.lang.String> map =
           internalGetQuickReplyId().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -1594,7 +1586,7 @@ java.lang.String defaultValue) {
     @java.lang.Override
     public java.lang.String getQuickReplyIdOrThrow(
         long key) {
-      
+
       java.util.Map<java.lang.Long, java.lang.String> map =
           internalGetQuickReplyId().getMap();
       if (!map.containsKey(key)) {
@@ -1723,11 +1715,13 @@ java.lang.String defaultValue) {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.common.CReply.QuickReplyWorkerStore parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.common.CReply.QuickReplyWorkerStore parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2003,7 +1997,7 @@ java.lang.String defaultValue) {
       @java.lang.Override
       public boolean containsQuickReplyId(
           long key) {
-        
+
         return internalGetQuickReplyId().getMap().containsKey(key);
       }
       /**
@@ -2044,7 +2038,7 @@ java.lang.String getQuickReplyIdOrDefault(
           long key,
           /* nullable */
 java.lang.String defaultValue) {
-        
+
         java.util.Map<java.lang.Long, java.lang.String> map =
             internalGetQuickReplyId().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -2062,7 +2056,7 @@ java.lang.String defaultValue) {
       @java.lang.Override
       public java.lang.String getQuickReplyIdOrThrow(
           long key) {
-        
+
         java.util.Map<java.lang.Long, java.lang.String> map =
             internalGetQuickReplyId().getMap();
         if (!map.containsKey(key)) {
@@ -2088,7 +2082,7 @@ java.lang.String defaultValue) {
        */
       public Builder removeQuickReplyId(
           long key) {
-        
+
         internalGetMutableQuickReplyId().getMutableMap()
             .remove(key);
         return this;
@@ -2115,7 +2109,7 @@ java.lang.String defaultValue) {
       public Builder putQuickReplyId(
           long key,
           java.lang.String value) {
-        
+
         if (value == null) { throw new NullPointerException("map value"); }
         internalGetMutableQuickReplyId().getMutableMap()
             .put(key, value);
@@ -2293,11 +2287,6 @@ java.lang.String defaultValue);
       return new QuickReplyGroup();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.common.CReply.internal_static_api_common_QuickReplyGroup_descriptor;
@@ -2374,7 +2363,7 @@ java.lang.String defaultValue);
     @java.lang.Override
     public boolean containsQuickReplyId(
         long key) {
-      
+
       return internalGetQuickReplyId().getMap().containsKey(key);
     }
     /**
@@ -2409,7 +2398,7 @@ java.lang.String getQuickReplyIdOrDefault(
         long key,
         /* nullable */
 java.lang.String defaultValue) {
-      
+
       java.util.Map<java.lang.Long, java.lang.String> map =
           internalGetQuickReplyId().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -2424,7 +2413,7 @@ java.lang.String defaultValue) {
     @java.lang.Override
     public java.lang.String getQuickReplyIdOrThrow(
         long key) {
-      
+
       java.util.Map<java.lang.Long, java.lang.String> map =
           internalGetQuickReplyId().getMap();
       if (!map.containsKey(key)) {
@@ -2564,11 +2553,13 @@ java.lang.String defaultValue) {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.common.CReply.QuickReplyGroup parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.common.CReply.QuickReplyGroup parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2840,7 +2831,7 @@ java.lang.String defaultValue) {
        * @return This builder for chaining.
        */
       public Builder setPriority(int value) {
-        
+
         priority_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -2897,7 +2888,7 @@ java.lang.String defaultValue) {
       @java.lang.Override
       public boolean containsQuickReplyId(
           long key) {
-        
+
         return internalGetQuickReplyId().getMap().containsKey(key);
       }
       /**
@@ -2932,7 +2923,7 @@ java.lang.String getQuickReplyIdOrDefault(
           long key,
           /* nullable */
 java.lang.String defaultValue) {
-        
+
         java.util.Map<java.lang.Long, java.lang.String> map =
             internalGetQuickReplyId().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -2947,7 +2938,7 @@ java.lang.String defaultValue) {
       @java.lang.Override
       public java.lang.String getQuickReplyIdOrThrow(
           long key) {
-        
+
         java.util.Map<java.lang.Long, java.lang.String> map =
             internalGetQuickReplyId().getMap();
         if (!map.containsKey(key)) {
@@ -2970,7 +2961,7 @@ java.lang.String defaultValue) {
        */
       public Builder removeQuickReplyId(
           long key) {
-        
+
         internalGetMutableQuickReplyId().getMutableMap()
             .remove(key);
         return this;
@@ -2994,7 +2985,7 @@ java.lang.String defaultValue) {
       public Builder putQuickReplyId(
           long key,
           java.lang.String value) {
-        
+
         if (value == null) { throw new NullPointerException("map value"); }
         internalGetMutableQuickReplyId().getMutableMap()
             .put(key, value);
@@ -3159,11 +3150,6 @@ com.teneasyChat.api.common.CReply.QuickReplyGroup defaultValue);
       return new QuickReplyGroupStore();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.common.CReply.internal_static_api_common_QuickReplyGroupStore_descriptor;
@@ -3404,11 +3390,13 @@ com.teneasyChat.api.common.CReply.QuickReplyGroup defaultValue) {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.common.CReply.QuickReplyGroupStore parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.common.CReply.QuickReplyGroupStore parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3996,11 +3984,6 @@ com.teneasyChat.api.common.CReply.QuickReplyGroup defaultValue) {
       return new QuestionAnswer();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.common.CReply.internal_static_api_common_QuestionAnswer_descriptor;
@@ -4323,11 +4306,13 @@ com.teneasyChat.api.common.CReply.QuickReplyGroup defaultValue) {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.common.CReply.QuestionAnswer parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.common.CReply.QuestionAnswer parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4657,7 +4642,7 @@ com.teneasyChat.api.common.CReply.QuickReplyGroup defaultValue) {
        * @return This builder for chaining.
        */
       public Builder setId(int value) {
-        
+
         id_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -5335,7 +5320,16 @@ com.teneasyChat.api.common.CReply.QuickReplyGroup defaultValue) {
      * 引导文案
      * </pre>
      *
-     * <code>string title = 3 [(.validate.rules) = { ... }</code>
+     * <code>optional string title = 3 [(.validate.rules) = { ... }</code>
+     * @return Whether the title field is set.
+     */
+    boolean hasTitle();
+    /**
+     * <pre>
+     * 引导文案
+     * </pre>
+     *
+     * <code>optional string title = 3 [(.validate.rules) = { ... }</code>
      * @return The title.
      */
     java.lang.String getTitle();
@@ -5344,7 +5338,7 @@ com.teneasyChat.api.common.CReply.QuickReplyGroup defaultValue) {
      * 引导文案
      * </pre>
      *
-     * <code>string title = 3 [(.validate.rules) = { ... }</code>
+     * <code>optional string title = 3 [(.validate.rules) = { ... }</code>
      * @return The bytes for title.
      */
     com.google.protobuf.ByteString
@@ -5495,7 +5489,8 @@ com.teneasyChat.api.common.CReply.QuickReplyGroup defaultValue) {
       title_ = "";
       qa_ = java.util.Collections.emptyList();
       workerId_ = emptyIntList();
-      workerNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      workerNames_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
     }
 
     @java.lang.Override
@@ -5505,11 +5500,6 @@ com.teneasyChat.api.common.CReply.QuickReplyGroup defaultValue) {
       return new AutoReplyItem();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.common.CReply.internal_static_api_common_AutoReplyItem_descriptor;
@@ -5523,6 +5513,7 @@ com.teneasyChat.api.common.CReply.QuickReplyGroup defaultValue) {
               com.teneasyChat.api.common.CReply.AutoReplyItem.class, com.teneasyChat.api.common.CReply.AutoReplyItem.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private long id_ = 0L;
     /**
@@ -5589,7 +5580,19 @@ com.teneasyChat.api.common.CReply.QuickReplyGroup defaultValue) {
      * 引导文案
      * </pre>
      *
-     * <code>string title = 3 [(.validate.rules) = { ... }</code>
+     * <code>optional string title = 3 [(.validate.rules) = { ... }</code>
+     * @return Whether the title field is set.
+     */
+    @java.lang.Override
+    public boolean hasTitle() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * 引导文案
+     * </pre>
+     *
+     * <code>optional string title = 3 [(.validate.rules) = { ... }</code>
      * @return The title.
      */
     @java.lang.Override
@@ -5610,7 +5613,7 @@ com.teneasyChat.api.common.CReply.QuickReplyGroup defaultValue) {
      * 引导文案
      * </pre>
      *
-     * <code>string title = 3 [(.validate.rules) = { ... }</code>
+     * <code>optional string title = 3 [(.validate.rules) = { ... }</code>
      * @return The bytes for title.
      */
     @java.lang.Override
@@ -5747,7 +5750,8 @@ com.teneasyChat.api.common.CReply.QuickReplyGroup defaultValue) {
 
     public static final int WORKER_NAMES_FIELD_NUMBER = 7;
     @SuppressWarnings("serial")
-    private com.google.protobuf.LazyStringList workerNames_;
+    private com.google.protobuf.LazyStringArrayList workerNames_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     /**
      * <pre>
      * 绑定客服名数组
@@ -5818,7 +5822,7 @@ com.teneasyChat.api.common.CReply.QuickReplyGroup defaultValue) {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, title_);
       }
       for (int i = 0; i < qa_.size(); i++) {
@@ -5853,7 +5857,7 @@ com.teneasyChat.api.common.CReply.QuickReplyGroup defaultValue) {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, title_);
       }
       for (int i = 0; i < qa_.size(); i++) {
@@ -5905,8 +5909,11 @@ com.teneasyChat.api.common.CReply.QuickReplyGroup defaultValue) {
           != other.getId()) return false;
       if (!getName()
           .equals(other.getName())) return false;
-      if (!getTitle()
-          .equals(other.getTitle())) return false;
+      if (hasTitle() != other.hasTitle()) return false;
+      if (hasTitle()) {
+        if (!getTitle()
+            .equals(other.getTitle())) return false;
+      }
       if (!getQaList()
           .equals(other.getQaList())) return false;
       if (java.lang.Double.doubleToLongBits(getDelaySec())
@@ -5932,8 +5939,10 @@ com.teneasyChat.api.common.CReply.QuickReplyGroup defaultValue) {
           getId());
       hash = (37 * hash) + NAME_FIELD_NUMBER;
       hash = (53 * hash) + getName().hashCode();
-      hash = (37 * hash) + TITLE_FIELD_NUMBER;
-      hash = (53 * hash) + getTitle().hashCode();
+      if (hasTitle()) {
+        hash = (37 * hash) + TITLE_FIELD_NUMBER;
+        hash = (53 * hash) + getTitle().hashCode();
+      }
       if (getQaCount() > 0) {
         hash = (37 * hash) + QA_FIELD_NUMBER;
         hash = (53 * hash) + getQaList().hashCode();
@@ -5998,11 +6007,13 @@ com.teneasyChat.api.common.CReply.QuickReplyGroup defaultValue) {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.common.CReply.AutoReplyItem parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.common.CReply.AutoReplyItem parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -6094,8 +6105,8 @@ com.teneasyChat.api.common.CReply.QuickReplyGroup defaultValue) {
         bitField0_ = (bitField0_ & ~0x00000008);
         delaySec_ = 0D;
         workerId_ = emptyIntList();
-        workerNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000040);
+        workerNames_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
         return this;
       }
 
@@ -6143,11 +6154,6 @@ com.teneasyChat.api.common.CReply.QuickReplyGroup defaultValue) {
           bitField0_ = (bitField0_ & ~0x00000020);
         }
         result.workerId_ = workerId_;
-        if (((bitField0_ & 0x00000040) != 0)) {
-          workerNames_ = workerNames_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000040);
-        }
-        result.workerNames_ = workerNames_;
       }
 
       private void buildPartial0(com.teneasyChat.api.common.CReply.AutoReplyItem result) {
@@ -6158,12 +6164,19 @@ com.teneasyChat.api.common.CReply.QuickReplyGroup defaultValue) {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.name_ = name_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.title_ = title_;
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.delaySec_ = delaySec_;
         }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          workerNames_.makeImmutable();
+          result.workerNames_ = workerNames_;
+        }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -6218,7 +6231,7 @@ com.teneasyChat.api.common.CReply.QuickReplyGroup defaultValue) {
           bitField0_ |= 0x00000002;
           onChanged();
         }
-        if (!other.getTitle().isEmpty()) {
+        if (other.hasTitle()) {
           title_ = other.title_;
           bitField0_ |= 0x00000004;
           onChanged();
@@ -6265,7 +6278,7 @@ com.teneasyChat.api.common.CReply.QuickReplyGroup defaultValue) {
         if (!other.workerNames_.isEmpty()) {
           if (workerNames_.isEmpty()) {
             workerNames_ = other.workerNames_;
-            bitField0_ = (bitField0_ & ~0x00000040);
+            bitField0_ |= 0x00000040;
           } else {
             ensureWorkerNamesIsMutable();
             workerNames_.addAll(other.workerNames_);
@@ -6385,7 +6398,7 @@ com.teneasyChat.api.common.CReply.QuickReplyGroup defaultValue) {
        * @return This builder for chaining.
        */
       public Builder setId(long value) {
-        
+
         id_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -6500,7 +6513,18 @@ com.teneasyChat.api.common.CReply.QuickReplyGroup defaultValue) {
        * 引导文案
        * </pre>
        *
-       * <code>string title = 3 [(.validate.rules) = { ... }</code>
+       * <code>optional string title = 3 [(.validate.rules) = { ... }</code>
+       * @return Whether the title field is set.
+       */
+      public boolean hasTitle() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * 引导文案
+       * </pre>
+       *
+       * <code>optional string title = 3 [(.validate.rules) = { ... }</code>
        * @return The title.
        */
       public java.lang.String getTitle() {
@@ -6520,7 +6544,7 @@ com.teneasyChat.api.common.CReply.QuickReplyGroup defaultValue) {
        * 引导文案
        * </pre>
        *
-       * <code>string title = 3 [(.validate.rules) = { ... }</code>
+       * <code>optional string title = 3 [(.validate.rules) = { ... }</code>
        * @return The bytes for title.
        */
       public com.google.protobuf.ByteString
@@ -6541,7 +6565,7 @@ com.teneasyChat.api.common.CReply.QuickReplyGroup defaultValue) {
        * 引导文案
        * </pre>
        *
-       * <code>string title = 3 [(.validate.rules) = { ... }</code>
+       * <code>optional string title = 3 [(.validate.rules) = { ... }</code>
        * @param value The title to set.
        * @return This builder for chaining.
        */
@@ -6558,7 +6582,7 @@ com.teneasyChat.api.common.CReply.QuickReplyGroup defaultValue) {
        * 引导文案
        * </pre>
        *
-       * <code>string title = 3 [(.validate.rules) = { ... }</code>
+       * <code>optional string title = 3 [(.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearTitle() {
@@ -6572,7 +6596,7 @@ com.teneasyChat.api.common.CReply.QuickReplyGroup defaultValue) {
        * 引导文案
        * </pre>
        *
-       * <code>string title = 3 [(.validate.rules) = { ... }</code>
+       * <code>optional string title = 3 [(.validate.rules) = { ... }</code>
        * @param value The bytes for title to set.
        * @return This builder for chaining.
        */
@@ -6921,7 +6945,7 @@ com.teneasyChat.api.common.CReply.QuickReplyGroup defaultValue) {
        * @return This builder for chaining.
        */
       public Builder setDelaySec(double value) {
-        
+
         delaySec_ = value;
         bitField0_ |= 0x00000010;
         onChanged();
@@ -6997,7 +7021,7 @@ com.teneasyChat.api.common.CReply.QuickReplyGroup defaultValue) {
        */
       public Builder setWorkerId(
           int index, int value) {
-        
+
         ensureWorkerIdIsMutable();
         workerId_.setInt(index, value);
         onChanged();
@@ -7013,7 +7037,7 @@ com.teneasyChat.api.common.CReply.QuickReplyGroup defaultValue) {
        * @return This builder for chaining.
        */
       public Builder addWorkerId(int value) {
-        
+
         ensureWorkerIdIsMutable();
         workerId_.addInt(value);
         onChanged();
@@ -7051,12 +7075,13 @@ com.teneasyChat.api.common.CReply.QuickReplyGroup defaultValue) {
         return this;
       }
 
-      private com.google.protobuf.LazyStringList workerNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private com.google.protobuf.LazyStringArrayList workerNames_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       private void ensureWorkerNamesIsMutable() {
-        if (!((bitField0_ & 0x00000040) != 0)) {
+        if (!workerNames_.isModifiable()) {
           workerNames_ = new com.google.protobuf.LazyStringArrayList(workerNames_);
-          bitField0_ |= 0x00000040;
-         }
+        }
+        bitField0_ |= 0x00000040;
       }
       /**
        * <pre>
@@ -7068,7 +7093,8 @@ com.teneasyChat.api.common.CReply.QuickReplyGroup defaultValue) {
        */
       public com.google.protobuf.ProtocolStringList
           getWorkerNamesList() {
-        return workerNames_.getUnmodifiableView();
+        workerNames_.makeImmutable();
+        return workerNames_;
       }
       /**
        * <pre>
@@ -7121,6 +7147,7 @@ com.teneasyChat.api.common.CReply.QuickReplyGroup defaultValue) {
         if (value == null) { throw new NullPointerException(); }
         ensureWorkerNamesIsMutable();
         workerNames_.set(index, value);
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -7138,6 +7165,7 @@ com.teneasyChat.api.common.CReply.QuickReplyGroup defaultValue) {
         if (value == null) { throw new NullPointerException(); }
         ensureWorkerNamesIsMutable();
         workerNames_.add(value);
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -7155,6 +7183,7 @@ com.teneasyChat.api.common.CReply.QuickReplyGroup defaultValue) {
         ensureWorkerNamesIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, workerNames_);
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -7167,8 +7196,9 @@ com.teneasyChat.api.common.CReply.QuickReplyGroup defaultValue) {
        * @return This builder for chaining.
        */
       public Builder clearWorkerNames() {
-        workerNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000040);
+        workerNames_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000040);;
         onChanged();
         return this;
       }
@@ -7187,6 +7217,7 @@ com.teneasyChat.api.common.CReply.QuickReplyGroup defaultValue) {
         checkByteStringIsUtf8(value);
         ensureWorkerNamesIsMutable();
         workerNames_.add(value);
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -7330,14 +7361,14 @@ com.teneasyChat.api.common.CReply.QuickReplyGroup defaultValue) {
       "uickReplyGroup:\0028\001\"\203\001\n\016QuestionAnswer\022\n\n" +
       "\002id\030\001 \001(\005\022%\n\010question\030\002 \001(\0132\023.api.common" +
       ".Message\022\017\n\007content\030\003 \001(\t\022-\n\006answer\030\004 \003(" +
-      "\0132\023.api.common.MessageB\010\372B\005\222\001\002\020\n\"\307\001\n\rAut" +
+      "\0132\023.api.common.MessageB\010\372B\005\222\001\002\020\n\"\326\001\n\rAut" +
       "oReplyItem\022\n\n\002id\030\001 \001(\003\022\025\n\004name\030\002 \001(\tB\007\372B" +
-      "\004r\002 \001\022\026\n\005title\030\003 \001(\tB\007\372B\004r\002 \001\022&\n\002qa\030\004 \003(" +
-      "\0132\032.api.common.QuestionAnswer\022*\n\tdelay_s" +
-      "ec\030\005 \001(\001B\027\372B\024\022\022\031\000\000\000\000\000 \214@)\000\000\000\000\000\000\000\000\022\021\n\twor" +
-      "ker_id\030\006 \003(\005\022\024\n\014worker_names\030\007 \003(\tB<\n\032co" +
-      "m.teneasyChat.api.commonZ\025wcs/api/common" +
-      ";common\272\002\006Commonb\006proto3"
+      "\004r\002 \001\022\033\n\005title\030\003 \001(\tB\007\372B\004r\002 \000H\000\210\001\001\022&\n\002qa" +
+      "\030\004 \003(\0132\032.api.common.QuestionAnswer\022*\n\tde" +
+      "lay_sec\030\005 \001(\001B\027\372B\024\022\022\031\000\000\000\000\000 \214@)\000\000\000\000\000\000\000\000\022\021" +
+      "\n\tworker_id\030\006 \003(\005\022\024\n\014worker_names\030\007 \003(\tB" +
+      "\010\n\006_titleB<\n\032com.teneasyChat.api.commonZ" +
+      "\025wcs/api/common;common\272\002\006Commonb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -7345,7 +7376,7 @@ com.teneasyChat.api.common.CReply.QuickReplyGroup defaultValue) {
           com.google.protobuf.TimestampProto.getDescriptor(),
           com.teneasyChat.api.common.CMessage.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
-          com.teneasyChat.validate.Validate.getDescriptor(),
+          io.envoyproxy.pgv.validate.Validate.getDescriptor(),
         });
     internal_static_api_common_QuickReply_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -7400,16 +7431,16 @@ com.teneasyChat.api.common.CReply.QuickReplyGroup defaultValue) {
     internal_static_api_common_AutoReplyItem_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_common_AutoReplyItem_descriptor,
-        new java.lang.String[] { "Id", "Name", "Title", "Qa", "DelaySec", "WorkerId", "WorkerNames", });
+        new java.lang.String[] { "Id", "Name", "Title", "Qa", "DelaySec", "WorkerId", "WorkerNames", "Title", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(com.teneasyChat.validate.Validate.rules);
+    registry.add(io.envoyproxy.pgv.validate.Validate.rules);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.protobuf.TimestampProto.getDescriptor();
     com.teneasyChat.api.common.CMessage.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
-    com.teneasyChat.validate.Validate.getDescriptor();
+    io.envoyproxy.pgv.validate.Validate.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

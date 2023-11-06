@@ -65,11 +65,6 @@ public final class GPubsub {
       return new PubSubMessage();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.gateway.GPubsub.internal_static_gateway_PubSubMessage_descriptor;
@@ -250,11 +245,13 @@ public final class GPubsub {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.gateway.GPubsub.PubSubMessage parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.gateway.GPubsub.PubSubMessage parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -507,7 +504,7 @@ public final class GPubsub {
        * @return This builder for chaining.
        */
       public Builder setTarget(long value) {
-        
+
         target_ = value;
         bitField0_ |= 0x00000001;
         onChanged();

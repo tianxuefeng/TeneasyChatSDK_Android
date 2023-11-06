@@ -14,6 +14,264 @@ public final class GGateway {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
+  /**
+   * Protobuf enum {@code gateway.WorkerChangedReason}
+   */
+  public enum WorkerChangedReason
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>WorkerChangedReasonUnknown = 0;</code>
+     */
+    WorkerChangedReasonUnknown(0),
+    /**
+     * <pre>
+     * 找不到分配的客服
+     * </pre>
+     *
+     * <code>WorkerChangedReasonMissAssignedWorker = 1;</code>
+     */
+    WorkerChangedReasonMissAssignedWorker(1),
+    /**
+     * <pre>
+     * 转接客服
+     * </pre>
+     *
+     * <code>WorkerChangedReasonTransferWorker = 2;</code>
+     */
+    WorkerChangedReasonTransferWorker(2),
+    /**
+     * <pre>
+     * 删除客服引起的会话转移(转移上级)
+     * </pre>
+     *
+     * <code>WorkerChangedReasonWorkerDeleted = 3;</code>
+     */
+    WorkerChangedReasonWorkerDeleted(3),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>WorkerChangedReasonUnknown = 0;</code>
+     */
+    public static final int WorkerChangedReasonUnknown_VALUE = 0;
+    /**
+     * <pre>
+     * 找不到分配的客服
+     * </pre>
+     *
+     * <code>WorkerChangedReasonMissAssignedWorker = 1;</code>
+     */
+    public static final int WorkerChangedReasonMissAssignedWorker_VALUE = 1;
+    /**
+     * <pre>
+     * 转接客服
+     * </pre>
+     *
+     * <code>WorkerChangedReasonTransferWorker = 2;</code>
+     */
+    public static final int WorkerChangedReasonTransferWorker_VALUE = 2;
+    /**
+     * <pre>
+     * 删除客服引起的会话转移(转移上级)
+     * </pre>
+     *
+     * <code>WorkerChangedReasonWorkerDeleted = 3;</code>
+     */
+    public static final int WorkerChangedReasonWorkerDeleted_VALUE = 3;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static WorkerChangedReason valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static WorkerChangedReason forNumber(int value) {
+      switch (value) {
+        case 0: return WorkerChangedReasonUnknown;
+        case 1: return WorkerChangedReasonMissAssignedWorker;
+        case 2: return WorkerChangedReasonTransferWorker;
+        case 3: return WorkerChangedReasonWorkerDeleted;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<WorkerChangedReason>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        WorkerChangedReason> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<WorkerChangedReason>() {
+            public WorkerChangedReason findValueByNumber(int number) {
+              return WorkerChangedReason.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.teneasyChat.gateway.GGateway.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final WorkerChangedReason[] VALUES = values();
+
+    public static WorkerChangedReason valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private WorkerChangedReason(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:gateway.WorkerChangedReason)
+  }
+
+  /**
+   * Protobuf enum {@code gateway.KickReason}
+   */
+  public enum KickReason
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>KickReasonCommon = 0;</code>
+     */
+    KickReasonCommon(0),
+    /**
+     * <code>KickReasonPermChanged = 1;</code>
+     */
+    KickReasonPermChanged(1),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>KickReasonCommon = 0;</code>
+     */
+    public static final int KickReasonCommon_VALUE = 0;
+    /**
+     * <code>KickReasonPermChanged = 1;</code>
+     */
+    public static final int KickReasonPermChanged_VALUE = 1;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static KickReason valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static KickReason forNumber(int value) {
+      switch (value) {
+        case 0: return KickReasonCommon;
+        case 1: return KickReasonPermChanged;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<KickReason>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        KickReason> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<KickReason>() {
+            public KickReason findValueByNumber(int number) {
+              return KickReason.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.teneasyChat.gateway.GGateway.getDescriptor().getEnumTypes().get(1);
+    }
+
+    private static final KickReason[] VALUES = values();
+
+    public static KickReason valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private KickReason(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:gateway.KickReason)
+  }
+
   public interface SCHiOrBuilder extends
       // @@protoc_insertion_point(interface_extends:gateway.SCHi)
       com.google.protobuf.MessageOrBuilder {
@@ -81,11 +339,6 @@ public final class GGateway {
       return new SCHi();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.gateway.GGateway.internal_static_gateway_SCHi_descriptor;
@@ -303,11 +556,13 @@ public final class GGateway {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.gateway.GGateway.SCHi parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.gateway.GGateway.SCHi parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -562,7 +817,7 @@ public final class GGateway {
        * @return This builder for chaining.
        */
       public Builder setId(long value) {
-        
+
         id_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -694,7 +949,7 @@ public final class GGateway {
        * @return This builder for chaining.
        */
       public Builder setWorkerId(int value) {
-        
+
         workerId_ = value;
         bitField0_ |= 0x00000004;
         onChanged();
@@ -850,11 +1105,6 @@ public final class GGateway {
       return new CSForward();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.gateway.GGateway.internal_static_gateway_CSForward_descriptor;
@@ -1135,11 +1385,13 @@ public final class GGateway {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.gateway.GGateway.CSForward parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.gateway.GGateway.CSForward parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1748,11 +2000,6 @@ public final class GGateway {
       return new SCForward();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.gateway.GGateway.internal_static_gateway_SCForward_descriptor;
@@ -1935,11 +2182,13 @@ public final class GGateway {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.gateway.GGateway.SCForward parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.gateway.GGateway.SCForward parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2375,11 +2624,6 @@ public final class GGateway {
       return new CSSendMessage();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.gateway.GGateway.internal_static_gateway_CSSendMessage_descriptor;
@@ -2533,11 +2777,13 @@ public final class GGateway {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.gateway.GGateway.CSSendMessage parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.gateway.GGateway.CSSendMessage parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2971,6 +3217,26 @@ public final class GGateway {
      * <code>.google.protobuf.Timestamp msg_time = 3;</code>
      */
     com.google.protobuf.TimestampOrBuilder getMsgTimeOrBuilder();
+
+    /**
+     * <pre>
+     *错误消息
+     * </pre>
+     *
+     * <code>string err_msg = 4;</code>
+     * @return The errMsg.
+     */
+    java.lang.String getErrMsg();
+    /**
+     * <pre>
+     *错误消息
+     * </pre>
+     *
+     * <code>string err_msg = 4;</code>
+     * @return The bytes for errMsg.
+     */
+    com.google.protobuf.ByteString
+        getErrMsgBytes();
   }
   /**
    * <pre>
@@ -2989,6 +3255,7 @@ public final class GGateway {
       super(builder);
     }
     private SCSendMessage() {
+      errMsg_ = "";
     }
 
     @java.lang.Override
@@ -2998,11 +3265,6 @@ public final class GGateway {
       return new SCSendMessage();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.gateway.GGateway.internal_static_gateway_SCSendMessage_descriptor;
@@ -3064,6 +3326,53 @@ public final class GGateway {
       return msgTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : msgTime_;
     }
 
+    public static final int ERR_MSG_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object errMsg_ = "";
+    /**
+     * <pre>
+     *错误消息
+     * </pre>
+     *
+     * <code>string err_msg = 4;</code>
+     * @return The errMsg.
+     */
+    @java.lang.Override
+    public java.lang.String getErrMsg() {
+      java.lang.Object ref = errMsg_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        errMsg_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     *错误消息
+     * </pre>
+     *
+     * <code>string err_msg = 4;</code>
+     * @return The bytes for errMsg.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getErrMsgBytes() {
+      java.lang.Object ref = errMsg_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        errMsg_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3087,6 +3396,9 @@ public final class GGateway {
       if (msgTime_ != null) {
         output.writeMessage(3, getMsgTime());
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(errMsg_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, errMsg_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -3107,6 +3419,9 @@ public final class GGateway {
       if (msgTime_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getMsgTime());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(errMsg_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, errMsg_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -3132,6 +3447,8 @@ public final class GGateway {
         if (!getMsgTime()
             .equals(other.getMsgTime())) return false;
       }
+      if (!getErrMsg()
+          .equals(other.getErrMsg())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -3153,6 +3470,8 @@ public final class GGateway {
         hash = (37 * hash) + MSG_TIME_FIELD_NUMBER;
         hash = (53 * hash) + getMsgTime().hashCode();
       }
+      hash = (37 * hash) + ERR_MSG_FIELD_NUMBER;
+      hash = (53 * hash) + getErrMsg().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3202,11 +3521,13 @@ public final class GGateway {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.gateway.GGateway.SCSendMessage parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.gateway.GGateway.SCSendMessage parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3293,6 +3614,7 @@ public final class GGateway {
           msgTimeBuilder_.dispose();
           msgTimeBuilder_ = null;
         }
+        errMsg_ = "";
         return this;
       }
 
@@ -3336,6 +3658,9 @@ public final class GGateway {
           result.msgTime_ = msgTimeBuilder_ == null
               ? msgTime_
               : msgTimeBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.errMsg_ = errMsg_;
         }
       }
 
@@ -3392,6 +3717,11 @@ public final class GGateway {
         if (other.hasMsgTime()) {
           mergeMsgTime(other.getMsgTime());
         }
+        if (!other.getErrMsg().isEmpty()) {
+          errMsg_ = other.errMsg_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -3435,6 +3765,11 @@ public final class GGateway {
                 bitField0_ |= 0x00000004;
                 break;
               } // case 26
+              case 34: {
+                errMsg_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -3467,7 +3802,7 @@ public final class GGateway {
        * @return This builder for chaining.
        */
       public Builder setChatId(long value) {
-        
+
         chatId_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -3499,7 +3834,7 @@ public final class GGateway {
        * @return This builder for chaining.
        */
       public Builder setMsgId(long value) {
-        
+
         msgId_ = value;
         bitField0_ |= 0x00000002;
         onChanged();
@@ -3634,6 +3969,98 @@ public final class GGateway {
         }
         return msgTimeBuilder_;
       }
+
+      private java.lang.Object errMsg_ = "";
+      /**
+       * <pre>
+       *错误消息
+       * </pre>
+       *
+       * <code>string err_msg = 4;</code>
+       * @return The errMsg.
+       */
+      public java.lang.String getErrMsg() {
+        java.lang.Object ref = errMsg_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          errMsg_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       *错误消息
+       * </pre>
+       *
+       * <code>string err_msg = 4;</code>
+       * @return The bytes for errMsg.
+       */
+      public com.google.protobuf.ByteString
+          getErrMsgBytes() {
+        java.lang.Object ref = errMsg_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          errMsg_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       *错误消息
+       * </pre>
+       *
+       * <code>string err_msg = 4;</code>
+       * @param value The errMsg to set.
+       * @return This builder for chaining.
+       */
+      public Builder setErrMsg(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        errMsg_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *错误消息
+       * </pre>
+       *
+       * <code>string err_msg = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearErrMsg() {
+        errMsg_ = getDefaultInstance().getErrMsg();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *错误消息
+       * </pre>
+       *
+       * <code>string err_msg = 4;</code>
+       * @param value The bytes for errMsg to set.
+       * @return This builder for chaining.
+       */
+      public Builder setErrMsgBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        errMsg_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -3749,11 +4176,6 @@ public final class GGateway {
       return new SCRecvMessage();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.gateway.GGateway.internal_static_gateway_SCRecvMessage_descriptor;
@@ -3930,11 +4352,13 @@ public final class GGateway {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.gateway.GGateway.SCRecvMessage parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.gateway.GGateway.SCRecvMessage parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4302,7 +4726,7 @@ public final class GGateway {
        * @return This builder for chaining.
        */
       public Builder setTarget(long value) {
-        
+
         target_ = value;
         bitField0_ |= 0x00000002;
         onChanged();
@@ -4424,11 +4848,6 @@ public final class GGateway {
       return new CSRecvMessage();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.gateway.GGateway.internal_static_gateway_CSRecvMessage_descriptor;
@@ -4586,11 +5005,13 @@ public final class GGateway {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.gateway.GGateway.CSRecvMessage parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.gateway.GGateway.CSRecvMessage parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4831,7 +5252,7 @@ public final class GGateway {
        * @return This builder for chaining.
        */
       public Builder setChatId(long value) {
-        
+
         chatId_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -4863,7 +5284,7 @@ public final class GGateway {
        * @return This builder for chaining.
        */
       public Builder setMsgId(long value) {
-        
+
         msgId_ = value;
         bitField0_ |= 0x00000002;
         onChanged();
@@ -4985,11 +5406,6 @@ public final class GGateway {
       return new CSReadMessage();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.gateway.GGateway.internal_static_gateway_CSReadMessage_descriptor;
@@ -5147,11 +5563,13 @@ public final class GGateway {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.gateway.GGateway.CSReadMessage parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.gateway.GGateway.CSReadMessage parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -5392,7 +5810,7 @@ public final class GGateway {
        * @return This builder for chaining.
        */
       public Builder setChatId(long value) {
-        
+
         chatId_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -5424,7 +5842,7 @@ public final class GGateway {
        * @return This builder for chaining.
        */
       public Builder setMsgId(long value) {
-        
+
         msgId_ = value;
         bitField0_ |= 0x00000002;
         onChanged();
@@ -5542,11 +5960,6 @@ public final class GGateway {
       return new SCReadMessage();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.gateway.GGateway.internal_static_gateway_SCReadMessage_descriptor;
@@ -5704,11 +6117,13 @@ public final class GGateway {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.gateway.GGateway.SCReadMessage parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.gateway.GGateway.SCReadMessage parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -5945,7 +6360,7 @@ public final class GGateway {
        * @return This builder for chaining.
        */
       public Builder setChatId(long value) {
-        
+
         chatId_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -5977,7 +6392,7 @@ public final class GGateway {
        * @return This builder for chaining.
        */
       public Builder setMsgId(long value) {
-        
+
         msgId_ = value;
         bitField0_ |= 0x00000002;
         onChanged();
@@ -6119,11 +6534,6 @@ public final class GGateway {
       return new InputtingBegin();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.gateway.GGateway.internal_static_gateway_InputtingBegin_descriptor;
@@ -6317,11 +6727,13 @@ public final class GGateway {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.gateway.GGateway.InputtingBegin parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.gateway.GGateway.InputtingBegin parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -6582,7 +6994,7 @@ public final class GGateway {
        * @return This builder for chaining.
        */
       public Builder setSelf(long value) {
-        
+
         self_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -6626,7 +7038,7 @@ public final class GGateway {
        * @return This builder for chaining.
        */
       public Builder setTarget(long value) {
-        
+
         target_ = value;
         bitField0_ |= 0x00000002;
         onChanged();
@@ -6814,11 +7226,6 @@ public final class GGateway {
       return new InputtingEnd();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.gateway.GGateway.internal_static_gateway_InputtingEnd_descriptor;
@@ -6984,11 +7391,13 @@ public final class GGateway {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.gateway.GGateway.InputtingEnd parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.gateway.GGateway.InputtingEnd parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -7238,7 +7647,7 @@ public final class GGateway {
        * @return This builder for chaining.
        */
       public Builder setSelf(long value) {
-        
+
         self_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -7282,7 +7691,7 @@ public final class GGateway {
        * @return This builder for chaining.
        */
       public Builder setTarget(long value) {
-        
+
         target_ = value;
         bitField0_ |= 0x00000002;
         onChanged();
@@ -7411,11 +7820,6 @@ public final class GGateway {
       return new WorkerTransfer();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.gateway.GGateway.internal_static_gateway_WorkerTransfer_descriptor;
@@ -7569,11 +7973,13 @@ public final class GGateway {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.gateway.GGateway.WorkerTransfer parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.gateway.GGateway.WorkerTransfer parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -8072,11 +8478,6 @@ public final class GGateway {
       return new SCChatChanged();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.gateway.GGateway.internal_static_gateway_SCChatChanged_descriptor;
@@ -8344,11 +8745,13 @@ public final class GGateway {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.gateway.GGateway.SCChatChanged parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.gateway.GGateway.SCChatChanged parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -8741,7 +9144,7 @@ public final class GGateway {
        * @return This builder for chaining.
        */
       public Builder setChatId(long value) {
-        
+
         chatId_ = value;
         bitField0_ |= 0x00000004;
         onChanged();
@@ -8928,7 +9331,7 @@ public final class GGateway {
        * @return This builder for chaining.
        */
       public Builder setTarget(long value) {
-        
+
         target_ = value;
         bitField0_ |= 0x00000010;
         onChanged();
@@ -9066,11 +9469,6 @@ public final class GGateway {
       return new SCUserConnectionChanged();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.gateway.GGateway.internal_static_gateway_SCUserConnectionChanged_descriptor;
@@ -9260,11 +9658,13 @@ public final class GGateway {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.gateway.GGateway.SCUserConnectionChanged parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.gateway.GGateway.SCUserConnectionChanged parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -9525,7 +9925,7 @@ public final class GGateway {
        * @return This builder for chaining.
        */
       public Builder setClientId(long value) {
-        
+
         clientId_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -9614,7 +10014,7 @@ public final class GGateway {
        * @return This builder for chaining.
        */
       public Builder setTarget(long value) {
-        
+
         target_ = value;
         bitField0_ |= 0x00000004;
         onChanged();
@@ -9699,34 +10099,51 @@ public final class GGateway {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string worker_name = 1;</code>
+     * <code>int32 worker_id = 1;</code>
+     * @return The workerId.
+     */
+    int getWorkerId();
+
+    /**
+     * <code>string worker_name = 2;</code>
      * @return The workerName.
      */
     java.lang.String getWorkerName();
     /**
-     * <code>string worker_name = 1;</code>
+     * <code>string worker_name = 2;</code>
      * @return The bytes for workerName.
      */
     com.google.protobuf.ByteString
         getWorkerNameBytes();
 
     /**
-     * <code>string worker_avatar = 2;</code>
+     * <code>string worker_avatar = 3;</code>
      * @return The workerAvatar.
      */
     java.lang.String getWorkerAvatar();
     /**
-     * <code>string worker_avatar = 2;</code>
+     * <code>string worker_avatar = 3;</code>
      * @return The bytes for workerAvatar.
      */
     com.google.protobuf.ByteString
         getWorkerAvatarBytes();
 
     /**
-     * <code>int64 target = 3;</code>
+     * <code>int64 target = 4;</code>
      * @return The target.
      */
     long getTarget();
+
+    /**
+     * <code>.gateway.WorkerChangedReason reason = 5;</code>
+     * @return The enum numeric value on the wire for reason.
+     */
+    int getReasonValue();
+    /**
+     * <code>.gateway.WorkerChangedReason reason = 5;</code>
+     * @return The reason.
+     */
+    com.teneasyChat.gateway.GGateway.WorkerChangedReason getReason();
   }
   /**
    * Protobuf type {@code gateway.SCWorkerChanged}
@@ -9743,6 +10160,7 @@ public final class GGateway {
     private SCWorkerChanged() {
       workerName_ = "";
       workerAvatar_ = "";
+      reason_ = 0;
     }
 
     @java.lang.Override
@@ -9752,11 +10170,6 @@ public final class GGateway {
       return new SCWorkerChanged();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.gateway.GGateway.internal_static_gateway_SCWorkerChanged_descriptor;
@@ -9770,11 +10183,22 @@ public final class GGateway {
               com.teneasyChat.gateway.GGateway.SCWorkerChanged.class, com.teneasyChat.gateway.GGateway.SCWorkerChanged.Builder.class);
     }
 
-    public static final int WORKER_NAME_FIELD_NUMBER = 1;
+    public static final int WORKER_ID_FIELD_NUMBER = 1;
+    private int workerId_ = 0;
+    /**
+     * <code>int32 worker_id = 1;</code>
+     * @return The workerId.
+     */
+    @java.lang.Override
+    public int getWorkerId() {
+      return workerId_;
+    }
+
+    public static final int WORKER_NAME_FIELD_NUMBER = 2;
     @SuppressWarnings("serial")
     private volatile java.lang.Object workerName_ = "";
     /**
-     * <code>string worker_name = 1;</code>
+     * <code>string worker_name = 2;</code>
      * @return The workerName.
      */
     @java.lang.Override
@@ -9791,7 +10215,7 @@ public final class GGateway {
       }
     }
     /**
-     * <code>string worker_name = 1;</code>
+     * <code>string worker_name = 2;</code>
      * @return The bytes for workerName.
      */
     @java.lang.Override
@@ -9809,11 +10233,11 @@ public final class GGateway {
       }
     }
 
-    public static final int WORKER_AVATAR_FIELD_NUMBER = 2;
+    public static final int WORKER_AVATAR_FIELD_NUMBER = 3;
     @SuppressWarnings("serial")
     private volatile java.lang.Object workerAvatar_ = "";
     /**
-     * <code>string worker_avatar = 2;</code>
+     * <code>string worker_avatar = 3;</code>
      * @return The workerAvatar.
      */
     @java.lang.Override
@@ -9830,7 +10254,7 @@ public final class GGateway {
       }
     }
     /**
-     * <code>string worker_avatar = 2;</code>
+     * <code>string worker_avatar = 3;</code>
      * @return The bytes for workerAvatar.
      */
     @java.lang.Override
@@ -9848,15 +10272,33 @@ public final class GGateway {
       }
     }
 
-    public static final int TARGET_FIELD_NUMBER = 3;
+    public static final int TARGET_FIELD_NUMBER = 4;
     private long target_ = 0L;
     /**
-     * <code>int64 target = 3;</code>
+     * <code>int64 target = 4;</code>
      * @return The target.
      */
     @java.lang.Override
     public long getTarget() {
       return target_;
+    }
+
+    public static final int REASON_FIELD_NUMBER = 5;
+    private int reason_ = 0;
+    /**
+     * <code>.gateway.WorkerChangedReason reason = 5;</code>
+     * @return The enum numeric value on the wire for reason.
+     */
+    @java.lang.Override public int getReasonValue() {
+      return reason_;
+    }
+    /**
+     * <code>.gateway.WorkerChangedReason reason = 5;</code>
+     * @return The reason.
+     */
+    @java.lang.Override public com.teneasyChat.gateway.GGateway.WorkerChangedReason getReason() {
+      com.teneasyChat.gateway.GGateway.WorkerChangedReason result = com.teneasyChat.gateway.GGateway.WorkerChangedReason.forNumber(reason_);
+      return result == null ? com.teneasyChat.gateway.GGateway.WorkerChangedReason.UNRECOGNIZED : result;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -9873,14 +10315,20 @@ public final class GGateway {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (workerId_ != 0) {
+        output.writeInt32(1, workerId_);
+      }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(workerName_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, workerName_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, workerName_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(workerAvatar_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, workerAvatar_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, workerAvatar_);
       }
       if (target_ != 0L) {
-        output.writeInt64(3, target_);
+        output.writeInt64(4, target_);
+      }
+      if (reason_ != com.teneasyChat.gateway.GGateway.WorkerChangedReason.WorkerChangedReasonUnknown.getNumber()) {
+        output.writeEnum(5, reason_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -9891,15 +10339,23 @@ public final class GGateway {
       if (size != -1) return size;
 
       size = 0;
+      if (workerId_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, workerId_);
+      }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(workerName_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, workerName_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, workerName_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(workerAvatar_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, workerAvatar_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, workerAvatar_);
       }
       if (target_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(3, target_);
+          .computeInt64Size(4, target_);
+      }
+      if (reason_ != com.teneasyChat.gateway.GGateway.WorkerChangedReason.WorkerChangedReasonUnknown.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(5, reason_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -9916,12 +10372,15 @@ public final class GGateway {
       }
       com.teneasyChat.gateway.GGateway.SCWorkerChanged other = (com.teneasyChat.gateway.GGateway.SCWorkerChanged) obj;
 
+      if (getWorkerId()
+          != other.getWorkerId()) return false;
       if (!getWorkerName()
           .equals(other.getWorkerName())) return false;
       if (!getWorkerAvatar()
           .equals(other.getWorkerAvatar())) return false;
       if (getTarget()
           != other.getTarget()) return false;
+      if (reason_ != other.reason_) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -9933,6 +10392,8 @@ public final class GGateway {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + WORKER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getWorkerId();
       hash = (37 * hash) + WORKER_NAME_FIELD_NUMBER;
       hash = (53 * hash) + getWorkerName().hashCode();
       hash = (37 * hash) + WORKER_AVATAR_FIELD_NUMBER;
@@ -9940,6 +10401,8 @@ public final class GGateway {
       hash = (37 * hash) + TARGET_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getTarget());
+      hash = (37 * hash) + REASON_FIELD_NUMBER;
+      hash = (53 * hash) + reason_;
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -9989,11 +10452,13 @@ public final class GGateway {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.gateway.GGateway.SCWorkerChanged parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.gateway.GGateway.SCWorkerChanged parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -10069,9 +10534,11 @@ public final class GGateway {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
+        workerId_ = 0;
         workerName_ = "";
         workerAvatar_ = "";
         target_ = 0L;
+        reason_ = 0;
         return this;
       }
 
@@ -10106,13 +10573,19 @@ public final class GGateway {
       private void buildPartial0(com.teneasyChat.gateway.GGateway.SCWorkerChanged result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.workerName_ = workerName_;
+          result.workerId_ = workerId_;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.workerAvatar_ = workerAvatar_;
+          result.workerName_ = workerName_;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.workerAvatar_ = workerAvatar_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
           result.target_ = target_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.reason_ = reason_;
         }
       }
 
@@ -10160,18 +10633,24 @@ public final class GGateway {
 
       public Builder mergeFrom(com.teneasyChat.gateway.GGateway.SCWorkerChanged other) {
         if (other == com.teneasyChat.gateway.GGateway.SCWorkerChanged.getDefaultInstance()) return this;
+        if (other.getWorkerId() != 0) {
+          setWorkerId(other.getWorkerId());
+        }
         if (!other.getWorkerName().isEmpty()) {
           workerName_ = other.workerName_;
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (!other.getWorkerAvatar().isEmpty()) {
           workerAvatar_ = other.workerAvatar_;
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (other.getTarget() != 0L) {
           setTarget(other.getTarget());
+        }
+        if (other.reason_ != 0) {
+          setReasonValue(other.getReasonValue());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -10199,21 +10678,31 @@ public final class GGateway {
               case 0:
                 done = true;
                 break;
-              case 10: {
-                workerName_ = input.readStringRequireUtf8();
+              case 8: {
+                workerId_ = input.readInt32();
                 bitField0_ |= 0x00000001;
                 break;
-              } // case 10
+              } // case 8
               case 18: {
-                workerAvatar_ = input.readStringRequireUtf8();
+                workerName_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000002;
                 break;
               } // case 18
-              case 24: {
-                target_ = input.readInt64();
+              case 26: {
+                workerAvatar_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000004;
                 break;
-              } // case 24
+              } // case 26
+              case 32: {
+                target_ = input.readInt64();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              case 40: {
+                reason_ = input.readEnum();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -10231,9 +10720,41 @@ public final class GGateway {
       }
       private int bitField0_;
 
+      private int workerId_ ;
+      /**
+       * <code>int32 worker_id = 1;</code>
+       * @return The workerId.
+       */
+      @java.lang.Override
+      public int getWorkerId() {
+        return workerId_;
+      }
+      /**
+       * <code>int32 worker_id = 1;</code>
+       * @param value The workerId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWorkerId(int value) {
+
+        workerId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 worker_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWorkerId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        workerId_ = 0;
+        onChanged();
+        return this;
+      }
+
       private java.lang.Object workerName_ = "";
       /**
-       * <code>string worker_name = 1;</code>
+       * <code>string worker_name = 2;</code>
        * @return The workerName.
        */
       public java.lang.String getWorkerName() {
@@ -10249,7 +10770,7 @@ public final class GGateway {
         }
       }
       /**
-       * <code>string worker_name = 1;</code>
+       * <code>string worker_name = 2;</code>
        * @return The bytes for workerName.
        */
       public com.google.protobuf.ByteString
@@ -10266,7 +10787,7 @@ public final class GGateway {
         }
       }
       /**
-       * <code>string worker_name = 1;</code>
+       * <code>string worker_name = 2;</code>
        * @param value The workerName to set.
        * @return This builder for chaining.
        */
@@ -10274,22 +10795,22 @@ public final class GGateway {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         workerName_ = value;
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
       /**
-       * <code>string worker_name = 1;</code>
+       * <code>string worker_name = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearWorkerName() {
         workerName_ = getDefaultInstance().getWorkerName();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
       /**
-       * <code>string worker_name = 1;</code>
+       * <code>string worker_name = 2;</code>
        * @param value The bytes for workerName to set.
        * @return This builder for chaining.
        */
@@ -10298,14 +10819,14 @@ public final class GGateway {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         workerName_ = value;
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
 
       private java.lang.Object workerAvatar_ = "";
       /**
-       * <code>string worker_avatar = 2;</code>
+       * <code>string worker_avatar = 3;</code>
        * @return The workerAvatar.
        */
       public java.lang.String getWorkerAvatar() {
@@ -10321,7 +10842,7 @@ public final class GGateway {
         }
       }
       /**
-       * <code>string worker_avatar = 2;</code>
+       * <code>string worker_avatar = 3;</code>
        * @return The bytes for workerAvatar.
        */
       public com.google.protobuf.ByteString
@@ -10338,7 +10859,7 @@ public final class GGateway {
         }
       }
       /**
-       * <code>string worker_avatar = 2;</code>
+       * <code>string worker_avatar = 3;</code>
        * @param value The workerAvatar to set.
        * @return This builder for chaining.
        */
@@ -10346,22 +10867,22 @@ public final class GGateway {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         workerAvatar_ = value;
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
       /**
-       * <code>string worker_avatar = 2;</code>
+       * <code>string worker_avatar = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearWorkerAvatar() {
         workerAvatar_ = getDefaultInstance().getWorkerAvatar();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
       /**
-       * <code>string worker_avatar = 2;</code>
+       * <code>string worker_avatar = 3;</code>
        * @param value The bytes for workerAvatar to set.
        * @return This builder for chaining.
        */
@@ -10370,14 +10891,14 @@ public final class GGateway {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         workerAvatar_ = value;
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
 
       private long target_ ;
       /**
-       * <code>int64 target = 3;</code>
+       * <code>int64 target = 4;</code>
        * @return The target.
        */
       @java.lang.Override
@@ -10385,24 +10906,77 @@ public final class GGateway {
         return target_;
       }
       /**
-       * <code>int64 target = 3;</code>
+       * <code>int64 target = 4;</code>
        * @param value The target to set.
        * @return This builder for chaining.
        */
       public Builder setTarget(long value) {
-        
+
         target_ = value;
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
       /**
-       * <code>int64 target = 3;</code>
+       * <code>int64 target = 4;</code>
        * @return This builder for chaining.
        */
       public Builder clearTarget() {
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000008);
         target_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int reason_ = 0;
+      /**
+       * <code>.gateway.WorkerChangedReason reason = 5;</code>
+       * @return The enum numeric value on the wire for reason.
+       */
+      @java.lang.Override public int getReasonValue() {
+        return reason_;
+      }
+      /**
+       * <code>.gateway.WorkerChangedReason reason = 5;</code>
+       * @param value The enum numeric value on the wire for reason to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReasonValue(int value) {
+        reason_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.gateway.WorkerChangedReason reason = 5;</code>
+       * @return The reason.
+       */
+      @java.lang.Override
+      public com.teneasyChat.gateway.GGateway.WorkerChangedReason getReason() {
+        com.teneasyChat.gateway.GGateway.WorkerChangedReason result = com.teneasyChat.gateway.GGateway.WorkerChangedReason.forNumber(reason_);
+        return result == null ? com.teneasyChat.gateway.GGateway.WorkerChangedReason.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.gateway.WorkerChangedReason reason = 5;</code>
+       * @param value The reason to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReason(com.teneasyChat.gateway.GGateway.WorkerChangedReason value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000010;
+        reason_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.gateway.WorkerChangedReason reason = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearReason() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        reason_ = 0;
         onChanged();
         return this;
       }
@@ -10479,6 +11053,17 @@ public final class GGateway {
      * @return The target.
      */
     long getTarget();
+
+    /**
+     * <code>.gateway.KickReason reason = 2;</code>
+     * @return The enum numeric value on the wire for reason.
+     */
+    int getReasonValue();
+    /**
+     * <code>.gateway.KickReason reason = 2;</code>
+     * @return The reason.
+     */
+    com.teneasyChat.gateway.GGateway.KickReason getReason();
   }
   /**
    * <pre>
@@ -10497,6 +11082,7 @@ public final class GGateway {
       super(builder);
     }
     private SCKick() {
+      reason_ = 0;
     }
 
     @java.lang.Override
@@ -10506,11 +11092,6 @@ public final class GGateway {
       return new SCKick();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.gateway.GGateway.internal_static_gateway_SCKick_descriptor;
@@ -10535,6 +11116,24 @@ public final class GGateway {
       return target_;
     }
 
+    public static final int REASON_FIELD_NUMBER = 2;
+    private int reason_ = 0;
+    /**
+     * <code>.gateway.KickReason reason = 2;</code>
+     * @return The enum numeric value on the wire for reason.
+     */
+    @java.lang.Override public int getReasonValue() {
+      return reason_;
+    }
+    /**
+     * <code>.gateway.KickReason reason = 2;</code>
+     * @return The reason.
+     */
+    @java.lang.Override public com.teneasyChat.gateway.GGateway.KickReason getReason() {
+      com.teneasyChat.gateway.GGateway.KickReason result = com.teneasyChat.gateway.GGateway.KickReason.forNumber(reason_);
+      return result == null ? com.teneasyChat.gateway.GGateway.KickReason.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -10552,6 +11151,9 @@ public final class GGateway {
       if (target_ != 0L) {
         output.writeInt64(1, target_);
       }
+      if (reason_ != com.teneasyChat.gateway.GGateway.KickReason.KickReasonCommon.getNumber()) {
+        output.writeEnum(2, reason_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -10564,6 +11166,10 @@ public final class GGateway {
       if (target_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(1, target_);
+      }
+      if (reason_ != com.teneasyChat.gateway.GGateway.KickReason.KickReasonCommon.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, reason_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -10582,6 +11188,7 @@ public final class GGateway {
 
       if (getTarget()
           != other.getTarget()) return false;
+      if (reason_ != other.reason_) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -10596,6 +11203,8 @@ public final class GGateway {
       hash = (37 * hash) + TARGET_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getTarget());
+      hash = (37 * hash) + REASON_FIELD_NUMBER;
+      hash = (53 * hash) + reason_;
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -10645,11 +11254,13 @@ public final class GGateway {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.gateway.GGateway.SCKick parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.gateway.GGateway.SCKick parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -10730,6 +11341,7 @@ public final class GGateway {
         super.clear();
         bitField0_ = 0;
         target_ = 0L;
+        reason_ = 0;
         return this;
       }
 
@@ -10765,6 +11377,9 @@ public final class GGateway {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.target_ = target_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.reason_ = reason_;
         }
       }
 
@@ -10815,6 +11430,9 @@ public final class GGateway {
         if (other.getTarget() != 0L) {
           setTarget(other.getTarget());
         }
+        if (other.reason_ != 0) {
+          setReasonValue(other.getReasonValue());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -10846,6 +11464,11 @@ public final class GGateway {
                 bitField0_ |= 0x00000001;
                 break;
               } // case 8
+              case 16: {
+                reason_ = input.readEnum();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -10878,7 +11501,7 @@ public final class GGateway {
        * @return This builder for chaining.
        */
       public Builder setTarget(long value) {
-        
+
         target_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -10891,6 +11514,59 @@ public final class GGateway {
       public Builder clearTarget() {
         bitField0_ = (bitField0_ & ~0x00000001);
         target_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int reason_ = 0;
+      /**
+       * <code>.gateway.KickReason reason = 2;</code>
+       * @return The enum numeric value on the wire for reason.
+       */
+      @java.lang.Override public int getReasonValue() {
+        return reason_;
+      }
+      /**
+       * <code>.gateway.KickReason reason = 2;</code>
+       * @param value The enum numeric value on the wire for reason to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReasonValue(int value) {
+        reason_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.gateway.KickReason reason = 2;</code>
+       * @return The reason.
+       */
+      @java.lang.Override
+      public com.teneasyChat.gateway.GGateway.KickReason getReason() {
+        com.teneasyChat.gateway.GGateway.KickReason result = com.teneasyChat.gateway.GGateway.KickReason.forNumber(reason_);
+        return result == null ? com.teneasyChat.gateway.GGateway.KickReason.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.gateway.KickReason reason = 2;</code>
+       * @param value The reason to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReason(com.teneasyChat.gateway.GGateway.KickReason value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000002;
+        reason_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.gateway.KickReason reason = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearReason() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        reason_ = 0;
         onChanged();
         return this;
       }
@@ -11030,11 +11706,6 @@ public final class GGateway {
       return new SCSimSendMessage();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.gateway.GGateway.internal_static_gateway_SCSimSendMessage_descriptor;
@@ -11250,11 +11921,13 @@ public final class GGateway {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.gateway.GGateway.SCSimSendMessage parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.gateway.GGateway.SCSimSendMessage parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -11795,7 +12468,7 @@ public final class GGateway {
        * @return This builder for chaining.
        */
       public Builder setWorker(long value) {
-        
+
         worker_ = value;
         bitField0_ |= 0x00000002;
         onChanged();
@@ -11835,7 +12508,7 @@ public final class GGateway {
        * @return This builder for chaining.
        */
       public Builder setTarget(long value) {
-        
+
         target_ = value;
         bitField0_ |= 0x00000004;
         onChanged();
@@ -11980,11 +12653,6 @@ public final class GGateway {
       return new SCSimSendMessageToWorker();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.gateway.GGateway.internal_static_gateway_SCSimSendMessageToWorker_descriptor;
@@ -12177,11 +12845,13 @@ public final class GGateway {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.gateway.GGateway.SCSimSendMessageToWorker parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.gateway.GGateway.SCSimSendMessageToWorker parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -12713,7 +13383,7 @@ public final class GGateway {
        * @return This builder for chaining.
        */
       public Builder setTarget(long value) {
-        
+
         target_ = value;
         bitField0_ |= 0x00000002;
         onChanged();
@@ -12905,34 +13575,43 @@ public final class GGateway {
       "(\t\022\014\n\004verb\030\003 \001(\t\022\014\n\004data\030\004 \001(\014\"&\n\tSCForw" +
       "ard\022\013\n\003err\030\002 \001(\t\022\014\n\004data\030\003 \001(\014\"1\n\rCSSend" +
       "Message\022 \n\003msg\030\001 \001(\0132\023.api.common.Messag" +
-      "e\"^\n\rSCSendMessage\022\017\n\007chat_id\030\001 \001(\003\022\016\n\006m" +
+      "e\"o\n\rSCSendMessage\022\017\n\007chat_id\030\001 \001(\003\022\016\n\006m" +
       "sg_id\030\002 \001(\003\022,\n\010msg_time\030\003 \001(\0132\032.google.p" +
-      "rotobuf.Timestamp\"A\n\rSCRecvMessage\022 \n\003ms" +
-      "g\030\001 \001(\0132\023.api.common.Message\022\016\n\006target\030\002" +
-      " \001(\003\"0\n\rCSRecvMessage\022\017\n\007chat_id\030\001 \001(\003\022\016" +
-      "\n\006msg_id\030\002 \001(\003\"0\n\rCSReadMessage\022\017\n\007chat_" +
-      "id\030\001 \001(\003\022\016\n\006msg_id\030\002 \001(\003\"0\n\rSCReadMessag" +
-      "e\022\017\n\007chat_id\030\001 \001(\003\022\016\n\006msg_id\030\002 \001(\003\"Z\n\016In" +
-      "puttingBegin\022\014\n\004self\030\001 \001(\003\022\016\n\006target\030\002 \001" +
-      "(\003\022*\n\007msg_fmt\030\003 \001(\0162\031.api.common.Message" +
-      "Format\",\n\014InputtingEnd\022\014\n\004self\030\001 \001(\003\022\016\n\006" +
-      "target\030\002 \001(\003\"2\n\016WorkerTransfer\022 \n\003msg\030\001 " +
-      "\001(\0132\023.api.common.Message\"\234\001\n\rSCChatChang" +
-      "ed\022#\n\004from\030\001 \001(\0162\025.api.common.ChatState\022" +
-      "!\n\002to\030\002 \001(\0162\025.api.common.ChatState\022\017\n\007ch" +
-      "at_id\030\003 \001(\003\022\"\n\004chat\030\004 \001(\0132\024.api.common.C" +
-      "hatItem\022\016\n\006target\030\005 \001(\003\"d\n\027SCUserConnect" +
-      "ionChanged\022\021\n\tclient_id\030\001 \001(\003\022&\n\004conn\030\002 " +
-      "\001(\0162\030.api.common.ConnectState\022\016\n\006target\030" +
-      "\003 \001(\003\"M\n\017SCWorkerChanged\022\023\n\013worker_name\030" +
-      "\001 \001(\t\022\025\n\rworker_avatar\030\002 \001(\t\022\016\n\006target\030\003" +
-      " \001(\003\"\030\n\006SCKick\022\016\n\006target\030\001 \001(\003\"U\n\020SCSimS" +
+      "rotobuf.Timestamp\022\017\n\007err_msg\030\004 \001(\t\"A\n\rSC" +
+      "RecvMessage\022 \n\003msg\030\001 \001(\0132\023.api.common.Me" +
+      "ssage\022\016\n\006target\030\002 \001(\003\"0\n\rCSRecvMessage\022\017" +
+      "\n\007chat_id\030\001 \001(\003\022\016\n\006msg_id\030\002 \001(\003\"0\n\rCSRea" +
+      "dMessage\022\017\n\007chat_id\030\001 \001(\003\022\016\n\006msg_id\030\002 \001(" +
+      "\003\"0\n\rSCReadMessage\022\017\n\007chat_id\030\001 \001(\003\022\016\n\006m" +
+      "sg_id\030\002 \001(\003\"Z\n\016InputtingBegin\022\014\n\004self\030\001 " +
+      "\001(\003\022\016\n\006target\030\002 \001(\003\022*\n\007msg_fmt\030\003 \001(\0162\031.a" +
+      "pi.common.MessageFormat\",\n\014InputtingEnd\022" +
+      "\014\n\004self\030\001 \001(\003\022\016\n\006target\030\002 \001(\003\"2\n\016WorkerT" +
+      "ransfer\022 \n\003msg\030\001 \001(\0132\023.api.common.Messag" +
+      "e\"\234\001\n\rSCChatChanged\022#\n\004from\030\001 \001(\0162\025.api." +
+      "common.ChatState\022!\n\002to\030\002 \001(\0162\025.api.commo" +
+      "n.ChatState\022\017\n\007chat_id\030\003 \001(\003\022\"\n\004chat\030\004 \001" +
+      "(\0132\024.api.common.ChatItem\022\016\n\006target\030\005 \001(\003" +
+      "\"d\n\027SCUserConnectionChanged\022\021\n\tclient_id" +
+      "\030\001 \001(\003\022&\n\004conn\030\002 \001(\0162\030.api.common.Connec" +
+      "tState\022\016\n\006target\030\003 \001(\003\"\216\001\n\017SCWorkerChang" +
+      "ed\022\021\n\tworker_id\030\001 \001(\005\022\023\n\013worker_name\030\002 \001" +
+      "(\t\022\025\n\rworker_avatar\030\003 \001(\t\022\016\n\006target\030\004 \001(" +
+      "\003\022,\n\006reason\030\005 \001(\0162\034.gateway.WorkerChange" +
+      "dReason\"=\n\006SCKick\022\016\n\006target\030\001 \001(\003\022#\n\006rea" +
+      "son\030\002 \001(\0162\023.gateway.KickReason\"U\n\020SCSimS" +
       "endMessage\022!\n\004msgs\030\001 \003(\0132\023.api.common.Me" +
       "ssage\022\016\n\006worker\030\002 \001(\003\022\016\n\006target\030\003 \001(\003\"M\n" +
       "\030SCSimSendMessageToWorker\022!\n\004msgs\030\001 \003(\0132" +
-      "\023.api.common.Message\022\016\n\006target\030\002 \001(\003B@\n\027" +
-      "com.teneasyChat.gatewayZ%wcs/service/gat" +
-      "eway/protocol;protocolb\006proto3"
+      "\023.api.common.Message\022\016\n\006target\030\002 \001(\003*\255\001\n" +
+      "\023WorkerChangedReason\022\036\n\032WorkerChangedRea" +
+      "sonUnknown\020\000\022)\n%WorkerChangedReasonMissA" +
+      "ssignedWorker\020\001\022%\n!WorkerChangedReasonTr" +
+      "ansferWorker\020\002\022$\n WorkerChangedReasonWor" +
+      "kerDeleted\020\003*=\n\nKickReason\022\024\n\020KickReason" +
+      "Common\020\000\022\031\n\025KickReasonPermChanged\020\001B@\n\027c" +
+      "om.teneasyChat.gatewayZ%wcs/service/gate" +
+      "way/protocol;protocolb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -12971,7 +13650,7 @@ public final class GGateway {
     internal_static_gateway_SCSendMessage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_gateway_SCSendMessage_descriptor,
-        new java.lang.String[] { "ChatId", "MsgId", "MsgTime", });
+        new java.lang.String[] { "ChatId", "MsgId", "MsgTime", "ErrMsg", });
     internal_static_gateway_SCRecvMessage_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_gateway_SCRecvMessage_fieldAccessorTable = new
@@ -13031,13 +13710,13 @@ public final class GGateway {
     internal_static_gateway_SCWorkerChanged_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_gateway_SCWorkerChanged_descriptor,
-        new java.lang.String[] { "WorkerName", "WorkerAvatar", "Target", });
+        new java.lang.String[] { "WorkerId", "WorkerName", "WorkerAvatar", "Target", "Reason", });
     internal_static_gateway_SCKick_descriptor =
       getDescriptor().getMessageTypes().get(15);
     internal_static_gateway_SCKick_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_gateway_SCKick_descriptor,
-        new java.lang.String[] { "Target", });
+        new java.lang.String[] { "Target", "Reason", });
     internal_static_gateway_SCSimSendMessage_descriptor =
       getDescriptor().getMessageTypes().get(16);
     internal_static_gateway_SCSimSendMessage_fieldAccessorTable = new

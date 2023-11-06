@@ -431,7 +431,7 @@ public final class CVerify {
      */
     com.teneasyChat.api.common.CVerify.VerifyByCaptchaOrBuilder getCaptchaOrBuilder();
 
-    public com.teneasyChat.api.common.CVerify.Verify.WayCase getWayCase();
+    com.teneasyChat.api.common.CVerify.Verify.WayCase getWayCase();
   }
   /**
    * Protobuf type {@code api.common.Verify}
@@ -455,11 +455,6 @@ public final class CVerify {
       return new Verify();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.common.CVerify.internal_static_api_common_Verify_descriptor;
@@ -474,6 +469,7 @@ public final class CVerify {
     }
 
     private int wayCase_ = 0;
+    @SuppressWarnings("serial")
     private java.lang.Object way_;
     public enum WayCase
         implements com.google.protobuf.Internal.EnumLite,
@@ -761,11 +757,13 @@ public final class CVerify {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.common.CVerify.Verify parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.common.CVerify.Verify parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1585,11 +1583,6 @@ public final class CVerify {
       return new VerifyBySMS();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.common.CVerify.internal_static_api_common_VerifyBySMS_descriptor;
@@ -1758,11 +1751,13 @@ public final class CVerify {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.common.CVerify.VerifyBySMS parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.common.CVerify.VerifyBySMS parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2184,11 +2179,6 @@ public final class CVerify {
       return new VerifyByPassword();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.common.CVerify.internal_static_api_common_VerifyByPassword_descriptor;
@@ -2357,11 +2347,13 @@ public final class CVerify {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.common.CVerify.VerifyByPassword parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.common.CVerify.VerifyByPassword parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2804,11 +2796,6 @@ public final class CVerify {
       return new VerifyByCaptcha();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.common.CVerify.internal_static_api_common_VerifyByCaptcha_descriptor;
@@ -3034,11 +3021,13 @@ public final class CVerify {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.common.CVerify.VerifyByCaptcha parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.common.CVerify.VerifyByCaptcha parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3569,7 +3558,7 @@ public final class CVerify {
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.teneasyChat.validate.Validate.getDescriptor(),
+          io.envoyproxy.pgv.validate.Validate.getDescriptor(),
         });
     internal_static_api_common_Verify_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -3597,11 +3586,11 @@ public final class CVerify {
         new java.lang.String[] { "Key", "Answer", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(com.teneasyChat.validate.Validate.required);
-    registry.add(com.teneasyChat.validate.Validate.rules);
+    registry.add(io.envoyproxy.pgv.validate.Validate.required);
+    registry.add(io.envoyproxy.pgv.validate.Validate.rules);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    com.teneasyChat.validate.Validate.getDescriptor();
+    io.envoyproxy.pgv.validate.Validate.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

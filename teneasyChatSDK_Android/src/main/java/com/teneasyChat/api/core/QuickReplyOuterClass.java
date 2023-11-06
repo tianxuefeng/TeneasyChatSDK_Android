@@ -64,11 +64,6 @@ public final class QuickReplyOuterClass {
       return new QuickReplyGroupItem();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.core.QuickReplyOuterClass.internal_static_api_core_QuickReplyGroupItem_descriptor;
@@ -251,11 +246,13 @@ public final class QuickReplyOuterClass {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.core.QuickReplyOuterClass.QuickReplyGroupItem parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.core.QuickReplyOuterClass.QuickReplyGroupItem parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -571,7 +568,7 @@ public final class QuickReplyOuterClass {
        * @return This builder for chaining.
        */
       public Builder setPriority(int value) {
-        
+
         priority_ = value;
         bitField0_ |= 0x00000002;
         onChanged();
@@ -706,11 +703,6 @@ public final class QuickReplyOuterClass {
       return new QuickReplyGroupQueryResponse();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.core.QuickReplyOuterClass.internal_static_api_core_QuickReplyGroupQueryResponse_descriptor;
@@ -876,11 +868,13 @@ public final class QuickReplyOuterClass {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.core.QuickReplyOuterClass.QuickReplyGroupQueryResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.core.QuickReplyOuterClass.QuickReplyGroupQueryResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1493,11 +1487,6 @@ public final class QuickReplyOuterClass {
       return new QuickReplyGroupCreateRequest();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.core.QuickReplyOuterClass.internal_static_api_core_QuickReplyGroupCreateRequest_descriptor;
@@ -1680,11 +1669,13 @@ public final class QuickReplyOuterClass {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.core.QuickReplyOuterClass.QuickReplyGroupCreateRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.core.QuickReplyOuterClass.QuickReplyGroupCreateRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1999,7 +1990,7 @@ public final class QuickReplyOuterClass {
        * @return This builder for chaining.
        */
       public Builder setPriority(int value) {
-        
+
         priority_ = value;
         bitField0_ |= 0x00000002;
         onChanged();
@@ -2157,11 +2148,6 @@ public final class QuickReplyOuterClass {
       return new QuickReplyGroupUpdateRequest();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.core.QuickReplyOuterClass.internal_static_api_core_QuickReplyGroupUpdateRequest_descriptor;
@@ -2409,11 +2395,13 @@ public final class QuickReplyOuterClass {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.core.QuickReplyOuterClass.QuickReplyGroupUpdateRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.core.QuickReplyOuterClass.QuickReplyGroupUpdateRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2854,7 +2842,7 @@ public final class QuickReplyOuterClass {
        * @return This builder for chaining.
        */
       public Builder setPriority(int value) {
-        
+
         priority_ = value;
         bitField0_ |= 0x00000004;
         onChanged();
@@ -2977,11 +2965,6 @@ public final class QuickReplyOuterClass {
       return new QuickReplyGroupDeleteRequest();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.core.QuickReplyOuterClass.internal_static_api_core_QuickReplyGroupDeleteRequest_descriptor;
@@ -3142,11 +3125,13 @@ public final class QuickReplyOuterClass {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.core.QuickReplyOuterClass.QuickReplyGroupDeleteRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.core.QuickReplyOuterClass.QuickReplyGroupDeleteRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3672,11 +3657,6 @@ public final class QuickReplyOuterClass {
       return new QuickReplyItem();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.core.QuickReplyOuterClass.internal_static_api_core_QuickReplyItem_descriptor;
@@ -4119,11 +4099,13 @@ public final class QuickReplyOuterClass {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.core.QuickReplyOuterClass.QuickReplyItem parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.core.QuickReplyOuterClass.QuickReplyItem parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4486,7 +4468,7 @@ public final class QuickReplyOuterClass {
        * @return This builder for chaining.
        */
       public Builder setId(long value) {
-        
+
         id_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -4714,7 +4696,7 @@ public final class QuickReplyOuterClass {
        * @return This builder for chaining.
        */
       public Builder setPriority(int value) {
-        
+
         priority_ = value;
         bitField0_ |= 0x00000008;
         onChanged();
@@ -5174,7 +5156,7 @@ public final class QuickReplyOuterClass {
        * @return This builder for chaining.
        */
       public Builder setIsCustom(boolean value) {
-        
+
         isCustom_ = value;
         bitField0_ |= 0x00000040;
         onChanged();
@@ -5319,11 +5301,6 @@ public final class QuickReplyOuterClass {
       return new QuickReplyQueryResponse();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.core.QuickReplyOuterClass.internal_static_api_core_QuickReplyQueryResponse_descriptor;
@@ -5489,11 +5466,13 @@ public final class QuickReplyOuterClass {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.core.QuickReplyOuterClass.QuickReplyQueryResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.core.QuickReplyOuterClass.QuickReplyQueryResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -6102,11 +6081,6 @@ public final class QuickReplyOuterClass {
       return new CreateQuickReplyRequest();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.core.QuickReplyOuterClass.internal_static_api_core_CreateQuickReplyRequest_descriptor;
@@ -6260,11 +6234,13 @@ public final class QuickReplyOuterClass {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.core.QuickReplyOuterClass.CreateQuickReplyRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.core.QuickReplyOuterClass.CreateQuickReplyRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -6709,11 +6685,6 @@ public final class QuickReplyOuterClass {
       return new CreateQuickReplyResponse();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.core.QuickReplyOuterClass.internal_static_api_core_CreateQuickReplyResponse_descriptor;
@@ -6867,11 +6838,13 @@ public final class QuickReplyOuterClass {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.core.QuickReplyOuterClass.CreateQuickReplyResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.core.QuickReplyOuterClass.CreateQuickReplyResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -7337,11 +7310,6 @@ public final class QuickReplyOuterClass {
       return new UpdateQuickReplyRequest();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.core.QuickReplyOuterClass.internal_static_api_core_UpdateQuickReplyRequest_descriptor;
@@ -7552,11 +7520,13 @@ public final class QuickReplyOuterClass {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.core.QuickReplyOuterClass.UpdateQuickReplyRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.core.QuickReplyOuterClass.UpdateQuickReplyRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -8115,11 +8085,6 @@ public final class QuickReplyOuterClass {
       return new DeleteQuickReplyRequest();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.core.QuickReplyOuterClass.internal_static_api_core_DeleteQuickReplyRequest_descriptor;
@@ -8303,11 +8268,13 @@ public final class QuickReplyOuterClass {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.core.QuickReplyOuterClass.DeleteQuickReplyRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.core.QuickReplyOuterClass.DeleteQuickReplyRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -8550,7 +8517,7 @@ public final class QuickReplyOuterClass {
        * @return This builder for chaining.
        */
       public Builder setQuickReplyId(long value) {
-        
+
         quickReplyId_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -8734,11 +8701,6 @@ public final class QuickReplyOuterClass {
       return new PushCommonRequest();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.core.QuickReplyOuterClass.internal_static_api_core_PushCommonRequest_descriptor;
@@ -8873,11 +8835,13 @@ public final class QuickReplyOuterClass {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.core.QuickReplyOuterClass.PushCommonRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.core.QuickReplyOuterClass.PushCommonRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -9102,7 +9066,7 @@ public final class QuickReplyOuterClass {
        * @return This builder for chaining.
        */
       public Builder setQuickReplyId(long value) {
-        
+
         quickReplyId_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -9214,11 +9178,6 @@ public final class QuickReplyOuterClass {
       return new PopCommonRequest();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.core.QuickReplyOuterClass.internal_static_api_core_PopCommonRequest_descriptor;
@@ -9353,11 +9312,13 @@ public final class QuickReplyOuterClass {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.core.QuickReplyOuterClass.PopCommonRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.core.QuickReplyOuterClass.PopCommonRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -9582,7 +9543,7 @@ public final class QuickReplyOuterClass {
        * @return This builder for chaining.
        */
       public Builder setQuickReplyId(long value) {
-        
+
         quickReplyId_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -9733,11 +9694,6 @@ public final class QuickReplyOuterClass {
       return new QueryCommonResponse();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.core.QuickReplyOuterClass.internal_static_api_core_QueryCommonResponse_descriptor;
@@ -9923,11 +9879,13 @@ public final class QuickReplyOuterClass {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.core.QuickReplyOuterClass.QueryCommonResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.core.QuickReplyOuterClass.QueryCommonResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -10629,11 +10587,6 @@ public final class QuickReplyOuterClass {
       return new QuickReplyItemGroup();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.core.QuickReplyOuterClass.internal_static_api_core_QuickReplyItemGroup_descriptor;
@@ -10870,11 +10823,13 @@ public final class QuickReplyOuterClass {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.core.QuickReplyOuterClass.QuickReplyItemGroup parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.core.QuickReplyOuterClass.QuickReplyItemGroup parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -11244,7 +11199,7 @@ public final class QuickReplyOuterClass {
        * @return This builder for chaining.
        */
       public Builder setPriority(int value) {
-        
+
         priority_ = value;
         bitField0_ |= 0x00000002;
         onChanged();
@@ -11635,11 +11590,6 @@ public final class QuickReplyOuterClass {
       return new QueryByWorkerResponse();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.core.QuickReplyOuterClass.internal_static_api_core_QueryByWorkerResponse_descriptor;
@@ -11825,11 +11775,13 @@ public final class QuickReplyOuterClass {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.core.QuickReplyOuterClass.QueryByWorkerResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.core.QuickReplyOuterClass.QueryByWorkerResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -12630,7 +12582,7 @@ public final class QuickReplyOuterClass {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.teneasyChat.api.Option.getDescriptor(),
           com.google.protobuf.EmptyProto.getDescriptor(),
-          com.teneasyChat.validate.Validate.getDescriptor(),
+          io.envoyproxy.pgv.validate.Validate.getDescriptor(),
           com.teneasyChat.api.common.CMessage.getDescriptor(),
         });
     internal_static_api_core_QuickReplyGroupItem_descriptor =
@@ -12734,12 +12686,12 @@ public final class QuickReplyOuterClass {
     registry.add(com.teneasyChat.api.Option.info);
     registry.add(com.teneasyChat.api.Option.method);
     registry.add(com.teneasyChat.api.Option.service);
-    registry.add(com.teneasyChat.validate.Validate.rules);
+    registry.add(io.envoyproxy.pgv.validate.Validate.rules);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.teneasyChat.api.Option.getDescriptor();
     com.google.protobuf.EmptyProto.getDescriptor();
-    com.teneasyChat.validate.Validate.getDescriptor();
+    io.envoyproxy.pgv.validate.Validate.getDescriptor();
     com.teneasyChat.api.common.CMessage.getDescriptor();
   }
 

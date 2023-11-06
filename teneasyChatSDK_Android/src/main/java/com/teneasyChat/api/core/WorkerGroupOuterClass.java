@@ -69,11 +69,6 @@ public final class WorkerGroupOuterClass {
       return new WorkerGroupQueryResponse();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.core.WorkerGroupOuterClass.internal_static_api_core_WorkerGroupQueryResponse_descriptor;
@@ -239,11 +234,13 @@ public final class WorkerGroupOuterClass {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.core.WorkerGroupOuterClass.WorkerGroupQueryResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.core.WorkerGroupOuterClass.WorkerGroupQueryResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -868,11 +865,6 @@ public final class WorkerGroupOuterClass {
       return new WorkerGroupCreateRequest();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.core.WorkerGroupOuterClass.internal_static_api_core_WorkerGroupCreateRequest_descriptor;
@@ -1067,11 +1059,13 @@ public final class WorkerGroupOuterClass {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.core.WorkerGroupOuterClass.WorkerGroupCreateRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.core.WorkerGroupOuterClass.WorkerGroupCreateRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1414,7 +1408,7 @@ public final class WorkerGroupOuterClass {
        * @return This builder for chaining.
        */
       public Builder setPriority(int value) {
-        
+
         priority_ = value;
         bitField0_ |= 0x00000002;
         onChanged();
@@ -1549,11 +1543,6 @@ public final class WorkerGroupOuterClass {
       return new WorkerGroupCreateResponse();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.core.WorkerGroupOuterClass.internal_static_api_core_WorkerGroupCreateResponse_descriptor;
@@ -1759,11 +1748,13 @@ public final class WorkerGroupOuterClass {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.core.WorkerGroupOuterClass.WorkerGroupCreateResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.core.WorkerGroupOuterClass.WorkerGroupCreateResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2014,7 +2005,7 @@ public final class WorkerGroupOuterClass {
        * @return This builder for chaining.
        */
       public Builder setId(long value) {
-        
+
         id_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -2118,7 +2109,7 @@ public final class WorkerGroupOuterClass {
        * @return This builder for chaining.
        */
       public Builder setPriority(int value) {
-        
+
         priority_ = value;
         bitField0_ |= 0x00000004;
         onChanged();
@@ -2265,11 +2256,6 @@ public final class WorkerGroupOuterClass {
       return new WorkerGroupUpdateRequest();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.core.WorkerGroupOuterClass.internal_static_api_core_WorkerGroupUpdateRequest_descriptor;
@@ -2487,11 +2473,13 @@ public final class WorkerGroupOuterClass {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.core.WorkerGroupOuterClass.WorkerGroupUpdateRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.core.WorkerGroupOuterClass.WorkerGroupUpdateRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2754,7 +2742,7 @@ public final class WorkerGroupOuterClass {
        * @return This builder for chaining.
        */
       public Builder setId(long value) {
-        
+
         id_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -2882,7 +2870,7 @@ public final class WorkerGroupOuterClass {
        * @return This builder for chaining.
        */
       public Builder setPriority(int value) {
-        
+
         priority_ = value;
         bitField0_ |= 0x00000004;
         onChanged();
@@ -3013,11 +3001,6 @@ public final class WorkerGroupOuterClass {
       return new WorkerGroupUpdateResponse();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.core.WorkerGroupOuterClass.internal_static_api_core_WorkerGroupUpdateResponse_descriptor;
@@ -3223,11 +3206,13 @@ public final class WorkerGroupOuterClass {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.core.WorkerGroupOuterClass.WorkerGroupUpdateResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.core.WorkerGroupOuterClass.WorkerGroupUpdateResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3478,7 +3463,7 @@ public final class WorkerGroupOuterClass {
        * @return This builder for chaining.
        */
       public Builder setId(long value) {
-        
+
         id_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -3582,7 +3567,7 @@ public final class WorkerGroupOuterClass {
        * @return This builder for chaining.
        */
       public Builder setPriority(int value) {
-        
+
         priority_ = value;
         bitField0_ |= 0x00000004;
         onChanged();
@@ -3702,11 +3687,6 @@ public final class WorkerGroupOuterClass {
       return new WorkerGroupDeleteRequest();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.teneasyChat.api.core.WorkerGroupOuterClass.internal_static_api_core_WorkerGroupDeleteRequest_descriptor;
@@ -3845,11 +3825,13 @@ public final class WorkerGroupOuterClass {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.teneasyChat.api.core.WorkerGroupOuterClass.WorkerGroupDeleteRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.teneasyChat.api.core.WorkerGroupOuterClass.WorkerGroupDeleteRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4086,7 +4068,7 @@ public final class WorkerGroupOuterClass {
        * @return This builder for chaining.
        */
       public Builder setId(long value) {
-        
+
         id_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -4247,7 +4229,7 @@ public final class WorkerGroupOuterClass {
           com.teneasyChat.api.Option.getDescriptor(),
           com.teneasyChat.api.common.CWorker.getDescriptor(),
           com.google.protobuf.EmptyProto.getDescriptor(),
-          com.teneasyChat.validate.Validate.getDescriptor(),
+          io.envoyproxy.pgv.validate.Validate.getDescriptor(),
         });
     internal_static_api_core_WorkerGroupQueryResponse_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -4290,13 +4272,13 @@ public final class WorkerGroupOuterClass {
     registry.add(com.teneasyChat.api.Option.info);
     registry.add(com.teneasyChat.api.Option.method);
     registry.add(com.teneasyChat.api.Option.service);
-    registry.add(com.teneasyChat.validate.Validate.rules);
+    registry.add(io.envoyproxy.pgv.validate.Validate.rules);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.teneasyChat.api.Option.getDescriptor();
     com.teneasyChat.api.common.CWorker.getDescriptor();
     com.google.protobuf.EmptyProto.getDescriptor();
-    com.teneasyChat.validate.Validate.getDescriptor();
+    io.envoyproxy.pgv.validate.Validate.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

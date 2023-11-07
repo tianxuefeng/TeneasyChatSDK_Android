@@ -11,6 +11,8 @@
         android:layout_height="match_parent"
         tools:context=".ui.main.MainFragment">
 
+
+
         <!-- bind:clickListener="@{vm.clickSendListener}" -->
 </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

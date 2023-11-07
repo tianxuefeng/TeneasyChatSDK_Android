@@ -36,10 +36,15 @@ class MainActivity : AppCompatActivity(), TeneasySDKDelegate {
         //addMsgItem(msgItem)
         chatLib.sendMessage(sayHello, CMessage.MessageFormat.MSG_TEXT)
 
-        chatLib.sendMessage("https://www.bing.com/th?id=OHR.SilencioSpain_ROW8301480487_1920x1200.jpg&rf=LaDigue_1920x1200.jpg", CMessage.MessageFormat.MSG_VIDEO)
+        chatLib.sendMessage("http://pic1.win4000.com/wallpaper/2019-09-02/5d6ca9f382bc4.jpg", CMessage.MessageFormat.MSG_IMG)
     }
 
     override fun receivedMsg(msg: CMessage.Message) {
+        if (msg.content != null) {
+            binding.tvContent.append(msg.content.toString() + "\n")
+        }else if (msg.video != null){
+            binding.tvContent.append(msg.video.toString() + "\n")
+        }
         println(msg)
     }
 

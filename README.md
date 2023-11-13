@@ -1,24 +1,26 @@
-集成步骤：
+引用SDK:
 
-1. implementation 'com.github.tianxuefeng:TeneasyChatSdkDemo:1.1.8' （版本号请替换为稳定版或最新版）
-2. gradle.properties: authToken=jp_3kctuti45o8ifvoi4nhmme0uk
-3. settings.gradle:
-  maven {
-            url "https://jitpack.io"
-            credentials { username authToken }
-        }
+repositories {
+   mavenCentral()
+……
+   maven {
+       url "https://jitpack.io"
+   }
+}
 
-4. AndroidManifest.xml
+implementation 'com.github.tianxuefeng:TeneasyChatSDK_Android:1.8.3'
+（版本号会不断递增，文档只是例子)
 
-    添加一个Activity: android:name="com.teneasy.chatuisdk.ui.main.KeFuActivity"
-       
+初始化SDK:
+private lateinit var chatLib: ChatLib
+override fun onCreate(savedInstanceState: Bundle?) {
+chatLib = ChatLib()
+chatLib.listener = this
+chatLib?.makeConnect()
+}
 
-5. 在页面添加一个按钮并触发事件：
+发消息:
 
-    R.id.btn_contactSupport -> {
-                val keFuIntent = Intent(this, KeFuActivity :: class.java)
-                this.startActivity(keFuIntent)
-
-完成。
-
-小福，2023-02-18
+普通文本消息
+val sayHello = "你好！"
+chatLib.sendMessage(sayHello, CMessage.MessageFormat.MSG_TEXT)

@@ -23,8 +23,6 @@ class MainActivity : AppCompatActivity(), TeneasySDKDelegate {
         chatLib.listener = this
         chatLib.makeConnect()
 
-
-
         binding.btnSend.setOnClickListener {
             sendMsg()
         }
@@ -67,6 +65,11 @@ class MainActivity : AppCompatActivity(), TeneasySDKDelegate {
 
     override fun workChanged(msg: GGateway.SCWorkerChanged) {
         Log.i("MainAct connected", "已经更换客服")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        chatLib.disConnect()
     }
 
 }

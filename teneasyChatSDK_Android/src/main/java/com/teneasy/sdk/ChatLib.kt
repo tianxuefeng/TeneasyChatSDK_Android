@@ -51,7 +51,7 @@ interface TeneasySDKDelegate {
 class ChatLib {
     private val TAG = "ChatLib"
     // 通讯地址
-    val baseUrl = "wss://csapi.xdev.stream/v1/gateway/h5?token="
+    var baseUrl = "wss://csapi.xdev.stream/v1/gateway/h5?token="
     fun isConnection() : Boolean {
         socket?: return false
         return socket.isOpen

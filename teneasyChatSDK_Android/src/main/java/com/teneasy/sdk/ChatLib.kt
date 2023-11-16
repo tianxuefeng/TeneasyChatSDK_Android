@@ -313,7 +313,7 @@ class ChatLib constructor(token:String, baseUrl:String = "", chatID: Long = 0){
                 Log.i(TAG, "forward: ${msg.data}")
             } else if(payLoad.act == GAction.Action.ActionSCSendMsgACK) {//消息回执
                 val scMsg = GGateway.SCSendMessage.parseFrom(msgData)
-
+                chatId = scMsg.chatId
                 if (sendingMessage != null){
                     listener?.msgReceipt(sendingMessage!!, payloadId, scMsg.msgId)
                 }

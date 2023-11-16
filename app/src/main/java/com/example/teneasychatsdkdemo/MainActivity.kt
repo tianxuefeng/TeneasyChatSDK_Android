@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity(), TeneasySDKDelegate {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        chatLib = ChatLib()
+        chatLib = ChatLib("CCcQARgRIBwoxtTNgeQw.BL9S_YLEWQmWzD1NjYHaDM3dUa6UOqgwOORaC9l8WyWuEVgCbxgd67GXmlQJsm1R2aQUgFDDrvpDsq3CmWqVAA")
         chatLib.listener = this
         chatLib.makeConnect()
 
@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity(), TeneasySDKDelegate {
         //addMsgItem(msgItem)
         chatLib.sendMessage(sayHello, CMessage.MessageFormat.MSG_TEXT)
 
-        chatLib.sendMessage("http://pic1.win4000.com/wallpaper/2019-09-02/5d6ca9f382bc4.jpg", CMessage.MessageFormat.MSG_IMG)
+        chatLib.sendMessage("/3/public/1/1695821236_29310.jpg", CMessage.MessageFormat.MSG_IMG)
     }
 
     override fun receivedMsg(msg: CMessage.Message) {

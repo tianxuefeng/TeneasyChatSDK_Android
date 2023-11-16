@@ -48,10 +48,10 @@ interface TeneasySDKDelegate {
 /**
  * 通讯核心类，提供了发送消息、解析消息等功能
  */
-class ChatLib {
+class ChatLib constructor(token:String, baseUrl:String = "", chatID: Long = 0){
     private val TAG = "ChatLib"
     // 通讯地址
-    var baseUrl = "wss://csapi.xdev.stream/v1/gateway/h5?token="
+   private var baseUrl = "wss://csapi.xdev.stream/v1/gateway/h5?token="
     fun isConnection() : Boolean {
         socket?: return false
         return socket.isOpen
@@ -59,17 +59,27 @@ class ChatLib {
 
     // 当前发送的消息实体，便于上层调用的逻辑处理
     var sendingMessage: CMessage.Message? = null
-    //var chatId: Long = 2692944494602 //2692944494608客服下线了
+    private var chatId: Long = 2692944494602 //2692944494608客服下线了
     /*
     测试环境 客服账号密码:  qixin001  qixin001  token: CAEQARjeCSBXKLK3no7pMA.4ZFT0KP1_DaEtPcdVhSyL9Q4Aolk16-bCgT6P8tm-cMOUEl-m1ygdpeIXx9iDaZbTcxEcRqW0gr6v7cuUjY2Cg
      */
     //var token: String? = "CCcQARgRIBwoxtTNgeQw.BL9S_YLEWQmWzD1NjYHaDM3dUa6UOqgwOORaC9l8WyWuEVgCbxgd67GXmlQJsm1R2aQUgFDDrvpDsq3CmWqVAA"//Dev_xiaofua1234
-    var token: String? = "CCcQARgRIBwoxtTNgeQw.BL9S_YLEWQmWzD1NjYHaDM3dUa6UOqgwOORaC9l8WyWuEVgCbxgd67GXmlQJsm1R2aQUgFDDrvpDsq3CmWqVAA"//qi xin
+    private var token: String? = "CCcQARgRIBwoxtTNgeQw.BL9S_YLEWQmWzD1NjYHaDM3dUa6UOqgwOORaC9l8WyWuEVgCbxgd67GXmlQJsm1R2aQUgFDDrvpDsq3CmWqVAA"//qi xin
     //var token: String? = "CCcQARgCIBwo6_7VjN8w.Pa47pIINpFETl5RxrpTPqLcn8RVBAWrGW_ogyzQipI475MLhNPFFPkuCNEtsYvabF9uXMKK2JhkbRdZArUK3DQ"//XiaoFua001
 
     private lateinit var socket: WebSocketClient
     var listener: TeneasySDKDelegate? = null
     private var payloadId = 0L
+
+    init {
+        this.chatId = chatID
+        if (token.length > 10) {
+            this.token = token
+        }
+        if (baseUrl.length > 10) {
+            this.baseUrl = baseUrl
+        }
+    }
 
     /**
      * 启动socket连接

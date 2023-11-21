@@ -146,12 +146,12 @@ class ChatLib constructor(token:String, baseUrl:String = "", chatID: Long = 0){
      */
    private fun sendTextMessage(msg: String) {
         //第一层
-        val content = CMessage.MessageImage.newBuilder()
-        content.uri = msg
+        val content = CMessage.MessageContent.newBuilder()
+        content.data = msg
 
         //第二层
         val msg = CMessage.Message.newBuilder()
-        msg.setImage(content)
+        msg.setContent(content)
         msg.sender = 0
         msg.chatId = 0
         msg.worker = 0

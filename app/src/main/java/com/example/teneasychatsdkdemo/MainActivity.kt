@@ -50,6 +50,8 @@ class MainActivity : AppCompatActivity(), TeneasySDKDelegate {
         //println(msg)
         val suc = if (msgId == 0L) "发送失败" else "发送成功"
         println(payloadId.toString() + " " +suc)
+
+        binding.tvContent.append(payloadId.toString() + " " +suc +"\n")
     }
 
     override fun systemMsg(msg: String) {
@@ -61,6 +63,7 @@ class MainActivity : AppCompatActivity(), TeneasySDKDelegate {
     override fun connected(c: GGateway.SCHi) {
         val workerId = c.workerId
         Log.i("MainAct connected", "成功连接")
+        binding.tvContent.append("成功连接\n")
     }
 
     override fun workChanged(msg: GGateway.SCWorkerChanged) {

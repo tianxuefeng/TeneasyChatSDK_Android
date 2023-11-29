@@ -69,7 +69,7 @@ class ChatLib constructor(token:String, baseUrl:String = "", chatID: Long = 0){
 
     private lateinit var socket: WebSocketClient
     var listener: TeneasySDKDelegate? = null
-    private var payloadId = 0L
+    var payloadId = 0L
 
     init {
         this.chatId = chatID

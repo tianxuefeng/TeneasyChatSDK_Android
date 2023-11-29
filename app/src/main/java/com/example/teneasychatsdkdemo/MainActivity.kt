@@ -33,6 +33,8 @@ class MainActivity : AppCompatActivity(), TeneasySDKDelegate {
         //val msgItem = chatLib.composeALocalMessage(sayHello)
         //addMsgItem(msgItem)
         chatLib.sendMessage(sayHello, CMessage.MessageFormat.MSG_TEXT)
+        val payloadId = chatLib.payloadId
+        val sendingMsg = chatLib.sendingMessage
 
         chatLib.sendMessage("/3/public/1/1695821236_29310.jpg", CMessage.MessageFormat.MSG_IMG)
     }

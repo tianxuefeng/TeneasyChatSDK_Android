@@ -36,7 +36,11 @@ class MainActivity : AppCompatActivity(), TeneasySDKDelegate {
         val payloadId = chatLib.payloadId
         val sendingMsg = chatLib.sendingMessage
 
-        chatLib.sendMessage("/3/public/1/1695821236_29310.jpg", CMessage.MessageFormat.MSG_IMG)
+        //chatLib.sendMessage("/3/public/1/1695821236_29310.jpg", CMessage.MessageFormat.MSG_IMG)
+
+        chatLib.sendMessage("1.mp3", CMessage.MessageFormat.MSG_VOICE)
+
+        chatLib.sendMessage("1.mp4", CMessage.MessageFormat.MSG_VIDEO)
     }
 
     override fun receivedMsg(msg: CMessage.Message) {
@@ -52,6 +56,14 @@ class MainActivity : AppCompatActivity(), TeneasySDKDelegate {
         //println(msg)
         val suc = if (msgId == 0L) "发送失败" else "发送成功"
         println(payloadId.toString() + " " +suc)
+
+        if (msg.content.toString() != "") {
+            binding.tvContent.append(msg.content.toString() )
+        }else if (msg.video.toString() != ""){
+            binding.tvContent.append(msg.video.toString() )
+        }else if (msg.audio.toString() != ""){
+            binding.tvContent.append(msg.audio.toString() )
+        }
 
         binding.tvContent.append(payloadId.toString() + " " +suc +"\n")
     }

@@ -70,6 +70,7 @@ class ChatLib constructor(token:String, baseUrl:String = "", chatID: Long = 0){
     private lateinit var socket: WebSocketClient
     var listener: TeneasySDKDelegate? = null
     var payloadId = 0L
+    private val msgList: MutableMap<Long, CMessage.Message> = mutableMapOf()
 
     init {
         this.chatId = chatID
@@ -256,6 +257,7 @@ class ChatLib constructor(token:String, baseUrl:String = "", chatID: Long = 0){
         // 第三层
         val cSendMsg = GGateway.CSSendMessage.newBuilder()
         cSendMsg.msg = cMsg
+
         val cSendMsgData = cSendMsg.build().toByteString()
 
         //第四层
@@ -265,6 +267,9 @@ class ChatLib constructor(token:String, baseUrl:String = "", chatID: Long = 0){
         payloadId += 1
         payload.id = payloadId
         Log.i(TAG, "send payloadId: ${payloadId}")
+
+        msgList[payloadId] = cMsg
+
         socket.send(payload.build().toByteArray())
     }
 
@@ -314,8 +319,9 @@ class ChatLib constructor(token:String, baseUrl:String = "", chatID: Long = 0){
             } else if(payLoad.act == GAction.Action.ActionSCSendMsgACK) {//消息回执
                 val scMsg = GGateway.SCSendMessage.parseFrom(msgData)
                 chatId = scMsg.chatId
-                if (sendingMessage != null){
-                    listener?.msgReceipt(sendingMessage!!, payloadId, scMsg.msgId)
+                var cMsg = msgList[payloadId]
+                if (cMsg != null){
+                    listener?.msgReceipt(cMsg, payloadId, scMsg.msgId)
                 }
                 Log.i(TAG, "消息ID: ${scMsg.msgId}")
             } else

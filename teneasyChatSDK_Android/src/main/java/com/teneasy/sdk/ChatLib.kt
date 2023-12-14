@@ -51,7 +51,7 @@ interface TeneasySDKDelegate {
 class ChatLib constructor(token:String, baseUrl:String = "", chatID: Long = 0){
     private val TAG = "ChatLib"
     // 通讯地址
-   private var baseUrl = "wss://csapi.xdev.stream/v1/gateway/h5?token="
+   private var baseUrl = ""
     fun isConnection() : Boolean {
         socket?: return false
         return socket.isOpen
@@ -59,12 +59,12 @@ class ChatLib constructor(token:String, baseUrl:String = "", chatID: Long = 0){
 
     // 当前发送的消息实体，便于上层调用的逻辑处理
     var sendingMessage: CMessage.Message? = null
-    private var chatId: Long = 2692944494602 //2692944494608客服下线了
+    private var chatId: Long = 0L //2692944494608客服下线了
     /*
     测试环境 客服账号密码:  qixin001  qixin001  token: CAEQARjeCSBXKLK3no7pMA.4ZFT0KP1_DaEtPcdVhSyL9Q4Aolk16-bCgT6P8tm-cMOUEl-m1ygdpeIXx9iDaZbTcxEcRqW0gr6v7cuUjY2Cg
      */
     //var token: String? = "CCcQARgRIBwoxtTNgeQw.BL9S_YLEWQmWzD1NjYHaDM3dUa6UOqgwOORaC9l8WyWuEVgCbxgd67GXmlQJsm1R2aQUgFDDrvpDsq3CmWqVAA"//Dev_xiaofua1234
-    private var token: String? = "CCcQARgRIBwoxtTNgeQw.BL9S_YLEWQmWzD1NjYHaDM3dUa6UOqgwOORaC9l8WyWuEVgCbxgd67GXmlQJsm1R2aQUgFDDrvpDsq3CmWqVAA"//qi xin
+    private var token: String? = ""//qi xin
     //var token: String? = "CCcQARgCIBwo6_7VjN8w.Pa47pIINpFETl5RxrpTPqLcn8RVBAWrGW_ogyzQipI475MLhNPFFPkuCNEtsYvabF9uXMKK2JhkbRdZArUK3DQ"//XiaoFua001
 
     private lateinit var socket: WebSocketClient
@@ -154,7 +154,7 @@ class ChatLib constructor(token:String, baseUrl:String = "", chatID: Long = 0){
         val msg = CMessage.Message.newBuilder()
         msg.setContent(content)
         msg.sender = 0
-        msg.chatId = 0
+        msg.chatId = chatId
         msg.worker = 0
         msg.msgTime = TimeUtil.msgTime()
 
@@ -175,7 +175,7 @@ class ChatLib constructor(token:String, baseUrl:String = "", chatID: Long = 0){
         val msg = CMessage.Message.newBuilder()
         msg.setImage(content)
         msg.sender = 0
-        msg.chatId = 0
+        msg.chatId = chatId
         msg.worker = 0
         msg.msgTime = TimeUtil.msgTime()
 
@@ -195,7 +195,7 @@ class ChatLib constructor(token:String, baseUrl:String = "", chatID: Long = 0){
         val msg = CMessage.Message.newBuilder()
         msg.setVideo(content)
         msg.sender = 0
-        msg.chatId = 0
+        msg.chatId = chatId
         msg.worker = 0
         msg.msgTime = TimeUtil.msgTime()
 
@@ -215,7 +215,7 @@ class ChatLib constructor(token:String, baseUrl:String = "", chatID: Long = 0){
         val msg = CMessage.Message.newBuilder()
         msg.setAudio(content)
         msg.sender = 0
-        msg.chatId = 0
+        msg.chatId = chatId
         msg.worker = 0
         msg.msgTime = TimeUtil.msgTime()
 
@@ -235,7 +235,7 @@ class ChatLib constructor(token:String, baseUrl:String = "", chatID: Long = 0){
         val msg = CMessage.Message.newBuilder()
         msg.setFile(content)
         msg.sender = 0
-        msg.chatId = 0
+        msg.chatId = chatId
         msg.worker = 0
         msg.msgTime = TimeUtil.msgTime()
 

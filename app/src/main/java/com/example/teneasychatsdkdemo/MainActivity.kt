@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity(), TeneasySDKDelegate {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        chatLib = ChatLib("CCcQARgRIBwoxtTNgeQw.BL9S_YLEWQmWzD1NjYHaDM3dUa6UOqgwOORaC9l8WyWuEVgCbxgd67GXmlQJsm1R2aQUgFDDrvpDsq3CmWqVAA", "", 0)
+        chatLib = ChatLib("CCcQARgRIBwoxtTNgeQw.BL9S_YLEWQmWzD1NjYHaDM3dUa6UOqgwOORaC9l8WyWuEVgCbxgd67GXmlQJsm1R2aQUgFDDrvpDsq3CmWqVAA", "wss://csapi.xdev.stream/v1/gateway/h5?token=", 0)
         chatLib.listener = this
         chatLib.makeConnect()
 

@@ -41,6 +41,8 @@ class MainActivity : AppCompatActivity(), TeneasySDKDelegate {
         chatLib.sendMessage("1.mp3", CMessage.MessageFormat.MSG_VOICE)
 
         chatLib.sendMessage("1.mp4", CMessage.MessageFormat.MSG_VIDEO)
+
+        chatLib.sendMessage("2.mp4", CMessage.MessageFormat.MSG_VIDEO, 564321055359893503)
     }
 
     override fun receivedMsg(msg: CMessage.Message) {

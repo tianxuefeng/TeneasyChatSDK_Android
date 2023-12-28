@@ -71,6 +71,7 @@ class ChatLib constructor(token:String, baseUrl:String = "", chatID: Long = 0){
     var listener: TeneasySDKDelegate? = null
     var payloadId = 0L
     private val msgList: MutableMap<Long, CMessage.Message> = mutableMapOf()
+    var replyMsgId: Long = 0L
 
     init {
         this.chatId = chatID
@@ -122,7 +123,8 @@ class ChatLib constructor(token:String, baseUrl:String = "", chatID: Long = 0){
      * 发送文本类型的消息
      * @param msg   消息内容或图片url,音频url,视频url...
      */
-     fun sendMessage(msg: String, type: MessageFormat) {
+     fun sendMessage(msg: String, type: MessageFormat, replyMsgId: Long = 0) {
+        this.replyMsgId = replyMsgId;
       if (type == MessageFormat.MSG_TEXT){
           sendTextMessage(msg)
       }else if (type == MessageFormat.MSG_IMG){
@@ -154,6 +156,7 @@ class ChatLib constructor(token:String, baseUrl:String = "", chatID: Long = 0){
         val msg = CMessage.Message.newBuilder()
         msg.setContent(content)
         msg.sender = 0
+        msg.replyMsgId = this.replyMsgId
         msg.chatId = chatId
         msg.worker = 0
         msg.msgTime = TimeUtil.msgTime()
@@ -174,6 +177,7 @@ class ChatLib constructor(token:String, baseUrl:String = "", chatID: Long = 0){
         //第二层
         val msg = CMessage.Message.newBuilder()
         msg.setImage(content)
+        msg.replyMsgId = this.replyMsgId
         msg.sender = 0
         msg.chatId = chatId
         msg.worker = 0
@@ -195,6 +199,7 @@ class ChatLib constructor(token:String, baseUrl:String = "", chatID: Long = 0){
         val msg = CMessage.Message.newBuilder()
         msg.setVideo(content)
         msg.sender = 0
+        msg.replyMsgId = this.replyMsgId
         msg.chatId = chatId
         msg.worker = 0
         msg.msgTime = TimeUtil.msgTime()
@@ -215,6 +220,7 @@ class ChatLib constructor(token:String, baseUrl:String = "", chatID: Long = 0){
         val msg = CMessage.Message.newBuilder()
         msg.setAudio(content)
         msg.sender = 0
+        msg.replyMsgId = this.replyMsgId
         msg.chatId = chatId
         msg.worker = 0
         msg.msgTime = TimeUtil.msgTime()
@@ -235,6 +241,7 @@ class ChatLib constructor(token:String, baseUrl:String = "", chatID: Long = 0){
         val msg = CMessage.Message.newBuilder()
         msg.setFile(content)
         msg.sender = 0
+        msg.replyMsgId = this.replyMsgId
         msg.chatId = chatId
         msg.worker = 0
         msg.msgTime = TimeUtil.msgTime()

@@ -143,6 +143,14 @@ class ChatLib constructor(token:String, baseUrl:String = "", chatID: Long = 0){
         }
     }
 
+    fun deleteMessage(MsgId: Long){
+        val msg = CMessage.Message.newBuilder()
+        msg.msgId = MsgId
+        msg.chatId = chatId
+        msg.setMsgOp(CMessage.MessageOperate.MSG_OP_DELETE)
+        doSendMsg(msg.build())
+    }
+
     /**
      * 发送文本类型的消息
      * @param msg   消息内容
@@ -254,7 +262,7 @@ class ChatLib constructor(token:String, baseUrl:String = "", chatID: Long = 0){
      * 发送文本消息
      * @param textMsg MessageItem
      */
-    private fun doSendMsg(cMsg: CMessage.Message) {
+    private fun doSendMsg(cMsg: CMessage.Message, act: GAction.Action = GAction.Action.ActionCSSendMsg) {
         if(!isConnection()) {
             makeConnect()
             failedToSend()
@@ -270,12 +278,14 @@ class ChatLib constructor(token:String, baseUrl:String = "", chatID: Long = 0){
         //第四层
         val payload = GPayload.Payload.newBuilder()
         payload.data = cSendMsgData
-        payload.act = GAction.Action.ActionCSSendMsg
+        payload.act = act
         payloadId += 1
         payload.id = payloadId
         Log.i(TAG, "send payloadId: ${payloadId}")
 
-        msgList[payloadId] = cMsg
+        if (act == GAction.Action.ActionCSSendMsg) {
+            msgList[payloadId] = cMsg
+        }
 
         socket.send(payload.build().toByteArray())
     }
@@ -300,8 +310,10 @@ class ChatLib constructor(token:String, baseUrl:String = "", chatID: Long = 0){
         else {
             val payLoad = GPayload.Payload.parseFrom(data)
             val msgData = payLoad.data
-             payloadId = payLoad.id
-            Log.i(TAG, "payloadId: ${payloadId}")
+            if (sendingMessage?.msgOp == CMessage.MessageOperate.MSG_OP_POST) {
+                payloadId = payLoad.id
+                Log.i(TAG, "new payloadId: ${payloadId}")
+            }
             //收到消息
             if(payLoad.act == GAction.Action.ActionSCRecvMsg) {
                 val recvMsg = GGateway.SCRecvMessage.parseFrom(msgData)
@@ -323,12 +335,29 @@ class ChatLib constructor(token:String, baseUrl:String = "", chatID: Long = 0){
             } else if(payLoad.act == GAction.Action.ActionForward) {
                 val msg = GGateway.CSForward.parseFrom(msgData)
                 Log.i(TAG, "forward: ${msg.data}")
+            }  else if(payLoad.act == GAction.Action.ActionSCDeleteMsgACK) {
+                //这部分实际没有用上
+                val scMsg = GGateway.SCSendMessage.parseFrom(msgData)
+                val msg = CMessage.Message.newBuilder()
+                msg.msgId = -1;
+                Log.i(TAG, "删除回执收到：消息ID: ${msg.msgId}")
+                listener?.msgReceipt(msg.build(), payLoad.id, -1)
+            }  else if(payLoad.act == GAction.Action.ActionSCDeleteMsg) {
+                val scMsg = GGateway.SCRecvMessage.parseFrom(msgData)
+                val msg = CMessage.Message.newBuilder()
+                msg.msgId = -1;
+                listener?.msgReceipt(msg.build(), payLoad.id, -1)
+                Log.i(TAG, "对方删除了消息：消息ID: ${scMsg.msg.msgId}")
             } else if(payLoad.act == GAction.Action.ActionSCSendMsgACK) {//消息回执
                 val scMsg = GGateway.SCSendMessage.parseFrom(msgData)
                 chatId = scMsg.chatId
-                var cMsg = msgList[payloadId]
+                var cMsg = msgList[payLoad.id]
                 if (cMsg != null){
-                    listener?.msgReceipt(cMsg, payloadId, scMsg.msgId)
+                    if (sendingMessage?.msgOp == CMessage.MessageOperate.MSG_OP_DELETE){
+                        listener?.msgReceipt(cMsg, payLoad.id, -1)
+                    }else{
+                        listener?.msgReceipt(cMsg, payLoad.id, scMsg.msgId)
+                    }
                 }
                 Log.i(TAG, "消息ID: ${scMsg.msgId}")
             } else

@@ -32,17 +32,18 @@ class MainActivity : AppCompatActivity(), TeneasySDKDelegate {
         val sayHello = "你好！"
         //val msgItem = chatLib.composeALocalMessage(sayHello)
         //addMsgItem(msgItem)
-        chatLib.sendMessage(sayHello, CMessage.MessageFormat.MSG_TEXT)
+       // chatLib.sendMessage(sayHello, CMessage.MessageFormat.MSG_TEXT)
         val payloadId = chatLib.payloadId
         val sendingMsg = chatLib.sendingMessage
 
         //chatLib.sendMessage("/3/public/1/1695821236_29310.jpg", CMessage.MessageFormat.MSG_IMG)
 
-        chatLib.sendMessage("1.mp3", CMessage.MessageFormat.MSG_VOICE)
+        //chatLib.sendMessage("1.mp3", CMessage.MessageFormat.MSG_VOICE)
 
-        chatLib.sendMessage("1.mp4", CMessage.MessageFormat.MSG_VIDEO)
+        //chatLib.sendMessage("1.mp4", CMessage.MessageFormat.MSG_VIDEO)
 
-        chatLib.sendMessage("2.mp4", CMessage.MessageFormat.MSG_VIDEO, 564321055359893503)
+        //chatLib.sendMessage("2.mp4", CMessage.MessageFormat.MSG_VIDEO, 564321055359893503)
+        chatLib.deleteMessage(493660676493934594)
     }
 
     override fun receivedMsg(msg: CMessage.Message) {

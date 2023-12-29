@@ -14,6 +14,7 @@ class MainActivity : AppCompatActivity(), TeneasySDKDelegate {
 
     private lateinit var chatLib: ChatLib
     private lateinit var binding: ActivityMainBinding
+    private var lastMsgId: Long = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -43,7 +44,7 @@ class MainActivity : AppCompatActivity(), TeneasySDKDelegate {
         //chatLib.sendMessage("1.mp4", CMessage.MessageFormat.MSG_VIDEO)
 
         //chatLib.sendMessage("2.mp4", CMessage.MessageFormat.MSG_VIDEO, 564321055359893503)
-        chatLib.deleteMessage(493660676493934594)
+        chatLib.deleteMessage(lastMsgId)
     }
 
     override fun receivedMsg(msg: CMessage.Message) {
@@ -59,16 +60,20 @@ class MainActivity : AppCompatActivity(), TeneasySDKDelegate {
         //println(msg)
         val suc = if (msgId == 0L) "发送失败" else "发送成功"
         println(payloadId.toString() + " " +suc)
+        runOnUiThread({
+            if (msg.content.toString() != "") {
+                binding.tvContent.append(msg.content.toString() )
+            }else if (msg.video.toString() != ""){
+                binding.tvContent.append(msg.video.toString() )
+            }else if (msg.audio.toString() != ""){
+                binding.tvContent.append(msg.audio.toString() )
+            }
 
-        if (msg.content.toString() != "") {
-            binding.tvContent.append(msg.content.toString() )
-        }else if (msg.video.toString() != ""){
-            binding.tvContent.append(msg.video.toString() )
-        }else if (msg.audio.toString() != ""){
-            binding.tvContent.append(msg.audio.toString() )
-        }
-
-        binding.tvContent.append(payloadId.toString() + " " +suc +"\n")
+            if (msgId > 0){
+                lastMsgId = msgId
+            }
+            binding.tvContent.append(payloadId.toString() + " msgId:" + lastMsgId +suc +"\n")
+        })
     }
 
     override fun systemMsg(msg: String) {
@@ -80,7 +85,10 @@ class MainActivity : AppCompatActivity(), TeneasySDKDelegate {
     override fun connected(c: GGateway.SCHi) {
         val workerId = c.workerId
         Log.i("MainAct connected", "成功连接")
-        binding.tvContent.append("成功连接\n")
+        chatLib.sendMessage("1.mp4", CMessage.MessageFormat.MSG_VIDEO)
+        runOnUiThread({
+            binding.tvContent.append("成功连接\n")
+        })
     }
 
     override fun workChanged(msg: GGateway.SCWorkerChanged) {

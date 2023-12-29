@@ -282,13 +282,12 @@ class ChatLib constructor(token:String, baseUrl:String = "", chatID: Long = 0){
         val payload = GPayload.Payload.newBuilder()
         payload.data = cSendMsgData
         payload.act = act
-        Log.i(TAG, "send payloadId: ${payloadId}")
-
         if (sendingMessage?.msgOp == CMessage.MessageOperate.MSG_OP_POST) {
             payloadId += 1
             msgList[payloadId] = cMsg
         }
         payload.id = payloadId
+        Log.i(TAG, "send payloadId: ${payloadId}")
         socket.send(payload.build().toByteArray())
     }
 
@@ -312,10 +311,6 @@ class ChatLib constructor(token:String, baseUrl:String = "", chatID: Long = 0){
         else {
             val payLoad = GPayload.Payload.parseFrom(data)
             val msgData = payLoad.data
-            if (sendingMessage?.msgOp != CMessage.MessageOperate.MSG_OP_DELETE) {
-                payloadId = payLoad.id
-                Log.i(TAG, "new payloadId: ${payloadId}")
-            }
             //收到消息
             if(payLoad.act == GAction.Action.ActionSCRecvMsg) {
                 val recvMsg = GGateway.SCRecvMessage.parseFrom(msgData)
@@ -323,12 +318,19 @@ class ChatLib constructor(token:String, baseUrl:String = "", chatID: Long = 0){
 //                var eventBus = MessageEventBus<MessageItem>()
 //                eventBus.setData(chatModel)
 //                EventBus.getDefault().post(eventBus)
-                recvMsg.msg.let {
-                    listener?.receivedMsg(it)
+                //收到对方撤回消息
+                if (recvMsg.msg.msgOp == CMessage.MessageOperate.MSG_OP_DELETE){
+                    listener?.msgReceipt(recvMsg.msg, payLoad.id, -1)
+                }else{
+                    recvMsg.msg.let {
+                        listener?.receivedMsg(it)
+                    }
                 }
             } else if(payLoad.act == GAction.Action.ActionSCHi) {
                 val msg = GGateway.SCHi.parseFrom(msgData)
                 token = msg.token
+                payloadId = payLoad.id
+                print("初始payloadId:" + payloadId + "\n")
                 listener?.connected(msg)
                 // 采用封装好的自定义事件类，来实现多类型传递
 //                var eventBus = MessageEventBus<GGateway.SCHi>()
@@ -349,11 +351,12 @@ class ChatLib constructor(token:String, baseUrl:String = "", chatID: Long = 0){
                     listener?.msgReceipt(msg.build(), payLoad.id, -1)
                 }
             }  else if(payLoad.act == GAction.Action.ActionSCDeleteMsg) {
-                val scMsg = GGateway.SCRecvMessage.parseFrom(msgData)
+                //val scMsg = GGateway.SCRecvMessage.parseFrom(msgData)
                 val msg = CMessage.Message.newBuilder()
                 msg.msgId = -1;
                 listener?.msgReceipt(msg.build(), payLoad.id, -1)
-                Log.i(TAG, "对方删除了消息：消息ID: ${scMsg.msg.msgId}")
+                Log.i(TAG, "对方删除了消息： payload ID${payLoad.id}")
+                //Log.i(TAG, "对方删除了消息：消息ID: ${scMsg.msg.msgId}")
             } else if(payLoad.act == GAction.Action.ActionSCSendMsgACK) {//消息回执
                 val scMsg = GGateway.SCSendMessage.parseFrom(msgData)
                 Log.i(TAG, "收到消息回执B msgId: ${scMsg.msgId}")

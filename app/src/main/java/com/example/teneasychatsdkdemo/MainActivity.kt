@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity(), TeneasySDKDelegate {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        chatLib = ChatLib("CCcQARgRIBwoxtTNgeQw.BL9S_YLEWQmWzD1NjYHaDM3dUa6UOqgwOORaC9l8WyWuEVgCbxgd67GXmlQJsm1R2aQUgFDDrvpDsq3CmWqVAA", "wss://csapi.xdev.stream/v1/gateway/h5?token=", 0)
+        chatLib = ChatLib("CMwBEAEYDiCcASjjoNCvyzE.RmXisQknL9Act5PeTAsUNb4ITWUXEZyCSkP5dALeo8EAzuPe9W9jdt7fASKBUvqOBmJeoby_rgycNPtkJQB_Ag", "wss://csapi.xdev.stream/v1/gateway/h5?token=", 0)
         chatLib.listener = this
         chatLib.makeConnect()
 
@@ -41,10 +41,10 @@ class MainActivity : AppCompatActivity(), TeneasySDKDelegate {
 
         //chatLib.sendMessage("1.mp3", CMessage.MessageFormat.MSG_VOICE)
 
-        //chatLib.sendMessage("1.mp4", CMessage.MessageFormat.MSG_VIDEO)
+        chatLib.sendMessage("1.mp4", CMessage.MessageFormat.MSG_VIDEO)
 
         //chatLib.sendMessage("2.mp4", CMessage.MessageFormat.MSG_VIDEO, 564321055359893503)
-        chatLib.deleteMessage(lastMsgId)
+        //chatLib.deleteMessage(lastMsgId)
     }
 
     override fun receivedMsg(msg: CMessage.Message) {
@@ -59,7 +59,7 @@ class MainActivity : AppCompatActivity(), TeneasySDKDelegate {
     override fun msgReceipt(msg: CMessage.Message, payloadId: Long, msgId: Long) {
         //println(msg)
         val suc = if (msgId == 0L) "发送失败" else "发送成功"
-        println(payloadId.toString() + " " +suc)
+        println("payloadId："  + payloadId.toString()   +suc)
         runOnUiThread({
             if (msg.content.toString() != "") {
                 binding.tvContent.append(msg.content.toString() )

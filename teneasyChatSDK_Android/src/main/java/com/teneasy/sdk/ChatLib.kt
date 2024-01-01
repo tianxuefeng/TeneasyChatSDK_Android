@@ -371,7 +371,13 @@ class ChatLib constructor(token:String, baseUrl:String = "", chatID: Long = 0){
                     }
                 }
                 Log.i(TAG, "消息ID: ${scMsg.msgId}")
-            } else
+            } else if(payLoad.act == GAction.Action.ActionSCWorkerChanged){
+                val scMsg = GGateway.SCWorkerChanged.parseFrom(msgData)
+                scMsg.apply {
+                    listener?.workChanged(scMsg);
+                }
+            }
+            else
                 Log.i(TAG, "received data: $data")
         }
     }

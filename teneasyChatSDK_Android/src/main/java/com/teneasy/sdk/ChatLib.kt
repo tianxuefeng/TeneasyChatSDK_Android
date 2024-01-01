@@ -343,7 +343,8 @@ class ChatLib constructor(token:String, baseUrl:String = "", chatID: Long = 0){
                 //这部分实际没有用上
                 val scMsg = GGateway.SCSendMessage.parseFrom(msgData)
                 val msg = CMessage.Message.newBuilder()
-                msg.msgId = -1;
+                msg.msgId = scMsg.msgId;
+                msg.msgOp = CMessage.MessageOperate.MSG_OP_DELETE;
                 Log.i(TAG, "删除回执收到A：消息ID: ${msg.msgId}")
                 var cMsg = msgList[payLoad.id]
                 if (cMsg != null) {
@@ -351,9 +352,10 @@ class ChatLib constructor(token:String, baseUrl:String = "", chatID: Long = 0){
                     listener?.msgReceipt(msg.build(), payLoad.id, -1)
                 }
             }  else if(payLoad.act == GAction.Action.ActionSCDeleteMsg) {
-                //val scMsg = GGateway.SCRecvMessage.parseFrom(msgData)
+                val scMsg = GGateway.SCRecvMessage.parseFrom(msgData)
                 val msg = CMessage.Message.newBuilder()
-                msg.msgId = -1;
+                msg.msgId = scMsg.msg.msgId;
+                msg.msgOp == CMessage.MessageOperate.MSG_OP_DELETE
                 listener?.msgReceipt(msg.build(), payLoad.id, -1)
                 Log.i(TAG, "对方删除了消息： payload ID${payLoad.id}")
                 //Log.i(TAG, "对方删除了消息：消息ID: ${scMsg.msg.msgId}")

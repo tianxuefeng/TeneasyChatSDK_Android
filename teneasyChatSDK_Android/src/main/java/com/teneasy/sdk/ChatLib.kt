@@ -54,7 +54,7 @@ class ChatLib constructor(token:String, baseUrl:String = "", chatID: Long = 0){
     // 通讯地址
    private var baseUrl = ""
     fun isConnection() : Boolean {
-        socket?: return false
+        if (socket == null) return false
         return socket.isOpen
     }
 
@@ -282,7 +282,8 @@ class ChatLib constructor(token:String, baseUrl:String = "", chatID: Long = 0){
         payload.data = cSendMsgData
         payload.act = act
 
-        if (sendingMessage?.msgOp == CMessage.MessageOperate.MSG_OP_POST && payload_Id != 0L) {
+        //payload_id != 0的时候，可能是重发，重发不需要+1
+        if (sendingMessage?.msgOp == CMessage.MessageOperate.MSG_OP_POST && payload_Id == 0L) {
             payloadId += 1
             msgList[payloadId] = cMsg
         }

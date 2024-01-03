@@ -21,11 +21,14 @@ class MainActivity : AppCompatActivity(), TeneasySDKDelegate {
         setContentView(binding.root)
 
         /*
+        老token，一直有效，很好
+        CCcQARgOICIowqaSjeIw.9rO3unQwFrUUa-vJ6HvUQAbiAZN7XWBbaE_Oyd48C0Ae4xhzWWSriIGZZdVSvOajS1h_RFlQHZiFzadgBBuwDQ
+
         CH0QARiX9w4gogEo9MS-08wx.R07hSs5oXQxe9s0bV0WsaislYcvHDNYvUYT-2JNEo4wcBC1LNEHmHAFSjCoY8g60oW31zZiIs1kZhejQEaEhBQ
 
        CH0QARib9w4gogEo8_nL1cwx.gXxoS2IK7cv4JWQb8LRmGI-cSEFHwfyBmoyErwSw0h1BXdkotxH4OgoiHvi6B6CON8LX7ei5AKwn3v1epXB9Cg
          */
-        chatLib = ChatLib("CH0QARib9w4gogEo8_nL1cwx.gXxoS2IK7cv4JWQb8LRmGI-cSEFHwfyBmoyErwSw0h1BXdkotxH4OgoiHvi6B6CON8LX7ei5AKwn3v1epXB9Cg", "wss://csapi.xdev.stream/v1/gateway/h5?token=", 0)
+        chatLib = ChatLib("CCcQARgOICIowqaSjeIw.9rO3unQwFrUUa-vJ6HvUQAbiAZN7XWBbaE_Oyd48C0Ae4xhzWWSriIGZZdVSvOajS1h_RFlQHZiFzadgBBuwDQ", "wss://csapi.xdev.stream/v1/gateway/h5?token=", 0)
         chatLib.listener = this
         chatLib.makeConnect()
 
@@ -50,8 +53,6 @@ class MainActivity : AppCompatActivity(), TeneasySDKDelegate {
 
         //chatLib.sendMessage("2.mp4", CMessage.MessageFormat.MSG_VIDEO, 564321055359893503)
         //chatLib.deleteMessage(lastMsgId)
-
-
     }
 
     override fun receivedMsg(msg: CMessage.Message) {

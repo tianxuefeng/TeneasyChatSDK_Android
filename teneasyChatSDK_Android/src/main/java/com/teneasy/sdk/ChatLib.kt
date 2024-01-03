@@ -6,6 +6,7 @@ import android.util.Log
 import android.widget.Toast
 import com.google.protobuf.Timestamp
 import com.teneasyChat.api.common.CMessage
+import com.teneasyChat.api.common.CMessage.Message
 import com.teneasyChat.api.common.CMessage.MessageFormat
 import com.teneasyChat.gateway.GAction
 import com.teneasyChat.gateway.GGateway
@@ -60,12 +61,7 @@ class ChatLib constructor(token:String, baseUrl:String = "", chatID: Long = 0){
     // 当前发送的消息实体，便于上层调用的逻辑处理
     var sendingMessage: CMessage.Message? = null
     private var chatId: Long = 0L //2692944494608客服下线了
-    /*
-    测试环境 客服账号密码:  qixin001  qixin001  token: CAEQARjeCSBXKLK3no7pMA.4ZFT0KP1_DaEtPcdVhSyL9Q4Aolk16-bCgT6P8tm-cMOUEl-m1ygdpeIXx9iDaZbTcxEcRqW0gr6v7cuUjY2Cg
-     */
-    //var token: String? = "CCcQARgRIBwoxtTNgeQw.BL9S_YLEWQmWzD1NjYHaDM3dUa6UOqgwOORaC9l8WyWuEVgCbxgd67GXmlQJsm1R2aQUgFDDrvpDsq3CmWqVAA"//Dev_xiaofua1234
     private var token: String? = ""//qi xin
-    //var token: String? = "CCcQARgCIBwo6_7VjN8w.Pa47pIINpFETl5RxrpTPqLcn8RVBAWrGW_ogyzQipI475MLhNPFFPkuCNEtsYvabF9uXMKK2JhkbRdZArUK3DQ"//XiaoFua001
 
     private lateinit var socket: WebSocketClient
     var listener: TeneasySDKDelegate? = null
@@ -106,12 +102,8 @@ class ChatLib constructor(token:String, baseUrl:String = "", chatID: Long = 0){
                     listener?.systemMsg("已连接上服务器")
                 }
                 override fun onClose(code: Int, reason: String, remote: Boolean) {
-//                    var eventBus = MessageEventBus<MessageItem>()
-//                    eventBus.arg = -200
-//                    EventBus.getDefault().post(eventBus)
                     listener?.systemMsg("已断开通信" + reason)
                 }
-
                 override fun onError(ex: Exception) {
                     ex.printStackTrace()
                 }
@@ -174,7 +166,6 @@ class ChatLib constructor(token:String, baseUrl:String = "", chatID: Long = 0){
 
         sendingMessage = msg.build()
     }
-
 
     /**
      * 发送图片类型的消息
@@ -260,12 +251,20 @@ class ChatLib constructor(token:String, baseUrl:String = "", chatID: Long = 0){
         sendingMessage = msg.build()
     }
 
+    /**
+     * 重发消息
+     * @param cMsg: Message
+     * @param payloadId: Long
+     */
+    fun resendMSg(cMsg: Message, payloadId: Long){
+        doSendMsg(cMsg, GAction.Action.ActionCSSendMsg, payloadId)
+    }
 
     /**
      * 发送文本消息
      * @param textMsg MessageItem
      */
-    private fun doSendMsg(cMsg: CMessage.Message, act: GAction.Action = GAction.Action.ActionCSSendMsg) {
+    private fun doSendMsg(cMsg: CMessage.Message, act: GAction.Action = GAction.Action.ActionCSSendMsg, payload_Id: Long = 0) {
         if(!isConnection()) {
             makeConnect()
             failedToSend()
@@ -282,11 +281,17 @@ class ChatLib constructor(token:String, baseUrl:String = "", chatID: Long = 0){
         val payload = GPayload.Payload.newBuilder()
         payload.data = cSendMsgData
         payload.act = act
-        if (sendingMessage?.msgOp == CMessage.MessageOperate.MSG_OP_POST) {
+
+        if (sendingMessage?.msgOp == CMessage.MessageOperate.MSG_OP_POST && payload_Id != 0L) {
             payloadId += 1
             msgList[payloadId] = cMsg
         }
-        payload.id = payloadId
+
+        if (payload_Id != 0L){
+            payload.id = payload_Id;
+        }else {
+            payload.id = payloadId
+        }
         Log.i(TAG, "send payloadId: ${payloadId}")
         socket.send(payload.build().toByteArray())
     }
@@ -314,10 +319,6 @@ class ChatLib constructor(token:String, baseUrl:String = "", chatID: Long = 0){
             //收到消息
             if(payLoad.act == GAction.Action.ActionSCRecvMsg) {
                 val recvMsg = GGateway.SCRecvMessage.parseFrom(msgData)
-                // 通过eventBus向上层发送数据，便于上层逻辑处理。调用时需在界面中注册eventBus事件
-//                var eventBus = MessageEventBus<MessageItem>()
-//                eventBus.setData(chatModel)
-//                EventBus.getDefault().post(eventBus)
                 //收到对方撤回消息
                 if (recvMsg.msg.msgOp == CMessage.MessageOperate.MSG_OP_DELETE){
                     listener?.msgReceipt(recvMsg.msg, payLoad.id, -1)
@@ -332,10 +333,6 @@ class ChatLib constructor(token:String, baseUrl:String = "", chatID: Long = 0){
                 payloadId = payLoad.id
                 print("初始payloadId:" + payloadId + "\n")
                 listener?.connected(msg)
-                // 采用封装好的自定义事件类，来实现多类型传递
-//                var eventBus = MessageEventBus<GGateway.SCHi>()
-//                eventBus.setData(msg)
-//                EventBus.getDefault().post(eventBus)
             } else if(payLoad.act == GAction.Action.ActionForward) {
                 val msg = GGateway.CSForward.parseFrom(msgData)
                 Log.i(TAG, "forward: ${msg.data}")
@@ -358,7 +355,6 @@ class ChatLib constructor(token:String, baseUrl:String = "", chatID: Long = 0){
                 msg.msgOp == CMessage.MessageOperate.MSG_OP_DELETE
                 listener?.msgReceipt(msg.build(), payLoad.id, -1)
                 Log.i(TAG, "对方删除了消息： payload ID${payLoad.id}")
-                //Log.i(TAG, "对方删除了消息：消息ID: ${scMsg.msg.msgId}")
             } else if(payLoad.act == GAction.Action.ActionSCSendMsgACK) {//消息回执
                 val scMsg = GGateway.SCSendMessage.parseFrom(msgData)
                 Log.i(TAG, "收到消息回执B msgId: ${scMsg.msgId}")

@@ -20,7 +20,12 @@ class MainActivity : AppCompatActivity(), TeneasySDKDelegate {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        chatLib = ChatLib("CMwBEAEYDiCcASjjoNCvyzE.RmXisQknL9Act5PeTAsUNb4ITWUXEZyCSkP5dALeo8EAzuPe9W9jdt7fASKBUvqOBmJeoby_rgycNPtkJQB_Ag", "wss://csapi.xdev.stream/v1/gateway/h5?token=", 0)
+        /*
+        CH0QARiX9w4gogEo9MS-08wx.R07hSs5oXQxe9s0bV0WsaislYcvHDNYvUYT-2JNEo4wcBC1LNEHmHAFSjCoY8g60oW31zZiIs1kZhejQEaEhBQ
+
+       CH0QARib9w4gogEo8_nL1cwx.gXxoS2IK7cv4JWQb8LRmGI-cSEFHwfyBmoyErwSw0h1BXdkotxH4OgoiHvi6B6CON8LX7ei5AKwn3v1epXB9Cg
+         */
+        chatLib = ChatLib("CH0QARib9w4gogEo8_nL1cwx.gXxoS2IK7cv4JWQb8LRmGI-cSEFHwfyBmoyErwSw0h1BXdkotxH4OgoiHvi6B6CON8LX7ei5AKwn3v1epXB9Cg", "wss://csapi.xdev.stream/v1/gateway/h5?token=", 0)
         chatLib.listener = this
         chatLib.makeConnect()
 
@@ -30,10 +35,10 @@ class MainActivity : AppCompatActivity(), TeneasySDKDelegate {
     }
 
     private fun sendMsg(){
-        val sayHello = "你好！"
+        val sayHello = "你好！今天去哪玩？"
         //val msgItem = chatLib.composeALocalMessage(sayHello)
         //addMsgItem(msgItem)
-       // chatLib.sendMessage(sayHello, CMessage.MessageFormat.MSG_TEXT)
+        chatLib.sendMessage(sayHello, CMessage.MessageFormat.MSG_TEXT)
         val payloadId = chatLib.payloadId
         val sendingMsg = chatLib.sendingMessage
 
@@ -41,7 +46,7 @@ class MainActivity : AppCompatActivity(), TeneasySDKDelegate {
 
         //chatLib.sendMessage("1.mp3", CMessage.MessageFormat.MSG_VOICE)
 
-        chatLib.sendMessage("1.mp4", CMessage.MessageFormat.MSG_VIDEO)
+        //chatLib.sendMessage("1.mp4", CMessage.MessageFormat.MSG_VIDEO)
 
         //chatLib.sendMessage("2.mp4", CMessage.MessageFormat.MSG_VIDEO, 564321055359893503)
         //chatLib.deleteMessage(lastMsgId)

@@ -2548,6 +2548,1750 @@ public final class WorkerOuterClass {
 
   }
 
+  public interface NIMAccountRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:api.core.NIMAccountRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int32 workerID = 1;</code>
+     * @return The workerID.
+     */
+    int getWorkerID();
+
+    /**
+     * <code>string name = 2;</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <code>string name = 2;</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>string avatar = 3;</code>
+     * @return The avatar.
+     */
+    java.lang.String getAvatar();
+    /**
+     * <code>string avatar = 3;</code>
+     * @return The bytes for avatar.
+     */
+    com.google.protobuf.ByteString
+        getAvatarBytes();
+  }
+  /**
+   * <pre>
+   *申请客服云信账号
+   * </pre>
+   *
+   * Protobuf type {@code api.core.NIMAccountRequest}
+   */
+  public static final class NIMAccountRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:api.core.NIMAccountRequest)
+      NIMAccountRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use NIMAccountRequest.newBuilder() to construct.
+    private NIMAccountRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private NIMAccountRequest() {
+      name_ = "";
+      avatar_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new NIMAccountRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.teneasyChat.api.core.WorkerOuterClass.internal_static_api_core_NIMAccountRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.teneasyChat.api.core.WorkerOuterClass.internal_static_api_core_NIMAccountRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.teneasyChat.api.core.WorkerOuterClass.NIMAccountRequest.class, com.teneasyChat.api.core.WorkerOuterClass.NIMAccountRequest.Builder.class);
+    }
+
+    public static final int WORKERID_FIELD_NUMBER = 1;
+    private int workerID_ = 0;
+    /**
+     * <code>int32 workerID = 1;</code>
+     * @return The workerID.
+     */
+    @java.lang.Override
+    public int getWorkerID() {
+      return workerID_;
+    }
+
+    public static final int NAME_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
+    /**
+     * <code>string name = 2;</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string name = 2;</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int AVATAR_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object avatar_ = "";
+    /**
+     * <code>string avatar = 3;</code>
+     * @return The avatar.
+     */
+    @java.lang.Override
+    public java.lang.String getAvatar() {
+      java.lang.Object ref = avatar_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        avatar_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string avatar = 3;</code>
+     * @return The bytes for avatar.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAvatarBytes() {
+      java.lang.Object ref = avatar_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        avatar_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (workerID_ != 0) {
+        output.writeInt32(1, workerID_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(avatar_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, avatar_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (workerID_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, workerID_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(avatar_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, avatar_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.teneasyChat.api.core.WorkerOuterClass.NIMAccountRequest)) {
+        return super.equals(obj);
+      }
+      com.teneasyChat.api.core.WorkerOuterClass.NIMAccountRequest other = (com.teneasyChat.api.core.WorkerOuterClass.NIMAccountRequest) obj;
+
+      if (getWorkerID()
+          != other.getWorkerID()) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getAvatar()
+          .equals(other.getAvatar())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + WORKERID_FIELD_NUMBER;
+      hash = (53 * hash) + getWorkerID();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + AVATAR_FIELD_NUMBER;
+      hash = (53 * hash) + getAvatar().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.teneasyChat.api.core.WorkerOuterClass.NIMAccountRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teneasyChat.api.core.WorkerOuterClass.NIMAccountRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teneasyChat.api.core.WorkerOuterClass.NIMAccountRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teneasyChat.api.core.WorkerOuterClass.NIMAccountRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teneasyChat.api.core.WorkerOuterClass.NIMAccountRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teneasyChat.api.core.WorkerOuterClass.NIMAccountRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teneasyChat.api.core.WorkerOuterClass.NIMAccountRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.teneasyChat.api.core.WorkerOuterClass.NIMAccountRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.teneasyChat.api.core.WorkerOuterClass.NIMAccountRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.teneasyChat.api.core.WorkerOuterClass.NIMAccountRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.teneasyChat.api.core.WorkerOuterClass.NIMAccountRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.teneasyChat.api.core.WorkerOuterClass.NIMAccountRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.teneasyChat.api.core.WorkerOuterClass.NIMAccountRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     *申请客服云信账号
+     * </pre>
+     *
+     * Protobuf type {@code api.core.NIMAccountRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:api.core.NIMAccountRequest)
+        com.teneasyChat.api.core.WorkerOuterClass.NIMAccountRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.teneasyChat.api.core.WorkerOuterClass.internal_static_api_core_NIMAccountRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.teneasyChat.api.core.WorkerOuterClass.internal_static_api_core_NIMAccountRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.teneasyChat.api.core.WorkerOuterClass.NIMAccountRequest.class, com.teneasyChat.api.core.WorkerOuterClass.NIMAccountRequest.Builder.class);
+      }
+
+      // Construct using com.teneasyChat.api.core.WorkerOuterClass.NIMAccountRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        workerID_ = 0;
+        name_ = "";
+        avatar_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.teneasyChat.api.core.WorkerOuterClass.internal_static_api_core_NIMAccountRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.teneasyChat.api.core.WorkerOuterClass.NIMAccountRequest getDefaultInstanceForType() {
+        return com.teneasyChat.api.core.WorkerOuterClass.NIMAccountRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.teneasyChat.api.core.WorkerOuterClass.NIMAccountRequest build() {
+        com.teneasyChat.api.core.WorkerOuterClass.NIMAccountRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.teneasyChat.api.core.WorkerOuterClass.NIMAccountRequest buildPartial() {
+        com.teneasyChat.api.core.WorkerOuterClass.NIMAccountRequest result = new com.teneasyChat.api.core.WorkerOuterClass.NIMAccountRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.teneasyChat.api.core.WorkerOuterClass.NIMAccountRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.workerID_ = workerID_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.avatar_ = avatar_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.teneasyChat.api.core.WorkerOuterClass.NIMAccountRequest) {
+          return mergeFrom((com.teneasyChat.api.core.WorkerOuterClass.NIMAccountRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.teneasyChat.api.core.WorkerOuterClass.NIMAccountRequest other) {
+        if (other == com.teneasyChat.api.core.WorkerOuterClass.NIMAccountRequest.getDefaultInstance()) return this;
+        if (other.getWorkerID() != 0) {
+          setWorkerID(other.getWorkerID());
+        }
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getAvatar().isEmpty()) {
+          avatar_ = other.avatar_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                workerID_ = input.readInt32();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                name_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                avatar_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private int workerID_ ;
+      /**
+       * <code>int32 workerID = 1;</code>
+       * @return The workerID.
+       */
+      @java.lang.Override
+      public int getWorkerID() {
+        return workerID_;
+      }
+      /**
+       * <code>int32 workerID = 1;</code>
+       * @param value The workerID to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWorkerID(int value) {
+
+        workerID_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 workerID = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWorkerID() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        workerID_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <code>string name = 2;</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string name = 2;</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string name = 2;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        name_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 2;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        name_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object avatar_ = "";
+      /**
+       * <code>string avatar = 3;</code>
+       * @return The avatar.
+       */
+      public java.lang.String getAvatar() {
+        java.lang.Object ref = avatar_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          avatar_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string avatar = 3;</code>
+       * @return The bytes for avatar.
+       */
+      public com.google.protobuf.ByteString
+          getAvatarBytes() {
+        java.lang.Object ref = avatar_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          avatar_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string avatar = 3;</code>
+       * @param value The avatar to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAvatar(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        avatar_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string avatar = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAvatar() {
+        avatar_ = getDefaultInstance().getAvatar();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string avatar = 3;</code>
+       * @param value The bytes for avatar to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAvatarBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        avatar_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:api.core.NIMAccountRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:api.core.NIMAccountRequest)
+    private static final com.teneasyChat.api.core.WorkerOuterClass.NIMAccountRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.teneasyChat.api.core.WorkerOuterClass.NIMAccountRequest();
+    }
+
+    public static com.teneasyChat.api.core.WorkerOuterClass.NIMAccountRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<NIMAccountRequest>
+        PARSER = new com.google.protobuf.AbstractParser<NIMAccountRequest>() {
+      @java.lang.Override
+      public NIMAccountRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<NIMAccountRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<NIMAccountRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.teneasyChat.api.core.WorkerOuterClass.NIMAccountRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface NIMAccountResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:api.core.NIMAccountResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     *账号
+     * </pre>
+     *
+     * <code>string nimaccid = 1;</code>
+     * @return The nimaccid.
+     */
+    java.lang.String getNimaccid();
+    /**
+     * <pre>
+     *账号
+     * </pre>
+     *
+     * <code>string nimaccid = 1;</code>
+     * @return The bytes for nimaccid.
+     */
+    com.google.protobuf.ByteString
+        getNimaccidBytes();
+
+    /**
+     * <pre>
+     *姓名
+     * </pre>
+     *
+     * <code>string nimname = 2;</code>
+     * @return The nimname.
+     */
+    java.lang.String getNimname();
+    /**
+     * <pre>
+     *姓名
+     * </pre>
+     *
+     * <code>string nimname = 2;</code>
+     * @return The bytes for nimname.
+     */
+    com.google.protobuf.ByteString
+        getNimnameBytes();
+
+    /**
+     * <pre>
+     *token
+     * </pre>
+     *
+     * <code>string nimtoken = 3;</code>
+     * @return The nimtoken.
+     */
+    java.lang.String getNimtoken();
+    /**
+     * <pre>
+     *token
+     * </pre>
+     *
+     * <code>string nimtoken = 3;</code>
+     * @return The bytes for nimtoken.
+     */
+    com.google.protobuf.ByteString
+        getNimtokenBytes();
+  }
+  /**
+   * <pre>
+   *回复客服云信账号
+   * </pre>
+   *
+   * Protobuf type {@code api.core.NIMAccountResponse}
+   */
+  public static final class NIMAccountResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:api.core.NIMAccountResponse)
+      NIMAccountResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use NIMAccountResponse.newBuilder() to construct.
+    private NIMAccountResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private NIMAccountResponse() {
+      nimaccid_ = "";
+      nimname_ = "";
+      nimtoken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new NIMAccountResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.teneasyChat.api.core.WorkerOuterClass.internal_static_api_core_NIMAccountResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.teneasyChat.api.core.WorkerOuterClass.internal_static_api_core_NIMAccountResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.teneasyChat.api.core.WorkerOuterClass.NIMAccountResponse.class, com.teneasyChat.api.core.WorkerOuterClass.NIMAccountResponse.Builder.class);
+    }
+
+    public static final int NIMACCID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object nimaccid_ = "";
+    /**
+     * <pre>
+     *账号
+     * </pre>
+     *
+     * <code>string nimaccid = 1;</code>
+     * @return The nimaccid.
+     */
+    @java.lang.Override
+    public java.lang.String getNimaccid() {
+      java.lang.Object ref = nimaccid_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nimaccid_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     *账号
+     * </pre>
+     *
+     * <code>string nimaccid = 1;</code>
+     * @return The bytes for nimaccid.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNimaccidBytes() {
+      java.lang.Object ref = nimaccid_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nimaccid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NIMNAME_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object nimname_ = "";
+    /**
+     * <pre>
+     *姓名
+     * </pre>
+     *
+     * <code>string nimname = 2;</code>
+     * @return The nimname.
+     */
+    @java.lang.Override
+    public java.lang.String getNimname() {
+      java.lang.Object ref = nimname_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nimname_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     *姓名
+     * </pre>
+     *
+     * <code>string nimname = 2;</code>
+     * @return The bytes for nimname.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNimnameBytes() {
+      java.lang.Object ref = nimname_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nimname_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NIMTOKEN_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object nimtoken_ = "";
+    /**
+     * <pre>
+     *token
+     * </pre>
+     *
+     * <code>string nimtoken = 3;</code>
+     * @return The nimtoken.
+     */
+    @java.lang.Override
+    public java.lang.String getNimtoken() {
+      java.lang.Object ref = nimtoken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nimtoken_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     *token
+     * </pre>
+     *
+     * <code>string nimtoken = 3;</code>
+     * @return The bytes for nimtoken.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNimtokenBytes() {
+      java.lang.Object ref = nimtoken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nimtoken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nimaccid_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, nimaccid_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nimname_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nimname_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nimtoken_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, nimtoken_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nimaccid_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, nimaccid_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nimname_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nimname_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nimtoken_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, nimtoken_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.teneasyChat.api.core.WorkerOuterClass.NIMAccountResponse)) {
+        return super.equals(obj);
+      }
+      com.teneasyChat.api.core.WorkerOuterClass.NIMAccountResponse other = (com.teneasyChat.api.core.WorkerOuterClass.NIMAccountResponse) obj;
+
+      if (!getNimaccid()
+          .equals(other.getNimaccid())) return false;
+      if (!getNimname()
+          .equals(other.getNimname())) return false;
+      if (!getNimtoken()
+          .equals(other.getNimtoken())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NIMACCID_FIELD_NUMBER;
+      hash = (53 * hash) + getNimaccid().hashCode();
+      hash = (37 * hash) + NIMNAME_FIELD_NUMBER;
+      hash = (53 * hash) + getNimname().hashCode();
+      hash = (37 * hash) + NIMTOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getNimtoken().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.teneasyChat.api.core.WorkerOuterClass.NIMAccountResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teneasyChat.api.core.WorkerOuterClass.NIMAccountResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teneasyChat.api.core.WorkerOuterClass.NIMAccountResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teneasyChat.api.core.WorkerOuterClass.NIMAccountResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teneasyChat.api.core.WorkerOuterClass.NIMAccountResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teneasyChat.api.core.WorkerOuterClass.NIMAccountResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teneasyChat.api.core.WorkerOuterClass.NIMAccountResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.teneasyChat.api.core.WorkerOuterClass.NIMAccountResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.teneasyChat.api.core.WorkerOuterClass.NIMAccountResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.teneasyChat.api.core.WorkerOuterClass.NIMAccountResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.teneasyChat.api.core.WorkerOuterClass.NIMAccountResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.teneasyChat.api.core.WorkerOuterClass.NIMAccountResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.teneasyChat.api.core.WorkerOuterClass.NIMAccountResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     *回复客服云信账号
+     * </pre>
+     *
+     * Protobuf type {@code api.core.NIMAccountResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:api.core.NIMAccountResponse)
+        com.teneasyChat.api.core.WorkerOuterClass.NIMAccountResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.teneasyChat.api.core.WorkerOuterClass.internal_static_api_core_NIMAccountResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.teneasyChat.api.core.WorkerOuterClass.internal_static_api_core_NIMAccountResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.teneasyChat.api.core.WorkerOuterClass.NIMAccountResponse.class, com.teneasyChat.api.core.WorkerOuterClass.NIMAccountResponse.Builder.class);
+      }
+
+      // Construct using com.teneasyChat.api.core.WorkerOuterClass.NIMAccountResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        nimaccid_ = "";
+        nimname_ = "";
+        nimtoken_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.teneasyChat.api.core.WorkerOuterClass.internal_static_api_core_NIMAccountResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.teneasyChat.api.core.WorkerOuterClass.NIMAccountResponse getDefaultInstanceForType() {
+        return com.teneasyChat.api.core.WorkerOuterClass.NIMAccountResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.teneasyChat.api.core.WorkerOuterClass.NIMAccountResponse build() {
+        com.teneasyChat.api.core.WorkerOuterClass.NIMAccountResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.teneasyChat.api.core.WorkerOuterClass.NIMAccountResponse buildPartial() {
+        com.teneasyChat.api.core.WorkerOuterClass.NIMAccountResponse result = new com.teneasyChat.api.core.WorkerOuterClass.NIMAccountResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.teneasyChat.api.core.WorkerOuterClass.NIMAccountResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.nimaccid_ = nimaccid_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.nimname_ = nimname_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.nimtoken_ = nimtoken_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.teneasyChat.api.core.WorkerOuterClass.NIMAccountResponse) {
+          return mergeFrom((com.teneasyChat.api.core.WorkerOuterClass.NIMAccountResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.teneasyChat.api.core.WorkerOuterClass.NIMAccountResponse other) {
+        if (other == com.teneasyChat.api.core.WorkerOuterClass.NIMAccountResponse.getDefaultInstance()) return this;
+        if (!other.getNimaccid().isEmpty()) {
+          nimaccid_ = other.nimaccid_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getNimname().isEmpty()) {
+          nimname_ = other.nimname_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getNimtoken().isEmpty()) {
+          nimtoken_ = other.nimtoken_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                nimaccid_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                nimname_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                nimtoken_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object nimaccid_ = "";
+      /**
+       * <pre>
+       *账号
+       * </pre>
+       *
+       * <code>string nimaccid = 1;</code>
+       * @return The nimaccid.
+       */
+      public java.lang.String getNimaccid() {
+        java.lang.Object ref = nimaccid_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          nimaccid_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       *账号
+       * </pre>
+       *
+       * <code>string nimaccid = 1;</code>
+       * @return The bytes for nimaccid.
+       */
+      public com.google.protobuf.ByteString
+          getNimaccidBytes() {
+        java.lang.Object ref = nimaccid_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nimaccid_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       *账号
+       * </pre>
+       *
+       * <code>string nimaccid = 1;</code>
+       * @param value The nimaccid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNimaccid(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        nimaccid_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *账号
+       * </pre>
+       *
+       * <code>string nimaccid = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNimaccid() {
+        nimaccid_ = getDefaultInstance().getNimaccid();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *账号
+       * </pre>
+       *
+       * <code>string nimaccid = 1;</code>
+       * @param value The bytes for nimaccid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNimaccidBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        nimaccid_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object nimname_ = "";
+      /**
+       * <pre>
+       *姓名
+       * </pre>
+       *
+       * <code>string nimname = 2;</code>
+       * @return The nimname.
+       */
+      public java.lang.String getNimname() {
+        java.lang.Object ref = nimname_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          nimname_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       *姓名
+       * </pre>
+       *
+       * <code>string nimname = 2;</code>
+       * @return The bytes for nimname.
+       */
+      public com.google.protobuf.ByteString
+          getNimnameBytes() {
+        java.lang.Object ref = nimname_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nimname_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       *姓名
+       * </pre>
+       *
+       * <code>string nimname = 2;</code>
+       * @param value The nimname to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNimname(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        nimname_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *姓名
+       * </pre>
+       *
+       * <code>string nimname = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNimname() {
+        nimname_ = getDefaultInstance().getNimname();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *姓名
+       * </pre>
+       *
+       * <code>string nimname = 2;</code>
+       * @param value The bytes for nimname to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNimnameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        nimname_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object nimtoken_ = "";
+      /**
+       * <pre>
+       *token
+       * </pre>
+       *
+       * <code>string nimtoken = 3;</code>
+       * @return The nimtoken.
+       */
+      public java.lang.String getNimtoken() {
+        java.lang.Object ref = nimtoken_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          nimtoken_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       *token
+       * </pre>
+       *
+       * <code>string nimtoken = 3;</code>
+       * @return The bytes for nimtoken.
+       */
+      public com.google.protobuf.ByteString
+          getNimtokenBytes() {
+        java.lang.Object ref = nimtoken_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nimtoken_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       *token
+       * </pre>
+       *
+       * <code>string nimtoken = 3;</code>
+       * @param value The nimtoken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNimtoken(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        nimtoken_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *token
+       * </pre>
+       *
+       * <code>string nimtoken = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNimtoken() {
+        nimtoken_ = getDefaultInstance().getNimtoken();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *token
+       * </pre>
+       *
+       * <code>string nimtoken = 3;</code>
+       * @param value The bytes for nimtoken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNimtokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        nimtoken_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:api.core.NIMAccountResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:api.core.NIMAccountResponse)
+    private static final com.teneasyChat.api.core.WorkerOuterClass.NIMAccountResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.teneasyChat.api.core.WorkerOuterClass.NIMAccountResponse();
+    }
+
+    public static com.teneasyChat.api.core.WorkerOuterClass.NIMAccountResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<NIMAccountResponse>
+        PARSER = new com.google.protobuf.AbstractParser<NIMAccountResponse>() {
+      @java.lang.Override
+      public NIMAccountResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<NIMAccountResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<NIMAccountResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.teneasyChat.api.core.WorkerOuterClass.NIMAccountResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface WorkerCreateRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:api.core.WorkerCreateRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -2662,6 +4406,54 @@ public final class WorkerOuterClass {
      */
     com.google.protobuf.ByteString
         getAvatarBytes();
+
+    /**
+     * <pre>
+     * 是否创建云信账号
+     * </pre>
+     *
+     * <code>optional bool bneednim = 8;</code>
+     * @return Whether the bneednim field is set.
+     */
+    boolean hasBneednim();
+    /**
+     * <pre>
+     * 是否创建云信账号
+     * </pre>
+     *
+     * <code>optional bool bneednim = 8;</code>
+     * @return The bneednim.
+     */
+    boolean getBneednim();
+
+    /**
+     * <pre>
+     *云信头像,需要外部拼接
+     * </pre>
+     *
+     * <code>optional string avatarurl = 9;</code>
+     * @return Whether the avatarurl field is set.
+     */
+    boolean hasAvatarurl();
+    /**
+     * <pre>
+     *云信头像,需要外部拼接
+     * </pre>
+     *
+     * <code>optional string avatarurl = 9;</code>
+     * @return The avatarurl.
+     */
+    java.lang.String getAvatarurl();
+    /**
+     * <pre>
+     *云信头像,需要外部拼接
+     * </pre>
+     *
+     * <code>optional string avatarurl = 9;</code>
+     * @return The bytes for avatarurl.
+     */
+    com.google.protobuf.ByteString
+        getAvatarurlBytes();
   }
   /**
    * <pre>
@@ -2685,6 +4477,7 @@ public final class WorkerOuterClass {
       groupIds_ = emptyLongList();
       name_ = "";
       avatar_ = "";
+      avatarurl_ = "";
     }
 
     @java.lang.Override
@@ -2707,6 +4500,7 @@ public final class WorkerOuterClass {
               com.teneasyChat.api.core.WorkerOuterClass.WorkerCreateRequest.class, com.teneasyChat.api.core.WorkerOuterClass.WorkerCreateRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ACCOUNT_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object account_ = "";
@@ -2943,6 +4737,92 @@ public final class WorkerOuterClass {
       }
     }
 
+    public static final int BNEEDNIM_FIELD_NUMBER = 8;
+    private boolean bneednim_ = false;
+    /**
+     * <pre>
+     * 是否创建云信账号
+     * </pre>
+     *
+     * <code>optional bool bneednim = 8;</code>
+     * @return Whether the bneednim field is set.
+     */
+    @java.lang.Override
+    public boolean hasBneednim() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * 是否创建云信账号
+     * </pre>
+     *
+     * <code>optional bool bneednim = 8;</code>
+     * @return The bneednim.
+     */
+    @java.lang.Override
+    public boolean getBneednim() {
+      return bneednim_;
+    }
+
+    public static final int AVATARURL_FIELD_NUMBER = 9;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object avatarurl_ = "";
+    /**
+     * <pre>
+     *云信头像,需要外部拼接
+     * </pre>
+     *
+     * <code>optional string avatarurl = 9;</code>
+     * @return Whether the avatarurl field is set.
+     */
+    @java.lang.Override
+    public boolean hasAvatarurl() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     *云信头像,需要外部拼接
+     * </pre>
+     *
+     * <code>optional string avatarurl = 9;</code>
+     * @return The avatarurl.
+     */
+    @java.lang.Override
+    public java.lang.String getAvatarurl() {
+      java.lang.Object ref = avatarurl_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        avatarurl_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     *云信头像,需要外部拼接
+     * </pre>
+     *
+     * <code>optional string avatarurl = 9;</code>
+     * @return The bytes for avatarurl.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAvatarurlBytes() {
+      java.lang.Object ref = avatarurl_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        avatarurl_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2979,6 +4859,12 @@ public final class WorkerOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(avatar_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, avatar_);
+      }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeBool(8, bneednim_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, avatarurl_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -3019,6 +4905,13 @@ public final class WorkerOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(avatar_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, avatar_);
       }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(8, bneednim_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, avatarurl_);
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -3046,6 +4939,16 @@ public final class WorkerOuterClass {
           .equals(other.getName())) return false;
       if (!getAvatar()
           .equals(other.getAvatar())) return false;
+      if (hasBneednim() != other.hasBneednim()) return false;
+      if (hasBneednim()) {
+        if (getBneednim()
+            != other.getBneednim()) return false;
+      }
+      if (hasAvatarurl() != other.hasAvatarurl()) return false;
+      if (hasAvatarurl()) {
+        if (!getAvatarurl()
+            .equals(other.getAvatarurl())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -3071,6 +4974,15 @@ public final class WorkerOuterClass {
       hash = (53 * hash) + getName().hashCode();
       hash = (37 * hash) + AVATAR_FIELD_NUMBER;
       hash = (53 * hash) + getAvatar().hashCode();
+      if (hasBneednim()) {
+        hash = (37 * hash) + BNEEDNIM_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getBneednim());
+      }
+      if (hasAvatarurl()) {
+        hash = (37 * hash) + AVATARURL_FIELD_NUMBER;
+        hash = (53 * hash) + getAvatarurl().hashCode();
+      }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3212,6 +5124,8 @@ public final class WorkerOuterClass {
         permMask_ = 0;
         name_ = "";
         avatar_ = "";
+        bneednim_ = false;
+        avatarurl_ = "";
         return this;
       }
 
@@ -3269,6 +5183,16 @@ public final class WorkerOuterClass {
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.avatar_ = avatar_;
         }
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.bneednim_ = bneednim_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.avatarurl_ = avatarurl_;
+          to_bitField0_ |= 0x00000002;
+        }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3348,6 +5272,14 @@ public final class WorkerOuterClass {
           bitField0_ |= 0x00000020;
           onChanged();
         }
+        if (other.hasBneednim()) {
+          setBneednim(other.getBneednim());
+        }
+        if (other.hasAvatarurl()) {
+          avatarurl_ = other.avatarurl_;
+          bitField0_ |= 0x00000080;
+          onChanged();
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -3415,6 +5347,16 @@ public final class WorkerOuterClass {
                 bitField0_ |= 0x00000020;
                 break;
               } // case 58
+              case 64: {
+                bneednim_ = input.readBool();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 64
+              case 74: {
+                avatarurl_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 74
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -3932,6 +5874,165 @@ public final class WorkerOuterClass {
         onChanged();
         return this;
       }
+
+      private boolean bneednim_ ;
+      /**
+       * <pre>
+       * 是否创建云信账号
+       * </pre>
+       *
+       * <code>optional bool bneednim = 8;</code>
+       * @return Whether the bneednim field is set.
+       */
+      @java.lang.Override
+      public boolean hasBneednim() {
+        return ((bitField0_ & 0x00000040) != 0);
+      }
+      /**
+       * <pre>
+       * 是否创建云信账号
+       * </pre>
+       *
+       * <code>optional bool bneednim = 8;</code>
+       * @return The bneednim.
+       */
+      @java.lang.Override
+      public boolean getBneednim() {
+        return bneednim_;
+      }
+      /**
+       * <pre>
+       * 是否创建云信账号
+       * </pre>
+       *
+       * <code>optional bool bneednim = 8;</code>
+       * @param value The bneednim to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBneednim(boolean value) {
+
+        bneednim_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 是否创建云信账号
+       * </pre>
+       *
+       * <code>optional bool bneednim = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBneednim() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        bneednim_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object avatarurl_ = "";
+      /**
+       * <pre>
+       *云信头像,需要外部拼接
+       * </pre>
+       *
+       * <code>optional string avatarurl = 9;</code>
+       * @return Whether the avatarurl field is set.
+       */
+      public boolean hasAvatarurl() {
+        return ((bitField0_ & 0x00000080) != 0);
+      }
+      /**
+       * <pre>
+       *云信头像,需要外部拼接
+       * </pre>
+       *
+       * <code>optional string avatarurl = 9;</code>
+       * @return The avatarurl.
+       */
+      public java.lang.String getAvatarurl() {
+        java.lang.Object ref = avatarurl_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          avatarurl_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       *云信头像,需要外部拼接
+       * </pre>
+       *
+       * <code>optional string avatarurl = 9;</code>
+       * @return The bytes for avatarurl.
+       */
+      public com.google.protobuf.ByteString
+          getAvatarurlBytes() {
+        java.lang.Object ref = avatarurl_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          avatarurl_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       *云信头像,需要外部拼接
+       * </pre>
+       *
+       * <code>optional string avatarurl = 9;</code>
+       * @param value The avatarurl to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAvatarurl(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        avatarurl_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *云信头像,需要外部拼接
+       * </pre>
+       *
+       * <code>optional string avatarurl = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAvatarurl() {
+        avatarurl_ = getDefaultInstance().getAvatarurl();
+        bitField0_ = (bitField0_ & ~0x00000080);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *云信头像,需要外部拼接
+       * </pre>
+       *
+       * <code>optional string avatarurl = 9;</code>
+       * @param value The bytes for avatarurl to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAvatarurlBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        avatarurl_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -4126,6 +6227,64 @@ public final class WorkerOuterClass {
      */
     com.google.protobuf.ByteString
         getAvatarBytes();
+
+    /**
+     * <pre>
+     * 云信Id
+     * </pre>
+     *
+     * <code>optional string nimid = 8;</code>
+     * @return Whether the nimid field is set.
+     */
+    boolean hasNimid();
+    /**
+     * <pre>
+     * 云信Id
+     * </pre>
+     *
+     * <code>optional string nimid = 8;</code>
+     * @return The nimid.
+     */
+    java.lang.String getNimid();
+    /**
+     * <pre>
+     * 云信Id
+     * </pre>
+     *
+     * <code>optional string nimid = 8;</code>
+     * @return The bytes for nimid.
+     */
+    com.google.protobuf.ByteString
+        getNimidBytes();
+
+    /**
+     * <pre>
+     * 云信session
+     * </pre>
+     *
+     * <code>optional string nimtoken = 9;</code>
+     * @return Whether the nimtoken field is set.
+     */
+    boolean hasNimtoken();
+    /**
+     * <pre>
+     * 云信session
+     * </pre>
+     *
+     * <code>optional string nimtoken = 9;</code>
+     * @return The nimtoken.
+     */
+    java.lang.String getNimtoken();
+    /**
+     * <pre>
+     * 云信session
+     * </pre>
+     *
+     * <code>optional string nimtoken = 9;</code>
+     * @return The bytes for nimtoken.
+     */
+    com.google.protobuf.ByteString
+        getNimtokenBytes();
   }
   /**
    * <pre>
@@ -4149,6 +6308,8 @@ public final class WorkerOuterClass {
       password_ = "";
       name_ = "";
       avatar_ = "";
+      nimid_ = "";
+      nimtoken_ = "";
     }
 
     @java.lang.Override
@@ -4413,6 +6574,124 @@ public final class WorkerOuterClass {
       }
     }
 
+    public static final int NIMID_FIELD_NUMBER = 8;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object nimid_ = "";
+    /**
+     * <pre>
+     * 云信Id
+     * </pre>
+     *
+     * <code>optional string nimid = 8;</code>
+     * @return Whether the nimid field is set.
+     */
+    @java.lang.Override
+    public boolean hasNimid() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <pre>
+     * 云信Id
+     * </pre>
+     *
+     * <code>optional string nimid = 8;</code>
+     * @return The nimid.
+     */
+    @java.lang.Override
+    public java.lang.String getNimid() {
+      java.lang.Object ref = nimid_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nimid_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * 云信Id
+     * </pre>
+     *
+     * <code>optional string nimid = 8;</code>
+     * @return The bytes for nimid.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNimidBytes() {
+      java.lang.Object ref = nimid_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nimid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NIMTOKEN_FIELD_NUMBER = 9;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object nimtoken_ = "";
+    /**
+     * <pre>
+     * 云信session
+     * </pre>
+     *
+     * <code>optional string nimtoken = 9;</code>
+     * @return Whether the nimtoken field is set.
+     */
+    @java.lang.Override
+    public boolean hasNimtoken() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <pre>
+     * 云信session
+     * </pre>
+     *
+     * <code>optional string nimtoken = 9;</code>
+     * @return The nimtoken.
+     */
+    @java.lang.Override
+    public java.lang.String getNimtoken() {
+      java.lang.Object ref = nimtoken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nimtoken_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * 云信session
+     * </pre>
+     *
+     * <code>optional string nimtoken = 9;</code>
+     * @return The bytes for nimtoken.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNimtokenBytes() {
+      java.lang.Object ref = nimtoken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nimtoken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4445,6 +6724,12 @@ public final class WorkerOuterClass {
       if (((bitField0_ & 0x00000010) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, avatar_);
       }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, nimid_);
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, nimtoken_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -4474,6 +6759,12 @@ public final class WorkerOuterClass {
       }
       if (((bitField0_ & 0x00000010) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, avatar_);
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, nimid_);
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, nimtoken_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -4517,6 +6808,16 @@ public final class WorkerOuterClass {
         if (!getAvatar()
             .equals(other.getAvatar())) return false;
       }
+      if (hasNimid() != other.hasNimid()) return false;
+      if (hasNimid()) {
+        if (!getNimid()
+            .equals(other.getNimid())) return false;
+      }
+      if (hasNimtoken() != other.hasNimtoken()) return false;
+      if (hasNimtoken()) {
+        if (!getNimtoken()
+            .equals(other.getNimtoken())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -4549,6 +6850,14 @@ public final class WorkerOuterClass {
       if (hasAvatar()) {
         hash = (37 * hash) + AVATAR_FIELD_NUMBER;
         hash = (53 * hash) + getAvatar().hashCode();
+      }
+      if (hasNimid()) {
+        hash = (37 * hash) + NIMID_FIELD_NUMBER;
+        hash = (53 * hash) + getNimid().hashCode();
+      }
+      if (hasNimtoken()) {
+        hash = (37 * hash) + NIMTOKEN_FIELD_NUMBER;
+        hash = (53 * hash) + getNimtoken().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -4703,6 +7012,8 @@ public final class WorkerOuterClass {
         permMask_ = 0;
         name_ = "";
         avatar_ = "";
+        nimid_ = "";
+        nimtoken_ = "";
         return this;
       }
 
@@ -4761,6 +7072,14 @@ public final class WorkerOuterClass {
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.avatar_ = avatar_;
           to_bitField0_ |= 0x00000010;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.nimid_ = nimid_;
+          to_bitField0_ |= 0x00000020;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.nimtoken_ = nimtoken_;
+          to_bitField0_ |= 0x00000040;
         }
         result.bitField0_ |= to_bitField0_;
       }
@@ -4833,6 +7152,16 @@ public final class WorkerOuterClass {
           bitField0_ |= 0x00000020;
           onChanged();
         }
+        if (other.hasNimid()) {
+          nimid_ = other.nimid_;
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
+        if (other.hasNimtoken()) {
+          nimtoken_ = other.nimtoken_;
+          bitField0_ |= 0x00000080;
+          onChanged();
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -4891,6 +7220,16 @@ public final class WorkerOuterClass {
                 bitField0_ |= 0x00000020;
                 break;
               } // case 58
+              case 66: {
+                nimid_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 66
+              case 74: {
+                nimtoken_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 74
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -5432,6 +7771,212 @@ public final class WorkerOuterClass {
         checkByteStringIsUtf8(value);
         avatar_ = value;
         bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object nimid_ = "";
+      /**
+       * <pre>
+       * 云信Id
+       * </pre>
+       *
+       * <code>optional string nimid = 8;</code>
+       * @return Whether the nimid field is set.
+       */
+      public boolean hasNimid() {
+        return ((bitField0_ & 0x00000040) != 0);
+      }
+      /**
+       * <pre>
+       * 云信Id
+       * </pre>
+       *
+       * <code>optional string nimid = 8;</code>
+       * @return The nimid.
+       */
+      public java.lang.String getNimid() {
+        java.lang.Object ref = nimid_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          nimid_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * 云信Id
+       * </pre>
+       *
+       * <code>optional string nimid = 8;</code>
+       * @return The bytes for nimid.
+       */
+      public com.google.protobuf.ByteString
+          getNimidBytes() {
+        java.lang.Object ref = nimid_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nimid_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * 云信Id
+       * </pre>
+       *
+       * <code>optional string nimid = 8;</code>
+       * @param value The nimid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNimid(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        nimid_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 云信Id
+       * </pre>
+       *
+       * <code>optional string nimid = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNimid() {
+        nimid_ = getDefaultInstance().getNimid();
+        bitField0_ = (bitField0_ & ~0x00000040);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 云信Id
+       * </pre>
+       *
+       * <code>optional string nimid = 8;</code>
+       * @param value The bytes for nimid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNimidBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        nimid_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object nimtoken_ = "";
+      /**
+       * <pre>
+       * 云信session
+       * </pre>
+       *
+       * <code>optional string nimtoken = 9;</code>
+       * @return Whether the nimtoken field is set.
+       */
+      public boolean hasNimtoken() {
+        return ((bitField0_ & 0x00000080) != 0);
+      }
+      /**
+       * <pre>
+       * 云信session
+       * </pre>
+       *
+       * <code>optional string nimtoken = 9;</code>
+       * @return The nimtoken.
+       */
+      public java.lang.String getNimtoken() {
+        java.lang.Object ref = nimtoken_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          nimtoken_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * 云信session
+       * </pre>
+       *
+       * <code>optional string nimtoken = 9;</code>
+       * @return The bytes for nimtoken.
+       */
+      public com.google.protobuf.ByteString
+          getNimtokenBytes() {
+        java.lang.Object ref = nimtoken_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nimtoken_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * 云信session
+       * </pre>
+       *
+       * <code>optional string nimtoken = 9;</code>
+       * @param value The nimtoken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNimtoken(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        nimtoken_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 云信session
+       * </pre>
+       *
+       * <code>optional string nimtoken = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNimtoken() {
+        nimtoken_ = getDefaultInstance().getNimtoken();
+        bitField0_ = (bitField0_ & ~0x00000080);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 云信session
+       * </pre>
+       *
+       * <code>optional string nimtoken = 9;</code>
+       * @param value The bytes for nimtoken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNimtokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        nimtoken_ = value;
+        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
@@ -25138,6 +27683,1083 @@ public final class WorkerOuterClass {
 
   }
 
+  public interface QuerySessionRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:api.core.QuerySessionRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int64 chat_id = 1;</code>
+     * @return The chatId.
+     */
+    long getChatId();
+  }
+  /**
+   * Protobuf type {@code api.core.QuerySessionRequest}
+   */
+  public static final class QuerySessionRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:api.core.QuerySessionRequest)
+      QuerySessionRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QuerySessionRequest.newBuilder() to construct.
+    private QuerySessionRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QuerySessionRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QuerySessionRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.teneasyChat.api.core.WorkerOuterClass.internal_static_api_core_QuerySessionRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.teneasyChat.api.core.WorkerOuterClass.internal_static_api_core_QuerySessionRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.teneasyChat.api.core.WorkerOuterClass.QuerySessionRequest.class, com.teneasyChat.api.core.WorkerOuterClass.QuerySessionRequest.Builder.class);
+    }
+
+    public static final int CHAT_ID_FIELD_NUMBER = 1;
+    private long chatId_ = 0L;
+    /**
+     * <code>int64 chat_id = 1;</code>
+     * @return The chatId.
+     */
+    @java.lang.Override
+    public long getChatId() {
+      return chatId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (chatId_ != 0L) {
+        output.writeInt64(1, chatId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (chatId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, chatId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.teneasyChat.api.core.WorkerOuterClass.QuerySessionRequest)) {
+        return super.equals(obj);
+      }
+      com.teneasyChat.api.core.WorkerOuterClass.QuerySessionRequest other = (com.teneasyChat.api.core.WorkerOuterClass.QuerySessionRequest) obj;
+
+      if (getChatId()
+          != other.getChatId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CHAT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getChatId());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.teneasyChat.api.core.WorkerOuterClass.QuerySessionRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teneasyChat.api.core.WorkerOuterClass.QuerySessionRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teneasyChat.api.core.WorkerOuterClass.QuerySessionRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teneasyChat.api.core.WorkerOuterClass.QuerySessionRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teneasyChat.api.core.WorkerOuterClass.QuerySessionRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teneasyChat.api.core.WorkerOuterClass.QuerySessionRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teneasyChat.api.core.WorkerOuterClass.QuerySessionRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.teneasyChat.api.core.WorkerOuterClass.QuerySessionRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.teneasyChat.api.core.WorkerOuterClass.QuerySessionRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.teneasyChat.api.core.WorkerOuterClass.QuerySessionRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.teneasyChat.api.core.WorkerOuterClass.QuerySessionRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.teneasyChat.api.core.WorkerOuterClass.QuerySessionRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.teneasyChat.api.core.WorkerOuterClass.QuerySessionRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code api.core.QuerySessionRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:api.core.QuerySessionRequest)
+        com.teneasyChat.api.core.WorkerOuterClass.QuerySessionRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.teneasyChat.api.core.WorkerOuterClass.internal_static_api_core_QuerySessionRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.teneasyChat.api.core.WorkerOuterClass.internal_static_api_core_QuerySessionRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.teneasyChat.api.core.WorkerOuterClass.QuerySessionRequest.class, com.teneasyChat.api.core.WorkerOuterClass.QuerySessionRequest.Builder.class);
+      }
+
+      // Construct using com.teneasyChat.api.core.WorkerOuterClass.QuerySessionRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        chatId_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.teneasyChat.api.core.WorkerOuterClass.internal_static_api_core_QuerySessionRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.teneasyChat.api.core.WorkerOuterClass.QuerySessionRequest getDefaultInstanceForType() {
+        return com.teneasyChat.api.core.WorkerOuterClass.QuerySessionRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.teneasyChat.api.core.WorkerOuterClass.QuerySessionRequest build() {
+        com.teneasyChat.api.core.WorkerOuterClass.QuerySessionRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.teneasyChat.api.core.WorkerOuterClass.QuerySessionRequest buildPartial() {
+        com.teneasyChat.api.core.WorkerOuterClass.QuerySessionRequest result = new com.teneasyChat.api.core.WorkerOuterClass.QuerySessionRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.teneasyChat.api.core.WorkerOuterClass.QuerySessionRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.chatId_ = chatId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.teneasyChat.api.core.WorkerOuterClass.QuerySessionRequest) {
+          return mergeFrom((com.teneasyChat.api.core.WorkerOuterClass.QuerySessionRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.teneasyChat.api.core.WorkerOuterClass.QuerySessionRequest other) {
+        if (other == com.teneasyChat.api.core.WorkerOuterClass.QuerySessionRequest.getDefaultInstance()) return this;
+        if (other.getChatId() != 0L) {
+          setChatId(other.getChatId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                chatId_ = input.readInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long chatId_ ;
+      /**
+       * <code>int64 chat_id = 1;</code>
+       * @return The chatId.
+       */
+      @java.lang.Override
+      public long getChatId() {
+        return chatId_;
+      }
+      /**
+       * <code>int64 chat_id = 1;</code>
+       * @param value The chatId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChatId(long value) {
+
+        chatId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 chat_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearChatId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        chatId_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:api.core.QuerySessionRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:api.core.QuerySessionRequest)
+    private static final com.teneasyChat.api.core.WorkerOuterClass.QuerySessionRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.teneasyChat.api.core.WorkerOuterClass.QuerySessionRequest();
+    }
+
+    public static com.teneasyChat.api.core.WorkerOuterClass.QuerySessionRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QuerySessionRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QuerySessionRequest>() {
+      @java.lang.Override
+      public QuerySessionRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QuerySessionRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QuerySessionRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.teneasyChat.api.core.WorkerOuterClass.QuerySessionRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QuerySessionResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:api.core.QuerySessionResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.api.common.ChatItem chat = 1;</code>
+     * @return Whether the chat field is set.
+     */
+    boolean hasChat();
+    /**
+     * <code>.api.common.ChatItem chat = 1;</code>
+     * @return The chat.
+     */
+    com.teneasyChat.api.common.CChat.ChatItem getChat();
+    /**
+     * <code>.api.common.ChatItem chat = 1;</code>
+     */
+    com.teneasyChat.api.common.CChat.ChatItemOrBuilder getChatOrBuilder();
+  }
+  /**
+   * Protobuf type {@code api.core.QuerySessionResponse}
+   */
+  public static final class QuerySessionResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:api.core.QuerySessionResponse)
+      QuerySessionResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QuerySessionResponse.newBuilder() to construct.
+    private QuerySessionResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QuerySessionResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QuerySessionResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.teneasyChat.api.core.WorkerOuterClass.internal_static_api_core_QuerySessionResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.teneasyChat.api.core.WorkerOuterClass.internal_static_api_core_QuerySessionResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.teneasyChat.api.core.WorkerOuterClass.QuerySessionResponse.class, com.teneasyChat.api.core.WorkerOuterClass.QuerySessionResponse.Builder.class);
+    }
+
+    public static final int CHAT_FIELD_NUMBER = 1;
+    private com.teneasyChat.api.common.CChat.ChatItem chat_;
+    /**
+     * <code>.api.common.ChatItem chat = 1;</code>
+     * @return Whether the chat field is set.
+     */
+    @java.lang.Override
+    public boolean hasChat() {
+      return chat_ != null;
+    }
+    /**
+     * <code>.api.common.ChatItem chat = 1;</code>
+     * @return The chat.
+     */
+    @java.lang.Override
+    public com.teneasyChat.api.common.CChat.ChatItem getChat() {
+      return chat_ == null ? com.teneasyChat.api.common.CChat.ChatItem.getDefaultInstance() : chat_;
+    }
+    /**
+     * <code>.api.common.ChatItem chat = 1;</code>
+     */
+    @java.lang.Override
+    public com.teneasyChat.api.common.CChat.ChatItemOrBuilder getChatOrBuilder() {
+      return chat_ == null ? com.teneasyChat.api.common.CChat.ChatItem.getDefaultInstance() : chat_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (chat_ != null) {
+        output.writeMessage(1, getChat());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (chat_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getChat());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.teneasyChat.api.core.WorkerOuterClass.QuerySessionResponse)) {
+        return super.equals(obj);
+      }
+      com.teneasyChat.api.core.WorkerOuterClass.QuerySessionResponse other = (com.teneasyChat.api.core.WorkerOuterClass.QuerySessionResponse) obj;
+
+      if (hasChat() != other.hasChat()) return false;
+      if (hasChat()) {
+        if (!getChat()
+            .equals(other.getChat())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasChat()) {
+        hash = (37 * hash) + CHAT_FIELD_NUMBER;
+        hash = (53 * hash) + getChat().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.teneasyChat.api.core.WorkerOuterClass.QuerySessionResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teneasyChat.api.core.WorkerOuterClass.QuerySessionResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teneasyChat.api.core.WorkerOuterClass.QuerySessionResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teneasyChat.api.core.WorkerOuterClass.QuerySessionResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teneasyChat.api.core.WorkerOuterClass.QuerySessionResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teneasyChat.api.core.WorkerOuterClass.QuerySessionResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teneasyChat.api.core.WorkerOuterClass.QuerySessionResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.teneasyChat.api.core.WorkerOuterClass.QuerySessionResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.teneasyChat.api.core.WorkerOuterClass.QuerySessionResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.teneasyChat.api.core.WorkerOuterClass.QuerySessionResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.teneasyChat.api.core.WorkerOuterClass.QuerySessionResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.teneasyChat.api.core.WorkerOuterClass.QuerySessionResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.teneasyChat.api.core.WorkerOuterClass.QuerySessionResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code api.core.QuerySessionResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:api.core.QuerySessionResponse)
+        com.teneasyChat.api.core.WorkerOuterClass.QuerySessionResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.teneasyChat.api.core.WorkerOuterClass.internal_static_api_core_QuerySessionResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.teneasyChat.api.core.WorkerOuterClass.internal_static_api_core_QuerySessionResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.teneasyChat.api.core.WorkerOuterClass.QuerySessionResponse.class, com.teneasyChat.api.core.WorkerOuterClass.QuerySessionResponse.Builder.class);
+      }
+
+      // Construct using com.teneasyChat.api.core.WorkerOuterClass.QuerySessionResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        chat_ = null;
+        if (chatBuilder_ != null) {
+          chatBuilder_.dispose();
+          chatBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.teneasyChat.api.core.WorkerOuterClass.internal_static_api_core_QuerySessionResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.teneasyChat.api.core.WorkerOuterClass.QuerySessionResponse getDefaultInstanceForType() {
+        return com.teneasyChat.api.core.WorkerOuterClass.QuerySessionResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.teneasyChat.api.core.WorkerOuterClass.QuerySessionResponse build() {
+        com.teneasyChat.api.core.WorkerOuterClass.QuerySessionResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.teneasyChat.api.core.WorkerOuterClass.QuerySessionResponse buildPartial() {
+        com.teneasyChat.api.core.WorkerOuterClass.QuerySessionResponse result = new com.teneasyChat.api.core.WorkerOuterClass.QuerySessionResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.teneasyChat.api.core.WorkerOuterClass.QuerySessionResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.chat_ = chatBuilder_ == null
+              ? chat_
+              : chatBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.teneasyChat.api.core.WorkerOuterClass.QuerySessionResponse) {
+          return mergeFrom((com.teneasyChat.api.core.WorkerOuterClass.QuerySessionResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.teneasyChat.api.core.WorkerOuterClass.QuerySessionResponse other) {
+        if (other == com.teneasyChat.api.core.WorkerOuterClass.QuerySessionResponse.getDefaultInstance()) return this;
+        if (other.hasChat()) {
+          mergeChat(other.getChat());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getChatFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.teneasyChat.api.common.CChat.ChatItem chat_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.teneasyChat.api.common.CChat.ChatItem, com.teneasyChat.api.common.CChat.ChatItem.Builder, com.teneasyChat.api.common.CChat.ChatItemOrBuilder> chatBuilder_;
+      /**
+       * <code>.api.common.ChatItem chat = 1;</code>
+       * @return Whether the chat field is set.
+       */
+      public boolean hasChat() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.api.common.ChatItem chat = 1;</code>
+       * @return The chat.
+       */
+      public com.teneasyChat.api.common.CChat.ChatItem getChat() {
+        if (chatBuilder_ == null) {
+          return chat_ == null ? com.teneasyChat.api.common.CChat.ChatItem.getDefaultInstance() : chat_;
+        } else {
+          return chatBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.api.common.ChatItem chat = 1;</code>
+       */
+      public Builder setChat(com.teneasyChat.api.common.CChat.ChatItem value) {
+        if (chatBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          chat_ = value;
+        } else {
+          chatBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.api.common.ChatItem chat = 1;</code>
+       */
+      public Builder setChat(
+          com.teneasyChat.api.common.CChat.ChatItem.Builder builderForValue) {
+        if (chatBuilder_ == null) {
+          chat_ = builderForValue.build();
+        } else {
+          chatBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.api.common.ChatItem chat = 1;</code>
+       */
+      public Builder mergeChat(com.teneasyChat.api.common.CChat.ChatItem value) {
+        if (chatBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            chat_ != null &&
+            chat_ != com.teneasyChat.api.common.CChat.ChatItem.getDefaultInstance()) {
+            getChatBuilder().mergeFrom(value);
+          } else {
+            chat_ = value;
+          }
+        } else {
+          chatBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.api.common.ChatItem chat = 1;</code>
+       */
+      public Builder clearChat() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        chat_ = null;
+        if (chatBuilder_ != null) {
+          chatBuilder_.dispose();
+          chatBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.api.common.ChatItem chat = 1;</code>
+       */
+      public com.teneasyChat.api.common.CChat.ChatItem.Builder getChatBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getChatFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.api.common.ChatItem chat = 1;</code>
+       */
+      public com.teneasyChat.api.common.CChat.ChatItemOrBuilder getChatOrBuilder() {
+        if (chatBuilder_ != null) {
+          return chatBuilder_.getMessageOrBuilder();
+        } else {
+          return chat_ == null ?
+              com.teneasyChat.api.common.CChat.ChatItem.getDefaultInstance() : chat_;
+        }
+      }
+      /**
+       * <code>.api.common.ChatItem chat = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.teneasyChat.api.common.CChat.ChatItem, com.teneasyChat.api.common.CChat.ChatItem.Builder, com.teneasyChat.api.common.CChat.ChatItemOrBuilder> 
+          getChatFieldBuilder() {
+        if (chatBuilder_ == null) {
+          chatBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.teneasyChat.api.common.CChat.ChatItem, com.teneasyChat.api.common.CChat.ChatItem.Builder, com.teneasyChat.api.common.CChat.ChatItemOrBuilder>(
+                  getChat(),
+                  getParentForChildren(),
+                  isClean());
+          chat_ = null;
+        }
+        return chatBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:api.core.QuerySessionResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:api.core.QuerySessionResponse)
+    private static final com.teneasyChat.api.core.WorkerOuterClass.QuerySessionResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.teneasyChat.api.core.WorkerOuterClass.QuerySessionResponse();
+    }
+
+    public static com.teneasyChat.api.core.WorkerOuterClass.QuerySessionResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QuerySessionResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QuerySessionResponse>() {
+      @java.lang.Override
+      public QuerySessionResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QuerySessionResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QuerySessionResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.teneasyChat.api.core.WorkerOuterClass.QuerySessionResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_core_WorkerQueryRequest_descriptor;
   private static final 
@@ -25153,6 +28775,16 @@ public final class WorkerOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_core_WorkerQuerySelfResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_core_NIMAccountRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_core_NIMAccountRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_core_NIMAccountResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_core_NIMAccountResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_core_WorkerCreateRequest_descriptor;
   private static final 
@@ -25288,6 +28920,16 @@ public final class WorkerOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_core_UnfreezeSessionResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_core_QuerySessionRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_core_QuerySessionRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_core_QuerySessionResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_core_QuerySessionResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -25310,144 +28952,160 @@ public final class WorkerOuterClass {
       "ryResponse\022!\n\005items\030\001 \003(\0132\022.api.common.W" +
       "orker\022 \n\005batch\030\002 \001(\0132\021.api.common.Batch\022" +
       "\r\n\005total\030\003 \001(\005\";\n\027WorkerQuerySelfRespons" +
-      "e\022 \n\004self\030\001 \001(\0132\022.api.common.Worker\"\272\001\n\023" +
-      "WorkerCreateRequest\022\032\n\007account\030\001 \001(\tB\t\372B" +
-      "\006r\004\020\003\030\020\022\033\n\010password\030\002 \001(\tB\t\372B\006r\004 \006(\024\022\033\n\t" +
-      "group_ids\030\003 \003(\003B\010\372B\005\222\001\002\030\001\022\032\n\tperm_mask\030\004" +
-      " \001(\005B\007\372B\004\032\002 \000\022\027\n\004name\030\006 \001(\tB\t\372B\006r\004\020\001\030\n\022\030" +
-      "\n\006avatar\030\007 \001(\tB\010\372B\005r\003\030\200 \"\240\002\n\023WorkerUpdat" +
-      "eRequest\022\036\n\tworker_id\030\001 \001(\005B\013\372B\010\032\006\030\377\377\001 \000" +
-      "\022 \n\010password\030\002 \001(\tB\t\372B\006r\004 \006(\024H\000\210\001\001\022,\n\tgr" +
-      "oup_ids\030\003 \001(\0132\024.api.common.SetInt64H\001\210\001\001" +
-      "\022\037\n\tperm_mask\030\005 \001(\005B\007\372B\004\032\002 \000H\002\210\001\001\022\034\n\004nam" +
-      "e\030\006 \001(\tB\t\372B\006r\004\020\001\030\nH\003\210\001\001\022\035\n\006avatar\030\007 \001(\tB" +
-      "\010\372B\005r\003\030\200 H\004\210\001\001B\013\n\t_passwordB\014\n\n_group_id" +
-      "sB\014\n\n_perm_maskB\007\n\005_nameB\t\n\007_avatar\"\226\001\n\r" +
-      "WorkerSession\022\021\n\tworker_id\030\001 \001(\005\022\022\n\nsess" +
-      "ion_id\030\002 \001(\005\022/\n\rconnect_state\030\003 \001(\0162\030.ap" +
-      "i.common.ConnectState\022-\n\014online_state\030\004 " +
-      "\001(\0162\027.api.common.OnlineState\"5\n\023WorkerDe" +
-      "leteRequest\022\036\n\tworker_id\030\001 \001(\005B\013\372B\010\032\006\030\377\377" +
-      "\001 \001\"Q\n\025WorkerTransferRequest\022\030\n\007chat_id\030" +
-      "\001 \001(\003B\007\372B\004\"\002 \000\022\036\n\tworker_id\030\002 \001(\005B\013\372B\010\032\006" +
-      "\030\377\377\001 \000\"Q\n\025BlacklistApplyRequest\022\030\n\007chat_" +
-      "id\030\001 \001(\003B\007\372B\004\"\002 \000\022\036\n\tworker_id\030\002 \001(\005B\013\372B" +
-      "\010\032\006\030\377\377\001 \000\"3\n\027BlacklistConfirmRequest\022\030\n\007" +
-      "chat_id\030\001 \001(\003B\007\372B\004\"\002 \000\"3\n\027BlacklistRecov" +
-      "erRequest\022\030\n\007chat_id\030\001 \001(\003B\007\372B\004\"\002 \000\"?\n\031C" +
-      "heckWorkerStatusResponse\022\"\n\006worker\030\001 \001(\013" +
-      "2\022.api.common.Worker\"7\n\030CheckWorkerStatu" +
-      "sRequest\022\033\n\nconsult_id\030\001 \001(\rB\007\372B\004*\002 \000\"\331\001" +
-      "\n\026GetWorkerStatusRequest\022\036\n\tworker_id\030\001 " +
-      "\001(\005B\013\372B\010\032\006\030\377\377\001 \000\022>\n\rconnect_state\030\002 \001(\0162" +
-      "\030.api.common.ConnectStateB\010\372B\005\202\001\002\020\001H\000\210\001\001" +
-      "\022<\n\014online_state\030\003 \001(\0162\027.api.common.Onli" +
-      "neStateB\010\372B\005\202\001\002\020\001H\001\210\001\001B\020\n\016_connect_state" +
-      "B\017\n\r_online_state\"J\n\027GetWorkerStatusResp" +
-      "onse\022/\n\016worker_session\030\001 \003(\0132\027.api.core." +
-      "WorkerSession\"Q\n\026SetWorkerStatusRequest\022" +
-      "7\n\014online_state\030\001 \001(\0162\027.api.common.Onlin" +
-      "eStateB\010\372B\005\202\001\002\020\001\"<\n\026WorkerTransferRespon" +
-      "se\022\"\n\006worker\030\001 \001(\0132\022.api.common.Worker\"S" +
-      "\n\017PasswordRequest\022\037\n\014old_password\030\001 \001(\tB" +
-      "\t\372B\006r\004 \006(\024\022\037\n\014new_password\030\002 \001(\tB\t\372B\006r\004 " +
-      "\006(\024\"h\n\023QueryFronterRequest\022\034\n\004name\030\001 \001(\t" +
-      "B\t\372B\006r\004\020\001\030\nH\000\210\001\001\022*\n\005batch\030\002 \001(\0132\021.api.co" +
-      "mmon.BatchB\010\372B\005\212\001\002\020\001B\007\n\005_name\"P\n\024QueryFr" +
-      "onterResponse\022)\n\005items\030\001 \003(\0132\032.api.core." +
-      "QueryFronterItem\022\r\n\005total\030\002 \001(\005\"f\n\020Query" +
-      "FronterItem\022\014\n\004name\030\001 \001(\t\022\017\n\007account\030\002 \001" +
-      "(\t\022\r\n\005group\030\003 \003(\t\022\021\n\tisManager\030\004 \001(\010\022\021\n\t" +
-      "worker_id\030\005 \001(\005\"\212\002\n\020DataQueryRequest\022\"\n\n" +
-      "start_time\030\001 \001(\tB\t\372B\006r\004\020\001\030@H\000\210\001\001\022 \n\010end_" +
-      "time\030\002 \001(\tB\t\372B\006r\004\020\001\030@H\001\210\001\001\022\020\n\010group_id\030\003" +
-      " \003(\005\022D\n\017worker_identity\030\004 \001(\0162\034.api.comm" +
-      "on.WorkerPermissionB\010\372B\005\202\001\002 \000H\002\210\001\001\022(\n\004pa" +
-      "ge\030\005 \001(\0132\020.api.common.PageB\010\372B\005\212\001\002\020\001B\r\n\013" +
-      "_start_timeB\013\n\t_end_timeB\022\n\020_worker_iden" +
-      "tity\"\224\002\n\021DataQueryResponse\022%\n\004item\030\001 \003(\013" +
-      "2\027.api.core.DataQueryItem\022\r\n\005total\030\002 \001(\005" +
-      "\022\024\n\014count_player\030\003 \001(\005\022\022\n\nthree_rate\030\004 \001" +
-      "(\002\022\025\n\rresponse_time\030\005 \001(\002\022\023\n\013server_time" +
-      "\030\006 \001(\002\022\031\n\021count_online_time\030\007 \001(\002\022\024\n\014acc" +
-      "epted_num\030\010 \001(\005\022\025\n\rtransfer_task\030\t \001(\005\022\023" +
-      "\n\013workerLimit\030\n \001(\005\022\026\n\016currentWorkers\030\013 " +
-      "\001(\005\"\225\002\n\rDataQueryItem\022\014\n\004name\030\001 \001(\t\022\021\n\tm" +
-      "atch_num\030\002 \001(\005\022\033\n\023three_response_rate\030\003 " +
-      "\001(\t\022\026\n\016switching_task\030\004 \001(\005\022\031\n\021accept_as" +
-      "signment\030\005 \001(\005\022\032\n\022corresponding_time\030\006 \001" +
-      "(\002\022\024\n\014belong_group\030\007 \003(\t\022\022\n\nfirst_line\030\010" +
-      " \001(\010\022\022\n\nis_manager\030\t \001(\010\022\024\n\014average_time" +
-      "\030\n \001(\002\022#\n\033accumulated_online_duration\030\013 " +
-      "\001(\002\"V\n\032QuerySpecPermWorkerRequest\0228\n\004per" +
-      "m\030\001 \001(\0162\034.api.common.WorkerPermissionB\014\372" +
-      "B\t\202\001\006\020\001\030\020\030@\"_\n\021WorkerListByGroup\022&\n\005grou" +
-      "p\030\001 \001(\0132\027.api.common.WorkerGroup\022\"\n\006work" +
-      "er\030\002 \003(\0132\022.api.common.Worker\"J\n\033QuerySpe" +
-      "cPermWorkerResponse\022+\n\006groups\030\001 \003(\0132\033.ap" +
-      "i.core.WorkerListByGroup\"3\n TryCleanupAs" +
-      "signedWorkerResponse\022\017\n\007cleaned\030\001 \001(\010\")\n" +
-      "\026UnfreezeSessionRequest\022\017\n\007chat_id\030\001 \001(\003" +
-      "\"c\n\027UnfreezeSessionResponse\022$\n\005state\030\001 \001" +
-      "(\0162\025.api.common.ChatState\022\"\n\004chat\030\002 \001(\0132" +
-      "\024.api.common.ChatItem2\230\021\n\006Worker\022i\n\tData" +
-      "Query\022\032.api.core.DataQueryRequest\032\033.api." +
-      "core.DataQueryResponse\"#\272\276\031\037\010\377\003\030\001\262\006\n2022" +
-      "-12-10\322\014\ndata-query\022u\n\014QueryFronter\022\035.ap" +
-      "i.core.QueryFronterRequest\032\036.api.core.Qu" +
-      "eryFronterResponse\"&\272\276\031\"\010\364\003\030\001\262\006\n2022-12-" +
-      "10\322\014\rquery-fronted\022d\n\005Query\022\034.api.core.W" +
-      "orkerQueryRequest\032\035.api.core.WorkerQuery" +
-      "Response\"\036\272\276\031\032\010\364\003\030\001\262\006\n2022-12-10\322\014\005query" +
-      "\022`\n\006Create\022\035.api.core.WorkerCreateReques" +
-      "t\032\026.google.protobuf.Empty\"\037\272\276\031\033\010\365\003\030\001\262\006\n2" +
-      "022-12-10\322\014\006create\022`\n\006Update\022\035.api.core." +
-      "WorkerUpdateRequest\032\026.google.protobuf.Em" +
-      "pty\"\037\272\276\031\033\010\366\003\030\001\262\006\n2022-12-10\322\014\006update\022`\n\006" +
-      "Delete\022\035.api.core.WorkerDeleteRequest\032\026." +
-      "google.protobuf.Empty\"\037\272\276\031\033\010\367\003\030\001\262\006\n2022-" +
-      "12-10\322\014\006delete\022k\n\010Transfer\022\037.api.core.Wo" +
-      "rkerTransferRequest\032\026.google.protobuf.Em" +
-      "pty\"&\272\276\031\"\010\370\003\030\001\262\006\n2022-12-30\312\014\002\020\004\322\014\010trans" +
-      "fer\022\207\001\n\017GetWorkerStatus\022 .api.core.GetWo" +
-      "rkerStatusRequest\032!.api.core.GetWorkerSt" +
-      "atusResponse\"/\272\276\031+\010\371\003\030\001\262\006\n2022-12-30\312\014\002\020" +
-      "\004\322\014\021get-worker-status\022|\n\017SetWorkerStatus" +
-      "\022 .api.core.SetWorkerStatusRequest\032\026.goo" +
-      "gle.protobuf.Empty\"/\272\276\031+\010\372\003\030\001\262\006\n2022-12-" +
-      "30\312\014\002\020\004\322\014\021set-worker-status\022\202\001\n\021CheckWor" +
-      "kerStatus\022\".api.core.CheckWorkerStatusRe" +
-      "quest\032\026.google.protobuf.Empty\"1\272\276\031-\010\373\003\030\001" +
-      "\262\006\n2022-12-30\312\014\002\020\004\322\014\023check-worker-status" +
-      "\022e\n\010Password\022\031.api.core.PasswordRequest\032" +
-      "\026.google.protobuf.Empty\"&\272\276\031\"\010\374\003\030\001\262\006\n202" +
-      "3-01-09\312\014\002\020\004\322\014\010password\022y\n\016BlacklistAppl" +
-      "y\022\037.api.core.BlacklistApplyRequest\032\026.goo" +
-      "gle.protobuf.Empty\".\272\276\031*\010\375\003\030\001\262\006\n2023-01-" +
-      "10\312\014\002\020\004\322\014\020black-list-apply\022\177\n\020BlacklistC" +
-      "onfirm\022!.api.core.BlacklistConfirmReques" +
-      "t\032\026.google.protobuf.Empty\"0\272\276\031,\010\376\003\030\001\262\006\n2" +
-      "023-01-10\312\014\002\020\004\322\014\022black-list-confirm\022\177\n\020B" +
-      "lacklistRecover\022!.api.core.BlacklistReco" +
-      "verRequest\032\026.google.protobuf.Empty\"0\272\276\031," +
-      "\010\377\003\030\001\262\006\n2023-01-28\312\014\002\020\004\322\014\022black-list-rec" +
-      "over\022\207\001\n\013QueryByPerm\022$.api.core.QuerySpe" +
-      "cPermWorkerRequest\032%.api.core.QuerySpecP" +
-      "ermWorkerResponse\"+\272\276\031\'\010\200\004\030\001\262\006\n2023-01-1" +
-      "0\312\014\002\020\004\322\014\rquery-by-perm\022\231\001\n\030TryCleanupAss" +
-      "ignedWorker\022\026.google.protobuf.Empty\032*.ap" +
-      "i.core.TryCleanupAssignedWorkerResponse\"" +
-      "9\272\276\0315\010\201\004\030\001\262\006\n2023-02-09\312\014\002\001\004\322\014\033try-clean" +
-      "up-assigned-worker\022p\n\tQuerySelf\022\026.google" +
-      ".protobuf.Empty\032!.api.core.WorkerQuerySe" +
-      "lfResponse\"(\272\276\031$\010\202\004\030\001\262\006\n2023-03-04\312\014\002\020\004\322" +
-      "\014\nquery-self\022\205\001\n\017UnfreezeSession\022 .api.c" +
-      "ore.UnfreezeSessionRequest\032!.api.core.Un" +
-      "freezeSessionResponse\"-\272\276\031)\010\203\004\030\001\262\006\n2023-" +
-      "04-19\312\014\001\004\322\014\020unfreeze-session\032\"\272\276\031\036\272\006\006wor" +
-      "ker\312\014\001\020\322\014\016/tenant/workerBE\n\030com.teneasyC" +
-      "hat.api.coreZ\021wcs/api/core;core\272\276\031\024\242\006\004je" +
-      "ff\262\006\n2022-12-06b\006proto3"
+      "e\022 \n\004self\030\001 \001(\0132\022.api.common.Worker\"C\n\021N" +
+      "IMAccountRequest\022\020\n\010workerID\030\001 \001(\005\022\014\n\004na" +
+      "me\030\002 \001(\t\022\016\n\006avatar\030\003 \001(\t\"I\n\022NIMAccountRe" +
+      "sponse\022\020\n\010nimaccid\030\001 \001(\t\022\017\n\007nimname\030\002 \001(" +
+      "\t\022\020\n\010nimtoken\030\003 \001(\t\"\204\002\n\023WorkerCreateRequ" +
+      "est\022\032\n\007account\030\001 \001(\tB\t\372B\006r\004\020\003\030\020\022\033\n\010passw" +
+      "ord\030\002 \001(\tB\t\372B\006r\004 \006(\024\022\033\n\tgroup_ids\030\003 \003(\003B" +
+      "\010\372B\005\222\001\002\030\001\022\032\n\tperm_mask\030\004 \001(\005B\007\372B\004\032\002 \000\022\027\n" +
+      "\004name\030\006 \001(\tB\t\372B\006r\004\020\001\030\n\022\030\n\006avatar\030\007 \001(\tB\010" +
+      "\372B\005r\003\030\200 \022\025\n\010bneednim\030\010 \001(\010H\000\210\001\001\022\026\n\tavata" +
+      "rurl\030\t \001(\tH\001\210\001\001B\013\n\t_bneednimB\014\n\n_avataru" +
+      "rl\"\342\002\n\023WorkerUpdateRequest\022\036\n\tworker_id\030" +
+      "\001 \001(\005B\013\372B\010\032\006\030\377\377\001 \000\022 \n\010password\030\002 \001(\tB\t\372B" +
+      "\006r\004 \006(\024H\000\210\001\001\022,\n\tgroup_ids\030\003 \001(\0132\024.api.co" +
+      "mmon.SetInt64H\001\210\001\001\022\037\n\tperm_mask\030\005 \001(\005B\007\372" +
+      "B\004\032\002 \000H\002\210\001\001\022\034\n\004name\030\006 \001(\tB\t\372B\006r\004\020\001\030\nH\003\210\001" +
+      "\001\022\035\n\006avatar\030\007 \001(\tB\010\372B\005r\003\030\200 H\004\210\001\001\022\022\n\005nimi" +
+      "d\030\010 \001(\tH\005\210\001\001\022\025\n\010nimtoken\030\t \001(\tH\006\210\001\001B\013\n\t_" +
+      "passwordB\014\n\n_group_idsB\014\n\n_perm_maskB\007\n\005" +
+      "_nameB\t\n\007_avatarB\010\n\006_nimidB\013\n\t_nimtoken\"" +
+      "\226\001\n\rWorkerSession\022\021\n\tworker_id\030\001 \001(\005\022\022\n\n" +
+      "session_id\030\002 \001(\005\022/\n\rconnect_state\030\003 \001(\0162" +
+      "\030.api.common.ConnectState\022-\n\014online_stat" +
+      "e\030\004 \001(\0162\027.api.common.OnlineState\"5\n\023Work" +
+      "erDeleteRequest\022\036\n\tworker_id\030\001 \001(\005B\013\372B\010\032" +
+      "\006\030\377\377\001 \001\"Q\n\025WorkerTransferRequest\022\030\n\007chat" +
+      "_id\030\001 \001(\003B\007\372B\004\"\002 \000\022\036\n\tworker_id\030\002 \001(\005B\013\372" +
+      "B\010\032\006\030\377\377\001 \000\"Q\n\025BlacklistApplyRequest\022\030\n\007c" +
+      "hat_id\030\001 \001(\003B\007\372B\004\"\002 \000\022\036\n\tworker_id\030\002 \001(\005" +
+      "B\013\372B\010\032\006\030\377\377\001 \000\"3\n\027BlacklistConfirmRequest" +
+      "\022\030\n\007chat_id\030\001 \001(\003B\007\372B\004\"\002 \000\"3\n\027BlacklistR" +
+      "ecoverRequest\022\030\n\007chat_id\030\001 \001(\003B\007\372B\004\"\002 \000\"" +
+      "?\n\031CheckWorkerStatusResponse\022\"\n\006worker\030\001" +
+      " \001(\0132\022.api.common.Worker\"7\n\030CheckWorkerS" +
+      "tatusRequest\022\033\n\nconsult_id\030\001 \001(\rB\007\372B\004*\002 " +
+      "\000\"\331\001\n\026GetWorkerStatusRequest\022\036\n\tworker_i" +
+      "d\030\001 \001(\005B\013\372B\010\032\006\030\377\377\001 \000\022>\n\rconnect_state\030\002 " +
+      "\001(\0162\030.api.common.ConnectStateB\010\372B\005\202\001\002\020\001H" +
+      "\000\210\001\001\022<\n\014online_state\030\003 \001(\0162\027.api.common." +
+      "OnlineStateB\010\372B\005\202\001\002\020\001H\001\210\001\001B\020\n\016_connect_s" +
+      "tateB\017\n\r_online_state\"J\n\027GetWorkerStatus" +
+      "Response\022/\n\016worker_session\030\001 \003(\0132\027.api.c" +
+      "ore.WorkerSession\"Q\n\026SetWorkerStatusRequ" +
+      "est\0227\n\014online_state\030\001 \001(\0162\027.api.common.O" +
+      "nlineStateB\010\372B\005\202\001\002\020\001\"<\n\026WorkerTransferRe" +
+      "sponse\022\"\n\006worker\030\001 \001(\0132\022.api.common.Work" +
+      "er\"S\n\017PasswordRequest\022\037\n\014old_password\030\001 " +
+      "\001(\tB\t\372B\006r\004 \006(\024\022\037\n\014new_password\030\002 \001(\tB\t\372B" +
+      "\006r\004 \006(\024\"h\n\023QueryFronterRequest\022\034\n\004name\030\001" +
+      " \001(\tB\t\372B\006r\004\020\001\030\nH\000\210\001\001\022*\n\005batch\030\002 \001(\0132\021.ap" +
+      "i.common.BatchB\010\372B\005\212\001\002\020\001B\007\n\005_name\"P\n\024Que" +
+      "ryFronterResponse\022)\n\005items\030\001 \003(\0132\032.api.c" +
+      "ore.QueryFronterItem\022\r\n\005total\030\002 \001(\005\"f\n\020Q" +
+      "ueryFronterItem\022\014\n\004name\030\001 \001(\t\022\017\n\007account" +
+      "\030\002 \001(\t\022\r\n\005group\030\003 \003(\t\022\021\n\tisManager\030\004 \001(\010" +
+      "\022\021\n\tworker_id\030\005 \001(\005\"\212\002\n\020DataQueryRequest" +
+      "\022\"\n\nstart_time\030\001 \001(\tB\t\372B\006r\004\020\001\030@H\000\210\001\001\022 \n\010" +
+      "end_time\030\002 \001(\tB\t\372B\006r\004\020\001\030@H\001\210\001\001\022\020\n\010group_" +
+      "id\030\003 \003(\005\022D\n\017worker_identity\030\004 \001(\0162\034.api." +
+      "common.WorkerPermissionB\010\372B\005\202\001\002 \000H\002\210\001\001\022(" +
+      "\n\004page\030\005 \001(\0132\020.api.common.PageB\010\372B\005\212\001\002\020\001" +
+      "B\r\n\013_start_timeB\013\n\t_end_timeB\022\n\020_worker_" +
+      "identity\"\224\002\n\021DataQueryResponse\022%\n\004item\030\001" +
+      " \003(\0132\027.api.core.DataQueryItem\022\r\n\005total\030\002" +
+      " \001(\005\022\024\n\014count_player\030\003 \001(\005\022\022\n\nthree_rate" +
+      "\030\004 \001(\002\022\025\n\rresponse_time\030\005 \001(\002\022\023\n\013server_" +
+      "time\030\006 \001(\002\022\031\n\021count_online_time\030\007 \001(\002\022\024\n" +
+      "\014accepted_num\030\010 \001(\005\022\025\n\rtransfer_task\030\t \001" +
+      "(\005\022\023\n\013workerLimit\030\n \001(\005\022\026\n\016currentWorker" +
+      "s\030\013 \001(\005\"\225\002\n\rDataQueryItem\022\014\n\004name\030\001 \001(\t\022" +
+      "\021\n\tmatch_num\030\002 \001(\005\022\033\n\023three_response_rat" +
+      "e\030\003 \001(\t\022\026\n\016switching_task\030\004 \001(\005\022\031\n\021accep" +
+      "t_assignment\030\005 \001(\005\022\032\n\022corresponding_time" +
+      "\030\006 \001(\002\022\024\n\014belong_group\030\007 \003(\t\022\022\n\nfirst_li" +
+      "ne\030\010 \001(\010\022\022\n\nis_manager\030\t \001(\010\022\024\n\014average_" +
+      "time\030\n \001(\002\022#\n\033accumulated_online_duratio" +
+      "n\030\013 \001(\002\"V\n\032QuerySpecPermWorkerRequest\0228\n" +
+      "\004perm\030\001 \001(\0162\034.api.common.WorkerPermissio" +
+      "nB\014\372B\t\202\001\006\020\001\030\020\030@\"_\n\021WorkerListByGroup\022&\n\005" +
+      "group\030\001 \001(\0132\027.api.common.WorkerGroup\022\"\n\006" +
+      "worker\030\002 \003(\0132\022.api.common.Worker\"J\n\033Quer" +
+      "ySpecPermWorkerResponse\022+\n\006groups\030\001 \003(\0132" +
+      "\033.api.core.WorkerListByGroup\"3\n TryClean" +
+      "upAssignedWorkerResponse\022\017\n\007cleaned\030\001 \001(" +
+      "\010\")\n\026UnfreezeSessionRequest\022\017\n\007chat_id\030\001" +
+      " \001(\003\"c\n\027UnfreezeSessionResponse\022$\n\005state" +
+      "\030\001 \001(\0162\025.api.common.ChatState\022\"\n\004chat\030\002 " +
+      "\001(\0132\024.api.common.ChatItem\"&\n\023QuerySessio" +
+      "nRequest\022\017\n\007chat_id\030\001 \001(\003\":\n\024QuerySessio" +
+      "nResponse\022\"\n\004chat\030\001 \001(\0132\024.api.common.Cha" +
+      "tItem2\224\023\n\006Worker\022i\n\tDataQuery\022\032.api.core" +
+      ".DataQueryRequest\032\033.api.core.DataQueryRe" +
+      "sponse\"#\272\276\031\037\010\377\003\030\001\262\006\n2022-12-10\322\014\ndata-qu" +
+      "ery\022u\n\014QueryFronter\022\035.api.core.QueryFron" +
+      "terRequest\032\036.api.core.QueryFronterRespon" +
+      "se\"&\272\276\031\"\010\364\003\030\001\262\006\n2022-12-10\322\014\rquery-front" +
+      "ed\022d\n\005Query\022\034.api.core.WorkerQueryReques" +
+      "t\032\035.api.core.WorkerQueryResponse\"\036\272\276\031\032\010\364" +
+      "\003\030\001\262\006\n2022-12-10\322\014\005query\022`\n\006Create\022\035.api" +
+      ".core.WorkerCreateRequest\032\026.google.proto" +
+      "buf.Empty\"\037\272\276\031\033\010\365\003\030\001\262\006\n2022-12-10\322\014\006crea" +
+      "te\022`\n\006Update\022\035.api.core.WorkerUpdateRequ" +
+      "est\032\026.google.protobuf.Empty\"\037\272\276\031\033\010\366\003\030\001\262\006" +
+      "\n2022-12-10\322\014\006update\022`\n\006Delete\022\035.api.cor" +
+      "e.WorkerDeleteRequest\032\026.google.protobuf." +
+      "Empty\"\037\272\276\031\033\010\367\003\030\001\262\006\n2022-12-10\322\014\006delete\022k" +
+      "\n\010Transfer\022\037.api.core.WorkerTransferRequ" +
+      "est\032\026.google.protobuf.Empty\"&\272\276\031\"\010\370\003\030\001\262\006" +
+      "\n2022-12-30\312\014\002\020\004\322\014\010transfer\022\207\001\n\017GetWorke" +
+      "rStatus\022 .api.core.GetWorkerStatusReques" +
+      "t\032!.api.core.GetWorkerStatusResponse\"/\272\276" +
+      "\031+\010\371\003\030\001\262\006\n2022-12-30\312\014\002\020\004\322\014\021get-worker-s" +
+      "tatus\022|\n\017SetWorkerStatus\022 .api.core.SetW" +
+      "orkerStatusRequest\032\026.google.protobuf.Emp" +
+      "ty\"/\272\276\031+\010\372\003\030\001\262\006\n2022-12-30\312\014\002\020\004\322\014\021set-wo" +
+      "rker-status\022\202\001\n\021CheckWorkerStatus\022\".api." +
+      "core.CheckWorkerStatusRequest\032\026.google.p" +
+      "rotobuf.Empty\"1\272\276\031-\010\373\003\030\001\262\006\n2022-12-30\312\014\002" +
+      "\020\004\322\014\023check-worker-status\022e\n\010Password\022\031.a" +
+      "pi.core.PasswordRequest\032\026.google.protobu" +
+      "f.Empty\"&\272\276\031\"\010\374\003\030\001\262\006\n2023-01-09\312\014\002\020\004\322\014\010p" +
+      "assword\022y\n\016BlacklistApply\022\037.api.core.Bla" +
+      "cklistApplyRequest\032\026.google.protobuf.Emp" +
+      "ty\".\272\276\031*\010\375\003\030\001\262\006\n2023-01-10\312\014\002\020\004\322\014\020black-" +
+      "list-apply\022\177\n\020BlacklistConfirm\022!.api.cor" +
+      "e.BlacklistConfirmRequest\032\026.google.proto" +
+      "buf.Empty\"0\272\276\031,\010\376\003\030\001\262\006\n2023-01-10\312\014\002\020\004\322\014" +
+      "\022black-list-confirm\022\177\n\020BlacklistRecover\022" +
+      "!.api.core.BlacklistRecoverRequest\032\026.goo" +
+      "gle.protobuf.Empty\"0\272\276\031,\010\377\003\030\001\262\006\n2023-01-" +
+      "28\312\014\002\020\004\322\014\022black-list-recover\022\207\001\n\013QueryBy" +
+      "Perm\022$.api.core.QuerySpecPermWorkerReque" +
+      "st\032%.api.core.QuerySpecPermWorkerRespons" +
+      "e\"+\272\276\031\'\010\200\004\030\001\262\006\n2023-01-10\312\014\002\020\004\322\014\rquery-b" +
+      "y-perm\022\231\001\n\030TryCleanupAssignedWorker\022\026.go" +
+      "ogle.protobuf.Empty\032*.api.core.TryCleanu" +
+      "pAssignedWorkerResponse\"9\272\276\0315\010\201\004\030\001\262\006\n202" +
+      "3-02-09\312\014\002\001\004\322\014\033try-cleanup-assigned-work" +
+      "er\022p\n\tQuerySelf\022\026.google.protobuf.Empty\032" +
+      "!.api.core.WorkerQuerySelfResponse\"(\272\276\031$" +
+      "\010\202\004\030\001\262\006\n2023-03-04\312\014\002\020\004\322\014\nquery-self\022\205\001\n" +
+      "\017UnfreezeSession\022 .api.core.UnfreezeSess" +
+      "ionRequest\032!.api.core.UnfreezeSessionRes" +
+      "ponse\"-\272\276\031)\010\203\004\030\001\262\006\n2023-04-19\312\014\001\004\322\014\020unfr" +
+      "eeze-session\022z\n\014QuerySession\022\035.api.core." +
+      "QuerySessionRequest\032\036.api.core.QuerySess" +
+      "ionResponse\"+\272\276\031\'\010\204\004\030\001\262\006\n2023-04-21\312\014\002\020\004" +
+      "\322\014\rquery-session\022~\n\020CreateNimAccount\022\033.a" +
+      "pi.core.NIMAccountRequest\032\034.api.core.NIM" +
+      "AccountResponse\"/\272\276\031+\010\204\004\030\001\262\006\n2023-11-06\312" +
+      "\014\002\020\004\322\014\021create-nimaccount\032\"\272\276\031\036\272\006\006worker\312" +
+      "\014\001\020\322\014\016/tenant/workerBE\n\030com.teneasyChat." +
+      "api.coreZ\021wcs/api/core;core\272\276\031\024\242\006\004jeff\262\006" +
+      "\n2022-12-06b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -25479,168 +29137,192 @@ public final class WorkerOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_core_WorkerQuerySelfResponse_descriptor,
         new java.lang.String[] { "Self", });
-    internal_static_api_core_WorkerCreateRequest_descriptor =
+    internal_static_api_core_NIMAccountRequest_descriptor =
       getDescriptor().getMessageTypes().get(3);
+    internal_static_api_core_NIMAccountRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_core_NIMAccountRequest_descriptor,
+        new java.lang.String[] { "WorkerID", "Name", "Avatar", });
+    internal_static_api_core_NIMAccountResponse_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_api_core_NIMAccountResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_core_NIMAccountResponse_descriptor,
+        new java.lang.String[] { "Nimaccid", "Nimname", "Nimtoken", });
+    internal_static_api_core_WorkerCreateRequest_descriptor =
+      getDescriptor().getMessageTypes().get(5);
     internal_static_api_core_WorkerCreateRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_core_WorkerCreateRequest_descriptor,
-        new java.lang.String[] { "Account", "Password", "GroupIds", "PermMask", "Name", "Avatar", });
+        new java.lang.String[] { "Account", "Password", "GroupIds", "PermMask", "Name", "Avatar", "Bneednim", "Avatarurl", "Bneednim", "Avatarurl", });
     internal_static_api_core_WorkerUpdateRequest_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_api_core_WorkerUpdateRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_core_WorkerUpdateRequest_descriptor,
-        new java.lang.String[] { "WorkerId", "Password", "GroupIds", "PermMask", "Name", "Avatar", "Password", "GroupIds", "PermMask", "Name", "Avatar", });
+        new java.lang.String[] { "WorkerId", "Password", "GroupIds", "PermMask", "Name", "Avatar", "Nimid", "Nimtoken", "Password", "GroupIds", "PermMask", "Name", "Avatar", "Nimid", "Nimtoken", });
     internal_static_api_core_WorkerSession_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_api_core_WorkerSession_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_core_WorkerSession_descriptor,
         new java.lang.String[] { "WorkerId", "SessionId", "ConnectState", "OnlineState", });
     internal_static_api_core_WorkerDeleteRequest_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_api_core_WorkerDeleteRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_core_WorkerDeleteRequest_descriptor,
         new java.lang.String[] { "WorkerId", });
     internal_static_api_core_WorkerTransferRequest_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_api_core_WorkerTransferRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_core_WorkerTransferRequest_descriptor,
         new java.lang.String[] { "ChatId", "WorkerId", });
     internal_static_api_core_BlacklistApplyRequest_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_api_core_BlacklistApplyRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_core_BlacklistApplyRequest_descriptor,
         new java.lang.String[] { "ChatId", "WorkerId", });
     internal_static_api_core_BlacklistConfirmRequest_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_api_core_BlacklistConfirmRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_core_BlacklistConfirmRequest_descriptor,
         new java.lang.String[] { "ChatId", });
     internal_static_api_core_BlacklistRecoverRequest_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_api_core_BlacklistRecoverRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_core_BlacklistRecoverRequest_descriptor,
         new java.lang.String[] { "ChatId", });
     internal_static_api_core_CheckWorkerStatusResponse_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_api_core_CheckWorkerStatusResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_core_CheckWorkerStatusResponse_descriptor,
         new java.lang.String[] { "Worker", });
     internal_static_api_core_CheckWorkerStatusRequest_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_api_core_CheckWorkerStatusRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_core_CheckWorkerStatusRequest_descriptor,
         new java.lang.String[] { "ConsultId", });
     internal_static_api_core_GetWorkerStatusRequest_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_api_core_GetWorkerStatusRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_core_GetWorkerStatusRequest_descriptor,
         new java.lang.String[] { "WorkerId", "ConnectState", "OnlineState", "ConnectState", "OnlineState", });
     internal_static_api_core_GetWorkerStatusResponse_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_api_core_GetWorkerStatusResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_core_GetWorkerStatusResponse_descriptor,
         new java.lang.String[] { "WorkerSession", });
     internal_static_api_core_SetWorkerStatusRequest_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_api_core_SetWorkerStatusRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_core_SetWorkerStatusRequest_descriptor,
         new java.lang.String[] { "OnlineState", });
     internal_static_api_core_WorkerTransferResponse_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_api_core_WorkerTransferResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_core_WorkerTransferResponse_descriptor,
         new java.lang.String[] { "Worker", });
     internal_static_api_core_PasswordRequest_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_api_core_PasswordRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_core_PasswordRequest_descriptor,
         new java.lang.String[] { "OldPassword", "NewPassword", });
     internal_static_api_core_QueryFronterRequest_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_api_core_QueryFronterRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_core_QueryFronterRequest_descriptor,
         new java.lang.String[] { "Name", "Batch", "Name", });
     internal_static_api_core_QueryFronterResponse_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_api_core_QueryFronterResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_core_QueryFronterResponse_descriptor,
         new java.lang.String[] { "Items", "Total", });
     internal_static_api_core_QueryFronterItem_descriptor =
-      getDescriptor().getMessageTypes().get(20);
+      getDescriptor().getMessageTypes().get(22);
     internal_static_api_core_QueryFronterItem_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_core_QueryFronterItem_descriptor,
         new java.lang.String[] { "Name", "Account", "Group", "IsManager", "WorkerId", });
     internal_static_api_core_DataQueryRequest_descriptor =
-      getDescriptor().getMessageTypes().get(21);
+      getDescriptor().getMessageTypes().get(23);
     internal_static_api_core_DataQueryRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_core_DataQueryRequest_descriptor,
         new java.lang.String[] { "StartTime", "EndTime", "GroupId", "WorkerIdentity", "Page", "StartTime", "EndTime", "WorkerIdentity", });
     internal_static_api_core_DataQueryResponse_descriptor =
-      getDescriptor().getMessageTypes().get(22);
+      getDescriptor().getMessageTypes().get(24);
     internal_static_api_core_DataQueryResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_core_DataQueryResponse_descriptor,
         new java.lang.String[] { "Item", "Total", "CountPlayer", "ThreeRate", "ResponseTime", "ServerTime", "CountOnlineTime", "AcceptedNum", "TransferTask", "WorkerLimit", "CurrentWorkers", });
     internal_static_api_core_DataQueryItem_descriptor =
-      getDescriptor().getMessageTypes().get(23);
+      getDescriptor().getMessageTypes().get(25);
     internal_static_api_core_DataQueryItem_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_core_DataQueryItem_descriptor,
         new java.lang.String[] { "Name", "MatchNum", "ThreeResponseRate", "SwitchingTask", "AcceptAssignment", "CorrespondingTime", "BelongGroup", "FirstLine", "IsManager", "AverageTime", "AccumulatedOnlineDuration", });
     internal_static_api_core_QuerySpecPermWorkerRequest_descriptor =
-      getDescriptor().getMessageTypes().get(24);
+      getDescriptor().getMessageTypes().get(26);
     internal_static_api_core_QuerySpecPermWorkerRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_core_QuerySpecPermWorkerRequest_descriptor,
         new java.lang.String[] { "Perm", });
     internal_static_api_core_WorkerListByGroup_descriptor =
-      getDescriptor().getMessageTypes().get(25);
+      getDescriptor().getMessageTypes().get(27);
     internal_static_api_core_WorkerListByGroup_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_core_WorkerListByGroup_descriptor,
         new java.lang.String[] { "Group", "Worker", });
     internal_static_api_core_QuerySpecPermWorkerResponse_descriptor =
-      getDescriptor().getMessageTypes().get(26);
+      getDescriptor().getMessageTypes().get(28);
     internal_static_api_core_QuerySpecPermWorkerResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_core_QuerySpecPermWorkerResponse_descriptor,
         new java.lang.String[] { "Groups", });
     internal_static_api_core_TryCleanupAssignedWorkerResponse_descriptor =
-      getDescriptor().getMessageTypes().get(27);
+      getDescriptor().getMessageTypes().get(29);
     internal_static_api_core_TryCleanupAssignedWorkerResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_core_TryCleanupAssignedWorkerResponse_descriptor,
         new java.lang.String[] { "Cleaned", });
     internal_static_api_core_UnfreezeSessionRequest_descriptor =
-      getDescriptor().getMessageTypes().get(28);
+      getDescriptor().getMessageTypes().get(30);
     internal_static_api_core_UnfreezeSessionRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_core_UnfreezeSessionRequest_descriptor,
         new java.lang.String[] { "ChatId", });
     internal_static_api_core_UnfreezeSessionResponse_descriptor =
-      getDescriptor().getMessageTypes().get(29);
+      getDescriptor().getMessageTypes().get(31);
     internal_static_api_core_UnfreezeSessionResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_core_UnfreezeSessionResponse_descriptor,
         new java.lang.String[] { "State", "Chat", });
+    internal_static_api_core_QuerySessionRequest_descriptor =
+      getDescriptor().getMessageTypes().get(32);
+    internal_static_api_core_QuerySessionRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_core_QuerySessionRequest_descriptor,
+        new java.lang.String[] { "ChatId", });
+    internal_static_api_core_QuerySessionResponse_descriptor =
+      getDescriptor().getMessageTypes().get(33);
+    internal_static_api_core_QuerySessionResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_core_QuerySessionResponse_descriptor,
+        new java.lang.String[] { "Chat", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.teneasyChat.api.Option.info);

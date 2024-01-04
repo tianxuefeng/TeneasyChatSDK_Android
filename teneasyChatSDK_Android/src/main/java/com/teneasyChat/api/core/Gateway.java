@@ -8509,7 +8509,7 @@ public final class Gateway {
       "id\030\003 \001(\005\022\024\n\014websocket_id\030\004 \001(\004\022\026\n\016websoc" +
       "ket_time\030\005 \001(\003\022\026\n\016websocket_flag\030\006 \001(\010\")" +
       "\n\024NewDisconnectRequest\022\021\n\tclient_id\030\001 \003(" +
-      "\0032\255\006\n\016GatewayManager\022R\n\006Beacon\022\036.api.cor" +
+      "\0032\237\007\n\016GatewayManager\022R\n\006Beacon\022\036.api.cor" +
       "e.GatewayBeaconRequest\032\026.google.protobuf" +
       ".Empty\"\020\272\276\031\014\010\240\006\322\014\006beacon\022c\n\010Register\022 .a" +
       "pi.core.GatewayRegisterRequest\032!.api.cor" +
@@ -8526,12 +8526,15 @@ public final class Gateway {
       "\014\017new-worker-conn\022l\n\016NewUserConnect\022\037.ap" +
       "i.core.NewUserConnectRequest\032 .api.core." +
       "NewUserConnectResponse\"\027\272\276\031\023\010\246\006\322\014\rnew-us" +
-      "er-conn\022a\n\rNewDisconnect\022\036.api.core.NewD" +
-      "isconnectRequest\032\026.google.protobuf.Empty" +
-      "\"\030\272\276\031\024\010\247\006\322\014\016new-disconnect\032\035\272\276\031\031\272\006\007gatew" +
-      "ay\312\014\001\004\322\014\010/gatewayBG\n\030com.teneasyChat.api" +
-      ".coreZ\021wcs/api/core;core\272\276\031\026\242\006\006calvin\262\006\n" +
-      "2022-12-15b\006proto3"
+      "er-conn\022p\n\020NewUserConnectV2\022\037.api.core.N" +
+      "ewUserConnectRequest\032 .api.core.NewUserC" +
+      "onnectResponse\"\031\272\276\031\025\010\246\006\322\014\017new-user-connV" +
+      "2\022a\n\rNewDisconnect\022\036.api.core.NewDisconn" +
+      "ectRequest\032\026.google.protobuf.Empty\"\030\272\276\031\024" +
+      "\010\247\006\322\014\016new-disconnect\032\035\272\276\031\031\272\006\007gateway\312\014\001\004" +
+      "\322\014\010/gatewayBG\n\030com.teneasyChat.api.coreZ" +
+      "\021wcs/api/core;core\272\276\031\026\242\006\006calvin\262\006\n2022-1" +
+      "2-15b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

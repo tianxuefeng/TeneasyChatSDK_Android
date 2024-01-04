@@ -12891,6 +12891,26 @@ public final class TenantOuterClass {
      * @return The cliqueId.
      */
     int getCliqueId();
+
+    /**
+     * <pre>
+     * 商户云信前缀
+     * </pre>
+     *
+     * <code>string nimprex = 7;</code>
+     * @return The nimprex.
+     */
+    java.lang.String getNimprex();
+    /**
+     * <pre>
+     * 商户云信前缀
+     * </pre>
+     *
+     * <code>string nimprex = 7;</code>
+     * @return The bytes for nimprex.
+     */
+    com.google.protobuf.ByteString
+        getNimprexBytes();
   }
   /**
    * <pre>
@@ -12911,6 +12931,7 @@ public final class TenantOuterClass {
     private UpdateTenantRequest() {
       name_ = "";
       password_ = "";
+      nimprex_ = "";
     }
 
     @java.lang.Override
@@ -13087,6 +13108,53 @@ public final class TenantOuterClass {
       return cliqueId_;
     }
 
+    public static final int NIMPREX_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object nimprex_ = "";
+    /**
+     * <pre>
+     * 商户云信前缀
+     * </pre>
+     *
+     * <code>string nimprex = 7;</code>
+     * @return The nimprex.
+     */
+    @java.lang.Override
+    public java.lang.String getNimprex() {
+      java.lang.Object ref = nimprex_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nimprex_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * 商户云信前缀
+     * </pre>
+     *
+     * <code>string nimprex = 7;</code>
+     * @return The bytes for nimprex.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNimprexBytes() {
+      java.lang.Object ref = nimprex_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nimprex_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -13119,6 +13187,9 @@ public final class TenantOuterClass {
       if (cliqueId_ != 0) {
         output.writeInt32(6, cliqueId_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nimprex_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, nimprex_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -13150,6 +13221,9 @@ public final class TenantOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(6, cliqueId_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nimprex_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, nimprex_);
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -13177,6 +13251,8 @@ public final class TenantOuterClass {
           .equals(other.getPassword())) return false;
       if (getCliqueId()
           != other.getCliqueId()) return false;
+      if (!getNimprex()
+          .equals(other.getNimprex())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -13200,6 +13276,8 @@ public final class TenantOuterClass {
       hash = (53 * hash) + getPassword().hashCode();
       hash = (37 * hash) + CLIQUE_ID_FIELD_NUMBER;
       hash = (53 * hash) + getCliqueId();
+      hash = (37 * hash) + NIMPREX_FIELD_NUMBER;
+      hash = (53 * hash) + getNimprex().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -13341,6 +13419,7 @@ public final class TenantOuterClass {
         dailyServiceCapacity_ = 0;
         password_ = "";
         cliqueId_ = 0;
+        nimprex_ = "";
         return this;
       }
 
@@ -13391,6 +13470,9 @@ public final class TenantOuterClass {
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.cliqueId_ = cliqueId_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.nimprex_ = nimprex_;
         }
       }
 
@@ -13460,6 +13542,11 @@ public final class TenantOuterClass {
         if (other.getCliqueId() != 0) {
           setCliqueId(other.getCliqueId());
         }
+        if (!other.getNimprex().isEmpty()) {
+          nimprex_ = other.nimprex_;
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -13516,6 +13603,11 @@ public final class TenantOuterClass {
                 bitField0_ |= 0x00000020;
                 break;
               } // case 48
+              case 58: {
+                nimprex_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -13892,6 +13984,98 @@ public final class TenantOuterClass {
         onChanged();
         return this;
       }
+
+      private java.lang.Object nimprex_ = "";
+      /**
+       * <pre>
+       * 商户云信前缀
+       * </pre>
+       *
+       * <code>string nimprex = 7;</code>
+       * @return The nimprex.
+       */
+      public java.lang.String getNimprex() {
+        java.lang.Object ref = nimprex_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          nimprex_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * 商户云信前缀
+       * </pre>
+       *
+       * <code>string nimprex = 7;</code>
+       * @return The bytes for nimprex.
+       */
+      public com.google.protobuf.ByteString
+          getNimprexBytes() {
+        java.lang.Object ref = nimprex_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nimprex_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * 商户云信前缀
+       * </pre>
+       *
+       * <code>string nimprex = 7;</code>
+       * @param value The nimprex to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNimprex(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        nimprex_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 商户云信前缀
+       * </pre>
+       *
+       * <code>string nimprex = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNimprex() {
+        nimprex_ = getDefaultInstance().getNimprex();
+        bitField0_ = (bitField0_ & ~0x00000040);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 商户云信前缀
+       * </pre>
+       *
+       * <code>string nimprex = 7;</code>
+       * @param value The bytes for nimprex to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNimprexBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        nimprex_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -13951,6 +14135,1974 @@ public final class TenantOuterClass {
 
     @java.lang.Override
     public com.teneasyChat.api.core.TenantOuterClass.UpdateTenantRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PublicKeyResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:api.core.PublicKeyResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     *key
+     * </pre>
+     *
+     * <code>string token = 1;</code>
+     * @return The token.
+     */
+    java.lang.String getToken();
+    /**
+     * <pre>
+     *key
+     * </pre>
+     *
+     * <code>string token = 1;</code>
+     * @return The bytes for token.
+     */
+    com.google.protobuf.ByteString
+        getTokenBytes();
+  }
+  /**
+   * Protobuf type {@code api.core.PublicKeyResponse}
+   */
+  public static final class PublicKeyResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:api.core.PublicKeyResponse)
+      PublicKeyResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PublicKeyResponse.newBuilder() to construct.
+    private PublicKeyResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PublicKeyResponse() {
+      token_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PublicKeyResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.teneasyChat.api.core.TenantOuterClass.internal_static_api_core_PublicKeyResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.teneasyChat.api.core.TenantOuterClass.internal_static_api_core_PublicKeyResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.teneasyChat.api.core.TenantOuterClass.PublicKeyResponse.class, com.teneasyChat.api.core.TenantOuterClass.PublicKeyResponse.Builder.class);
+    }
+
+    public static final int TOKEN_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object token_ = "";
+    /**
+     * <pre>
+     *key
+     * </pre>
+     *
+     * <code>string token = 1;</code>
+     * @return The token.
+     */
+    @java.lang.Override
+    public java.lang.String getToken() {
+      java.lang.Object ref = token_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        token_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     *key
+     * </pre>
+     *
+     * <code>string token = 1;</code>
+     * @return The bytes for token.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTokenBytes() {
+      java.lang.Object ref = token_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        token_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(token_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, token_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(token_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, token_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.teneasyChat.api.core.TenantOuterClass.PublicKeyResponse)) {
+        return super.equals(obj);
+      }
+      com.teneasyChat.api.core.TenantOuterClass.PublicKeyResponse other = (com.teneasyChat.api.core.TenantOuterClass.PublicKeyResponse) obj;
+
+      if (!getToken()
+          .equals(other.getToken())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getToken().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.teneasyChat.api.core.TenantOuterClass.PublicKeyResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teneasyChat.api.core.TenantOuterClass.PublicKeyResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teneasyChat.api.core.TenantOuterClass.PublicKeyResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teneasyChat.api.core.TenantOuterClass.PublicKeyResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teneasyChat.api.core.TenantOuterClass.PublicKeyResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teneasyChat.api.core.TenantOuterClass.PublicKeyResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teneasyChat.api.core.TenantOuterClass.PublicKeyResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.teneasyChat.api.core.TenantOuterClass.PublicKeyResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.teneasyChat.api.core.TenantOuterClass.PublicKeyResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.teneasyChat.api.core.TenantOuterClass.PublicKeyResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.teneasyChat.api.core.TenantOuterClass.PublicKeyResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.teneasyChat.api.core.TenantOuterClass.PublicKeyResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.teneasyChat.api.core.TenantOuterClass.PublicKeyResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code api.core.PublicKeyResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:api.core.PublicKeyResponse)
+        com.teneasyChat.api.core.TenantOuterClass.PublicKeyResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.teneasyChat.api.core.TenantOuterClass.internal_static_api_core_PublicKeyResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.teneasyChat.api.core.TenantOuterClass.internal_static_api_core_PublicKeyResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.teneasyChat.api.core.TenantOuterClass.PublicKeyResponse.class, com.teneasyChat.api.core.TenantOuterClass.PublicKeyResponse.Builder.class);
+      }
+
+      // Construct using com.teneasyChat.api.core.TenantOuterClass.PublicKeyResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        token_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.teneasyChat.api.core.TenantOuterClass.internal_static_api_core_PublicKeyResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.teneasyChat.api.core.TenantOuterClass.PublicKeyResponse getDefaultInstanceForType() {
+        return com.teneasyChat.api.core.TenantOuterClass.PublicKeyResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.teneasyChat.api.core.TenantOuterClass.PublicKeyResponse build() {
+        com.teneasyChat.api.core.TenantOuterClass.PublicKeyResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.teneasyChat.api.core.TenantOuterClass.PublicKeyResponse buildPartial() {
+        com.teneasyChat.api.core.TenantOuterClass.PublicKeyResponse result = new com.teneasyChat.api.core.TenantOuterClass.PublicKeyResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.teneasyChat.api.core.TenantOuterClass.PublicKeyResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.token_ = token_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.teneasyChat.api.core.TenantOuterClass.PublicKeyResponse) {
+          return mergeFrom((com.teneasyChat.api.core.TenantOuterClass.PublicKeyResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.teneasyChat.api.core.TenantOuterClass.PublicKeyResponse other) {
+        if (other == com.teneasyChat.api.core.TenantOuterClass.PublicKeyResponse.getDefaultInstance()) return this;
+        if (!other.getToken().isEmpty()) {
+          token_ = other.token_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                token_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object token_ = "";
+      /**
+       * <pre>
+       *key
+       * </pre>
+       *
+       * <code>string token = 1;</code>
+       * @return The token.
+       */
+      public java.lang.String getToken() {
+        java.lang.Object ref = token_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          token_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       *key
+       * </pre>
+       *
+       * <code>string token = 1;</code>
+       * @return The bytes for token.
+       */
+      public com.google.protobuf.ByteString
+          getTokenBytes() {
+        java.lang.Object ref = token_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          token_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       *key
+       * </pre>
+       *
+       * <code>string token = 1;</code>
+       * @param value The token to set.
+       * @return This builder for chaining.
+       */
+      public Builder setToken(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        token_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *key
+       * </pre>
+       *
+       * <code>string token = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearToken() {
+        token_ = getDefaultInstance().getToken();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *key
+       * </pre>
+       *
+       * <code>string token = 1;</code>
+       * @param value The bytes for token to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        token_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:api.core.PublicKeyResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:api.core.PublicKeyResponse)
+    private static final com.teneasyChat.api.core.TenantOuterClass.PublicKeyResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.teneasyChat.api.core.TenantOuterClass.PublicKeyResponse();
+    }
+
+    public static com.teneasyChat.api.core.TenantOuterClass.PublicKeyResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PublicKeyResponse>
+        PARSER = new com.google.protobuf.AbstractParser<PublicKeyResponse>() {
+      @java.lang.Override
+      public PublicKeyResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<PublicKeyResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PublicKeyResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.teneasyChat.api.core.TenantOuterClass.PublicKeyResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryTenantInfoResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:api.core.QueryTenantInfoResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.api.core.TenantItem item = 1;</code>
+     * @return Whether the item field is set.
+     */
+    boolean hasItem();
+    /**
+     * <code>.api.core.TenantItem item = 1;</code>
+     * @return The item.
+     */
+    com.teneasyChat.api.core.TenantOuterClass.TenantItem getItem();
+    /**
+     * <code>.api.core.TenantItem item = 1;</code>
+     */
+    com.teneasyChat.api.core.TenantOuterClass.TenantItemOrBuilder getItemOrBuilder();
+  }
+  /**
+   * Protobuf type {@code api.core.QueryTenantInfoResponse}
+   */
+  public static final class QueryTenantInfoResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:api.core.QueryTenantInfoResponse)
+      QueryTenantInfoResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryTenantInfoResponse.newBuilder() to construct.
+    private QueryTenantInfoResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryTenantInfoResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryTenantInfoResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.teneasyChat.api.core.TenantOuterClass.internal_static_api_core_QueryTenantInfoResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.teneasyChat.api.core.TenantOuterClass.internal_static_api_core_QueryTenantInfoResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.teneasyChat.api.core.TenantOuterClass.QueryTenantInfoResponse.class, com.teneasyChat.api.core.TenantOuterClass.QueryTenantInfoResponse.Builder.class);
+    }
+
+    public static final int ITEM_FIELD_NUMBER = 1;
+    private com.teneasyChat.api.core.TenantOuterClass.TenantItem item_;
+    /**
+     * <code>.api.core.TenantItem item = 1;</code>
+     * @return Whether the item field is set.
+     */
+    @java.lang.Override
+    public boolean hasItem() {
+      return item_ != null;
+    }
+    /**
+     * <code>.api.core.TenantItem item = 1;</code>
+     * @return The item.
+     */
+    @java.lang.Override
+    public com.teneasyChat.api.core.TenantOuterClass.TenantItem getItem() {
+      return item_ == null ? com.teneasyChat.api.core.TenantOuterClass.TenantItem.getDefaultInstance() : item_;
+    }
+    /**
+     * <code>.api.core.TenantItem item = 1;</code>
+     */
+    @java.lang.Override
+    public com.teneasyChat.api.core.TenantOuterClass.TenantItemOrBuilder getItemOrBuilder() {
+      return item_ == null ? com.teneasyChat.api.core.TenantOuterClass.TenantItem.getDefaultInstance() : item_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (item_ != null) {
+        output.writeMessage(1, getItem());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (item_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getItem());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.teneasyChat.api.core.TenantOuterClass.QueryTenantInfoResponse)) {
+        return super.equals(obj);
+      }
+      com.teneasyChat.api.core.TenantOuterClass.QueryTenantInfoResponse other = (com.teneasyChat.api.core.TenantOuterClass.QueryTenantInfoResponse) obj;
+
+      if (hasItem() != other.hasItem()) return false;
+      if (hasItem()) {
+        if (!getItem()
+            .equals(other.getItem())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasItem()) {
+        hash = (37 * hash) + ITEM_FIELD_NUMBER;
+        hash = (53 * hash) + getItem().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.teneasyChat.api.core.TenantOuterClass.QueryTenantInfoResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teneasyChat.api.core.TenantOuterClass.QueryTenantInfoResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teneasyChat.api.core.TenantOuterClass.QueryTenantInfoResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teneasyChat.api.core.TenantOuterClass.QueryTenantInfoResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teneasyChat.api.core.TenantOuterClass.QueryTenantInfoResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teneasyChat.api.core.TenantOuterClass.QueryTenantInfoResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teneasyChat.api.core.TenantOuterClass.QueryTenantInfoResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.teneasyChat.api.core.TenantOuterClass.QueryTenantInfoResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.teneasyChat.api.core.TenantOuterClass.QueryTenantInfoResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.teneasyChat.api.core.TenantOuterClass.QueryTenantInfoResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.teneasyChat.api.core.TenantOuterClass.QueryTenantInfoResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.teneasyChat.api.core.TenantOuterClass.QueryTenantInfoResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.teneasyChat.api.core.TenantOuterClass.QueryTenantInfoResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code api.core.QueryTenantInfoResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:api.core.QueryTenantInfoResponse)
+        com.teneasyChat.api.core.TenantOuterClass.QueryTenantInfoResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.teneasyChat.api.core.TenantOuterClass.internal_static_api_core_QueryTenantInfoResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.teneasyChat.api.core.TenantOuterClass.internal_static_api_core_QueryTenantInfoResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.teneasyChat.api.core.TenantOuterClass.QueryTenantInfoResponse.class, com.teneasyChat.api.core.TenantOuterClass.QueryTenantInfoResponse.Builder.class);
+      }
+
+      // Construct using com.teneasyChat.api.core.TenantOuterClass.QueryTenantInfoResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        item_ = null;
+        if (itemBuilder_ != null) {
+          itemBuilder_.dispose();
+          itemBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.teneasyChat.api.core.TenantOuterClass.internal_static_api_core_QueryTenantInfoResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.teneasyChat.api.core.TenantOuterClass.QueryTenantInfoResponse getDefaultInstanceForType() {
+        return com.teneasyChat.api.core.TenantOuterClass.QueryTenantInfoResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.teneasyChat.api.core.TenantOuterClass.QueryTenantInfoResponse build() {
+        com.teneasyChat.api.core.TenantOuterClass.QueryTenantInfoResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.teneasyChat.api.core.TenantOuterClass.QueryTenantInfoResponse buildPartial() {
+        com.teneasyChat.api.core.TenantOuterClass.QueryTenantInfoResponse result = new com.teneasyChat.api.core.TenantOuterClass.QueryTenantInfoResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.teneasyChat.api.core.TenantOuterClass.QueryTenantInfoResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.item_ = itemBuilder_ == null
+              ? item_
+              : itemBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.teneasyChat.api.core.TenantOuterClass.QueryTenantInfoResponse) {
+          return mergeFrom((com.teneasyChat.api.core.TenantOuterClass.QueryTenantInfoResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.teneasyChat.api.core.TenantOuterClass.QueryTenantInfoResponse other) {
+        if (other == com.teneasyChat.api.core.TenantOuterClass.QueryTenantInfoResponse.getDefaultInstance()) return this;
+        if (other.hasItem()) {
+          mergeItem(other.getItem());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getItemFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.teneasyChat.api.core.TenantOuterClass.TenantItem item_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.teneasyChat.api.core.TenantOuterClass.TenantItem, com.teneasyChat.api.core.TenantOuterClass.TenantItem.Builder, com.teneasyChat.api.core.TenantOuterClass.TenantItemOrBuilder> itemBuilder_;
+      /**
+       * <code>.api.core.TenantItem item = 1;</code>
+       * @return Whether the item field is set.
+       */
+      public boolean hasItem() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.api.core.TenantItem item = 1;</code>
+       * @return The item.
+       */
+      public com.teneasyChat.api.core.TenantOuterClass.TenantItem getItem() {
+        if (itemBuilder_ == null) {
+          return item_ == null ? com.teneasyChat.api.core.TenantOuterClass.TenantItem.getDefaultInstance() : item_;
+        } else {
+          return itemBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.api.core.TenantItem item = 1;</code>
+       */
+      public Builder setItem(com.teneasyChat.api.core.TenantOuterClass.TenantItem value) {
+        if (itemBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          item_ = value;
+        } else {
+          itemBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.api.core.TenantItem item = 1;</code>
+       */
+      public Builder setItem(
+          com.teneasyChat.api.core.TenantOuterClass.TenantItem.Builder builderForValue) {
+        if (itemBuilder_ == null) {
+          item_ = builderForValue.build();
+        } else {
+          itemBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.api.core.TenantItem item = 1;</code>
+       */
+      public Builder mergeItem(com.teneasyChat.api.core.TenantOuterClass.TenantItem value) {
+        if (itemBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            item_ != null &&
+            item_ != com.teneasyChat.api.core.TenantOuterClass.TenantItem.getDefaultInstance()) {
+            getItemBuilder().mergeFrom(value);
+          } else {
+            item_ = value;
+          }
+        } else {
+          itemBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.api.core.TenantItem item = 1;</code>
+       */
+      public Builder clearItem() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        item_ = null;
+        if (itemBuilder_ != null) {
+          itemBuilder_.dispose();
+          itemBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.api.core.TenantItem item = 1;</code>
+       */
+      public com.teneasyChat.api.core.TenantOuterClass.TenantItem.Builder getItemBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getItemFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.api.core.TenantItem item = 1;</code>
+       */
+      public com.teneasyChat.api.core.TenantOuterClass.TenantItemOrBuilder getItemOrBuilder() {
+        if (itemBuilder_ != null) {
+          return itemBuilder_.getMessageOrBuilder();
+        } else {
+          return item_ == null ?
+              com.teneasyChat.api.core.TenantOuterClass.TenantItem.getDefaultInstance() : item_;
+        }
+      }
+      /**
+       * <code>.api.core.TenantItem item = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.teneasyChat.api.core.TenantOuterClass.TenantItem, com.teneasyChat.api.core.TenantOuterClass.TenantItem.Builder, com.teneasyChat.api.core.TenantOuterClass.TenantItemOrBuilder> 
+          getItemFieldBuilder() {
+        if (itemBuilder_ == null) {
+          itemBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.teneasyChat.api.core.TenantOuterClass.TenantItem, com.teneasyChat.api.core.TenantOuterClass.TenantItem.Builder, com.teneasyChat.api.core.TenantOuterClass.TenantItemOrBuilder>(
+                  getItem(),
+                  getParentForChildren(),
+                  isClean());
+          item_ = null;
+        }
+        return itemBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:api.core.QueryTenantInfoResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:api.core.QueryTenantInfoResponse)
+    private static final com.teneasyChat.api.core.TenantOuterClass.QueryTenantInfoResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.teneasyChat.api.core.TenantOuterClass.QueryTenantInfoResponse();
+    }
+
+    public static com.teneasyChat.api.core.TenantOuterClass.QueryTenantInfoResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryTenantInfoResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryTenantInfoResponse>() {
+      @java.lang.Override
+      public QueryTenantInfoResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryTenantInfoResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryTenantInfoResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.teneasyChat.api.core.TenantOuterClass.QueryTenantInfoResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UpdateNimInfoRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:api.core.UpdateNimInfoRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int32 workerId = 1;</code>
+     * @return The workerId.
+     */
+    int getWorkerId();
+
+    /**
+     * <code>string nimid = 2;</code>
+     * @return The nimid.
+     */
+    java.lang.String getNimid();
+    /**
+     * <code>string nimid = 2;</code>
+     * @return The bytes for nimid.
+     */
+    com.google.protobuf.ByteString
+        getNimidBytes();
+
+    /**
+     * <code>string nimsession = 3;</code>
+     * @return The nimsession.
+     */
+    java.lang.String getNimsession();
+    /**
+     * <code>string nimsession = 3;</code>
+     * @return The bytes for nimsession.
+     */
+    com.google.protobuf.ByteString
+        getNimsessionBytes();
+  }
+  /**
+   * <pre>
+   * TODO: 更新云信信息
+   * </pre>
+   *
+   * Protobuf type {@code api.core.UpdateNimInfoRequest}
+   */
+  public static final class UpdateNimInfoRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:api.core.UpdateNimInfoRequest)
+      UpdateNimInfoRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UpdateNimInfoRequest.newBuilder() to construct.
+    private UpdateNimInfoRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UpdateNimInfoRequest() {
+      nimid_ = "";
+      nimsession_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateNimInfoRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.teneasyChat.api.core.TenantOuterClass.internal_static_api_core_UpdateNimInfoRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.teneasyChat.api.core.TenantOuterClass.internal_static_api_core_UpdateNimInfoRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.teneasyChat.api.core.TenantOuterClass.UpdateNimInfoRequest.class, com.teneasyChat.api.core.TenantOuterClass.UpdateNimInfoRequest.Builder.class);
+    }
+
+    public static final int WORKERID_FIELD_NUMBER = 1;
+    private int workerId_ = 0;
+    /**
+     * <code>int32 workerId = 1;</code>
+     * @return The workerId.
+     */
+    @java.lang.Override
+    public int getWorkerId() {
+      return workerId_;
+    }
+
+    public static final int NIMID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object nimid_ = "";
+    /**
+     * <code>string nimid = 2;</code>
+     * @return The nimid.
+     */
+    @java.lang.Override
+    public java.lang.String getNimid() {
+      java.lang.Object ref = nimid_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nimid_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string nimid = 2;</code>
+     * @return The bytes for nimid.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNimidBytes() {
+      java.lang.Object ref = nimid_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nimid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NIMSESSION_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object nimsession_ = "";
+    /**
+     * <code>string nimsession = 3;</code>
+     * @return The nimsession.
+     */
+    @java.lang.Override
+    public java.lang.String getNimsession() {
+      java.lang.Object ref = nimsession_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nimsession_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string nimsession = 3;</code>
+     * @return The bytes for nimsession.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNimsessionBytes() {
+      java.lang.Object ref = nimsession_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nimsession_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (workerId_ != 0) {
+        output.writeInt32(1, workerId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nimid_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nimid_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nimsession_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, nimsession_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (workerId_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, workerId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nimid_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nimid_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nimsession_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, nimsession_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.teneasyChat.api.core.TenantOuterClass.UpdateNimInfoRequest)) {
+        return super.equals(obj);
+      }
+      com.teneasyChat.api.core.TenantOuterClass.UpdateNimInfoRequest other = (com.teneasyChat.api.core.TenantOuterClass.UpdateNimInfoRequest) obj;
+
+      if (getWorkerId()
+          != other.getWorkerId()) return false;
+      if (!getNimid()
+          .equals(other.getNimid())) return false;
+      if (!getNimsession()
+          .equals(other.getNimsession())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + WORKERID_FIELD_NUMBER;
+      hash = (53 * hash) + getWorkerId();
+      hash = (37 * hash) + NIMID_FIELD_NUMBER;
+      hash = (53 * hash) + getNimid().hashCode();
+      hash = (37 * hash) + NIMSESSION_FIELD_NUMBER;
+      hash = (53 * hash) + getNimsession().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.teneasyChat.api.core.TenantOuterClass.UpdateNimInfoRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teneasyChat.api.core.TenantOuterClass.UpdateNimInfoRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teneasyChat.api.core.TenantOuterClass.UpdateNimInfoRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teneasyChat.api.core.TenantOuterClass.UpdateNimInfoRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teneasyChat.api.core.TenantOuterClass.UpdateNimInfoRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teneasyChat.api.core.TenantOuterClass.UpdateNimInfoRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teneasyChat.api.core.TenantOuterClass.UpdateNimInfoRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.teneasyChat.api.core.TenantOuterClass.UpdateNimInfoRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.teneasyChat.api.core.TenantOuterClass.UpdateNimInfoRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.teneasyChat.api.core.TenantOuterClass.UpdateNimInfoRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.teneasyChat.api.core.TenantOuterClass.UpdateNimInfoRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.teneasyChat.api.core.TenantOuterClass.UpdateNimInfoRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.teneasyChat.api.core.TenantOuterClass.UpdateNimInfoRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * TODO: 更新云信信息
+     * </pre>
+     *
+     * Protobuf type {@code api.core.UpdateNimInfoRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:api.core.UpdateNimInfoRequest)
+        com.teneasyChat.api.core.TenantOuterClass.UpdateNimInfoRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.teneasyChat.api.core.TenantOuterClass.internal_static_api_core_UpdateNimInfoRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.teneasyChat.api.core.TenantOuterClass.internal_static_api_core_UpdateNimInfoRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.teneasyChat.api.core.TenantOuterClass.UpdateNimInfoRequest.class, com.teneasyChat.api.core.TenantOuterClass.UpdateNimInfoRequest.Builder.class);
+      }
+
+      // Construct using com.teneasyChat.api.core.TenantOuterClass.UpdateNimInfoRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        workerId_ = 0;
+        nimid_ = "";
+        nimsession_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.teneasyChat.api.core.TenantOuterClass.internal_static_api_core_UpdateNimInfoRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.teneasyChat.api.core.TenantOuterClass.UpdateNimInfoRequest getDefaultInstanceForType() {
+        return com.teneasyChat.api.core.TenantOuterClass.UpdateNimInfoRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.teneasyChat.api.core.TenantOuterClass.UpdateNimInfoRequest build() {
+        com.teneasyChat.api.core.TenantOuterClass.UpdateNimInfoRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.teneasyChat.api.core.TenantOuterClass.UpdateNimInfoRequest buildPartial() {
+        com.teneasyChat.api.core.TenantOuterClass.UpdateNimInfoRequest result = new com.teneasyChat.api.core.TenantOuterClass.UpdateNimInfoRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.teneasyChat.api.core.TenantOuterClass.UpdateNimInfoRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.workerId_ = workerId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.nimid_ = nimid_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.nimsession_ = nimsession_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.teneasyChat.api.core.TenantOuterClass.UpdateNimInfoRequest) {
+          return mergeFrom((com.teneasyChat.api.core.TenantOuterClass.UpdateNimInfoRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.teneasyChat.api.core.TenantOuterClass.UpdateNimInfoRequest other) {
+        if (other == com.teneasyChat.api.core.TenantOuterClass.UpdateNimInfoRequest.getDefaultInstance()) return this;
+        if (other.getWorkerId() != 0) {
+          setWorkerId(other.getWorkerId());
+        }
+        if (!other.getNimid().isEmpty()) {
+          nimid_ = other.nimid_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getNimsession().isEmpty()) {
+          nimsession_ = other.nimsession_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                workerId_ = input.readInt32();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                nimid_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                nimsession_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private int workerId_ ;
+      /**
+       * <code>int32 workerId = 1;</code>
+       * @return The workerId.
+       */
+      @java.lang.Override
+      public int getWorkerId() {
+        return workerId_;
+      }
+      /**
+       * <code>int32 workerId = 1;</code>
+       * @param value The workerId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWorkerId(int value) {
+
+        workerId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 workerId = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWorkerId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        workerId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object nimid_ = "";
+      /**
+       * <code>string nimid = 2;</code>
+       * @return The nimid.
+       */
+      public java.lang.String getNimid() {
+        java.lang.Object ref = nimid_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          nimid_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string nimid = 2;</code>
+       * @return The bytes for nimid.
+       */
+      public com.google.protobuf.ByteString
+          getNimidBytes() {
+        java.lang.Object ref = nimid_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nimid_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string nimid = 2;</code>
+       * @param value The nimid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNimid(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        nimid_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string nimid = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNimid() {
+        nimid_ = getDefaultInstance().getNimid();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string nimid = 2;</code>
+       * @param value The bytes for nimid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNimidBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        nimid_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object nimsession_ = "";
+      /**
+       * <code>string nimsession = 3;</code>
+       * @return The nimsession.
+       */
+      public java.lang.String getNimsession() {
+        java.lang.Object ref = nimsession_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          nimsession_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string nimsession = 3;</code>
+       * @return The bytes for nimsession.
+       */
+      public com.google.protobuf.ByteString
+          getNimsessionBytes() {
+        java.lang.Object ref = nimsession_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nimsession_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string nimsession = 3;</code>
+       * @param value The nimsession to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNimsession(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        nimsession_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string nimsession = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNimsession() {
+        nimsession_ = getDefaultInstance().getNimsession();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string nimsession = 3;</code>
+       * @param value The bytes for nimsession to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNimsessionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        nimsession_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:api.core.UpdateNimInfoRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:api.core.UpdateNimInfoRequest)
+    private static final com.teneasyChat.api.core.TenantOuterClass.UpdateNimInfoRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.teneasyChat.api.core.TenantOuterClass.UpdateNimInfoRequest();
+    }
+
+    public static com.teneasyChat.api.core.TenantOuterClass.UpdateNimInfoRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UpdateNimInfoRequest>
+        PARSER = new com.google.protobuf.AbstractParser<UpdateNimInfoRequest>() {
+      @java.lang.Override
+      public UpdateNimInfoRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<UpdateNimInfoRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UpdateNimInfoRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.teneasyChat.api.core.TenantOuterClass.UpdateNimInfoRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -14031,6 +16183,21 @@ public final class TenantOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_core_UpdateTenantRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_core_PublicKeyResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_core_PublicKeyResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_core_QueryTenantInfoResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_core_QueryTenantInfoResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_core_UpdateNimInfoRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_core_UpdateNimInfoRequest_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -14081,41 +16248,54 @@ public final class TenantOuterClass {
       "\n\ngroup_name\030\r \001(\t\022\021\n\tclique_Id\030\016 \001(\005\"6\n" +
       "\021AdminLoginRequest\022\017\n\007account\030\001 \001(\t\022\020\n\010p" +
       "assword\030\002 \001(\t\"#\n\022AdminLoginResponse\022\r\n\005t" +
-      "oken\030\001 \001(\t\"\325\001\n\023UpdateTenantRequest\022\036\n\tte" +
+      "oken\030\001 \001(\t\"\346\001\n\023UpdateTenantRequest\022\036\n\tte" +
       "nant_id\030\001 \001(\rB\013\372B\010*\006\030\377\377\001 \000\022\027\n\004name\030\002 \001(\t" +
       "B\t\372B\006r\004\020\001\030\020\022#\n\017worker_capacity\030\003 \001(\005B\n\372B" +
       "\007\032\005\030\217N(\000\022\'\n\026daily_service_capacity\030\004 \001(\005" +
       "B\007\372B\004\032\002(\000\022\033\n\010password\030\005 \001(\tB\t\372B\006r\004 \005(d\022\032" +
-      "\n\tclique_id\030\006 \001(\005B\007\372B\004\032\002(\000*O\n\tRoleRoute\022" +
-      "\025\n\021Role_ROUTE_WORKER\020\000\022\027\n\023Role_ROUTE_CUS" +
-      "TOMER\020\001\022\022\n\016Role_ROUTE_ALL\020\0022\321\007\n\006Tenant\022p" +
-      "\n\nAdminLogin\022\033.api.core.AdminLoginReques" +
-      "t\032\034.api.core.AdminLoginResponse\"\'\272\276\031#\010k\030" +
-      "\001\262\006\n2022-12-10\312\014\001\002\322\014\013admin-login\022[\n\005Logi" +
-      "n\022\026.api.core.LoginRequest\032\027.api.core.Log" +
-      "inResponse\"!\272\276\031\035\010d\030\001\262\006\n2022-12-10\312\014\001\002\322\014\005" +
-      "login\022\\\n\006Logout\022\026.google.protobuf.Empty\032" +
-      "\026.google.protobuf.Empty\"\"\272\276\031\036\010e\030\001\262\006\n2022" +
-      "-12-10\312\014\001\002\322\014\006logout\022c\n\006Create\022\035.api.core" +
-      ".TenantCreateRequest\032\026.google.protobuf.E" +
-      "mpty\"\"\272\276\031\036\010f\030\001\262\006\n2022-12-10\312\014\001\002\322\014\006create" +
-      "\022g\n\005Query\022\034.api.core.TenantQueryRequest\032" +
-      "\035.api.core.TenantQueryResponse\"!\272\276\031\035\010h\030\001" +
-      "\262\006\n2022-12-10\312\014\001 \322\014\005query\022i\n\014UpdateTenan" +
-      "t\022\035.api.core.UpdateTenantRequest\032\026.googl" +
-      "e.protobuf.Empty\"\"\272\276\031\036\010i\030\001\262\006\n2022-12-10\312" +
-      "\014\001 \322\014\006update\022i\n\014DeleteTenant\022\035.api.core." +
-      "DeleteTenantRequest\032\026.google.protobuf.Em" +
-      "pty\"\"\272\276\031\036\010j\030\001\262\006\n2022-12-10\312\014\001 \322\014\006delete\022" +
-      "t\n\014ManagerLogin\022\035.api.core.ManagerLoginR" +
-      "equest\032\036.api.core.ManagerLoginResponse\"%" +
-      "\272\276\031!\010g\030\001\262\006\n2022-12-12\322\014\rmanager-login\022c\n" +
-      "\tGetRoutes\022\026.api.core.RouteRequest\032\027.api" +
-      ".core.RouteResponse\"%\272\276\031!\010l\030\001\262\006\n2023-04-" +
-      "06\312\014\001\000\322\014\tgetroutes\032\033\272\276\031\027\272\006\006tenant\312\014\001\020\322\014\007" +
-      "/tenantBG\n\030com.teneasyChat.api.coreZ\021wcs" +
-      "/api/core;core\272\276\031\026\242\006\006calvin\262\006\n2022-12-03" +
-      "b\006proto3"
+      "\n\tclique_id\030\006 \001(\005B\007\372B\004\032\002(\000\022\017\n\007nimprex\030\007 " +
+      "\001(\t\"\"\n\021PublicKeyResponse\022\r\n\005token\030\001 \001(\t\"" +
+      "=\n\027QueryTenantInfoResponse\022\"\n\004item\030\001 \001(\013" +
+      "2\024.api.core.TenantItem\"K\n\024UpdateNimInfoR" +
+      "equest\022\020\n\010workerId\030\001 \001(\005\022\r\n\005nimid\030\002 \001(\t\022" +
+      "\022\n\nnimsession\030\003 \001(\t*O\n\tRoleRoute\022\025\n\021Role" +
+      "_ROUTE_WORKER\020\000\022\027\n\023Role_ROUTE_CUSTOMER\020\001" +
+      "\022\022\n\016Role_ROUTE_ALL\020\0022\264\n\n\006Tenant\022p\n\nAdmin" +
+      "Login\022\033.api.core.AdminLoginRequest\032\034.api" +
+      ".core.AdminLoginResponse\"\'\272\276\031#\010k\030\001\262\006\n202" +
+      "2-12-10\312\014\001\002\322\014\013admin-login\022[\n\005Login\022\026.api" +
+      ".core.LoginRequest\032\027.api.core.LoginRespo" +
+      "nse\"!\272\276\031\035\010d\030\001\262\006\n2022-12-10\312\014\001\002\322\014\005login\022\\" +
+      "\n\006Logout\022\026.google.protobuf.Empty\032\026.googl" +
+      "e.protobuf.Empty\"\"\272\276\031\036\010e\030\001\262\006\n2022-12-10\312" +
+      "\014\001\002\322\014\006logout\022c\n\006Create\022\035.api.core.Tenant" +
+      "CreateRequest\032\026.google.protobuf.Empty\"\"\272" +
+      "\276\031\036\010f\030\001\262\006\n2022-12-10\312\014\001\002\322\014\006create\022g\n\005Que" +
+      "ry\022\034.api.core.TenantQueryRequest\032\035.api.c" +
+      "ore.TenantQueryResponse\"!\272\276\031\035\010h\030\001\262\006\n2022" +
+      "-12-10\312\014\001 \322\014\005query\022i\n\014UpdateTenant\022\035.api" +
+      ".core.UpdateTenantRequest\032\026.google.proto" +
+      "buf.Empty\"\"\272\276\031\036\010i\030\001\262\006\n2022-12-10\312\014\001 \322\014\006u" +
+      "pdate\022i\n\014DeleteTenant\022\035.api.core.DeleteT" +
+      "enantRequest\032\026.google.protobuf.Empty\"\"\272\276" +
+      "\031\036\010j\030\001\262\006\n2022-12-10\312\014\001 \322\014\006delete\022t\n\014Mana" +
+      "gerLogin\022\035.api.core.ManagerLoginRequest\032" +
+      "\036.api.core.ManagerLoginResponse\"%\272\276\031!\010g\030" +
+      "\001\262\006\n2022-12-12\322\014\rmanager-login\022c\n\tGetRou" +
+      "tes\022\026.api.core.RouteRequest\032\027.api.core.R" +
+      "outeResponse\"%\272\276\031!\010l\030\001\262\006\n2023-04-06\312\014\001\000\322" +
+      "\014\tgetroutes\022t\n\017CreatePublicKey\022\026.google." +
+      "protobuf.Empty\032\033.api.core.PublicKeyRespo" +
+      "nse\",\272\276\031(\010m\030\001\262\006\n2023-09-28\312\014\001\000\322\014\020create-" +
+      "publickey\022v\n\rQuerySelfInfo\022\026.google.prot" +
+      "obuf.Empty\032!.api.core.QueryTenantInfoRes" +
+      "ponse\"*\272\276\031&\010n\030\001\262\006\n2023-09-28\312\014\001\000\322\014\016query" +
+      "-selfinfo\022s\n\rUpdateNimInfo\022\036.api.core.Up" +
+      "dateNimInfoRequest\032\026.google.protobuf.Emp" +
+      "ty\"*\272\276\031&\010o\030\001\262\006\n2023-12-22\312\014\001\000\322\014\016update-n" +
+      "iminfo\032\033\272\276\031\027\272\006\006tenant\312\014\001\020\322\014\007/tenantBG\n\030c" +
+      "om.teneasyChat.api.coreZ\021wcs/api/core;co" +
+      "re\272\276\031\026\242\006\006calvin\262\006\n2022-12-03b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -14216,7 +16396,25 @@ public final class TenantOuterClass {
     internal_static_api_core_UpdateTenantRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_core_UpdateTenantRequest_descriptor,
-        new java.lang.String[] { "TenantId", "Name", "WorkerCapacity", "DailyServiceCapacity", "Password", "CliqueId", });
+        new java.lang.String[] { "TenantId", "Name", "WorkerCapacity", "DailyServiceCapacity", "Password", "CliqueId", "Nimprex", });
+    internal_static_api_core_PublicKeyResponse_descriptor =
+      getDescriptor().getMessageTypes().get(15);
+    internal_static_api_core_PublicKeyResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_core_PublicKeyResponse_descriptor,
+        new java.lang.String[] { "Token", });
+    internal_static_api_core_QueryTenantInfoResponse_descriptor =
+      getDescriptor().getMessageTypes().get(16);
+    internal_static_api_core_QueryTenantInfoResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_core_QueryTenantInfoResponse_descriptor,
+        new java.lang.String[] { "Item", });
+    internal_static_api_core_UpdateNimInfoRequest_descriptor =
+      getDescriptor().getMessageTypes().get(17);
+    internal_static_api_core_UpdateNimInfoRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_core_UpdateNimInfoRequest_descriptor,
+        new java.lang.String[] { "WorkerId", "Nimid", "Nimsession", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.teneasyChat.api.Option.info);

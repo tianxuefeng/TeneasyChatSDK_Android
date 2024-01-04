@@ -6342,21 +6342,21 @@ com.teneasyChat.api.common.CChat.ChatDetail defaultValue) {
       "etail:\0028\001\"H\n\023QuerySpecMsgRequest\022\030\n\007chat" +
       "_id\030\001 \001(\003B\007\372B\004\"\002 \000\022\027\n\006msg_id\030\002 \001(\003B\007\372B\004\"" +
       "\002 \000\"8\n\024QuerySpecMsgResponse\022 \n\003msg\030\001 \001(\013" +
-      "2\023.api.common.Message2\220\001\n\024MessageClientS" +
-      "ervice\022U\n\004sync\022\034.api.core.MessageSyncReq" +
-      "uest\032\035.api.core.MessageSyncResponse\"\020\272\276\031" +
-      "\014\010\314\010\030\001\322\014\004sync\032!\272\276\031\035\272\006\007message\312\014\002\001\004\322\014\013api" +
-      "/message2\326\002\n\024MessageTenantService\022U\n\004syn" +
-      "c\022\034.api.core.MessageSyncRequest\032\035.api.co" +
-      "re.MessageSyncResponse\"\020\272\276\031\014\010\315\010\030\001\322\014\004sync" +
-      "\022]\n\006search\022\036.api.core.MessageSearchReque" +
-      "st\032\037.api.core.MessageSearchResponse\"\022\272\276\031" +
-      "\016\010\316\010\030\001\322\014\006search\022b\n\tQuerySpec\022\035.api.core." +
-      "QuerySpecMsgRequest\032\036.api.core.QuerySpec" +
-      "MsgResponse\"\026\272\276\031\022\010\317\010\030\001\322\014\nquery-spec\032$\272\276\031" +
-      " \272\006\007message\312\014\002\020\004\322\014\016tenant/messageBG\n\030com" +
-      ".teneasyChat.api.coreZ\021wcs/api/core;core" +
-      "\272\276\031\026\242\006\006calvin\262\006\n2022-12-30b\006proto3"
+      "2\023.api.common.Message2\226\001\n\024MessageClientS" +
+      "ervice\022[\n\004sync\022\034.api.core.MessageSyncReq" +
+      "uest\032\035.api.core.MessageSyncResponse\"\026\272\276\031" +
+      "\022\010\314\010\030\001\312\014\003\001\004\002\322\014\004sync\032!\272\276\031\035\272\006\007message\312\014\002\001\004" +
+      "\322\014\013api/message2\326\002\n\024MessageTenantService\022" +
+      "U\n\004sync\022\034.api.core.MessageSyncRequest\032\035." +
+      "api.core.MessageSyncResponse\"\020\272\276\031\014\010\315\010\030\001\322" +
+      "\014\004sync\022]\n\006search\022\036.api.core.MessageSearc" +
+      "hRequest\032\037.api.core.MessageSearchRespons" +
+      "e\"\022\272\276\031\016\010\316\010\030\001\322\014\006search\022b\n\tQuerySpec\022\035.api" +
+      ".core.QuerySpecMsgRequest\032\036.api.core.Que" +
+      "rySpecMsgResponse\"\026\272\276\031\022\010\317\010\030\001\322\014\nquery-spe" +
+      "c\032$\272\276\031 \272\006\007message\312\014\002\020\004\322\014\016tenant/messageB" +
+      "G\n\030com.teneasyChat.api.coreZ\021wcs/api/cor" +
+      "e;core\272\276\031\026\242\006\006calvin\262\006\n2022-12-30b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

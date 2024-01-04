@@ -830,6 +830,56 @@ public final class CWorker {
      * @return The tenantId.
      */
     int getTenantId();
+
+    /**
+     * <pre>
+     * 云信Id
+     * </pre>
+     *
+     * <code>string worker_nimid = 11;</code>
+     * @return The workerNimid.
+     */
+    java.lang.String getWorkerNimid();
+    /**
+     * <pre>
+     * 云信Id
+     * </pre>
+     *
+     * <code>string worker_nimid = 11;</code>
+     * @return The bytes for workerNimid.
+     */
+    com.google.protobuf.ByteString
+        getWorkerNimidBytes();
+
+    /**
+     * <pre>
+     * 云信session
+     * </pre>
+     *
+     * <code>string worker_nimsession = 12;</code>
+     * @return The workerNimsession.
+     */
+    java.lang.String getWorkerNimsession();
+    /**
+     * <pre>
+     * 云信session
+     * </pre>
+     *
+     * <code>string worker_nimsession = 12;</code>
+     * @return The bytes for workerNimsession.
+     */
+    com.google.protobuf.ByteString
+        getWorkerNimsessionBytes();
+
+    /**
+     * <pre>
+     *是否已经注册nim true需要，false 不需要
+     * </pre>
+     *
+     * <code>bool bneednim = 13;</code>
+     * @return The bneednim.
+     */
+    boolean getBneednim();
   }
   /**
    * Protobuf type {@code api.common.Worker}
@@ -851,6 +901,8 @@ public final class CWorker {
       onlineState_ = 0;
       password_ = "";
       connectState_ = 0;
+      workerNimid_ = "";
+      workerNimsession_ = "";
     }
 
     @java.lang.Override
@@ -1207,6 +1259,115 @@ public final class CWorker {
       return tenantId_;
     }
 
+    public static final int WORKER_NIMID_FIELD_NUMBER = 11;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object workerNimid_ = "";
+    /**
+     * <pre>
+     * 云信Id
+     * </pre>
+     *
+     * <code>string worker_nimid = 11;</code>
+     * @return The workerNimid.
+     */
+    @java.lang.Override
+    public java.lang.String getWorkerNimid() {
+      java.lang.Object ref = workerNimid_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        workerNimid_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * 云信Id
+     * </pre>
+     *
+     * <code>string worker_nimid = 11;</code>
+     * @return The bytes for workerNimid.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getWorkerNimidBytes() {
+      java.lang.Object ref = workerNimid_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        workerNimid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int WORKER_NIMSESSION_FIELD_NUMBER = 12;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object workerNimsession_ = "";
+    /**
+     * <pre>
+     * 云信session
+     * </pre>
+     *
+     * <code>string worker_nimsession = 12;</code>
+     * @return The workerNimsession.
+     */
+    @java.lang.Override
+    public java.lang.String getWorkerNimsession() {
+      java.lang.Object ref = workerNimsession_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        workerNimsession_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * 云信session
+     * </pre>
+     *
+     * <code>string worker_nimsession = 12;</code>
+     * @return The bytes for workerNimsession.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getWorkerNimsessionBytes() {
+      java.lang.Object ref = workerNimsession_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        workerNimsession_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BNEEDNIM_FIELD_NUMBER = 13;
+    private boolean bneednim_ = false;
+    /**
+     * <pre>
+     *是否已经注册nim true需要，false 不需要
+     * </pre>
+     *
+     * <code>bool bneednim = 13;</code>
+     * @return The bneednim.
+     */
+    @java.lang.Override
+    public boolean getBneednim() {
+      return bneednim_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1250,6 +1411,15 @@ public final class CWorker {
       }
       if (tenantId_ != 0) {
         output.writeInt32(10, tenantId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(workerNimid_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 11, workerNimid_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(workerNimsession_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 12, workerNimsession_);
+      }
+      if (bneednim_ != false) {
+        output.writeBool(13, bneednim_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -1296,6 +1466,16 @@ public final class CWorker {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(10, tenantId_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(workerNimid_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, workerNimid_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(workerNimsession_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, workerNimsession_);
+      }
+      if (bneednim_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(13, bneednim_);
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1329,6 +1509,12 @@ public final class CWorker {
       if (connectState_ != other.connectState_) return false;
       if (getTenantId()
           != other.getTenantId()) return false;
+      if (!getWorkerNimid()
+          .equals(other.getWorkerNimid())) return false;
+      if (!getWorkerNimsession()
+          .equals(other.getWorkerNimsession())) return false;
+      if (getBneednim()
+          != other.getBneednim()) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -1362,6 +1548,13 @@ public final class CWorker {
       hash = (53 * hash) + connectState_;
       hash = (37 * hash) + TENANT_ID_FIELD_NUMBER;
       hash = (53 * hash) + getTenantId();
+      hash = (37 * hash) + WORKER_NIMID_FIELD_NUMBER;
+      hash = (53 * hash) + getWorkerNimid().hashCode();
+      hash = (37 * hash) + WORKER_NIMSESSION_FIELD_NUMBER;
+      hash = (53 * hash) + getWorkerNimsession().hashCode();
+      hash = (37 * hash) + BNEEDNIM_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getBneednim());
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1509,6 +1702,9 @@ public final class CWorker {
         password_ = "";
         connectState_ = 0;
         tenantId_ = 0;
+        workerNimid_ = "";
+        workerNimsession_ = "";
+        bneednim_ = false;
         return this;
       }
 
@@ -1581,6 +1777,15 @@ public final class CWorker {
         }
         if (((from_bitField0_ & 0x00000200) != 0)) {
           result.tenantId_ = tenantId_;
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.workerNimid_ = workerNimid_;
+        }
+        if (((from_bitField0_ & 0x00000800) != 0)) {
+          result.workerNimsession_ = workerNimsession_;
+        }
+        if (((from_bitField0_ & 0x00001000) != 0)) {
+          result.bneednim_ = bneednim_;
         }
       }
 
@@ -1689,6 +1894,19 @@ public final class CWorker {
         if (other.getTenantId() != 0) {
           setTenantId(other.getTenantId());
         }
+        if (!other.getWorkerNimid().isEmpty()) {
+          workerNimid_ = other.workerNimid_;
+          bitField0_ |= 0x00000400;
+          onChanged();
+        }
+        if (!other.getWorkerNimsession().isEmpty()) {
+          workerNimsession_ = other.workerNimsession_;
+          bitField0_ |= 0x00000800;
+          onChanged();
+        }
+        if (other.getBneednim() != false) {
+          setBneednim(other.getBneednim());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -1773,6 +1991,21 @@ public final class CWorker {
                 bitField0_ |= 0x00000200;
                 break;
               } // case 80
+              case 90: {
+                workerNimid_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000400;
+                break;
+              } // case 90
+              case 98: {
+                workerNimsession_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000800;
+                break;
+              } // case 98
+              case 104: {
+                bneednim_ = input.readBool();
+                bitField0_ |= 0x00001000;
+                break;
+              } // case 104
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -2712,6 +2945,234 @@ public final class CWorker {
       public Builder clearTenantId() {
         bitField0_ = (bitField0_ & ~0x00000200);
         tenantId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object workerNimid_ = "";
+      /**
+       * <pre>
+       * 云信Id
+       * </pre>
+       *
+       * <code>string worker_nimid = 11;</code>
+       * @return The workerNimid.
+       */
+      public java.lang.String getWorkerNimid() {
+        java.lang.Object ref = workerNimid_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          workerNimid_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * 云信Id
+       * </pre>
+       *
+       * <code>string worker_nimid = 11;</code>
+       * @return The bytes for workerNimid.
+       */
+      public com.google.protobuf.ByteString
+          getWorkerNimidBytes() {
+        java.lang.Object ref = workerNimid_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          workerNimid_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * 云信Id
+       * </pre>
+       *
+       * <code>string worker_nimid = 11;</code>
+       * @param value The workerNimid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWorkerNimid(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        workerNimid_ = value;
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 云信Id
+       * </pre>
+       *
+       * <code>string worker_nimid = 11;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWorkerNimid() {
+        workerNimid_ = getDefaultInstance().getWorkerNimid();
+        bitField0_ = (bitField0_ & ~0x00000400);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 云信Id
+       * </pre>
+       *
+       * <code>string worker_nimid = 11;</code>
+       * @param value The bytes for workerNimid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWorkerNimidBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        workerNimid_ = value;
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object workerNimsession_ = "";
+      /**
+       * <pre>
+       * 云信session
+       * </pre>
+       *
+       * <code>string worker_nimsession = 12;</code>
+       * @return The workerNimsession.
+       */
+      public java.lang.String getWorkerNimsession() {
+        java.lang.Object ref = workerNimsession_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          workerNimsession_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * 云信session
+       * </pre>
+       *
+       * <code>string worker_nimsession = 12;</code>
+       * @return The bytes for workerNimsession.
+       */
+      public com.google.protobuf.ByteString
+          getWorkerNimsessionBytes() {
+        java.lang.Object ref = workerNimsession_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          workerNimsession_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * 云信session
+       * </pre>
+       *
+       * <code>string worker_nimsession = 12;</code>
+       * @param value The workerNimsession to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWorkerNimsession(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        workerNimsession_ = value;
+        bitField0_ |= 0x00000800;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 云信session
+       * </pre>
+       *
+       * <code>string worker_nimsession = 12;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWorkerNimsession() {
+        workerNimsession_ = getDefaultInstance().getWorkerNimsession();
+        bitField0_ = (bitField0_ & ~0x00000800);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 云信session
+       * </pre>
+       *
+       * <code>string worker_nimsession = 12;</code>
+       * @param value The bytes for workerNimsession to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWorkerNimsessionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        workerNimsession_ = value;
+        bitField0_ |= 0x00000800;
+        onChanged();
+        return this;
+      }
+
+      private boolean bneednim_ ;
+      /**
+       * <pre>
+       *是否已经注册nim true需要，false 不需要
+       * </pre>
+       *
+       * <code>bool bneednim = 13;</code>
+       * @return The bneednim.
+       */
+      @java.lang.Override
+      public boolean getBneednim() {
+        return bneednim_;
+      }
+      /**
+       * <pre>
+       *是否已经注册nim true需要，false 不需要
+       * </pre>
+       *
+       * <code>bool bneednim = 13;</code>
+       * @param value The bneednim to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBneednim(boolean value) {
+
+        bneednim_ = value;
+        bitField0_ |= 0x00001000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *是否已经注册nim true需要，false 不需要
+       * </pre>
+       *
+       * <code>bool bneednim = 13;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBneednim() {
+        bitField0_ = (bitField0_ & ~0x00001000);
+        bneednim_ = false;
         onChanged();
         return this;
       }
@@ -4971,32 +5432,34 @@ public final class CWorker {
   static {
     java.lang.String[] descriptorData = {
       "\n\031api/common/c_worker.proto\022\napi.common\032" +
-      "\027api/common/c_base.proto\"\212\002\n\006Worker\022\021\n\tw" +
+      "\027api/common/c_base.proto\"\315\002\n\006Worker\022\021\n\tw" +
       "orker_id\030\001 \001(\005\022\017\n\007account\030\002 \001(\t\022&\n\005group" +
       "\030\003 \003(\0132\027.api.common.WorkerGroup\022\021\n\tperm_" +
       "mask\030\004 \001(\005\022\014\n\004name\030\005 \001(\t\022\016\n\006avatar\030\006 \001(\t" +
       "\022-\n\014online_state\030\007 \001(\0162\027.api.common.Onli" +
       "neState\022\020\n\010password\030\010 \001(\t\022/\n\rconnect_sta" +
       "te\030\t \001(\0162\030.api.common.ConnectState\022\021\n\tte" +
-      "nant_id\030\n \001(\005\"H\n\013WorkerGroup\022\n\n\002id\030\001 \001(\003" +
-      "\022\014\n\004name\030\002 \001(\t\022\020\n\010priority\030\003 \001(\005\022\r\n\005coun" +
-      "t\030\004 \001(\005\":\n\014Distribution\022\n\n\002id\030\001 \001(\003\022\014\n\004n" +
-      "ame\030\002 \001(\t\022\020\n\010priority\030\003 \001(\005\":\n\014TenantCli" +
-      "que\022\n\n\002id\030\001 \001(\005\022\014\n\004name\030\002 \001(\t\022\020\n\010priorit" +
-      "y\030\003 \001(\005*y\n\020DistributionType\022\030\n\024DISTRIBUT" +
-      "ION_LEISURE\020\000\022\025\n\021DISTRIBUTION_BUSY\020\001\022\030\n\024" +
-      "DISTRIBUTION_OFFLINE\020\002\022\032\n\026DISTRIBUTION_N" +
-      "OT_LOGIN\020\003*\322\001\n\020WorkerPermission\022\024\n\020WORKE" +
-      "R_PERM_NONE\020\000\022\023\n\017WORKER_PERM_TOP\020\001\022\025\n\021WO" +
-      "RKER_PERM_ADMIN\020\002\022\026\n\022WORKER_PERM_LEADER\020" +
-      "\004\022\027\n\023WORKER_PERM_FRONTER\020\010\022\030\n\024WORKER_PER" +
-      "M_TRANSFER\020\020\022\030\n\024WORKER_PERM_SEARCHER\020 \022\027" +
-      "\n\023WORKER_PERM_BLACKER\020@*C\n\014ConnectState\022" +
-      "\031\n\025CONNECT_STATE_OFFLINE\020\000\022\030\n\024CONNECT_ST" +
-      "ATE_ONLINE\020\001*Q\n\013OnlineState\022\025\n\021ONLINE_ST" +
-      "ATE_IDLE\020\000\022\025\n\021ONLINE_STATE_BUSY\020\001\022\024\n\020ONL" +
-      "INE_STATE_AFK\020\002B3\n\032com.teneasyChat.api.c" +
-      "ommonZ\025wcs/api/common;commonb\006proto3"
+      "nant_id\030\n \001(\005\022\024\n\014worker_nimid\030\013 \001(\t\022\031\n\021w" +
+      "orker_nimsession\030\014 \001(\t\022\020\n\010bneednim\030\r \001(\010" +
+      "\"H\n\013WorkerGroup\022\n\n\002id\030\001 \001(\003\022\014\n\004name\030\002 \001(" +
+      "\t\022\020\n\010priority\030\003 \001(\005\022\r\n\005count\030\004 \001(\005\":\n\014Di" +
+      "stribution\022\n\n\002id\030\001 \001(\003\022\014\n\004name\030\002 \001(\t\022\020\n\010" +
+      "priority\030\003 \001(\005\":\n\014TenantClique\022\n\n\002id\030\001 \001" +
+      "(\005\022\014\n\004name\030\002 \001(\t\022\020\n\010priority\030\003 \001(\005*y\n\020Di" +
+      "stributionType\022\030\n\024DISTRIBUTION_LEISURE\020\000" +
+      "\022\025\n\021DISTRIBUTION_BUSY\020\001\022\030\n\024DISTRIBUTION_" +
+      "OFFLINE\020\002\022\032\n\026DISTRIBUTION_NOT_LOGIN\020\003*\322\001" +
+      "\n\020WorkerPermission\022\024\n\020WORKER_PERM_NONE\020\000" +
+      "\022\023\n\017WORKER_PERM_TOP\020\001\022\025\n\021WORKER_PERM_ADM" +
+      "IN\020\002\022\026\n\022WORKER_PERM_LEADER\020\004\022\027\n\023WORKER_P" +
+      "ERM_FRONTER\020\010\022\030\n\024WORKER_PERM_TRANSFER\020\020\022" +
+      "\030\n\024WORKER_PERM_SEARCHER\020 \022\027\n\023WORKER_PERM" +
+      "_BLACKER\020@*C\n\014ConnectState\022\031\n\025CONNECT_ST" +
+      "ATE_OFFLINE\020\000\022\030\n\024CONNECT_STATE_ONLINE\020\001*" +
+      "Q\n\013OnlineState\022\025\n\021ONLINE_STATE_IDLE\020\000\022\025\n" +
+      "\021ONLINE_STATE_BUSY\020\001\022\024\n\020ONLINE_STATE_AFK" +
+      "\020\002B3\n\032com.teneasyChat.api.commonZ\025wcs/ap" +
+      "i/common;commonb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -5008,7 +5471,7 @@ public final class CWorker {
     internal_static_api_common_Worker_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_common_Worker_descriptor,
-        new java.lang.String[] { "WorkerId", "Account", "Group", "PermMask", "Name", "Avatar", "OnlineState", "Password", "ConnectState", "TenantId", });
+        new java.lang.String[] { "WorkerId", "Account", "Group", "PermMask", "Name", "Avatar", "OnlineState", "Password", "ConnectState", "TenantId", "WorkerNimid", "WorkerNimsession", "Bneednim", });
     internal_static_api_common_WorkerGroup_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_api_common_WorkerGroup_fieldAccessorTable = new

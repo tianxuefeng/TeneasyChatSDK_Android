@@ -29,17 +29,27 @@ public final class GPubsub {
     long getTarget();
 
     /**
-     * <code>.api.common.Message msg = 2;</code>
+     * <pre>
+     *发送方id
+     * </pre>
+     *
+     * <code>uint64 id = 2;</code>
+     * @return The id.
+     */
+    long getId();
+
+    /**
+     * <code>.api.common.Message msg = 3;</code>
      * @return Whether the msg field is set.
      */
     boolean hasMsg();
     /**
-     * <code>.api.common.Message msg = 2;</code>
+     * <code>.api.common.Message msg = 3;</code>
      * @return The msg.
      */
     com.teneasyChat.api.common.CMessage.Message getMsg();
     /**
-     * <code>.api.common.Message msg = 2;</code>
+     * <code>.api.common.Message msg = 3;</code>
      */
     com.teneasyChat.api.common.CMessage.MessageOrBuilder getMsgOrBuilder();
   }
@@ -93,10 +103,25 @@ public final class GPubsub {
       return target_;
     }
 
-    public static final int MSG_FIELD_NUMBER = 2;
+    public static final int ID_FIELD_NUMBER = 2;
+    private long id_ = 0L;
+    /**
+     * <pre>
+     *发送方id
+     * </pre>
+     *
+     * <code>uint64 id = 2;</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public long getId() {
+      return id_;
+    }
+
+    public static final int MSG_FIELD_NUMBER = 3;
     private com.teneasyChat.api.common.CMessage.Message msg_;
     /**
-     * <code>.api.common.Message msg = 2;</code>
+     * <code>.api.common.Message msg = 3;</code>
      * @return Whether the msg field is set.
      */
     @java.lang.Override
@@ -104,7 +129,7 @@ public final class GPubsub {
       return msg_ != null;
     }
     /**
-     * <code>.api.common.Message msg = 2;</code>
+     * <code>.api.common.Message msg = 3;</code>
      * @return The msg.
      */
     @java.lang.Override
@@ -112,7 +137,7 @@ public final class GPubsub {
       return msg_ == null ? com.teneasyChat.api.common.CMessage.Message.getDefaultInstance() : msg_;
     }
     /**
-     * <code>.api.common.Message msg = 2;</code>
+     * <code>.api.common.Message msg = 3;</code>
      */
     @java.lang.Override
     public com.teneasyChat.api.common.CMessage.MessageOrBuilder getMsgOrBuilder() {
@@ -136,8 +161,11 @@ public final class GPubsub {
       if (target_ != 0L) {
         output.writeInt64(1, target_);
       }
+      if (id_ != 0L) {
+        output.writeUInt64(2, id_);
+      }
       if (msg_ != null) {
-        output.writeMessage(2, getMsg());
+        output.writeMessage(3, getMsg());
       }
       getUnknownFields().writeTo(output);
     }
@@ -152,9 +180,13 @@ public final class GPubsub {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(1, target_);
       }
+      if (id_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, id_);
+      }
       if (msg_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getMsg());
+          .computeMessageSize(3, getMsg());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -173,6 +205,8 @@ public final class GPubsub {
 
       if (getTarget()
           != other.getTarget()) return false;
+      if (getId()
+          != other.getId()) return false;
       if (hasMsg() != other.hasMsg()) return false;
       if (hasMsg()) {
         if (!getMsg()
@@ -192,6 +226,9 @@ public final class GPubsub {
       hash = (37 * hash) + TARGET_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getTarget());
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getId());
       if (hasMsg()) {
         hash = (37 * hash) + MSG_FIELD_NUMBER;
         hash = (53 * hash) + getMsg().hashCode();
@@ -328,6 +365,7 @@ public final class GPubsub {
         super.clear();
         bitField0_ = 0;
         target_ = 0L;
+        id_ = 0L;
         msg_ = null;
         if (msgBuilder_ != null) {
           msgBuilder_.dispose();
@@ -370,6 +408,9 @@ public final class GPubsub {
           result.target_ = target_;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
           result.msg_ = msgBuilder_ == null
               ? msg_
               : msgBuilder_.build();
@@ -423,6 +464,9 @@ public final class GPubsub {
         if (other.getTarget() != 0L) {
           setTarget(other.getTarget());
         }
+        if (other.getId() != 0L) {
+          setId(other.getId());
+        }
         if (other.hasMsg()) {
           mergeMsg(other.getMsg());
         }
@@ -457,13 +501,18 @@ public final class GPubsub {
                 bitField0_ |= 0x00000001;
                 break;
               } // case 8
-              case 18: {
+              case 16: {
+                id_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
                 input.readMessage(
                     getMsgFieldBuilder().getBuilder(),
                     extensionRegistry);
-                bitField0_ |= 0x00000002;
+                bitField0_ |= 0x00000004;
                 break;
-              } // case 18
+              } // case 26
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -525,18 +574,62 @@ public final class GPubsub {
         return this;
       }
 
+      private long id_ ;
+      /**
+       * <pre>
+       *发送方id
+       * </pre>
+       *
+       * <code>uint64 id = 2;</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public long getId() {
+        return id_;
+      }
+      /**
+       * <pre>
+       *发送方id
+       * </pre>
+       *
+       * <code>uint64 id = 2;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(long value) {
+
+        id_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *发送方id
+       * </pre>
+       *
+       * <code>uint64 id = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        id_ = 0L;
+        onChanged();
+        return this;
+      }
+
       private com.teneasyChat.api.common.CMessage.Message msg_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.teneasyChat.api.common.CMessage.Message, com.teneasyChat.api.common.CMessage.Message.Builder, com.teneasyChat.api.common.CMessage.MessageOrBuilder> msgBuilder_;
       /**
-       * <code>.api.common.Message msg = 2;</code>
+       * <code>.api.common.Message msg = 3;</code>
        * @return Whether the msg field is set.
        */
       public boolean hasMsg() {
-        return ((bitField0_ & 0x00000002) != 0);
+        return ((bitField0_ & 0x00000004) != 0);
       }
       /**
-       * <code>.api.common.Message msg = 2;</code>
+       * <code>.api.common.Message msg = 3;</code>
        * @return The msg.
        */
       public com.teneasyChat.api.common.CMessage.Message getMsg() {
@@ -547,7 +640,7 @@ public final class GPubsub {
         }
       }
       /**
-       * <code>.api.common.Message msg = 2;</code>
+       * <code>.api.common.Message msg = 3;</code>
        */
       public Builder setMsg(com.teneasyChat.api.common.CMessage.Message value) {
         if (msgBuilder_ == null) {
@@ -558,12 +651,12 @@ public final class GPubsub {
         } else {
           msgBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
       /**
-       * <code>.api.common.Message msg = 2;</code>
+       * <code>.api.common.Message msg = 3;</code>
        */
       public Builder setMsg(
           com.teneasyChat.api.common.CMessage.Message.Builder builderForValue) {
@@ -572,16 +665,16 @@ public final class GPubsub {
         } else {
           msgBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
       /**
-       * <code>.api.common.Message msg = 2;</code>
+       * <code>.api.common.Message msg = 3;</code>
        */
       public Builder mergeMsg(com.teneasyChat.api.common.CMessage.Message value) {
         if (msgBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0) &&
+          if (((bitField0_ & 0x00000004) != 0) &&
             msg_ != null &&
             msg_ != com.teneasyChat.api.common.CMessage.Message.getDefaultInstance()) {
             getMsgBuilder().mergeFrom(value);
@@ -591,15 +684,15 @@ public final class GPubsub {
         } else {
           msgBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
       /**
-       * <code>.api.common.Message msg = 2;</code>
+       * <code>.api.common.Message msg = 3;</code>
        */
       public Builder clearMsg() {
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000004);
         msg_ = null;
         if (msgBuilder_ != null) {
           msgBuilder_.dispose();
@@ -609,15 +702,15 @@ public final class GPubsub {
         return this;
       }
       /**
-       * <code>.api.common.Message msg = 2;</code>
+       * <code>.api.common.Message msg = 3;</code>
        */
       public com.teneasyChat.api.common.CMessage.Message.Builder getMsgBuilder() {
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000004;
         onChanged();
         return getMsgFieldBuilder().getBuilder();
       }
       /**
-       * <code>.api.common.Message msg = 2;</code>
+       * <code>.api.common.Message msg = 3;</code>
        */
       public com.teneasyChat.api.common.CMessage.MessageOrBuilder getMsgOrBuilder() {
         if (msgBuilder_ != null) {
@@ -628,7 +721,7 @@ public final class GPubsub {
         }
       }
       /**
-       * <code>.api.common.Message msg = 2;</code>
+       * <code>.api.common.Message msg = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.teneasyChat.api.common.CMessage.Message, com.teneasyChat.api.common.CMessage.Message.Builder, com.teneasyChat.api.common.CMessage.MessageOrBuilder> 
@@ -722,11 +815,11 @@ public final class GPubsub {
   static {
     java.lang.String[] descriptorData = {
       "\n\026gateway/g_pubsub.proto\022\007gateway\032\032api/c" +
-      "ommon/c_message.proto\"A\n\rPubSubMessage\022\016" +
-      "\n\006target\030\001 \001(\003\022 \n\003msg\030\002 \001(\0132\023.api.common" +
-      ".MessageB@\n\027com.teneasyChat.gatewayZ%wcs" +
-      "/service/gateway/protocol;protocolb\006prot" +
-      "o3"
+      "ommon/c_message.proto\"M\n\rPubSubMessage\022\016" +
+      "\n\006target\030\001 \001(\003\022\n\n\002id\030\002 \001(\004\022 \n\003msg\030\003 \001(\0132" +
+      "\023.api.common.MessageB@\n\027com.teneasyChat." +
+      "gatewayZ%wcs/service/gateway/protocol;pr" +
+      "otocolb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -738,7 +831,7 @@ public final class GPubsub {
     internal_static_gateway_PubSubMessage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_gateway_PubSubMessage_descriptor,
-        new java.lang.String[] { "Target", "Msg", });
+        new java.lang.String[] { "Target", "Id", "Msg", });
     com.teneasyChat.api.common.CMessage.getDescriptor();
   }
 

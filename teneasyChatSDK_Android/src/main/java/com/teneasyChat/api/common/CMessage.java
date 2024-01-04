@@ -4688,6 +4688,4318 @@ public final class CMessage {
 
   }
 
+  public interface MessageUnionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:api.common.MessageUnion)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.api.common.MessageContent content = 1;</code>
+     * @return Whether the content field is set.
+     */
+    boolean hasContent();
+    /**
+     * <code>.api.common.MessageContent content = 1;</code>
+     * @return The content.
+     */
+    com.teneasyChat.api.common.CMessage.MessageContent getContent();
+    /**
+     * <code>.api.common.MessageContent content = 1;</code>
+     */
+    com.teneasyChat.api.common.CMessage.MessageContentOrBuilder getContentOrBuilder();
+
+    /**
+     * <code>.api.common.MessageImage image = 2;</code>
+     * @return Whether the image field is set.
+     */
+    boolean hasImage();
+    /**
+     * <code>.api.common.MessageImage image = 2;</code>
+     * @return The image.
+     */
+    com.teneasyChat.api.common.CMessage.MessageImage getImage();
+    /**
+     * <code>.api.common.MessageImage image = 2;</code>
+     */
+    com.teneasyChat.api.common.CMessage.MessageImageOrBuilder getImageOrBuilder();
+
+    /**
+     * <code>.api.common.MessageAudio audio = 3;</code>
+     * @return Whether the audio field is set.
+     */
+    boolean hasAudio();
+    /**
+     * <code>.api.common.MessageAudio audio = 3;</code>
+     * @return The audio.
+     */
+    com.teneasyChat.api.common.CMessage.MessageAudio getAudio();
+    /**
+     * <code>.api.common.MessageAudio audio = 3;</code>
+     */
+    com.teneasyChat.api.common.CMessage.MessageAudioOrBuilder getAudioOrBuilder();
+
+    /**
+     * <code>.api.common.MessageVideo video = 4;</code>
+     * @return Whether the video field is set.
+     */
+    boolean hasVideo();
+    /**
+     * <code>.api.common.MessageVideo video = 4;</code>
+     * @return The video.
+     */
+    com.teneasyChat.api.common.CMessage.MessageVideo getVideo();
+    /**
+     * <code>.api.common.MessageVideo video = 4;</code>
+     */
+    com.teneasyChat.api.common.CMessage.MessageVideoOrBuilder getVideoOrBuilder();
+
+    /**
+     * <code>.api.common.MessageGeo geo = 5;</code>
+     * @return Whether the geo field is set.
+     */
+    boolean hasGeo();
+    /**
+     * <code>.api.common.MessageGeo geo = 5;</code>
+     * @return The geo.
+     */
+    com.teneasyChat.api.common.CMessage.MessageGeo getGeo();
+    /**
+     * <code>.api.common.MessageGeo geo = 5;</code>
+     */
+    com.teneasyChat.api.common.CMessage.MessageGeoOrBuilder getGeoOrBuilder();
+
+    /**
+     * <code>.api.common.MessageFile file = 6;</code>
+     * @return Whether the file field is set.
+     */
+    boolean hasFile();
+    /**
+     * <code>.api.common.MessageFile file = 6;</code>
+     * @return The file.
+     */
+    com.teneasyChat.api.common.CMessage.MessageFile getFile();
+    /**
+     * <code>.api.common.MessageFile file = 6;</code>
+     */
+    com.teneasyChat.api.common.CMessage.MessageFileOrBuilder getFileOrBuilder();
+
+    com.teneasyChat.api.common.CMessage.MessageUnion.PayloadCase getPayloadCase();
+  }
+  /**
+   * Protobuf type {@code api.common.MessageUnion}
+   */
+  public static final class MessageUnion extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:api.common.MessageUnion)
+      MessageUnionOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MessageUnion.newBuilder() to construct.
+    private MessageUnion(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MessageUnion() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MessageUnion();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.teneasyChat.api.common.CMessage.internal_static_api_common_MessageUnion_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.teneasyChat.api.common.CMessage.internal_static_api_common_MessageUnion_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.teneasyChat.api.common.CMessage.MessageUnion.class, com.teneasyChat.api.common.CMessage.MessageUnion.Builder.class);
+    }
+
+    private int payloadCase_ = 0;
+    @SuppressWarnings("serial")
+    private java.lang.Object payload_;
+    public enum PayloadCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      CONTENT(1),
+      IMAGE(2),
+      AUDIO(3),
+      VIDEO(4),
+      GEO(5),
+      FILE(6),
+      PAYLOAD_NOT_SET(0);
+      private final int value;
+      private PayloadCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static PayloadCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static PayloadCase forNumber(int value) {
+        switch (value) {
+          case 1: return CONTENT;
+          case 2: return IMAGE;
+          case 3: return AUDIO;
+          case 4: return VIDEO;
+          case 5: return GEO;
+          case 6: return FILE;
+          case 0: return PAYLOAD_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public PayloadCase
+    getPayloadCase() {
+      return PayloadCase.forNumber(
+          payloadCase_);
+    }
+
+    public static final int CONTENT_FIELD_NUMBER = 1;
+    /**
+     * <code>.api.common.MessageContent content = 1;</code>
+     * @return Whether the content field is set.
+     */
+    @java.lang.Override
+    public boolean hasContent() {
+      return payloadCase_ == 1;
+    }
+    /**
+     * <code>.api.common.MessageContent content = 1;</code>
+     * @return The content.
+     */
+    @java.lang.Override
+    public com.teneasyChat.api.common.CMessage.MessageContent getContent() {
+      if (payloadCase_ == 1) {
+         return (com.teneasyChat.api.common.CMessage.MessageContent) payload_;
+      }
+      return com.teneasyChat.api.common.CMessage.MessageContent.getDefaultInstance();
+    }
+    /**
+     * <code>.api.common.MessageContent content = 1;</code>
+     */
+    @java.lang.Override
+    public com.teneasyChat.api.common.CMessage.MessageContentOrBuilder getContentOrBuilder() {
+      if (payloadCase_ == 1) {
+         return (com.teneasyChat.api.common.CMessage.MessageContent) payload_;
+      }
+      return com.teneasyChat.api.common.CMessage.MessageContent.getDefaultInstance();
+    }
+
+    public static final int IMAGE_FIELD_NUMBER = 2;
+    /**
+     * <code>.api.common.MessageImage image = 2;</code>
+     * @return Whether the image field is set.
+     */
+    @java.lang.Override
+    public boolean hasImage() {
+      return payloadCase_ == 2;
+    }
+    /**
+     * <code>.api.common.MessageImage image = 2;</code>
+     * @return The image.
+     */
+    @java.lang.Override
+    public com.teneasyChat.api.common.CMessage.MessageImage getImage() {
+      if (payloadCase_ == 2) {
+         return (com.teneasyChat.api.common.CMessage.MessageImage) payload_;
+      }
+      return com.teneasyChat.api.common.CMessage.MessageImage.getDefaultInstance();
+    }
+    /**
+     * <code>.api.common.MessageImage image = 2;</code>
+     */
+    @java.lang.Override
+    public com.teneasyChat.api.common.CMessage.MessageImageOrBuilder getImageOrBuilder() {
+      if (payloadCase_ == 2) {
+         return (com.teneasyChat.api.common.CMessage.MessageImage) payload_;
+      }
+      return com.teneasyChat.api.common.CMessage.MessageImage.getDefaultInstance();
+    }
+
+    public static final int AUDIO_FIELD_NUMBER = 3;
+    /**
+     * <code>.api.common.MessageAudio audio = 3;</code>
+     * @return Whether the audio field is set.
+     */
+    @java.lang.Override
+    public boolean hasAudio() {
+      return payloadCase_ == 3;
+    }
+    /**
+     * <code>.api.common.MessageAudio audio = 3;</code>
+     * @return The audio.
+     */
+    @java.lang.Override
+    public com.teneasyChat.api.common.CMessage.MessageAudio getAudio() {
+      if (payloadCase_ == 3) {
+         return (com.teneasyChat.api.common.CMessage.MessageAudio) payload_;
+      }
+      return com.teneasyChat.api.common.CMessage.MessageAudio.getDefaultInstance();
+    }
+    /**
+     * <code>.api.common.MessageAudio audio = 3;</code>
+     */
+    @java.lang.Override
+    public com.teneasyChat.api.common.CMessage.MessageAudioOrBuilder getAudioOrBuilder() {
+      if (payloadCase_ == 3) {
+         return (com.teneasyChat.api.common.CMessage.MessageAudio) payload_;
+      }
+      return com.teneasyChat.api.common.CMessage.MessageAudio.getDefaultInstance();
+    }
+
+    public static final int VIDEO_FIELD_NUMBER = 4;
+    /**
+     * <code>.api.common.MessageVideo video = 4;</code>
+     * @return Whether the video field is set.
+     */
+    @java.lang.Override
+    public boolean hasVideo() {
+      return payloadCase_ == 4;
+    }
+    /**
+     * <code>.api.common.MessageVideo video = 4;</code>
+     * @return The video.
+     */
+    @java.lang.Override
+    public com.teneasyChat.api.common.CMessage.MessageVideo getVideo() {
+      if (payloadCase_ == 4) {
+         return (com.teneasyChat.api.common.CMessage.MessageVideo) payload_;
+      }
+      return com.teneasyChat.api.common.CMessage.MessageVideo.getDefaultInstance();
+    }
+    /**
+     * <code>.api.common.MessageVideo video = 4;</code>
+     */
+    @java.lang.Override
+    public com.teneasyChat.api.common.CMessage.MessageVideoOrBuilder getVideoOrBuilder() {
+      if (payloadCase_ == 4) {
+         return (com.teneasyChat.api.common.CMessage.MessageVideo) payload_;
+      }
+      return com.teneasyChat.api.common.CMessage.MessageVideo.getDefaultInstance();
+    }
+
+    public static final int GEO_FIELD_NUMBER = 5;
+    /**
+     * <code>.api.common.MessageGeo geo = 5;</code>
+     * @return Whether the geo field is set.
+     */
+    @java.lang.Override
+    public boolean hasGeo() {
+      return payloadCase_ == 5;
+    }
+    /**
+     * <code>.api.common.MessageGeo geo = 5;</code>
+     * @return The geo.
+     */
+    @java.lang.Override
+    public com.teneasyChat.api.common.CMessage.MessageGeo getGeo() {
+      if (payloadCase_ == 5) {
+         return (com.teneasyChat.api.common.CMessage.MessageGeo) payload_;
+      }
+      return com.teneasyChat.api.common.CMessage.MessageGeo.getDefaultInstance();
+    }
+    /**
+     * <code>.api.common.MessageGeo geo = 5;</code>
+     */
+    @java.lang.Override
+    public com.teneasyChat.api.common.CMessage.MessageGeoOrBuilder getGeoOrBuilder() {
+      if (payloadCase_ == 5) {
+         return (com.teneasyChat.api.common.CMessage.MessageGeo) payload_;
+      }
+      return com.teneasyChat.api.common.CMessage.MessageGeo.getDefaultInstance();
+    }
+
+    public static final int FILE_FIELD_NUMBER = 6;
+    /**
+     * <code>.api.common.MessageFile file = 6;</code>
+     * @return Whether the file field is set.
+     */
+    @java.lang.Override
+    public boolean hasFile() {
+      return payloadCase_ == 6;
+    }
+    /**
+     * <code>.api.common.MessageFile file = 6;</code>
+     * @return The file.
+     */
+    @java.lang.Override
+    public com.teneasyChat.api.common.CMessage.MessageFile getFile() {
+      if (payloadCase_ == 6) {
+         return (com.teneasyChat.api.common.CMessage.MessageFile) payload_;
+      }
+      return com.teneasyChat.api.common.CMessage.MessageFile.getDefaultInstance();
+    }
+    /**
+     * <code>.api.common.MessageFile file = 6;</code>
+     */
+    @java.lang.Override
+    public com.teneasyChat.api.common.CMessage.MessageFileOrBuilder getFileOrBuilder() {
+      if (payloadCase_ == 6) {
+         return (com.teneasyChat.api.common.CMessage.MessageFile) payload_;
+      }
+      return com.teneasyChat.api.common.CMessage.MessageFile.getDefaultInstance();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (payloadCase_ == 1) {
+        output.writeMessage(1, (com.teneasyChat.api.common.CMessage.MessageContent) payload_);
+      }
+      if (payloadCase_ == 2) {
+        output.writeMessage(2, (com.teneasyChat.api.common.CMessage.MessageImage) payload_);
+      }
+      if (payloadCase_ == 3) {
+        output.writeMessage(3, (com.teneasyChat.api.common.CMessage.MessageAudio) payload_);
+      }
+      if (payloadCase_ == 4) {
+        output.writeMessage(4, (com.teneasyChat.api.common.CMessage.MessageVideo) payload_);
+      }
+      if (payloadCase_ == 5) {
+        output.writeMessage(5, (com.teneasyChat.api.common.CMessage.MessageGeo) payload_);
+      }
+      if (payloadCase_ == 6) {
+        output.writeMessage(6, (com.teneasyChat.api.common.CMessage.MessageFile) payload_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (payloadCase_ == 1) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, (com.teneasyChat.api.common.CMessage.MessageContent) payload_);
+      }
+      if (payloadCase_ == 2) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, (com.teneasyChat.api.common.CMessage.MessageImage) payload_);
+      }
+      if (payloadCase_ == 3) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, (com.teneasyChat.api.common.CMessage.MessageAudio) payload_);
+      }
+      if (payloadCase_ == 4) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, (com.teneasyChat.api.common.CMessage.MessageVideo) payload_);
+      }
+      if (payloadCase_ == 5) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, (com.teneasyChat.api.common.CMessage.MessageGeo) payload_);
+      }
+      if (payloadCase_ == 6) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, (com.teneasyChat.api.common.CMessage.MessageFile) payload_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.teneasyChat.api.common.CMessage.MessageUnion)) {
+        return super.equals(obj);
+      }
+      com.teneasyChat.api.common.CMessage.MessageUnion other = (com.teneasyChat.api.common.CMessage.MessageUnion) obj;
+
+      if (!getPayloadCase().equals(other.getPayloadCase())) return false;
+      switch (payloadCase_) {
+        case 1:
+          if (!getContent()
+              .equals(other.getContent())) return false;
+          break;
+        case 2:
+          if (!getImage()
+              .equals(other.getImage())) return false;
+          break;
+        case 3:
+          if (!getAudio()
+              .equals(other.getAudio())) return false;
+          break;
+        case 4:
+          if (!getVideo()
+              .equals(other.getVideo())) return false;
+          break;
+        case 5:
+          if (!getGeo()
+              .equals(other.getGeo())) return false;
+          break;
+        case 6:
+          if (!getFile()
+              .equals(other.getFile())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      switch (payloadCase_) {
+        case 1:
+          hash = (37 * hash) + CONTENT_FIELD_NUMBER;
+          hash = (53 * hash) + getContent().hashCode();
+          break;
+        case 2:
+          hash = (37 * hash) + IMAGE_FIELD_NUMBER;
+          hash = (53 * hash) + getImage().hashCode();
+          break;
+        case 3:
+          hash = (37 * hash) + AUDIO_FIELD_NUMBER;
+          hash = (53 * hash) + getAudio().hashCode();
+          break;
+        case 4:
+          hash = (37 * hash) + VIDEO_FIELD_NUMBER;
+          hash = (53 * hash) + getVideo().hashCode();
+          break;
+        case 5:
+          hash = (37 * hash) + GEO_FIELD_NUMBER;
+          hash = (53 * hash) + getGeo().hashCode();
+          break;
+        case 6:
+          hash = (37 * hash) + FILE_FIELD_NUMBER;
+          hash = (53 * hash) + getFile().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.teneasyChat.api.common.CMessage.MessageUnion parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teneasyChat.api.common.CMessage.MessageUnion parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teneasyChat.api.common.CMessage.MessageUnion parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teneasyChat.api.common.CMessage.MessageUnion parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teneasyChat.api.common.CMessage.MessageUnion parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teneasyChat.api.common.CMessage.MessageUnion parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teneasyChat.api.common.CMessage.MessageUnion parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.teneasyChat.api.common.CMessage.MessageUnion parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.teneasyChat.api.common.CMessage.MessageUnion parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.teneasyChat.api.common.CMessage.MessageUnion parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.teneasyChat.api.common.CMessage.MessageUnion parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.teneasyChat.api.common.CMessage.MessageUnion parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.teneasyChat.api.common.CMessage.MessageUnion prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code api.common.MessageUnion}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:api.common.MessageUnion)
+        com.teneasyChat.api.common.CMessage.MessageUnionOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.teneasyChat.api.common.CMessage.internal_static_api_common_MessageUnion_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.teneasyChat.api.common.CMessage.internal_static_api_common_MessageUnion_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.teneasyChat.api.common.CMessage.MessageUnion.class, com.teneasyChat.api.common.CMessage.MessageUnion.Builder.class);
+      }
+
+      // Construct using com.teneasyChat.api.common.CMessage.MessageUnion.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (contentBuilder_ != null) {
+          contentBuilder_.clear();
+        }
+        if (imageBuilder_ != null) {
+          imageBuilder_.clear();
+        }
+        if (audioBuilder_ != null) {
+          audioBuilder_.clear();
+        }
+        if (videoBuilder_ != null) {
+          videoBuilder_.clear();
+        }
+        if (geoBuilder_ != null) {
+          geoBuilder_.clear();
+        }
+        if (fileBuilder_ != null) {
+          fileBuilder_.clear();
+        }
+        payloadCase_ = 0;
+        payload_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.teneasyChat.api.common.CMessage.internal_static_api_common_MessageUnion_descriptor;
+      }
+
+      @java.lang.Override
+      public com.teneasyChat.api.common.CMessage.MessageUnion getDefaultInstanceForType() {
+        return com.teneasyChat.api.common.CMessage.MessageUnion.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.teneasyChat.api.common.CMessage.MessageUnion build() {
+        com.teneasyChat.api.common.CMessage.MessageUnion result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.teneasyChat.api.common.CMessage.MessageUnion buildPartial() {
+        com.teneasyChat.api.common.CMessage.MessageUnion result = new com.teneasyChat.api.common.CMessage.MessageUnion(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        buildPartialOneofs(result);
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.teneasyChat.api.common.CMessage.MessageUnion result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      private void buildPartialOneofs(com.teneasyChat.api.common.CMessage.MessageUnion result) {
+        result.payloadCase_ = payloadCase_;
+        result.payload_ = this.payload_;
+        if (payloadCase_ == 1 &&
+            contentBuilder_ != null) {
+          result.payload_ = contentBuilder_.build();
+        }
+        if (payloadCase_ == 2 &&
+            imageBuilder_ != null) {
+          result.payload_ = imageBuilder_.build();
+        }
+        if (payloadCase_ == 3 &&
+            audioBuilder_ != null) {
+          result.payload_ = audioBuilder_.build();
+        }
+        if (payloadCase_ == 4 &&
+            videoBuilder_ != null) {
+          result.payload_ = videoBuilder_.build();
+        }
+        if (payloadCase_ == 5 &&
+            geoBuilder_ != null) {
+          result.payload_ = geoBuilder_.build();
+        }
+        if (payloadCase_ == 6 &&
+            fileBuilder_ != null) {
+          result.payload_ = fileBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.teneasyChat.api.common.CMessage.MessageUnion) {
+          return mergeFrom((com.teneasyChat.api.common.CMessage.MessageUnion)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.teneasyChat.api.common.CMessage.MessageUnion other) {
+        if (other == com.teneasyChat.api.common.CMessage.MessageUnion.getDefaultInstance()) return this;
+        switch (other.getPayloadCase()) {
+          case CONTENT: {
+            mergeContent(other.getContent());
+            break;
+          }
+          case IMAGE: {
+            mergeImage(other.getImage());
+            break;
+          }
+          case AUDIO: {
+            mergeAudio(other.getAudio());
+            break;
+          }
+          case VIDEO: {
+            mergeVideo(other.getVideo());
+            break;
+          }
+          case GEO: {
+            mergeGeo(other.getGeo());
+            break;
+          }
+          case FILE: {
+            mergeFile(other.getFile());
+            break;
+          }
+          case PAYLOAD_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getContentFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                payloadCase_ = 1;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getImageFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                payloadCase_ = 2;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getAudioFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                payloadCase_ = 3;
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getVideoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                payloadCase_ = 4;
+                break;
+              } // case 34
+              case 42: {
+                input.readMessage(
+                    getGeoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                payloadCase_ = 5;
+                break;
+              } // case 42
+              case 50: {
+                input.readMessage(
+                    getFileFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                payloadCase_ = 6;
+                break;
+              } // case 50
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int payloadCase_ = 0;
+      private java.lang.Object payload_;
+      public PayloadCase
+          getPayloadCase() {
+        return PayloadCase.forNumber(
+            payloadCase_);
+      }
+
+      public Builder clearPayload() {
+        payloadCase_ = 0;
+        payload_ = null;
+        onChanged();
+        return this;
+      }
+
+      private int bitField0_;
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.teneasyChat.api.common.CMessage.MessageContent, com.teneasyChat.api.common.CMessage.MessageContent.Builder, com.teneasyChat.api.common.CMessage.MessageContentOrBuilder> contentBuilder_;
+      /**
+       * <code>.api.common.MessageContent content = 1;</code>
+       * @return Whether the content field is set.
+       */
+      @java.lang.Override
+      public boolean hasContent() {
+        return payloadCase_ == 1;
+      }
+      /**
+       * <code>.api.common.MessageContent content = 1;</code>
+       * @return The content.
+       */
+      @java.lang.Override
+      public com.teneasyChat.api.common.CMessage.MessageContent getContent() {
+        if (contentBuilder_ == null) {
+          if (payloadCase_ == 1) {
+            return (com.teneasyChat.api.common.CMessage.MessageContent) payload_;
+          }
+          return com.teneasyChat.api.common.CMessage.MessageContent.getDefaultInstance();
+        } else {
+          if (payloadCase_ == 1) {
+            return contentBuilder_.getMessage();
+          }
+          return com.teneasyChat.api.common.CMessage.MessageContent.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.api.common.MessageContent content = 1;</code>
+       */
+      public Builder setContent(com.teneasyChat.api.common.CMessage.MessageContent value) {
+        if (contentBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          payload_ = value;
+          onChanged();
+        } else {
+          contentBuilder_.setMessage(value);
+        }
+        payloadCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>.api.common.MessageContent content = 1;</code>
+       */
+      public Builder setContent(
+          com.teneasyChat.api.common.CMessage.MessageContent.Builder builderForValue) {
+        if (contentBuilder_ == null) {
+          payload_ = builderForValue.build();
+          onChanged();
+        } else {
+          contentBuilder_.setMessage(builderForValue.build());
+        }
+        payloadCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>.api.common.MessageContent content = 1;</code>
+       */
+      public Builder mergeContent(com.teneasyChat.api.common.CMessage.MessageContent value) {
+        if (contentBuilder_ == null) {
+          if (payloadCase_ == 1 &&
+              payload_ != com.teneasyChat.api.common.CMessage.MessageContent.getDefaultInstance()) {
+            payload_ = com.teneasyChat.api.common.CMessage.MessageContent.newBuilder((com.teneasyChat.api.common.CMessage.MessageContent) payload_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            payload_ = value;
+          }
+          onChanged();
+        } else {
+          if (payloadCase_ == 1) {
+            contentBuilder_.mergeFrom(value);
+          } else {
+            contentBuilder_.setMessage(value);
+          }
+        }
+        payloadCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>.api.common.MessageContent content = 1;</code>
+       */
+      public Builder clearContent() {
+        if (contentBuilder_ == null) {
+          if (payloadCase_ == 1) {
+            payloadCase_ = 0;
+            payload_ = null;
+            onChanged();
+          }
+        } else {
+          if (payloadCase_ == 1) {
+            payloadCase_ = 0;
+            payload_ = null;
+          }
+          contentBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.api.common.MessageContent content = 1;</code>
+       */
+      public com.teneasyChat.api.common.CMessage.MessageContent.Builder getContentBuilder() {
+        return getContentFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.api.common.MessageContent content = 1;</code>
+       */
+      @java.lang.Override
+      public com.teneasyChat.api.common.CMessage.MessageContentOrBuilder getContentOrBuilder() {
+        if ((payloadCase_ == 1) && (contentBuilder_ != null)) {
+          return contentBuilder_.getMessageOrBuilder();
+        } else {
+          if (payloadCase_ == 1) {
+            return (com.teneasyChat.api.common.CMessage.MessageContent) payload_;
+          }
+          return com.teneasyChat.api.common.CMessage.MessageContent.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.api.common.MessageContent content = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.teneasyChat.api.common.CMessage.MessageContent, com.teneasyChat.api.common.CMessage.MessageContent.Builder, com.teneasyChat.api.common.CMessage.MessageContentOrBuilder> 
+          getContentFieldBuilder() {
+        if (contentBuilder_ == null) {
+          if (!(payloadCase_ == 1)) {
+            payload_ = com.teneasyChat.api.common.CMessage.MessageContent.getDefaultInstance();
+          }
+          contentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.teneasyChat.api.common.CMessage.MessageContent, com.teneasyChat.api.common.CMessage.MessageContent.Builder, com.teneasyChat.api.common.CMessage.MessageContentOrBuilder>(
+                  (com.teneasyChat.api.common.CMessage.MessageContent) payload_,
+                  getParentForChildren(),
+                  isClean());
+          payload_ = null;
+        }
+        payloadCase_ = 1;
+        onChanged();
+        return contentBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.teneasyChat.api.common.CMessage.MessageImage, com.teneasyChat.api.common.CMessage.MessageImage.Builder, com.teneasyChat.api.common.CMessage.MessageImageOrBuilder> imageBuilder_;
+      /**
+       * <code>.api.common.MessageImage image = 2;</code>
+       * @return Whether the image field is set.
+       */
+      @java.lang.Override
+      public boolean hasImage() {
+        return payloadCase_ == 2;
+      }
+      /**
+       * <code>.api.common.MessageImage image = 2;</code>
+       * @return The image.
+       */
+      @java.lang.Override
+      public com.teneasyChat.api.common.CMessage.MessageImage getImage() {
+        if (imageBuilder_ == null) {
+          if (payloadCase_ == 2) {
+            return (com.teneasyChat.api.common.CMessage.MessageImage) payload_;
+          }
+          return com.teneasyChat.api.common.CMessage.MessageImage.getDefaultInstance();
+        } else {
+          if (payloadCase_ == 2) {
+            return imageBuilder_.getMessage();
+          }
+          return com.teneasyChat.api.common.CMessage.MessageImage.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.api.common.MessageImage image = 2;</code>
+       */
+      public Builder setImage(com.teneasyChat.api.common.CMessage.MessageImage value) {
+        if (imageBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          payload_ = value;
+          onChanged();
+        } else {
+          imageBuilder_.setMessage(value);
+        }
+        payloadCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.api.common.MessageImage image = 2;</code>
+       */
+      public Builder setImage(
+          com.teneasyChat.api.common.CMessage.MessageImage.Builder builderForValue) {
+        if (imageBuilder_ == null) {
+          payload_ = builderForValue.build();
+          onChanged();
+        } else {
+          imageBuilder_.setMessage(builderForValue.build());
+        }
+        payloadCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.api.common.MessageImage image = 2;</code>
+       */
+      public Builder mergeImage(com.teneasyChat.api.common.CMessage.MessageImage value) {
+        if (imageBuilder_ == null) {
+          if (payloadCase_ == 2 &&
+              payload_ != com.teneasyChat.api.common.CMessage.MessageImage.getDefaultInstance()) {
+            payload_ = com.teneasyChat.api.common.CMessage.MessageImage.newBuilder((com.teneasyChat.api.common.CMessage.MessageImage) payload_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            payload_ = value;
+          }
+          onChanged();
+        } else {
+          if (payloadCase_ == 2) {
+            imageBuilder_.mergeFrom(value);
+          } else {
+            imageBuilder_.setMessage(value);
+          }
+        }
+        payloadCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.api.common.MessageImage image = 2;</code>
+       */
+      public Builder clearImage() {
+        if (imageBuilder_ == null) {
+          if (payloadCase_ == 2) {
+            payloadCase_ = 0;
+            payload_ = null;
+            onChanged();
+          }
+        } else {
+          if (payloadCase_ == 2) {
+            payloadCase_ = 0;
+            payload_ = null;
+          }
+          imageBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.api.common.MessageImage image = 2;</code>
+       */
+      public com.teneasyChat.api.common.CMessage.MessageImage.Builder getImageBuilder() {
+        return getImageFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.api.common.MessageImage image = 2;</code>
+       */
+      @java.lang.Override
+      public com.teneasyChat.api.common.CMessage.MessageImageOrBuilder getImageOrBuilder() {
+        if ((payloadCase_ == 2) && (imageBuilder_ != null)) {
+          return imageBuilder_.getMessageOrBuilder();
+        } else {
+          if (payloadCase_ == 2) {
+            return (com.teneasyChat.api.common.CMessage.MessageImage) payload_;
+          }
+          return com.teneasyChat.api.common.CMessage.MessageImage.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.api.common.MessageImage image = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.teneasyChat.api.common.CMessage.MessageImage, com.teneasyChat.api.common.CMessage.MessageImage.Builder, com.teneasyChat.api.common.CMessage.MessageImageOrBuilder> 
+          getImageFieldBuilder() {
+        if (imageBuilder_ == null) {
+          if (!(payloadCase_ == 2)) {
+            payload_ = com.teneasyChat.api.common.CMessage.MessageImage.getDefaultInstance();
+          }
+          imageBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.teneasyChat.api.common.CMessage.MessageImage, com.teneasyChat.api.common.CMessage.MessageImage.Builder, com.teneasyChat.api.common.CMessage.MessageImageOrBuilder>(
+                  (com.teneasyChat.api.common.CMessage.MessageImage) payload_,
+                  getParentForChildren(),
+                  isClean());
+          payload_ = null;
+        }
+        payloadCase_ = 2;
+        onChanged();
+        return imageBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.teneasyChat.api.common.CMessage.MessageAudio, com.teneasyChat.api.common.CMessage.MessageAudio.Builder, com.teneasyChat.api.common.CMessage.MessageAudioOrBuilder> audioBuilder_;
+      /**
+       * <code>.api.common.MessageAudio audio = 3;</code>
+       * @return Whether the audio field is set.
+       */
+      @java.lang.Override
+      public boolean hasAudio() {
+        return payloadCase_ == 3;
+      }
+      /**
+       * <code>.api.common.MessageAudio audio = 3;</code>
+       * @return The audio.
+       */
+      @java.lang.Override
+      public com.teneasyChat.api.common.CMessage.MessageAudio getAudio() {
+        if (audioBuilder_ == null) {
+          if (payloadCase_ == 3) {
+            return (com.teneasyChat.api.common.CMessage.MessageAudio) payload_;
+          }
+          return com.teneasyChat.api.common.CMessage.MessageAudio.getDefaultInstance();
+        } else {
+          if (payloadCase_ == 3) {
+            return audioBuilder_.getMessage();
+          }
+          return com.teneasyChat.api.common.CMessage.MessageAudio.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.api.common.MessageAudio audio = 3;</code>
+       */
+      public Builder setAudio(com.teneasyChat.api.common.CMessage.MessageAudio value) {
+        if (audioBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          payload_ = value;
+          onChanged();
+        } else {
+          audioBuilder_.setMessage(value);
+        }
+        payloadCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.api.common.MessageAudio audio = 3;</code>
+       */
+      public Builder setAudio(
+          com.teneasyChat.api.common.CMessage.MessageAudio.Builder builderForValue) {
+        if (audioBuilder_ == null) {
+          payload_ = builderForValue.build();
+          onChanged();
+        } else {
+          audioBuilder_.setMessage(builderForValue.build());
+        }
+        payloadCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.api.common.MessageAudio audio = 3;</code>
+       */
+      public Builder mergeAudio(com.teneasyChat.api.common.CMessage.MessageAudio value) {
+        if (audioBuilder_ == null) {
+          if (payloadCase_ == 3 &&
+              payload_ != com.teneasyChat.api.common.CMessage.MessageAudio.getDefaultInstance()) {
+            payload_ = com.teneasyChat.api.common.CMessage.MessageAudio.newBuilder((com.teneasyChat.api.common.CMessage.MessageAudio) payload_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            payload_ = value;
+          }
+          onChanged();
+        } else {
+          if (payloadCase_ == 3) {
+            audioBuilder_.mergeFrom(value);
+          } else {
+            audioBuilder_.setMessage(value);
+          }
+        }
+        payloadCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.api.common.MessageAudio audio = 3;</code>
+       */
+      public Builder clearAudio() {
+        if (audioBuilder_ == null) {
+          if (payloadCase_ == 3) {
+            payloadCase_ = 0;
+            payload_ = null;
+            onChanged();
+          }
+        } else {
+          if (payloadCase_ == 3) {
+            payloadCase_ = 0;
+            payload_ = null;
+          }
+          audioBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.api.common.MessageAudio audio = 3;</code>
+       */
+      public com.teneasyChat.api.common.CMessage.MessageAudio.Builder getAudioBuilder() {
+        return getAudioFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.api.common.MessageAudio audio = 3;</code>
+       */
+      @java.lang.Override
+      public com.teneasyChat.api.common.CMessage.MessageAudioOrBuilder getAudioOrBuilder() {
+        if ((payloadCase_ == 3) && (audioBuilder_ != null)) {
+          return audioBuilder_.getMessageOrBuilder();
+        } else {
+          if (payloadCase_ == 3) {
+            return (com.teneasyChat.api.common.CMessage.MessageAudio) payload_;
+          }
+          return com.teneasyChat.api.common.CMessage.MessageAudio.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.api.common.MessageAudio audio = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.teneasyChat.api.common.CMessage.MessageAudio, com.teneasyChat.api.common.CMessage.MessageAudio.Builder, com.teneasyChat.api.common.CMessage.MessageAudioOrBuilder> 
+          getAudioFieldBuilder() {
+        if (audioBuilder_ == null) {
+          if (!(payloadCase_ == 3)) {
+            payload_ = com.teneasyChat.api.common.CMessage.MessageAudio.getDefaultInstance();
+          }
+          audioBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.teneasyChat.api.common.CMessage.MessageAudio, com.teneasyChat.api.common.CMessage.MessageAudio.Builder, com.teneasyChat.api.common.CMessage.MessageAudioOrBuilder>(
+                  (com.teneasyChat.api.common.CMessage.MessageAudio) payload_,
+                  getParentForChildren(),
+                  isClean());
+          payload_ = null;
+        }
+        payloadCase_ = 3;
+        onChanged();
+        return audioBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.teneasyChat.api.common.CMessage.MessageVideo, com.teneasyChat.api.common.CMessage.MessageVideo.Builder, com.teneasyChat.api.common.CMessage.MessageVideoOrBuilder> videoBuilder_;
+      /**
+       * <code>.api.common.MessageVideo video = 4;</code>
+       * @return Whether the video field is set.
+       */
+      @java.lang.Override
+      public boolean hasVideo() {
+        return payloadCase_ == 4;
+      }
+      /**
+       * <code>.api.common.MessageVideo video = 4;</code>
+       * @return The video.
+       */
+      @java.lang.Override
+      public com.teneasyChat.api.common.CMessage.MessageVideo getVideo() {
+        if (videoBuilder_ == null) {
+          if (payloadCase_ == 4) {
+            return (com.teneasyChat.api.common.CMessage.MessageVideo) payload_;
+          }
+          return com.teneasyChat.api.common.CMessage.MessageVideo.getDefaultInstance();
+        } else {
+          if (payloadCase_ == 4) {
+            return videoBuilder_.getMessage();
+          }
+          return com.teneasyChat.api.common.CMessage.MessageVideo.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.api.common.MessageVideo video = 4;</code>
+       */
+      public Builder setVideo(com.teneasyChat.api.common.CMessage.MessageVideo value) {
+        if (videoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          payload_ = value;
+          onChanged();
+        } else {
+          videoBuilder_.setMessage(value);
+        }
+        payloadCase_ = 4;
+        return this;
+      }
+      /**
+       * <code>.api.common.MessageVideo video = 4;</code>
+       */
+      public Builder setVideo(
+          com.teneasyChat.api.common.CMessage.MessageVideo.Builder builderForValue) {
+        if (videoBuilder_ == null) {
+          payload_ = builderForValue.build();
+          onChanged();
+        } else {
+          videoBuilder_.setMessage(builderForValue.build());
+        }
+        payloadCase_ = 4;
+        return this;
+      }
+      /**
+       * <code>.api.common.MessageVideo video = 4;</code>
+       */
+      public Builder mergeVideo(com.teneasyChat.api.common.CMessage.MessageVideo value) {
+        if (videoBuilder_ == null) {
+          if (payloadCase_ == 4 &&
+              payload_ != com.teneasyChat.api.common.CMessage.MessageVideo.getDefaultInstance()) {
+            payload_ = com.teneasyChat.api.common.CMessage.MessageVideo.newBuilder((com.teneasyChat.api.common.CMessage.MessageVideo) payload_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            payload_ = value;
+          }
+          onChanged();
+        } else {
+          if (payloadCase_ == 4) {
+            videoBuilder_.mergeFrom(value);
+          } else {
+            videoBuilder_.setMessage(value);
+          }
+        }
+        payloadCase_ = 4;
+        return this;
+      }
+      /**
+       * <code>.api.common.MessageVideo video = 4;</code>
+       */
+      public Builder clearVideo() {
+        if (videoBuilder_ == null) {
+          if (payloadCase_ == 4) {
+            payloadCase_ = 0;
+            payload_ = null;
+            onChanged();
+          }
+        } else {
+          if (payloadCase_ == 4) {
+            payloadCase_ = 0;
+            payload_ = null;
+          }
+          videoBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.api.common.MessageVideo video = 4;</code>
+       */
+      public com.teneasyChat.api.common.CMessage.MessageVideo.Builder getVideoBuilder() {
+        return getVideoFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.api.common.MessageVideo video = 4;</code>
+       */
+      @java.lang.Override
+      public com.teneasyChat.api.common.CMessage.MessageVideoOrBuilder getVideoOrBuilder() {
+        if ((payloadCase_ == 4) && (videoBuilder_ != null)) {
+          return videoBuilder_.getMessageOrBuilder();
+        } else {
+          if (payloadCase_ == 4) {
+            return (com.teneasyChat.api.common.CMessage.MessageVideo) payload_;
+          }
+          return com.teneasyChat.api.common.CMessage.MessageVideo.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.api.common.MessageVideo video = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.teneasyChat.api.common.CMessage.MessageVideo, com.teneasyChat.api.common.CMessage.MessageVideo.Builder, com.teneasyChat.api.common.CMessage.MessageVideoOrBuilder> 
+          getVideoFieldBuilder() {
+        if (videoBuilder_ == null) {
+          if (!(payloadCase_ == 4)) {
+            payload_ = com.teneasyChat.api.common.CMessage.MessageVideo.getDefaultInstance();
+          }
+          videoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.teneasyChat.api.common.CMessage.MessageVideo, com.teneasyChat.api.common.CMessage.MessageVideo.Builder, com.teneasyChat.api.common.CMessage.MessageVideoOrBuilder>(
+                  (com.teneasyChat.api.common.CMessage.MessageVideo) payload_,
+                  getParentForChildren(),
+                  isClean());
+          payload_ = null;
+        }
+        payloadCase_ = 4;
+        onChanged();
+        return videoBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.teneasyChat.api.common.CMessage.MessageGeo, com.teneasyChat.api.common.CMessage.MessageGeo.Builder, com.teneasyChat.api.common.CMessage.MessageGeoOrBuilder> geoBuilder_;
+      /**
+       * <code>.api.common.MessageGeo geo = 5;</code>
+       * @return Whether the geo field is set.
+       */
+      @java.lang.Override
+      public boolean hasGeo() {
+        return payloadCase_ == 5;
+      }
+      /**
+       * <code>.api.common.MessageGeo geo = 5;</code>
+       * @return The geo.
+       */
+      @java.lang.Override
+      public com.teneasyChat.api.common.CMessage.MessageGeo getGeo() {
+        if (geoBuilder_ == null) {
+          if (payloadCase_ == 5) {
+            return (com.teneasyChat.api.common.CMessage.MessageGeo) payload_;
+          }
+          return com.teneasyChat.api.common.CMessage.MessageGeo.getDefaultInstance();
+        } else {
+          if (payloadCase_ == 5) {
+            return geoBuilder_.getMessage();
+          }
+          return com.teneasyChat.api.common.CMessage.MessageGeo.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.api.common.MessageGeo geo = 5;</code>
+       */
+      public Builder setGeo(com.teneasyChat.api.common.CMessage.MessageGeo value) {
+        if (geoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          payload_ = value;
+          onChanged();
+        } else {
+          geoBuilder_.setMessage(value);
+        }
+        payloadCase_ = 5;
+        return this;
+      }
+      /**
+       * <code>.api.common.MessageGeo geo = 5;</code>
+       */
+      public Builder setGeo(
+          com.teneasyChat.api.common.CMessage.MessageGeo.Builder builderForValue) {
+        if (geoBuilder_ == null) {
+          payload_ = builderForValue.build();
+          onChanged();
+        } else {
+          geoBuilder_.setMessage(builderForValue.build());
+        }
+        payloadCase_ = 5;
+        return this;
+      }
+      /**
+       * <code>.api.common.MessageGeo geo = 5;</code>
+       */
+      public Builder mergeGeo(com.teneasyChat.api.common.CMessage.MessageGeo value) {
+        if (geoBuilder_ == null) {
+          if (payloadCase_ == 5 &&
+              payload_ != com.teneasyChat.api.common.CMessage.MessageGeo.getDefaultInstance()) {
+            payload_ = com.teneasyChat.api.common.CMessage.MessageGeo.newBuilder((com.teneasyChat.api.common.CMessage.MessageGeo) payload_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            payload_ = value;
+          }
+          onChanged();
+        } else {
+          if (payloadCase_ == 5) {
+            geoBuilder_.mergeFrom(value);
+          } else {
+            geoBuilder_.setMessage(value);
+          }
+        }
+        payloadCase_ = 5;
+        return this;
+      }
+      /**
+       * <code>.api.common.MessageGeo geo = 5;</code>
+       */
+      public Builder clearGeo() {
+        if (geoBuilder_ == null) {
+          if (payloadCase_ == 5) {
+            payloadCase_ = 0;
+            payload_ = null;
+            onChanged();
+          }
+        } else {
+          if (payloadCase_ == 5) {
+            payloadCase_ = 0;
+            payload_ = null;
+          }
+          geoBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.api.common.MessageGeo geo = 5;</code>
+       */
+      public com.teneasyChat.api.common.CMessage.MessageGeo.Builder getGeoBuilder() {
+        return getGeoFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.api.common.MessageGeo geo = 5;</code>
+       */
+      @java.lang.Override
+      public com.teneasyChat.api.common.CMessage.MessageGeoOrBuilder getGeoOrBuilder() {
+        if ((payloadCase_ == 5) && (geoBuilder_ != null)) {
+          return geoBuilder_.getMessageOrBuilder();
+        } else {
+          if (payloadCase_ == 5) {
+            return (com.teneasyChat.api.common.CMessage.MessageGeo) payload_;
+          }
+          return com.teneasyChat.api.common.CMessage.MessageGeo.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.api.common.MessageGeo geo = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.teneasyChat.api.common.CMessage.MessageGeo, com.teneasyChat.api.common.CMessage.MessageGeo.Builder, com.teneasyChat.api.common.CMessage.MessageGeoOrBuilder> 
+          getGeoFieldBuilder() {
+        if (geoBuilder_ == null) {
+          if (!(payloadCase_ == 5)) {
+            payload_ = com.teneasyChat.api.common.CMessage.MessageGeo.getDefaultInstance();
+          }
+          geoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.teneasyChat.api.common.CMessage.MessageGeo, com.teneasyChat.api.common.CMessage.MessageGeo.Builder, com.teneasyChat.api.common.CMessage.MessageGeoOrBuilder>(
+                  (com.teneasyChat.api.common.CMessage.MessageGeo) payload_,
+                  getParentForChildren(),
+                  isClean());
+          payload_ = null;
+        }
+        payloadCase_ = 5;
+        onChanged();
+        return geoBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.teneasyChat.api.common.CMessage.MessageFile, com.teneasyChat.api.common.CMessage.MessageFile.Builder, com.teneasyChat.api.common.CMessage.MessageFileOrBuilder> fileBuilder_;
+      /**
+       * <code>.api.common.MessageFile file = 6;</code>
+       * @return Whether the file field is set.
+       */
+      @java.lang.Override
+      public boolean hasFile() {
+        return payloadCase_ == 6;
+      }
+      /**
+       * <code>.api.common.MessageFile file = 6;</code>
+       * @return The file.
+       */
+      @java.lang.Override
+      public com.teneasyChat.api.common.CMessage.MessageFile getFile() {
+        if (fileBuilder_ == null) {
+          if (payloadCase_ == 6) {
+            return (com.teneasyChat.api.common.CMessage.MessageFile) payload_;
+          }
+          return com.teneasyChat.api.common.CMessage.MessageFile.getDefaultInstance();
+        } else {
+          if (payloadCase_ == 6) {
+            return fileBuilder_.getMessage();
+          }
+          return com.teneasyChat.api.common.CMessage.MessageFile.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.api.common.MessageFile file = 6;</code>
+       */
+      public Builder setFile(com.teneasyChat.api.common.CMessage.MessageFile value) {
+        if (fileBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          payload_ = value;
+          onChanged();
+        } else {
+          fileBuilder_.setMessage(value);
+        }
+        payloadCase_ = 6;
+        return this;
+      }
+      /**
+       * <code>.api.common.MessageFile file = 6;</code>
+       */
+      public Builder setFile(
+          com.teneasyChat.api.common.CMessage.MessageFile.Builder builderForValue) {
+        if (fileBuilder_ == null) {
+          payload_ = builderForValue.build();
+          onChanged();
+        } else {
+          fileBuilder_.setMessage(builderForValue.build());
+        }
+        payloadCase_ = 6;
+        return this;
+      }
+      /**
+       * <code>.api.common.MessageFile file = 6;</code>
+       */
+      public Builder mergeFile(com.teneasyChat.api.common.CMessage.MessageFile value) {
+        if (fileBuilder_ == null) {
+          if (payloadCase_ == 6 &&
+              payload_ != com.teneasyChat.api.common.CMessage.MessageFile.getDefaultInstance()) {
+            payload_ = com.teneasyChat.api.common.CMessage.MessageFile.newBuilder((com.teneasyChat.api.common.CMessage.MessageFile) payload_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            payload_ = value;
+          }
+          onChanged();
+        } else {
+          if (payloadCase_ == 6) {
+            fileBuilder_.mergeFrom(value);
+          } else {
+            fileBuilder_.setMessage(value);
+          }
+        }
+        payloadCase_ = 6;
+        return this;
+      }
+      /**
+       * <code>.api.common.MessageFile file = 6;</code>
+       */
+      public Builder clearFile() {
+        if (fileBuilder_ == null) {
+          if (payloadCase_ == 6) {
+            payloadCase_ = 0;
+            payload_ = null;
+            onChanged();
+          }
+        } else {
+          if (payloadCase_ == 6) {
+            payloadCase_ = 0;
+            payload_ = null;
+          }
+          fileBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.api.common.MessageFile file = 6;</code>
+       */
+      public com.teneasyChat.api.common.CMessage.MessageFile.Builder getFileBuilder() {
+        return getFileFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.api.common.MessageFile file = 6;</code>
+       */
+      @java.lang.Override
+      public com.teneasyChat.api.common.CMessage.MessageFileOrBuilder getFileOrBuilder() {
+        if ((payloadCase_ == 6) && (fileBuilder_ != null)) {
+          return fileBuilder_.getMessageOrBuilder();
+        } else {
+          if (payloadCase_ == 6) {
+            return (com.teneasyChat.api.common.CMessage.MessageFile) payload_;
+          }
+          return com.teneasyChat.api.common.CMessage.MessageFile.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.api.common.MessageFile file = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.teneasyChat.api.common.CMessage.MessageFile, com.teneasyChat.api.common.CMessage.MessageFile.Builder, com.teneasyChat.api.common.CMessage.MessageFileOrBuilder> 
+          getFileFieldBuilder() {
+        if (fileBuilder_ == null) {
+          if (!(payloadCase_ == 6)) {
+            payload_ = com.teneasyChat.api.common.CMessage.MessageFile.getDefaultInstance();
+          }
+          fileBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.teneasyChat.api.common.CMessage.MessageFile, com.teneasyChat.api.common.CMessage.MessageFile.Builder, com.teneasyChat.api.common.CMessage.MessageFileOrBuilder>(
+                  (com.teneasyChat.api.common.CMessage.MessageFile) payload_,
+                  getParentForChildren(),
+                  isClean());
+          payload_ = null;
+        }
+        payloadCase_ = 6;
+        onChanged();
+        return fileBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:api.common.MessageUnion)
+    }
+
+    // @@protoc_insertion_point(class_scope:api.common.MessageUnion)
+    private static final com.teneasyChat.api.common.CMessage.MessageUnion DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.teneasyChat.api.common.CMessage.MessageUnion();
+    }
+
+    public static com.teneasyChat.api.common.CMessage.MessageUnion getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MessageUnion>
+        PARSER = new com.google.protobuf.AbstractParser<MessageUnion>() {
+      @java.lang.Override
+      public MessageUnion parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MessageUnion> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MessageUnion> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.teneasyChat.api.common.CMessage.MessageUnion getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MessageAutoReplyQAOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:api.common.MessageAutoReplyQA)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * 序号
+     * </pre>
+     *
+     * <code>int32 id = 1;</code>
+     * @return The id.
+     */
+    int getId();
+
+    /**
+     * <pre>
+     * 常见问题
+     * </pre>
+     *
+     * <code>.api.common.MessageUnion question = 2;</code>
+     * @return Whether the question field is set.
+     */
+    boolean hasQuestion();
+    /**
+     * <pre>
+     * 常见问题
+     * </pre>
+     *
+     * <code>.api.common.MessageUnion question = 2;</code>
+     * @return The question.
+     */
+    com.teneasyChat.api.common.CMessage.MessageUnion getQuestion();
+    /**
+     * <pre>
+     * 常见问题
+     * </pre>
+     *
+     * <code>.api.common.MessageUnion question = 2;</code>
+     */
+    com.teneasyChat.api.common.CMessage.MessageUnionOrBuilder getQuestionOrBuilder();
+
+    /**
+     * <pre>
+     * 回答
+     * </pre>
+     *
+     * <code>repeated .api.common.MessageUnion answer = 3 [(.validate.rules) = { ... }</code>
+     */
+    java.util.List<com.teneasyChat.api.common.CMessage.MessageUnion> 
+        getAnswerList();
+    /**
+     * <pre>
+     * 回答
+     * </pre>
+     *
+     * <code>repeated .api.common.MessageUnion answer = 3 [(.validate.rules) = { ... }</code>
+     */
+    com.teneasyChat.api.common.CMessage.MessageUnion getAnswer(int index);
+    /**
+     * <pre>
+     * 回答
+     * </pre>
+     *
+     * <code>repeated .api.common.MessageUnion answer = 3 [(.validate.rules) = { ... }</code>
+     */
+    int getAnswerCount();
+    /**
+     * <pre>
+     * 回答
+     * </pre>
+     *
+     * <code>repeated .api.common.MessageUnion answer = 3 [(.validate.rules) = { ... }</code>
+     */
+    java.util.List<? extends com.teneasyChat.api.common.CMessage.MessageUnionOrBuilder> 
+        getAnswerOrBuilderList();
+    /**
+     * <pre>
+     * 回答
+     * </pre>
+     *
+     * <code>repeated .api.common.MessageUnion answer = 3 [(.validate.rules) = { ... }</code>
+     */
+    com.teneasyChat.api.common.CMessage.MessageUnionOrBuilder getAnswerOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code api.common.MessageAutoReplyQA}
+   */
+  public static final class MessageAutoReplyQA extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:api.common.MessageAutoReplyQA)
+      MessageAutoReplyQAOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MessageAutoReplyQA.newBuilder() to construct.
+    private MessageAutoReplyQA(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MessageAutoReplyQA() {
+      answer_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MessageAutoReplyQA();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.teneasyChat.api.common.CMessage.internal_static_api_common_MessageAutoReplyQA_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.teneasyChat.api.common.CMessage.internal_static_api_common_MessageAutoReplyQA_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.teneasyChat.api.common.CMessage.MessageAutoReplyQA.class, com.teneasyChat.api.common.CMessage.MessageAutoReplyQA.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private int id_ = 0;
+    /**
+     * <pre>
+     * 序号
+     * </pre>
+     *
+     * <code>int32 id = 1;</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public int getId() {
+      return id_;
+    }
+
+    public static final int QUESTION_FIELD_NUMBER = 2;
+    private com.teneasyChat.api.common.CMessage.MessageUnion question_;
+    /**
+     * <pre>
+     * 常见问题
+     * </pre>
+     *
+     * <code>.api.common.MessageUnion question = 2;</code>
+     * @return Whether the question field is set.
+     */
+    @java.lang.Override
+    public boolean hasQuestion() {
+      return question_ != null;
+    }
+    /**
+     * <pre>
+     * 常见问题
+     * </pre>
+     *
+     * <code>.api.common.MessageUnion question = 2;</code>
+     * @return The question.
+     */
+    @java.lang.Override
+    public com.teneasyChat.api.common.CMessage.MessageUnion getQuestion() {
+      return question_ == null ? com.teneasyChat.api.common.CMessage.MessageUnion.getDefaultInstance() : question_;
+    }
+    /**
+     * <pre>
+     * 常见问题
+     * </pre>
+     *
+     * <code>.api.common.MessageUnion question = 2;</code>
+     */
+    @java.lang.Override
+    public com.teneasyChat.api.common.CMessage.MessageUnionOrBuilder getQuestionOrBuilder() {
+      return question_ == null ? com.teneasyChat.api.common.CMessage.MessageUnion.getDefaultInstance() : question_;
+    }
+
+    public static final int ANSWER_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.teneasyChat.api.common.CMessage.MessageUnion> answer_;
+    /**
+     * <pre>
+     * 回答
+     * </pre>
+     *
+     * <code>repeated .api.common.MessageUnion answer = 3 [(.validate.rules) = { ... }</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.teneasyChat.api.common.CMessage.MessageUnion> getAnswerList() {
+      return answer_;
+    }
+    /**
+     * <pre>
+     * 回答
+     * </pre>
+     *
+     * <code>repeated .api.common.MessageUnion answer = 3 [(.validate.rules) = { ... }</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.teneasyChat.api.common.CMessage.MessageUnionOrBuilder> 
+        getAnswerOrBuilderList() {
+      return answer_;
+    }
+    /**
+     * <pre>
+     * 回答
+     * </pre>
+     *
+     * <code>repeated .api.common.MessageUnion answer = 3 [(.validate.rules) = { ... }</code>
+     */
+    @java.lang.Override
+    public int getAnswerCount() {
+      return answer_.size();
+    }
+    /**
+     * <pre>
+     * 回答
+     * </pre>
+     *
+     * <code>repeated .api.common.MessageUnion answer = 3 [(.validate.rules) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.teneasyChat.api.common.CMessage.MessageUnion getAnswer(int index) {
+      return answer_.get(index);
+    }
+    /**
+     * <pre>
+     * 回答
+     * </pre>
+     *
+     * <code>repeated .api.common.MessageUnion answer = 3 [(.validate.rules) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.teneasyChat.api.common.CMessage.MessageUnionOrBuilder getAnswerOrBuilder(
+        int index) {
+      return answer_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (id_ != 0) {
+        output.writeInt32(1, id_);
+      }
+      if (question_ != null) {
+        output.writeMessage(2, getQuestion());
+      }
+      for (int i = 0; i < answer_.size(); i++) {
+        output.writeMessage(3, answer_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (id_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, id_);
+      }
+      if (question_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getQuestion());
+      }
+      for (int i = 0; i < answer_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, answer_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.teneasyChat.api.common.CMessage.MessageAutoReplyQA)) {
+        return super.equals(obj);
+      }
+      com.teneasyChat.api.common.CMessage.MessageAutoReplyQA other = (com.teneasyChat.api.common.CMessage.MessageAutoReplyQA) obj;
+
+      if (getId()
+          != other.getId()) return false;
+      if (hasQuestion() != other.hasQuestion()) return false;
+      if (hasQuestion()) {
+        if (!getQuestion()
+            .equals(other.getQuestion())) return false;
+      }
+      if (!getAnswerList()
+          .equals(other.getAnswerList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId();
+      if (hasQuestion()) {
+        hash = (37 * hash) + QUESTION_FIELD_NUMBER;
+        hash = (53 * hash) + getQuestion().hashCode();
+      }
+      if (getAnswerCount() > 0) {
+        hash = (37 * hash) + ANSWER_FIELD_NUMBER;
+        hash = (53 * hash) + getAnswerList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.teneasyChat.api.common.CMessage.MessageAutoReplyQA parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teneasyChat.api.common.CMessage.MessageAutoReplyQA parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teneasyChat.api.common.CMessage.MessageAutoReplyQA parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teneasyChat.api.common.CMessage.MessageAutoReplyQA parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teneasyChat.api.common.CMessage.MessageAutoReplyQA parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teneasyChat.api.common.CMessage.MessageAutoReplyQA parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teneasyChat.api.common.CMessage.MessageAutoReplyQA parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.teneasyChat.api.common.CMessage.MessageAutoReplyQA parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.teneasyChat.api.common.CMessage.MessageAutoReplyQA parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.teneasyChat.api.common.CMessage.MessageAutoReplyQA parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.teneasyChat.api.common.CMessage.MessageAutoReplyQA parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.teneasyChat.api.common.CMessage.MessageAutoReplyQA parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.teneasyChat.api.common.CMessage.MessageAutoReplyQA prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code api.common.MessageAutoReplyQA}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:api.common.MessageAutoReplyQA)
+        com.teneasyChat.api.common.CMessage.MessageAutoReplyQAOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.teneasyChat.api.common.CMessage.internal_static_api_common_MessageAutoReplyQA_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.teneasyChat.api.common.CMessage.internal_static_api_common_MessageAutoReplyQA_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.teneasyChat.api.common.CMessage.MessageAutoReplyQA.class, com.teneasyChat.api.common.CMessage.MessageAutoReplyQA.Builder.class);
+      }
+
+      // Construct using com.teneasyChat.api.common.CMessage.MessageAutoReplyQA.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        id_ = 0;
+        question_ = null;
+        if (questionBuilder_ != null) {
+          questionBuilder_.dispose();
+          questionBuilder_ = null;
+        }
+        if (answerBuilder_ == null) {
+          answer_ = java.util.Collections.emptyList();
+        } else {
+          answer_ = null;
+          answerBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.teneasyChat.api.common.CMessage.internal_static_api_common_MessageAutoReplyQA_descriptor;
+      }
+
+      @java.lang.Override
+      public com.teneasyChat.api.common.CMessage.MessageAutoReplyQA getDefaultInstanceForType() {
+        return com.teneasyChat.api.common.CMessage.MessageAutoReplyQA.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.teneasyChat.api.common.CMessage.MessageAutoReplyQA build() {
+        com.teneasyChat.api.common.CMessage.MessageAutoReplyQA result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.teneasyChat.api.common.CMessage.MessageAutoReplyQA buildPartial() {
+        com.teneasyChat.api.common.CMessage.MessageAutoReplyQA result = new com.teneasyChat.api.common.CMessage.MessageAutoReplyQA(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.teneasyChat.api.common.CMessage.MessageAutoReplyQA result) {
+        if (answerBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            answer_ = java.util.Collections.unmodifiableList(answer_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.answer_ = answer_;
+        } else {
+          result.answer_ = answerBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.teneasyChat.api.common.CMessage.MessageAutoReplyQA result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.question_ = questionBuilder_ == null
+              ? question_
+              : questionBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.teneasyChat.api.common.CMessage.MessageAutoReplyQA) {
+          return mergeFrom((com.teneasyChat.api.common.CMessage.MessageAutoReplyQA)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.teneasyChat.api.common.CMessage.MessageAutoReplyQA other) {
+        if (other == com.teneasyChat.api.common.CMessage.MessageAutoReplyQA.getDefaultInstance()) return this;
+        if (other.getId() != 0) {
+          setId(other.getId());
+        }
+        if (other.hasQuestion()) {
+          mergeQuestion(other.getQuestion());
+        }
+        if (answerBuilder_ == null) {
+          if (!other.answer_.isEmpty()) {
+            if (answer_.isEmpty()) {
+              answer_ = other.answer_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureAnswerIsMutable();
+              answer_.addAll(other.answer_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.answer_.isEmpty()) {
+            if (answerBuilder_.isEmpty()) {
+              answerBuilder_.dispose();
+              answerBuilder_ = null;
+              answer_ = other.answer_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              answerBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getAnswerFieldBuilder() : null;
+            } else {
+              answerBuilder_.addAllMessages(other.answer_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                id_ = input.readInt32();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                input.readMessage(
+                    getQuestionFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                com.teneasyChat.api.common.CMessage.MessageUnion m =
+                    input.readMessage(
+                        com.teneasyChat.api.common.CMessage.MessageUnion.parser(),
+                        extensionRegistry);
+                if (answerBuilder_ == null) {
+                  ensureAnswerIsMutable();
+                  answer_.add(m);
+                } else {
+                  answerBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private int id_ ;
+      /**
+       * <pre>
+       * 序号
+       * </pre>
+       *
+       * <code>int32 id = 1;</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public int getId() {
+        return id_;
+      }
+      /**
+       * <pre>
+       * 序号
+       * </pre>
+       *
+       * <code>int32 id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(int value) {
+
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 序号
+       * </pre>
+       *
+       * <code>int32 id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        id_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.teneasyChat.api.common.CMessage.MessageUnion question_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.teneasyChat.api.common.CMessage.MessageUnion, com.teneasyChat.api.common.CMessage.MessageUnion.Builder, com.teneasyChat.api.common.CMessage.MessageUnionOrBuilder> questionBuilder_;
+      /**
+       * <pre>
+       * 常见问题
+       * </pre>
+       *
+       * <code>.api.common.MessageUnion question = 2;</code>
+       * @return Whether the question field is set.
+       */
+      public boolean hasQuestion() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * 常见问题
+       * </pre>
+       *
+       * <code>.api.common.MessageUnion question = 2;</code>
+       * @return The question.
+       */
+      public com.teneasyChat.api.common.CMessage.MessageUnion getQuestion() {
+        if (questionBuilder_ == null) {
+          return question_ == null ? com.teneasyChat.api.common.CMessage.MessageUnion.getDefaultInstance() : question_;
+        } else {
+          return questionBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * 常见问题
+       * </pre>
+       *
+       * <code>.api.common.MessageUnion question = 2;</code>
+       */
+      public Builder setQuestion(com.teneasyChat.api.common.CMessage.MessageUnion value) {
+        if (questionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          question_ = value;
+        } else {
+          questionBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 常见问题
+       * </pre>
+       *
+       * <code>.api.common.MessageUnion question = 2;</code>
+       */
+      public Builder setQuestion(
+          com.teneasyChat.api.common.CMessage.MessageUnion.Builder builderForValue) {
+        if (questionBuilder_ == null) {
+          question_ = builderForValue.build();
+        } else {
+          questionBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 常见问题
+       * </pre>
+       *
+       * <code>.api.common.MessageUnion question = 2;</code>
+       */
+      public Builder mergeQuestion(com.teneasyChat.api.common.CMessage.MessageUnion value) {
+        if (questionBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            question_ != null &&
+            question_ != com.teneasyChat.api.common.CMessage.MessageUnion.getDefaultInstance()) {
+            getQuestionBuilder().mergeFrom(value);
+          } else {
+            question_ = value;
+          }
+        } else {
+          questionBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 常见问题
+       * </pre>
+       *
+       * <code>.api.common.MessageUnion question = 2;</code>
+       */
+      public Builder clearQuestion() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        question_ = null;
+        if (questionBuilder_ != null) {
+          questionBuilder_.dispose();
+          questionBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 常见问题
+       * </pre>
+       *
+       * <code>.api.common.MessageUnion question = 2;</code>
+       */
+      public com.teneasyChat.api.common.CMessage.MessageUnion.Builder getQuestionBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getQuestionFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * 常见问题
+       * </pre>
+       *
+       * <code>.api.common.MessageUnion question = 2;</code>
+       */
+      public com.teneasyChat.api.common.CMessage.MessageUnionOrBuilder getQuestionOrBuilder() {
+        if (questionBuilder_ != null) {
+          return questionBuilder_.getMessageOrBuilder();
+        } else {
+          return question_ == null ?
+              com.teneasyChat.api.common.CMessage.MessageUnion.getDefaultInstance() : question_;
+        }
+      }
+      /**
+       * <pre>
+       * 常见问题
+       * </pre>
+       *
+       * <code>.api.common.MessageUnion question = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.teneasyChat.api.common.CMessage.MessageUnion, com.teneasyChat.api.common.CMessage.MessageUnion.Builder, com.teneasyChat.api.common.CMessage.MessageUnionOrBuilder> 
+          getQuestionFieldBuilder() {
+        if (questionBuilder_ == null) {
+          questionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.teneasyChat.api.common.CMessage.MessageUnion, com.teneasyChat.api.common.CMessage.MessageUnion.Builder, com.teneasyChat.api.common.CMessage.MessageUnionOrBuilder>(
+                  getQuestion(),
+                  getParentForChildren(),
+                  isClean());
+          question_ = null;
+        }
+        return questionBuilder_;
+      }
+
+      private java.util.List<com.teneasyChat.api.common.CMessage.MessageUnion> answer_ =
+        java.util.Collections.emptyList();
+      private void ensureAnswerIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          answer_ = new java.util.ArrayList<com.teneasyChat.api.common.CMessage.MessageUnion>(answer_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.teneasyChat.api.common.CMessage.MessageUnion, com.teneasyChat.api.common.CMessage.MessageUnion.Builder, com.teneasyChat.api.common.CMessage.MessageUnionOrBuilder> answerBuilder_;
+
+      /**
+       * <pre>
+       * 回答
+       * </pre>
+       *
+       * <code>repeated .api.common.MessageUnion answer = 3 [(.validate.rules) = { ... }</code>
+       */
+      public java.util.List<com.teneasyChat.api.common.CMessage.MessageUnion> getAnswerList() {
+        if (answerBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(answer_);
+        } else {
+          return answerBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * 回答
+       * </pre>
+       *
+       * <code>repeated .api.common.MessageUnion answer = 3 [(.validate.rules) = { ... }</code>
+       */
+      public int getAnswerCount() {
+        if (answerBuilder_ == null) {
+          return answer_.size();
+        } else {
+          return answerBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * 回答
+       * </pre>
+       *
+       * <code>repeated .api.common.MessageUnion answer = 3 [(.validate.rules) = { ... }</code>
+       */
+      public com.teneasyChat.api.common.CMessage.MessageUnion getAnswer(int index) {
+        if (answerBuilder_ == null) {
+          return answer_.get(index);
+        } else {
+          return answerBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * 回答
+       * </pre>
+       *
+       * <code>repeated .api.common.MessageUnion answer = 3 [(.validate.rules) = { ... }</code>
+       */
+      public Builder setAnswer(
+          int index, com.teneasyChat.api.common.CMessage.MessageUnion value) {
+        if (answerBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAnswerIsMutable();
+          answer_.set(index, value);
+          onChanged();
+        } else {
+          answerBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * 回答
+       * </pre>
+       *
+       * <code>repeated .api.common.MessageUnion answer = 3 [(.validate.rules) = { ... }</code>
+       */
+      public Builder setAnswer(
+          int index, com.teneasyChat.api.common.CMessage.MessageUnion.Builder builderForValue) {
+        if (answerBuilder_ == null) {
+          ensureAnswerIsMutable();
+          answer_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          answerBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * 回答
+       * </pre>
+       *
+       * <code>repeated .api.common.MessageUnion answer = 3 [(.validate.rules) = { ... }</code>
+       */
+      public Builder addAnswer(com.teneasyChat.api.common.CMessage.MessageUnion value) {
+        if (answerBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAnswerIsMutable();
+          answer_.add(value);
+          onChanged();
+        } else {
+          answerBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * 回答
+       * </pre>
+       *
+       * <code>repeated .api.common.MessageUnion answer = 3 [(.validate.rules) = { ... }</code>
+       */
+      public Builder addAnswer(
+          int index, com.teneasyChat.api.common.CMessage.MessageUnion value) {
+        if (answerBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAnswerIsMutable();
+          answer_.add(index, value);
+          onChanged();
+        } else {
+          answerBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * 回答
+       * </pre>
+       *
+       * <code>repeated .api.common.MessageUnion answer = 3 [(.validate.rules) = { ... }</code>
+       */
+      public Builder addAnswer(
+          com.teneasyChat.api.common.CMessage.MessageUnion.Builder builderForValue) {
+        if (answerBuilder_ == null) {
+          ensureAnswerIsMutable();
+          answer_.add(builderForValue.build());
+          onChanged();
+        } else {
+          answerBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * 回答
+       * </pre>
+       *
+       * <code>repeated .api.common.MessageUnion answer = 3 [(.validate.rules) = { ... }</code>
+       */
+      public Builder addAnswer(
+          int index, com.teneasyChat.api.common.CMessage.MessageUnion.Builder builderForValue) {
+        if (answerBuilder_ == null) {
+          ensureAnswerIsMutable();
+          answer_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          answerBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * 回答
+       * </pre>
+       *
+       * <code>repeated .api.common.MessageUnion answer = 3 [(.validate.rules) = { ... }</code>
+       */
+      public Builder addAllAnswer(
+          java.lang.Iterable<? extends com.teneasyChat.api.common.CMessage.MessageUnion> values) {
+        if (answerBuilder_ == null) {
+          ensureAnswerIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, answer_);
+          onChanged();
+        } else {
+          answerBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * 回答
+       * </pre>
+       *
+       * <code>repeated .api.common.MessageUnion answer = 3 [(.validate.rules) = { ... }</code>
+       */
+      public Builder clearAnswer() {
+        if (answerBuilder_ == null) {
+          answer_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          answerBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * 回答
+       * </pre>
+       *
+       * <code>repeated .api.common.MessageUnion answer = 3 [(.validate.rules) = { ... }</code>
+       */
+      public Builder removeAnswer(int index) {
+        if (answerBuilder_ == null) {
+          ensureAnswerIsMutable();
+          answer_.remove(index);
+          onChanged();
+        } else {
+          answerBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * 回答
+       * </pre>
+       *
+       * <code>repeated .api.common.MessageUnion answer = 3 [(.validate.rules) = { ... }</code>
+       */
+      public com.teneasyChat.api.common.CMessage.MessageUnion.Builder getAnswerBuilder(
+          int index) {
+        return getAnswerFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * 回答
+       * </pre>
+       *
+       * <code>repeated .api.common.MessageUnion answer = 3 [(.validate.rules) = { ... }</code>
+       */
+      public com.teneasyChat.api.common.CMessage.MessageUnionOrBuilder getAnswerOrBuilder(
+          int index) {
+        if (answerBuilder_ == null) {
+          return answer_.get(index);  } else {
+          return answerBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * 回答
+       * </pre>
+       *
+       * <code>repeated .api.common.MessageUnion answer = 3 [(.validate.rules) = { ... }</code>
+       */
+      public java.util.List<? extends com.teneasyChat.api.common.CMessage.MessageUnionOrBuilder> 
+           getAnswerOrBuilderList() {
+        if (answerBuilder_ != null) {
+          return answerBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(answer_);
+        }
+      }
+      /**
+       * <pre>
+       * 回答
+       * </pre>
+       *
+       * <code>repeated .api.common.MessageUnion answer = 3 [(.validate.rules) = { ... }</code>
+       */
+      public com.teneasyChat.api.common.CMessage.MessageUnion.Builder addAnswerBuilder() {
+        return getAnswerFieldBuilder().addBuilder(
+            com.teneasyChat.api.common.CMessage.MessageUnion.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * 回答
+       * </pre>
+       *
+       * <code>repeated .api.common.MessageUnion answer = 3 [(.validate.rules) = { ... }</code>
+       */
+      public com.teneasyChat.api.common.CMessage.MessageUnion.Builder addAnswerBuilder(
+          int index) {
+        return getAnswerFieldBuilder().addBuilder(
+            index, com.teneasyChat.api.common.CMessage.MessageUnion.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * 回答
+       * </pre>
+       *
+       * <code>repeated .api.common.MessageUnion answer = 3 [(.validate.rules) = { ... }</code>
+       */
+      public java.util.List<com.teneasyChat.api.common.CMessage.MessageUnion.Builder> 
+           getAnswerBuilderList() {
+        return getAnswerFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.teneasyChat.api.common.CMessage.MessageUnion, com.teneasyChat.api.common.CMessage.MessageUnion.Builder, com.teneasyChat.api.common.CMessage.MessageUnionOrBuilder> 
+          getAnswerFieldBuilder() {
+        if (answerBuilder_ == null) {
+          answerBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.teneasyChat.api.common.CMessage.MessageUnion, com.teneasyChat.api.common.CMessage.MessageUnion.Builder, com.teneasyChat.api.common.CMessage.MessageUnionOrBuilder>(
+                  answer_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          answer_ = null;
+        }
+        return answerBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:api.common.MessageAutoReplyQA)
+    }
+
+    // @@protoc_insertion_point(class_scope:api.common.MessageAutoReplyQA)
+    private static final com.teneasyChat.api.common.CMessage.MessageAutoReplyQA DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.teneasyChat.api.common.CMessage.MessageAutoReplyQA();
+    }
+
+    public static com.teneasyChat.api.common.CMessage.MessageAutoReplyQA getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MessageAutoReplyQA>
+        PARSER = new com.google.protobuf.AbstractParser<MessageAutoReplyQA>() {
+      @java.lang.Override
+      public MessageAutoReplyQA parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MessageAutoReplyQA> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MessageAutoReplyQA> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.teneasyChat.api.common.CMessage.MessageAutoReplyQA getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MessageAutoReplyOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:api.common.MessageAutoReply)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int64 id = 1;</code>
+     * @return The id.
+     */
+    long getId();
+
+    /**
+     * <pre>
+     * 引导文案
+     * </pre>
+     *
+     * <code>string title = 2;</code>
+     * @return The title.
+     */
+    java.lang.String getTitle();
+    /**
+     * <pre>
+     * 引导文案
+     * </pre>
+     *
+     * <code>string title = 2;</code>
+     * @return The bytes for title.
+     */
+    com.google.protobuf.ByteString
+        getTitleBytes();
+
+    /**
+     * <pre>
+     * 延迟回复时间
+     * </pre>
+     *
+     * <code>int32 delay_sec = 3;</code>
+     * @return The delaySec.
+     */
+    int getDelaySec();
+
+    /**
+     * <pre>
+     * 问答
+     * </pre>
+     *
+     * <code>repeated .api.common.MessageAutoReplyQA qa = 4;</code>
+     */
+    java.util.List<com.teneasyChat.api.common.CMessage.MessageAutoReplyQA> 
+        getQaList();
+    /**
+     * <pre>
+     * 问答
+     * </pre>
+     *
+     * <code>repeated .api.common.MessageAutoReplyQA qa = 4;</code>
+     */
+    com.teneasyChat.api.common.CMessage.MessageAutoReplyQA getQa(int index);
+    /**
+     * <pre>
+     * 问答
+     * </pre>
+     *
+     * <code>repeated .api.common.MessageAutoReplyQA qa = 4;</code>
+     */
+    int getQaCount();
+    /**
+     * <pre>
+     * 问答
+     * </pre>
+     *
+     * <code>repeated .api.common.MessageAutoReplyQA qa = 4;</code>
+     */
+    java.util.List<? extends com.teneasyChat.api.common.CMessage.MessageAutoReplyQAOrBuilder> 
+        getQaOrBuilderList();
+    /**
+     * <pre>
+     * 问答
+     * </pre>
+     *
+     * <code>repeated .api.common.MessageAutoReplyQA qa = 4;</code>
+     */
+    com.teneasyChat.api.common.CMessage.MessageAutoReplyQAOrBuilder getQaOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * 自动回复消息
+   * </pre>
+   *
+   * Protobuf type {@code api.common.MessageAutoReply}
+   */
+  public static final class MessageAutoReply extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:api.common.MessageAutoReply)
+      MessageAutoReplyOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MessageAutoReply.newBuilder() to construct.
+    private MessageAutoReply(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MessageAutoReply() {
+      title_ = "";
+      qa_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MessageAutoReply();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.teneasyChat.api.common.CMessage.internal_static_api_common_MessageAutoReply_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.teneasyChat.api.common.CMessage.internal_static_api_common_MessageAutoReply_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.teneasyChat.api.common.CMessage.MessageAutoReply.class, com.teneasyChat.api.common.CMessage.MessageAutoReply.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private long id_ = 0L;
+    /**
+     * <code>int64 id = 1;</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public long getId() {
+      return id_;
+    }
+
+    public static final int TITLE_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object title_ = "";
+    /**
+     * <pre>
+     * 引导文案
+     * </pre>
+     *
+     * <code>string title = 2;</code>
+     * @return The title.
+     */
+    @java.lang.Override
+    public java.lang.String getTitle() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        title_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * 引导文案
+     * </pre>
+     *
+     * <code>string title = 2;</code>
+     * @return The bytes for title.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTitleBytes() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        title_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DELAY_SEC_FIELD_NUMBER = 3;
+    private int delaySec_ = 0;
+    /**
+     * <pre>
+     * 延迟回复时间
+     * </pre>
+     *
+     * <code>int32 delay_sec = 3;</code>
+     * @return The delaySec.
+     */
+    @java.lang.Override
+    public int getDelaySec() {
+      return delaySec_;
+    }
+
+    public static final int QA_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private java.util.List<com.teneasyChat.api.common.CMessage.MessageAutoReplyQA> qa_;
+    /**
+     * <pre>
+     * 问答
+     * </pre>
+     *
+     * <code>repeated .api.common.MessageAutoReplyQA qa = 4;</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.teneasyChat.api.common.CMessage.MessageAutoReplyQA> getQaList() {
+      return qa_;
+    }
+    /**
+     * <pre>
+     * 问答
+     * </pre>
+     *
+     * <code>repeated .api.common.MessageAutoReplyQA qa = 4;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.teneasyChat.api.common.CMessage.MessageAutoReplyQAOrBuilder> 
+        getQaOrBuilderList() {
+      return qa_;
+    }
+    /**
+     * <pre>
+     * 问答
+     * </pre>
+     *
+     * <code>repeated .api.common.MessageAutoReplyQA qa = 4;</code>
+     */
+    @java.lang.Override
+    public int getQaCount() {
+      return qa_.size();
+    }
+    /**
+     * <pre>
+     * 问答
+     * </pre>
+     *
+     * <code>repeated .api.common.MessageAutoReplyQA qa = 4;</code>
+     */
+    @java.lang.Override
+    public com.teneasyChat.api.common.CMessage.MessageAutoReplyQA getQa(int index) {
+      return qa_.get(index);
+    }
+    /**
+     * <pre>
+     * 问答
+     * </pre>
+     *
+     * <code>repeated .api.common.MessageAutoReplyQA qa = 4;</code>
+     */
+    @java.lang.Override
+    public com.teneasyChat.api.common.CMessage.MessageAutoReplyQAOrBuilder getQaOrBuilder(
+        int index) {
+      return qa_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (id_ != 0L) {
+        output.writeInt64(1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, title_);
+      }
+      if (delaySec_ != 0) {
+        output.writeInt32(3, delaySec_);
+      }
+      for (int i = 0; i < qa_.size(); i++) {
+        output.writeMessage(4, qa_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (id_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, title_);
+      }
+      if (delaySec_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, delaySec_);
+      }
+      for (int i = 0; i < qa_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, qa_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.teneasyChat.api.common.CMessage.MessageAutoReply)) {
+        return super.equals(obj);
+      }
+      com.teneasyChat.api.common.CMessage.MessageAutoReply other = (com.teneasyChat.api.common.CMessage.MessageAutoReply) obj;
+
+      if (getId()
+          != other.getId()) return false;
+      if (!getTitle()
+          .equals(other.getTitle())) return false;
+      if (getDelaySec()
+          != other.getDelaySec()) return false;
+      if (!getQaList()
+          .equals(other.getQaList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getId());
+      hash = (37 * hash) + TITLE_FIELD_NUMBER;
+      hash = (53 * hash) + getTitle().hashCode();
+      hash = (37 * hash) + DELAY_SEC_FIELD_NUMBER;
+      hash = (53 * hash) + getDelaySec();
+      if (getQaCount() > 0) {
+        hash = (37 * hash) + QA_FIELD_NUMBER;
+        hash = (53 * hash) + getQaList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.teneasyChat.api.common.CMessage.MessageAutoReply parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teneasyChat.api.common.CMessage.MessageAutoReply parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teneasyChat.api.common.CMessage.MessageAutoReply parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teneasyChat.api.common.CMessage.MessageAutoReply parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teneasyChat.api.common.CMessage.MessageAutoReply parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teneasyChat.api.common.CMessage.MessageAutoReply parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teneasyChat.api.common.CMessage.MessageAutoReply parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.teneasyChat.api.common.CMessage.MessageAutoReply parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.teneasyChat.api.common.CMessage.MessageAutoReply parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.teneasyChat.api.common.CMessage.MessageAutoReply parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.teneasyChat.api.common.CMessage.MessageAutoReply parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.teneasyChat.api.common.CMessage.MessageAutoReply parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.teneasyChat.api.common.CMessage.MessageAutoReply prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * 自动回复消息
+     * </pre>
+     *
+     * Protobuf type {@code api.common.MessageAutoReply}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:api.common.MessageAutoReply)
+        com.teneasyChat.api.common.CMessage.MessageAutoReplyOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.teneasyChat.api.common.CMessage.internal_static_api_common_MessageAutoReply_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.teneasyChat.api.common.CMessage.internal_static_api_common_MessageAutoReply_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.teneasyChat.api.common.CMessage.MessageAutoReply.class, com.teneasyChat.api.common.CMessage.MessageAutoReply.Builder.class);
+      }
+
+      // Construct using com.teneasyChat.api.common.CMessage.MessageAutoReply.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        id_ = 0L;
+        title_ = "";
+        delaySec_ = 0;
+        if (qaBuilder_ == null) {
+          qa_ = java.util.Collections.emptyList();
+        } else {
+          qa_ = null;
+          qaBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.teneasyChat.api.common.CMessage.internal_static_api_common_MessageAutoReply_descriptor;
+      }
+
+      @java.lang.Override
+      public com.teneasyChat.api.common.CMessage.MessageAutoReply getDefaultInstanceForType() {
+        return com.teneasyChat.api.common.CMessage.MessageAutoReply.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.teneasyChat.api.common.CMessage.MessageAutoReply build() {
+        com.teneasyChat.api.common.CMessage.MessageAutoReply result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.teneasyChat.api.common.CMessage.MessageAutoReply buildPartial() {
+        com.teneasyChat.api.common.CMessage.MessageAutoReply result = new com.teneasyChat.api.common.CMessage.MessageAutoReply(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.teneasyChat.api.common.CMessage.MessageAutoReply result) {
+        if (qaBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            qa_ = java.util.Collections.unmodifiableList(qa_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.qa_ = qa_;
+        } else {
+          result.qa_ = qaBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.teneasyChat.api.common.CMessage.MessageAutoReply result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.title_ = title_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.delaySec_ = delaySec_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.teneasyChat.api.common.CMessage.MessageAutoReply) {
+          return mergeFrom((com.teneasyChat.api.common.CMessage.MessageAutoReply)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.teneasyChat.api.common.CMessage.MessageAutoReply other) {
+        if (other == com.teneasyChat.api.common.CMessage.MessageAutoReply.getDefaultInstance()) return this;
+        if (other.getId() != 0L) {
+          setId(other.getId());
+        }
+        if (!other.getTitle().isEmpty()) {
+          title_ = other.title_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.getDelaySec() != 0) {
+          setDelaySec(other.getDelaySec());
+        }
+        if (qaBuilder_ == null) {
+          if (!other.qa_.isEmpty()) {
+            if (qa_.isEmpty()) {
+              qa_ = other.qa_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureQaIsMutable();
+              qa_.addAll(other.qa_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.qa_.isEmpty()) {
+            if (qaBuilder_.isEmpty()) {
+              qaBuilder_.dispose();
+              qaBuilder_ = null;
+              qa_ = other.qa_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              qaBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getQaFieldBuilder() : null;
+            } else {
+              qaBuilder_.addAllMessages(other.qa_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                id_ = input.readInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                title_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                delaySec_ = input.readInt32();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 34: {
+                com.teneasyChat.api.common.CMessage.MessageAutoReplyQA m =
+                    input.readMessage(
+                        com.teneasyChat.api.common.CMessage.MessageAutoReplyQA.parser(),
+                        extensionRegistry);
+                if (qaBuilder_ == null) {
+                  ensureQaIsMutable();
+                  qa_.add(m);
+                } else {
+                  qaBuilder_.addMessage(m);
+                }
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long id_ ;
+      /**
+       * <code>int64 id = 1;</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public long getId() {
+        return id_;
+      }
+      /**
+       * <code>int64 id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(long value) {
+
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        id_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object title_ = "";
+      /**
+       * <pre>
+       * 引导文案
+       * </pre>
+       *
+       * <code>string title = 2;</code>
+       * @return The title.
+       */
+      public java.lang.String getTitle() {
+        java.lang.Object ref = title_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          title_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * 引导文案
+       * </pre>
+       *
+       * <code>string title = 2;</code>
+       * @return The bytes for title.
+       */
+      public com.google.protobuf.ByteString
+          getTitleBytes() {
+        java.lang.Object ref = title_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          title_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * 引导文案
+       * </pre>
+       *
+       * <code>string title = 2;</code>
+       * @param value The title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitle(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        title_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 引导文案
+       * </pre>
+       *
+       * <code>string title = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTitle() {
+        title_ = getDefaultInstance().getTitle();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 引导文案
+       * </pre>
+       *
+       * <code>string title = 2;</code>
+       * @param value The bytes for title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        title_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private int delaySec_ ;
+      /**
+       * <pre>
+       * 延迟回复时间
+       * </pre>
+       *
+       * <code>int32 delay_sec = 3;</code>
+       * @return The delaySec.
+       */
+      @java.lang.Override
+      public int getDelaySec() {
+        return delaySec_;
+      }
+      /**
+       * <pre>
+       * 延迟回复时间
+       * </pre>
+       *
+       * <code>int32 delay_sec = 3;</code>
+       * @param value The delaySec to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDelaySec(int value) {
+
+        delaySec_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 延迟回复时间
+       * </pre>
+       *
+       * <code>int32 delay_sec = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDelaySec() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        delaySec_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.teneasyChat.api.common.CMessage.MessageAutoReplyQA> qa_ =
+        java.util.Collections.emptyList();
+      private void ensureQaIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          qa_ = new java.util.ArrayList<com.teneasyChat.api.common.CMessage.MessageAutoReplyQA>(qa_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.teneasyChat.api.common.CMessage.MessageAutoReplyQA, com.teneasyChat.api.common.CMessage.MessageAutoReplyQA.Builder, com.teneasyChat.api.common.CMessage.MessageAutoReplyQAOrBuilder> qaBuilder_;
+
+      /**
+       * <pre>
+       * 问答
+       * </pre>
+       *
+       * <code>repeated .api.common.MessageAutoReplyQA qa = 4;</code>
+       */
+      public java.util.List<com.teneasyChat.api.common.CMessage.MessageAutoReplyQA> getQaList() {
+        if (qaBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(qa_);
+        } else {
+          return qaBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * 问答
+       * </pre>
+       *
+       * <code>repeated .api.common.MessageAutoReplyQA qa = 4;</code>
+       */
+      public int getQaCount() {
+        if (qaBuilder_ == null) {
+          return qa_.size();
+        } else {
+          return qaBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * 问答
+       * </pre>
+       *
+       * <code>repeated .api.common.MessageAutoReplyQA qa = 4;</code>
+       */
+      public com.teneasyChat.api.common.CMessage.MessageAutoReplyQA getQa(int index) {
+        if (qaBuilder_ == null) {
+          return qa_.get(index);
+        } else {
+          return qaBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * 问答
+       * </pre>
+       *
+       * <code>repeated .api.common.MessageAutoReplyQA qa = 4;</code>
+       */
+      public Builder setQa(
+          int index, com.teneasyChat.api.common.CMessage.MessageAutoReplyQA value) {
+        if (qaBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureQaIsMutable();
+          qa_.set(index, value);
+          onChanged();
+        } else {
+          qaBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * 问答
+       * </pre>
+       *
+       * <code>repeated .api.common.MessageAutoReplyQA qa = 4;</code>
+       */
+      public Builder setQa(
+          int index, com.teneasyChat.api.common.CMessage.MessageAutoReplyQA.Builder builderForValue) {
+        if (qaBuilder_ == null) {
+          ensureQaIsMutable();
+          qa_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          qaBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * 问答
+       * </pre>
+       *
+       * <code>repeated .api.common.MessageAutoReplyQA qa = 4;</code>
+       */
+      public Builder addQa(com.teneasyChat.api.common.CMessage.MessageAutoReplyQA value) {
+        if (qaBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureQaIsMutable();
+          qa_.add(value);
+          onChanged();
+        } else {
+          qaBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * 问答
+       * </pre>
+       *
+       * <code>repeated .api.common.MessageAutoReplyQA qa = 4;</code>
+       */
+      public Builder addQa(
+          int index, com.teneasyChat.api.common.CMessage.MessageAutoReplyQA value) {
+        if (qaBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureQaIsMutable();
+          qa_.add(index, value);
+          onChanged();
+        } else {
+          qaBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * 问答
+       * </pre>
+       *
+       * <code>repeated .api.common.MessageAutoReplyQA qa = 4;</code>
+       */
+      public Builder addQa(
+          com.teneasyChat.api.common.CMessage.MessageAutoReplyQA.Builder builderForValue) {
+        if (qaBuilder_ == null) {
+          ensureQaIsMutable();
+          qa_.add(builderForValue.build());
+          onChanged();
+        } else {
+          qaBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * 问答
+       * </pre>
+       *
+       * <code>repeated .api.common.MessageAutoReplyQA qa = 4;</code>
+       */
+      public Builder addQa(
+          int index, com.teneasyChat.api.common.CMessage.MessageAutoReplyQA.Builder builderForValue) {
+        if (qaBuilder_ == null) {
+          ensureQaIsMutable();
+          qa_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          qaBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * 问答
+       * </pre>
+       *
+       * <code>repeated .api.common.MessageAutoReplyQA qa = 4;</code>
+       */
+      public Builder addAllQa(
+          java.lang.Iterable<? extends com.teneasyChat.api.common.CMessage.MessageAutoReplyQA> values) {
+        if (qaBuilder_ == null) {
+          ensureQaIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, qa_);
+          onChanged();
+        } else {
+          qaBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * 问答
+       * </pre>
+       *
+       * <code>repeated .api.common.MessageAutoReplyQA qa = 4;</code>
+       */
+      public Builder clearQa() {
+        if (qaBuilder_ == null) {
+          qa_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          qaBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * 问答
+       * </pre>
+       *
+       * <code>repeated .api.common.MessageAutoReplyQA qa = 4;</code>
+       */
+      public Builder removeQa(int index) {
+        if (qaBuilder_ == null) {
+          ensureQaIsMutable();
+          qa_.remove(index);
+          onChanged();
+        } else {
+          qaBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * 问答
+       * </pre>
+       *
+       * <code>repeated .api.common.MessageAutoReplyQA qa = 4;</code>
+       */
+      public com.teneasyChat.api.common.CMessage.MessageAutoReplyQA.Builder getQaBuilder(
+          int index) {
+        return getQaFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * 问答
+       * </pre>
+       *
+       * <code>repeated .api.common.MessageAutoReplyQA qa = 4;</code>
+       */
+      public com.teneasyChat.api.common.CMessage.MessageAutoReplyQAOrBuilder getQaOrBuilder(
+          int index) {
+        if (qaBuilder_ == null) {
+          return qa_.get(index);  } else {
+          return qaBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * 问答
+       * </pre>
+       *
+       * <code>repeated .api.common.MessageAutoReplyQA qa = 4;</code>
+       */
+      public java.util.List<? extends com.teneasyChat.api.common.CMessage.MessageAutoReplyQAOrBuilder> 
+           getQaOrBuilderList() {
+        if (qaBuilder_ != null) {
+          return qaBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(qa_);
+        }
+      }
+      /**
+       * <pre>
+       * 问答
+       * </pre>
+       *
+       * <code>repeated .api.common.MessageAutoReplyQA qa = 4;</code>
+       */
+      public com.teneasyChat.api.common.CMessage.MessageAutoReplyQA.Builder addQaBuilder() {
+        return getQaFieldBuilder().addBuilder(
+            com.teneasyChat.api.common.CMessage.MessageAutoReplyQA.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * 问答
+       * </pre>
+       *
+       * <code>repeated .api.common.MessageAutoReplyQA qa = 4;</code>
+       */
+      public com.teneasyChat.api.common.CMessage.MessageAutoReplyQA.Builder addQaBuilder(
+          int index) {
+        return getQaFieldBuilder().addBuilder(
+            index, com.teneasyChat.api.common.CMessage.MessageAutoReplyQA.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * 问答
+       * </pre>
+       *
+       * <code>repeated .api.common.MessageAutoReplyQA qa = 4;</code>
+       */
+      public java.util.List<com.teneasyChat.api.common.CMessage.MessageAutoReplyQA.Builder> 
+           getQaBuilderList() {
+        return getQaFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.teneasyChat.api.common.CMessage.MessageAutoReplyQA, com.teneasyChat.api.common.CMessage.MessageAutoReplyQA.Builder, com.teneasyChat.api.common.CMessage.MessageAutoReplyQAOrBuilder> 
+          getQaFieldBuilder() {
+        if (qaBuilder_ == null) {
+          qaBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.teneasyChat.api.common.CMessage.MessageAutoReplyQA, com.teneasyChat.api.common.CMessage.MessageAutoReplyQA.Builder, com.teneasyChat.api.common.CMessage.MessageAutoReplyQAOrBuilder>(
+                  qa_,
+                  ((bitField0_ & 0x00000008) != 0),
+                  getParentForChildren(),
+                  isClean());
+          qa_ = null;
+        }
+        return qaBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:api.common.MessageAutoReply)
+    }
+
+    // @@protoc_insertion_point(class_scope:api.common.MessageAutoReply)
+    private static final com.teneasyChat.api.common.CMessage.MessageAutoReply DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.teneasyChat.api.common.CMessage.MessageAutoReply();
+    }
+
+    public static com.teneasyChat.api.common.CMessage.MessageAutoReply getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MessageAutoReply>
+        PARSER = new com.google.protobuf.AbstractParser<MessageAutoReply>() {
+      @java.lang.Override
+      public MessageAutoReply parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MessageAutoReply> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MessageAutoReply> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.teneasyChat.api.common.CMessage.MessageAutoReply getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface MessageKeyOrBuilder extends
       // @@protoc_insertion_point(interface_extends:api.common.MessageKey)
       com.google.protobuf.MessageOrBuilder {
@@ -5827,6 +10139,1140 @@ public final class CMessage {
 
   }
 
+  public interface MessageWorkerChangedOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:api.common.MessageWorkerChanged)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int64 worker_client_id = 1;</code>
+     * @return The workerClientId.
+     */
+    long getWorkerClientId();
+
+    /**
+     * <code>int32 worker_id = 2;</code>
+     * @return The workerId.
+     */
+    int getWorkerId();
+
+    /**
+     * <code>string name = 3;</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <code>string name = 3;</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>string avatar = 4;</code>
+     * @return The avatar.
+     */
+    java.lang.String getAvatar();
+    /**
+     * <code>string avatar = 4;</code>
+     * @return The bytes for avatar.
+     */
+    com.google.protobuf.ByteString
+        getAvatarBytes();
+
+    /**
+     * <code>string greeting = 5;</code>
+     * @return The greeting.
+     */
+    java.lang.String getGreeting();
+    /**
+     * <code>string greeting = 5;</code>
+     * @return The bytes for greeting.
+     */
+    com.google.protobuf.ByteString
+        getGreetingBytes();
+
+    /**
+     * <pre>
+     *转接任务
+     * </pre>
+     *
+     * <code>.api.common.ChatState State = 6;</code>
+     * @return The enum numeric value on the wire for state.
+     */
+    int getStateValue();
+    /**
+     * <pre>
+     *转接任务
+     * </pre>
+     *
+     * <code>.api.common.ChatState State = 6;</code>
+     * @return The state.
+     */
+    com.teneasyChat.api.common.CMessage.ChatState getState();
+  }
+  /**
+   * Protobuf type {@code api.common.MessageWorkerChanged}
+   */
+  public static final class MessageWorkerChanged extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:api.common.MessageWorkerChanged)
+      MessageWorkerChangedOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MessageWorkerChanged.newBuilder() to construct.
+    private MessageWorkerChanged(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MessageWorkerChanged() {
+      name_ = "";
+      avatar_ = "";
+      greeting_ = "";
+      state_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MessageWorkerChanged();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.teneasyChat.api.common.CMessage.internal_static_api_common_MessageWorkerChanged_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.teneasyChat.api.common.CMessage.internal_static_api_common_MessageWorkerChanged_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.teneasyChat.api.common.CMessage.MessageWorkerChanged.class, com.teneasyChat.api.common.CMessage.MessageWorkerChanged.Builder.class);
+    }
+
+    public static final int WORKER_CLIENT_ID_FIELD_NUMBER = 1;
+    private long workerClientId_ = 0L;
+    /**
+     * <code>int64 worker_client_id = 1;</code>
+     * @return The workerClientId.
+     */
+    @java.lang.Override
+    public long getWorkerClientId() {
+      return workerClientId_;
+    }
+
+    public static final int WORKER_ID_FIELD_NUMBER = 2;
+    private int workerId_ = 0;
+    /**
+     * <code>int32 worker_id = 2;</code>
+     * @return The workerId.
+     */
+    @java.lang.Override
+    public int getWorkerId() {
+      return workerId_;
+    }
+
+    public static final int NAME_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
+    /**
+     * <code>string name = 3;</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string name = 3;</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int AVATAR_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object avatar_ = "";
+    /**
+     * <code>string avatar = 4;</code>
+     * @return The avatar.
+     */
+    @java.lang.Override
+    public java.lang.String getAvatar() {
+      java.lang.Object ref = avatar_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        avatar_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string avatar = 4;</code>
+     * @return The bytes for avatar.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAvatarBytes() {
+      java.lang.Object ref = avatar_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        avatar_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int GREETING_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object greeting_ = "";
+    /**
+     * <code>string greeting = 5;</code>
+     * @return The greeting.
+     */
+    @java.lang.Override
+    public java.lang.String getGreeting() {
+      java.lang.Object ref = greeting_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        greeting_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string greeting = 5;</code>
+     * @return The bytes for greeting.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getGreetingBytes() {
+      java.lang.Object ref = greeting_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        greeting_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STATE_FIELD_NUMBER = 6;
+    private int state_ = 0;
+    /**
+     * <pre>
+     *转接任务
+     * </pre>
+     *
+     * <code>.api.common.ChatState State = 6;</code>
+     * @return The enum numeric value on the wire for state.
+     */
+    @java.lang.Override public int getStateValue() {
+      return state_;
+    }
+    /**
+     * <pre>
+     *转接任务
+     * </pre>
+     *
+     * <code>.api.common.ChatState State = 6;</code>
+     * @return The state.
+     */
+    @java.lang.Override public com.teneasyChat.api.common.CMessage.ChatState getState() {
+      com.teneasyChat.api.common.CMessage.ChatState result = com.teneasyChat.api.common.CMessage.ChatState.forNumber(state_);
+      return result == null ? com.teneasyChat.api.common.CMessage.ChatState.UNRECOGNIZED : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (workerClientId_ != 0L) {
+        output.writeInt64(1, workerClientId_);
+      }
+      if (workerId_ != 0) {
+        output.writeInt32(2, workerId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(avatar_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, avatar_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(greeting_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, greeting_);
+      }
+      if (state_ != com.teneasyChat.api.common.CMessage.ChatState.CHAT_STATE_COMMON.getNumber()) {
+        output.writeEnum(6, state_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (workerClientId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, workerClientId_);
+      }
+      if (workerId_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, workerId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(avatar_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, avatar_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(greeting_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, greeting_);
+      }
+      if (state_ != com.teneasyChat.api.common.CMessage.ChatState.CHAT_STATE_COMMON.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(6, state_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.teneasyChat.api.common.CMessage.MessageWorkerChanged)) {
+        return super.equals(obj);
+      }
+      com.teneasyChat.api.common.CMessage.MessageWorkerChanged other = (com.teneasyChat.api.common.CMessage.MessageWorkerChanged) obj;
+
+      if (getWorkerClientId()
+          != other.getWorkerClientId()) return false;
+      if (getWorkerId()
+          != other.getWorkerId()) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getAvatar()
+          .equals(other.getAvatar())) return false;
+      if (!getGreeting()
+          .equals(other.getGreeting())) return false;
+      if (state_ != other.state_) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + WORKER_CLIENT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getWorkerClientId());
+      hash = (37 * hash) + WORKER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getWorkerId();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + AVATAR_FIELD_NUMBER;
+      hash = (53 * hash) + getAvatar().hashCode();
+      hash = (37 * hash) + GREETING_FIELD_NUMBER;
+      hash = (53 * hash) + getGreeting().hashCode();
+      hash = (37 * hash) + STATE_FIELD_NUMBER;
+      hash = (53 * hash) + state_;
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.teneasyChat.api.common.CMessage.MessageWorkerChanged parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teneasyChat.api.common.CMessage.MessageWorkerChanged parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teneasyChat.api.common.CMessage.MessageWorkerChanged parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teneasyChat.api.common.CMessage.MessageWorkerChanged parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teneasyChat.api.common.CMessage.MessageWorkerChanged parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teneasyChat.api.common.CMessage.MessageWorkerChanged parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teneasyChat.api.common.CMessage.MessageWorkerChanged parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.teneasyChat.api.common.CMessage.MessageWorkerChanged parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.teneasyChat.api.common.CMessage.MessageWorkerChanged parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.teneasyChat.api.common.CMessage.MessageWorkerChanged parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.teneasyChat.api.common.CMessage.MessageWorkerChanged parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.teneasyChat.api.common.CMessage.MessageWorkerChanged parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.teneasyChat.api.common.CMessage.MessageWorkerChanged prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code api.common.MessageWorkerChanged}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:api.common.MessageWorkerChanged)
+        com.teneasyChat.api.common.CMessage.MessageWorkerChangedOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.teneasyChat.api.common.CMessage.internal_static_api_common_MessageWorkerChanged_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.teneasyChat.api.common.CMessage.internal_static_api_common_MessageWorkerChanged_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.teneasyChat.api.common.CMessage.MessageWorkerChanged.class, com.teneasyChat.api.common.CMessage.MessageWorkerChanged.Builder.class);
+      }
+
+      // Construct using com.teneasyChat.api.common.CMessage.MessageWorkerChanged.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        workerClientId_ = 0L;
+        workerId_ = 0;
+        name_ = "";
+        avatar_ = "";
+        greeting_ = "";
+        state_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.teneasyChat.api.common.CMessage.internal_static_api_common_MessageWorkerChanged_descriptor;
+      }
+
+      @java.lang.Override
+      public com.teneasyChat.api.common.CMessage.MessageWorkerChanged getDefaultInstanceForType() {
+        return com.teneasyChat.api.common.CMessage.MessageWorkerChanged.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.teneasyChat.api.common.CMessage.MessageWorkerChanged build() {
+        com.teneasyChat.api.common.CMessage.MessageWorkerChanged result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.teneasyChat.api.common.CMessage.MessageWorkerChanged buildPartial() {
+        com.teneasyChat.api.common.CMessage.MessageWorkerChanged result = new com.teneasyChat.api.common.CMessage.MessageWorkerChanged(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.teneasyChat.api.common.CMessage.MessageWorkerChanged result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.workerClientId_ = workerClientId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.workerId_ = workerId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.avatar_ = avatar_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.greeting_ = greeting_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.state_ = state_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.teneasyChat.api.common.CMessage.MessageWorkerChanged) {
+          return mergeFrom((com.teneasyChat.api.common.CMessage.MessageWorkerChanged)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.teneasyChat.api.common.CMessage.MessageWorkerChanged other) {
+        if (other == com.teneasyChat.api.common.CMessage.MessageWorkerChanged.getDefaultInstance()) return this;
+        if (other.getWorkerClientId() != 0L) {
+          setWorkerClientId(other.getWorkerClientId());
+        }
+        if (other.getWorkerId() != 0) {
+          setWorkerId(other.getWorkerId());
+        }
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getAvatar().isEmpty()) {
+          avatar_ = other.avatar_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getGreeting().isEmpty()) {
+          greeting_ = other.greeting_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (other.state_ != 0) {
+          setStateValue(other.getStateValue());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                workerClientId_ = input.readInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                workerId_ = input.readInt32();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                name_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                avatar_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                greeting_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 48: {
+                state_ = input.readEnum();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 48
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long workerClientId_ ;
+      /**
+       * <code>int64 worker_client_id = 1;</code>
+       * @return The workerClientId.
+       */
+      @java.lang.Override
+      public long getWorkerClientId() {
+        return workerClientId_;
+      }
+      /**
+       * <code>int64 worker_client_id = 1;</code>
+       * @param value The workerClientId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWorkerClientId(long value) {
+
+        workerClientId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 worker_client_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWorkerClientId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        workerClientId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int workerId_ ;
+      /**
+       * <code>int32 worker_id = 2;</code>
+       * @return The workerId.
+       */
+      @java.lang.Override
+      public int getWorkerId() {
+        return workerId_;
+      }
+      /**
+       * <code>int32 worker_id = 2;</code>
+       * @param value The workerId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWorkerId(int value) {
+
+        workerId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 worker_id = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWorkerId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        workerId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <code>string name = 3;</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string name = 3;</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string name = 3;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        name_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 3;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        name_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object avatar_ = "";
+      /**
+       * <code>string avatar = 4;</code>
+       * @return The avatar.
+       */
+      public java.lang.String getAvatar() {
+        java.lang.Object ref = avatar_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          avatar_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string avatar = 4;</code>
+       * @return The bytes for avatar.
+       */
+      public com.google.protobuf.ByteString
+          getAvatarBytes() {
+        java.lang.Object ref = avatar_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          avatar_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string avatar = 4;</code>
+       * @param value The avatar to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAvatar(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        avatar_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string avatar = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAvatar() {
+        avatar_ = getDefaultInstance().getAvatar();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string avatar = 4;</code>
+       * @param value The bytes for avatar to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAvatarBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        avatar_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object greeting_ = "";
+      /**
+       * <code>string greeting = 5;</code>
+       * @return The greeting.
+       */
+      public java.lang.String getGreeting() {
+        java.lang.Object ref = greeting_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          greeting_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string greeting = 5;</code>
+       * @return The bytes for greeting.
+       */
+      public com.google.protobuf.ByteString
+          getGreetingBytes() {
+        java.lang.Object ref = greeting_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          greeting_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string greeting = 5;</code>
+       * @param value The greeting to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGreeting(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        greeting_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string greeting = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGreeting() {
+        greeting_ = getDefaultInstance().getGreeting();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string greeting = 5;</code>
+       * @param value The bytes for greeting to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGreetingBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        greeting_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private int state_ = 0;
+      /**
+       * <pre>
+       *转接任务
+       * </pre>
+       *
+       * <code>.api.common.ChatState State = 6;</code>
+       * @return The enum numeric value on the wire for state.
+       */
+      @java.lang.Override public int getStateValue() {
+        return state_;
+      }
+      /**
+       * <pre>
+       *转接任务
+       * </pre>
+       *
+       * <code>.api.common.ChatState State = 6;</code>
+       * @param value The enum numeric value on the wire for state to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStateValue(int value) {
+        state_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *转接任务
+       * </pre>
+       *
+       * <code>.api.common.ChatState State = 6;</code>
+       * @return The state.
+       */
+      @java.lang.Override
+      public com.teneasyChat.api.common.CMessage.ChatState getState() {
+        com.teneasyChat.api.common.CMessage.ChatState result = com.teneasyChat.api.common.CMessage.ChatState.forNumber(state_);
+        return result == null ? com.teneasyChat.api.common.CMessage.ChatState.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       *转接任务
+       * </pre>
+       *
+       * <code>.api.common.ChatState State = 6;</code>
+       * @param value The state to set.
+       * @return This builder for chaining.
+       */
+      public Builder setState(com.teneasyChat.api.common.CMessage.ChatState value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000020;
+        state_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *转接任务
+       * </pre>
+       *
+       * <code>.api.common.ChatState State = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearState() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        state_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:api.common.MessageWorkerChanged)
+    }
+
+    // @@protoc_insertion_point(class_scope:api.common.MessageWorkerChanged)
+    private static final com.teneasyChat.api.common.CMessage.MessageWorkerChanged DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.teneasyChat.api.common.CMessage.MessageWorkerChanged();
+    }
+
+    public static com.teneasyChat.api.common.CMessage.MessageWorkerChanged getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MessageWorkerChanged>
+        PARSER = new com.google.protobuf.AbstractParser<MessageWorkerChanged>() {
+      @java.lang.Override
+      public MessageWorkerChanged parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MessageWorkerChanged> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MessageWorkerChanged> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.teneasyChat.api.common.CMessage.MessageWorkerChanged getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface MessageOrBuilder extends
       // @@protoc_insertion_point(interface_extends:api.common.Message)
       com.google.protobuf.MessageOrBuilder {
@@ -5934,30 +11380,30 @@ public final class CMessage {
 
     /**
      * <pre>
-     * 自动回复相关
+     * 自动回复选项, 历史原因保留(没规划好, 应该放到payload中)
      * </pre>
      *
-     * <code>.api.common.MessageAutoReplyFlag auto_reply = 8;</code>
-     * @return Whether the autoReply field is set.
+     * <code>.api.common.MessageAutoReplyFlag auto_reply_flag = 8;</code>
+     * @return Whether the autoReplyFlag field is set.
      */
-    boolean hasAutoReply();
+    boolean hasAutoReplyFlag();
     /**
      * <pre>
-     * 自动回复相关
+     * 自动回复选项, 历史原因保留(没规划好, 应该放到payload中)
      * </pre>
      *
-     * <code>.api.common.MessageAutoReplyFlag auto_reply = 8;</code>
-     * @return The autoReply.
+     * <code>.api.common.MessageAutoReplyFlag auto_reply_flag = 8;</code>
+     * @return The autoReplyFlag.
      */
-    com.teneasyChat.api.common.CMessage.MessageAutoReplyFlag getAutoReply();
+    com.teneasyChat.api.common.CMessage.MessageAutoReplyFlag getAutoReplyFlag();
     /**
      * <pre>
-     * 自动回复相关
+     * 自动回复选项, 历史原因保留(没规划好, 应该放到payload中)
      * </pre>
      *
-     * <code>.api.common.MessageAutoReplyFlag auto_reply = 8;</code>
+     * <code>.api.common.MessageAutoReplyFlag auto_reply_flag = 8;</code>
      */
-    com.teneasyChat.api.common.CMessage.MessageAutoReplyFlagOrBuilder getAutoReplyOrBuilder();
+    com.teneasyChat.api.common.CMessage.MessageAutoReplyFlagOrBuilder getAutoReplyFlagOrBuilder();
 
     /**
      * <code>.api.common.MessageContent content = 100;</code>
@@ -6130,6 +11576,60 @@ public final class CMessage {
      */
     com.teneasyChat.api.common.CMessage.BlackListConfirmOrBuilder getBlacklistConfirmOrBuilder();
 
+    /**
+     * <pre>
+     * 自动回复问题
+     * </pre>
+     *
+     * <code>.api.common.MessageAutoReply auto_reply = 109;</code>
+     * @return Whether the autoReply field is set.
+     */
+    boolean hasAutoReply();
+    /**
+     * <pre>
+     * 自动回复问题
+     * </pre>
+     *
+     * <code>.api.common.MessageAutoReply auto_reply = 109;</code>
+     * @return The autoReply.
+     */
+    com.teneasyChat.api.common.CMessage.MessageAutoReply getAutoReply();
+    /**
+     * <pre>
+     * 自动回复问题
+     * </pre>
+     *
+     * <code>.api.common.MessageAutoReply auto_reply = 109;</code>
+     */
+    com.teneasyChat.api.common.CMessage.MessageAutoReplyOrBuilder getAutoReplyOrBuilder();
+
+    /**
+     * <pre>
+     * 客服改变
+     * </pre>
+     *
+     * <code>.api.common.MessageWorkerChanged worker_changed = 110;</code>
+     * @return Whether the workerChanged field is set.
+     */
+    boolean hasWorkerChanged();
+    /**
+     * <pre>
+     * 客服改变
+     * </pre>
+     *
+     * <code>.api.common.MessageWorkerChanged worker_changed = 110;</code>
+     * @return The workerChanged.
+     */
+    com.teneasyChat.api.common.CMessage.MessageWorkerChanged getWorkerChanged();
+    /**
+     * <pre>
+     * 客服改变
+     * </pre>
+     *
+     * <code>.api.common.MessageWorkerChanged worker_changed = 110;</code>
+     */
+    com.teneasyChat.api.common.CMessage.MessageWorkerChangedOrBuilder getWorkerChangedOrBuilder();
+
     com.teneasyChat.api.common.CMessage.Message.PayloadCase getPayloadCase();
   }
   /**
@@ -6183,6 +11683,8 @@ public final class CMessage {
       WORKER_TRANS(106),
       BLACKLIST_APPLY(107),
       BLACKLIST_CONFIRM(108),
+      AUTO_REPLY(109),
+      WORKER_CHANGED(110),
       PAYLOAD_NOT_SET(0);
       private final int value;
       private PayloadCase(int value) {
@@ -6209,6 +11711,8 @@ public final class CMessage {
           case 106: return WORKER_TRANS;
           case 107: return BLACKLIST_APPLY;
           case 108: return BLACKLIST_CONFIRM;
+          case 109: return AUTO_REPLY;
+          case 110: return WORKER_CHANGED;
           case 0: return PAYLOAD_NOT_SET;
           default: return null;
         }
@@ -6368,42 +11872,42 @@ public final class CMessage {
       return worker_;
     }
 
-    public static final int AUTO_REPLY_FIELD_NUMBER = 8;
-    private com.teneasyChat.api.common.CMessage.MessageAutoReplyFlag autoReply_;
+    public static final int AUTO_REPLY_FLAG_FIELD_NUMBER = 8;
+    private com.teneasyChat.api.common.CMessage.MessageAutoReplyFlag autoReplyFlag_;
     /**
      * <pre>
-     * 自动回复相关
+     * 自动回复选项, 历史原因保留(没规划好, 应该放到payload中)
      * </pre>
      *
-     * <code>.api.common.MessageAutoReplyFlag auto_reply = 8;</code>
-     * @return Whether the autoReply field is set.
+     * <code>.api.common.MessageAutoReplyFlag auto_reply_flag = 8;</code>
+     * @return Whether the autoReplyFlag field is set.
      */
     @java.lang.Override
-    public boolean hasAutoReply() {
-      return autoReply_ != null;
+    public boolean hasAutoReplyFlag() {
+      return autoReplyFlag_ != null;
     }
     /**
      * <pre>
-     * 自动回复相关
+     * 自动回复选项, 历史原因保留(没规划好, 应该放到payload中)
      * </pre>
      *
-     * <code>.api.common.MessageAutoReplyFlag auto_reply = 8;</code>
-     * @return The autoReply.
+     * <code>.api.common.MessageAutoReplyFlag auto_reply_flag = 8;</code>
+     * @return The autoReplyFlag.
      */
     @java.lang.Override
-    public com.teneasyChat.api.common.CMessage.MessageAutoReplyFlag getAutoReply() {
-      return autoReply_ == null ? com.teneasyChat.api.common.CMessage.MessageAutoReplyFlag.getDefaultInstance() : autoReply_;
+    public com.teneasyChat.api.common.CMessage.MessageAutoReplyFlag getAutoReplyFlag() {
+      return autoReplyFlag_ == null ? com.teneasyChat.api.common.CMessage.MessageAutoReplyFlag.getDefaultInstance() : autoReplyFlag_;
     }
     /**
      * <pre>
-     * 自动回复相关
+     * 自动回复选项, 历史原因保留(没规划好, 应该放到payload中)
      * </pre>
      *
-     * <code>.api.common.MessageAutoReplyFlag auto_reply = 8;</code>
+     * <code>.api.common.MessageAutoReplyFlag auto_reply_flag = 8;</code>
      */
     @java.lang.Override
-    public com.teneasyChat.api.common.CMessage.MessageAutoReplyFlagOrBuilder getAutoReplyOrBuilder() {
-      return autoReply_ == null ? com.teneasyChat.api.common.CMessage.MessageAutoReplyFlag.getDefaultInstance() : autoReply_;
+    public com.teneasyChat.api.common.CMessage.MessageAutoReplyFlagOrBuilder getAutoReplyFlagOrBuilder() {
+      return autoReplyFlag_ == null ? com.teneasyChat.api.common.CMessage.MessageAutoReplyFlag.getDefaultInstance() : autoReplyFlag_;
     }
 
     public static final int CONTENT_FIELD_NUMBER = 100;
@@ -6721,6 +12225,92 @@ public final class CMessage {
       return com.teneasyChat.api.common.CMessage.BlackListConfirm.getDefaultInstance();
     }
 
+    public static final int AUTO_REPLY_FIELD_NUMBER = 109;
+    /**
+     * <pre>
+     * 自动回复问题
+     * </pre>
+     *
+     * <code>.api.common.MessageAutoReply auto_reply = 109;</code>
+     * @return Whether the autoReply field is set.
+     */
+    @java.lang.Override
+    public boolean hasAutoReply() {
+      return payloadCase_ == 109;
+    }
+    /**
+     * <pre>
+     * 自动回复问题
+     * </pre>
+     *
+     * <code>.api.common.MessageAutoReply auto_reply = 109;</code>
+     * @return The autoReply.
+     */
+    @java.lang.Override
+    public com.teneasyChat.api.common.CMessage.MessageAutoReply getAutoReply() {
+      if (payloadCase_ == 109) {
+         return (com.teneasyChat.api.common.CMessage.MessageAutoReply) payload_;
+      }
+      return com.teneasyChat.api.common.CMessage.MessageAutoReply.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * 自动回复问题
+     * </pre>
+     *
+     * <code>.api.common.MessageAutoReply auto_reply = 109;</code>
+     */
+    @java.lang.Override
+    public com.teneasyChat.api.common.CMessage.MessageAutoReplyOrBuilder getAutoReplyOrBuilder() {
+      if (payloadCase_ == 109) {
+         return (com.teneasyChat.api.common.CMessage.MessageAutoReply) payload_;
+      }
+      return com.teneasyChat.api.common.CMessage.MessageAutoReply.getDefaultInstance();
+    }
+
+    public static final int WORKER_CHANGED_FIELD_NUMBER = 110;
+    /**
+     * <pre>
+     * 客服改变
+     * </pre>
+     *
+     * <code>.api.common.MessageWorkerChanged worker_changed = 110;</code>
+     * @return Whether the workerChanged field is set.
+     */
+    @java.lang.Override
+    public boolean hasWorkerChanged() {
+      return payloadCase_ == 110;
+    }
+    /**
+     * <pre>
+     * 客服改变
+     * </pre>
+     *
+     * <code>.api.common.MessageWorkerChanged worker_changed = 110;</code>
+     * @return The workerChanged.
+     */
+    @java.lang.Override
+    public com.teneasyChat.api.common.CMessage.MessageWorkerChanged getWorkerChanged() {
+      if (payloadCase_ == 110) {
+         return (com.teneasyChat.api.common.CMessage.MessageWorkerChanged) payload_;
+      }
+      return com.teneasyChat.api.common.CMessage.MessageWorkerChanged.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * 客服改变
+     * </pre>
+     *
+     * <code>.api.common.MessageWorkerChanged worker_changed = 110;</code>
+     */
+    @java.lang.Override
+    public com.teneasyChat.api.common.CMessage.MessageWorkerChangedOrBuilder getWorkerChangedOrBuilder() {
+      if (payloadCase_ == 110) {
+         return (com.teneasyChat.api.common.CMessage.MessageWorkerChanged) payload_;
+      }
+      return com.teneasyChat.api.common.CMessage.MessageWorkerChanged.getDefaultInstance();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -6756,8 +12346,8 @@ public final class CMessage {
       if (worker_ != 0) {
         output.writeInt32(7, worker_);
       }
-      if (autoReply_ != null) {
-        output.writeMessage(8, getAutoReply());
+      if (autoReplyFlag_ != null) {
+        output.writeMessage(8, getAutoReplyFlag());
       }
       if (payloadCase_ == 100) {
         output.writeMessage(100, (com.teneasyChat.api.common.CMessage.MessageContent) payload_);
@@ -6785,6 +12375,12 @@ public final class CMessage {
       }
       if (payloadCase_ == 108) {
         output.writeMessage(108, (com.teneasyChat.api.common.CMessage.BlackListConfirm) payload_);
+      }
+      if (payloadCase_ == 109) {
+        output.writeMessage(109, (com.teneasyChat.api.common.CMessage.MessageAutoReply) payload_);
+      }
+      if (payloadCase_ == 110) {
+        output.writeMessage(110, (com.teneasyChat.api.common.CMessage.MessageWorkerChanged) payload_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -6823,9 +12419,9 @@ public final class CMessage {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(7, worker_);
       }
-      if (autoReply_ != null) {
+      if (autoReplyFlag_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(8, getAutoReply());
+          .computeMessageSize(8, getAutoReplyFlag());
       }
       if (payloadCase_ == 100) {
         size += com.google.protobuf.CodedOutputStream
@@ -6863,6 +12459,14 @@ public final class CMessage {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(108, (com.teneasyChat.api.common.CMessage.BlackListConfirm) payload_);
       }
+      if (payloadCase_ == 109) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(109, (com.teneasyChat.api.common.CMessage.MessageAutoReply) payload_);
+      }
+      if (payloadCase_ == 110) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(110, (com.teneasyChat.api.common.CMessage.MessageWorkerChanged) payload_);
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -6894,10 +12498,10 @@ public final class CMessage {
       if (msgOp_ != other.msgOp_) return false;
       if (getWorker()
           != other.getWorker()) return false;
-      if (hasAutoReply() != other.hasAutoReply()) return false;
-      if (hasAutoReply()) {
-        if (!getAutoReply()
-            .equals(other.getAutoReply())) return false;
+      if (hasAutoReplyFlag() != other.hasAutoReplyFlag()) return false;
+      if (hasAutoReplyFlag()) {
+        if (!getAutoReplyFlag()
+            .equals(other.getAutoReplyFlag())) return false;
       }
       if (!getPayloadCase().equals(other.getPayloadCase())) return false;
       switch (payloadCase_) {
@@ -6937,6 +12541,14 @@ public final class CMessage {
           if (!getBlacklistConfirm()
               .equals(other.getBlacklistConfirm())) return false;
           break;
+        case 109:
+          if (!getAutoReply()
+              .equals(other.getAutoReply())) return false;
+          break;
+        case 110:
+          if (!getWorkerChanged()
+              .equals(other.getWorkerChanged())) return false;
+          break;
         case 0:
         default:
       }
@@ -6971,9 +12583,9 @@ public final class CMessage {
       hash = (53 * hash) + msgOp_;
       hash = (37 * hash) + WORKER_FIELD_NUMBER;
       hash = (53 * hash) + getWorker();
-      if (hasAutoReply()) {
-        hash = (37 * hash) + AUTO_REPLY_FIELD_NUMBER;
-        hash = (53 * hash) + getAutoReply().hashCode();
+      if (hasAutoReplyFlag()) {
+        hash = (37 * hash) + AUTO_REPLY_FLAG_FIELD_NUMBER;
+        hash = (53 * hash) + getAutoReplyFlag().hashCode();
       }
       switch (payloadCase_) {
         case 100:
@@ -7011,6 +12623,14 @@ public final class CMessage {
         case 108:
           hash = (37 * hash) + BLACKLIST_CONFIRM_FIELD_NUMBER;
           hash = (53 * hash) + getBlacklistConfirm().hashCode();
+          break;
+        case 109:
+          hash = (37 * hash) + AUTO_REPLY_FIELD_NUMBER;
+          hash = (53 * hash) + getAutoReply().hashCode();
+          break;
+        case 110:
+          hash = (37 * hash) + WORKER_CHANGED_FIELD_NUMBER;
+          hash = (53 * hash) + getWorkerChanged().hashCode();
           break;
         case 0:
         default:
@@ -7157,10 +12777,10 @@ public final class CMessage {
         replyMsgId_ = 0L;
         msgOp_ = 0;
         worker_ = 0;
-        autoReply_ = null;
-        if (autoReplyBuilder_ != null) {
-          autoReplyBuilder_.dispose();
-          autoReplyBuilder_ = null;
+        autoReplyFlag_ = null;
+        if (autoReplyFlagBuilder_ != null) {
+          autoReplyFlagBuilder_.dispose();
+          autoReplyFlagBuilder_ = null;
         }
         if (contentBuilder_ != null) {
           contentBuilder_.clear();
@@ -7188,6 +12808,12 @@ public final class CMessage {
         }
         if (blacklistConfirmBuilder_ != null) {
           blacklistConfirmBuilder_.clear();
+        }
+        if (autoReplyBuilder_ != null) {
+          autoReplyBuilder_.clear();
+        }
+        if (workerChangedBuilder_ != null) {
+          workerChangedBuilder_.clear();
         }
         payloadCase_ = 0;
         payload_ = null;
@@ -7249,9 +12875,9 @@ public final class CMessage {
           result.worker_ = worker_;
         }
         if (((from_bitField0_ & 0x00000080) != 0)) {
-          result.autoReply_ = autoReplyBuilder_ == null
-              ? autoReply_
-              : autoReplyBuilder_.build();
+          result.autoReplyFlag_ = autoReplyFlagBuilder_ == null
+              ? autoReplyFlag_
+              : autoReplyFlagBuilder_.build();
         }
       }
 
@@ -7293,6 +12919,14 @@ public final class CMessage {
         if (payloadCase_ == 108 &&
             blacklistConfirmBuilder_ != null) {
           result.payload_ = blacklistConfirmBuilder_.build();
+        }
+        if (payloadCase_ == 109 &&
+            autoReplyBuilder_ != null) {
+          result.payload_ = autoReplyBuilder_.build();
+        }
+        if (payloadCase_ == 110 &&
+            workerChangedBuilder_ != null) {
+          result.payload_ = workerChangedBuilder_.build();
         }
       }
 
@@ -7361,8 +12995,8 @@ public final class CMessage {
         if (other.getWorker() != 0) {
           setWorker(other.getWorker());
         }
-        if (other.hasAutoReply()) {
-          mergeAutoReply(other.getAutoReply());
+        if (other.hasAutoReplyFlag()) {
+          mergeAutoReplyFlag(other.getAutoReplyFlag());
         }
         switch (other.getPayloadCase()) {
           case CONTENT: {
@@ -7399,6 +13033,14 @@ public final class CMessage {
           }
           case BLACKLIST_CONFIRM: {
             mergeBlacklistConfirm(other.getBlacklistConfirm());
+            break;
+          }
+          case AUTO_REPLY: {
+            mergeAutoReply(other.getAutoReply());
+            break;
+          }
+          case WORKER_CHANGED: {
+            mergeWorkerChanged(other.getWorkerChanged());
             break;
           }
           case PAYLOAD_NOT_SET: {
@@ -7470,7 +13112,7 @@ public final class CMessage {
               } // case 56
               case 66: {
                 input.readMessage(
-                    getAutoReplyFieldBuilder().getBuilder(),
+                    getAutoReplyFlagFieldBuilder().getBuilder(),
                     extensionRegistry);
                 bitField0_ |= 0x00000080;
                 break;
@@ -7538,6 +13180,20 @@ public final class CMessage {
                 payloadCase_ = 108;
                 break;
               } // case 866
+              case 874: {
+                input.readMessage(
+                    getAutoReplyFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                payloadCase_ = 109;
+                break;
+              } // case 874
+              case 882: {
+                input.readMessage(
+                    getWorkerChangedFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                payloadCase_ = 110;
+                break;
+              } // case 882
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -8033,50 +13689,50 @@ public final class CMessage {
         return this;
       }
 
-      private com.teneasyChat.api.common.CMessage.MessageAutoReplyFlag autoReply_;
+      private com.teneasyChat.api.common.CMessage.MessageAutoReplyFlag autoReplyFlag_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.teneasyChat.api.common.CMessage.MessageAutoReplyFlag, com.teneasyChat.api.common.CMessage.MessageAutoReplyFlag.Builder, com.teneasyChat.api.common.CMessage.MessageAutoReplyFlagOrBuilder> autoReplyBuilder_;
+          com.teneasyChat.api.common.CMessage.MessageAutoReplyFlag, com.teneasyChat.api.common.CMessage.MessageAutoReplyFlag.Builder, com.teneasyChat.api.common.CMessage.MessageAutoReplyFlagOrBuilder> autoReplyFlagBuilder_;
       /**
        * <pre>
-       * 自动回复相关
+       * 自动回复选项, 历史原因保留(没规划好, 应该放到payload中)
        * </pre>
        *
-       * <code>.api.common.MessageAutoReplyFlag auto_reply = 8;</code>
-       * @return Whether the autoReply field is set.
+       * <code>.api.common.MessageAutoReplyFlag auto_reply_flag = 8;</code>
+       * @return Whether the autoReplyFlag field is set.
        */
-      public boolean hasAutoReply() {
+      public boolean hasAutoReplyFlag() {
         return ((bitField0_ & 0x00000080) != 0);
       }
       /**
        * <pre>
-       * 自动回复相关
+       * 自动回复选项, 历史原因保留(没规划好, 应该放到payload中)
        * </pre>
        *
-       * <code>.api.common.MessageAutoReplyFlag auto_reply = 8;</code>
-       * @return The autoReply.
+       * <code>.api.common.MessageAutoReplyFlag auto_reply_flag = 8;</code>
+       * @return The autoReplyFlag.
        */
-      public com.teneasyChat.api.common.CMessage.MessageAutoReplyFlag getAutoReply() {
-        if (autoReplyBuilder_ == null) {
-          return autoReply_ == null ? com.teneasyChat.api.common.CMessage.MessageAutoReplyFlag.getDefaultInstance() : autoReply_;
+      public com.teneasyChat.api.common.CMessage.MessageAutoReplyFlag getAutoReplyFlag() {
+        if (autoReplyFlagBuilder_ == null) {
+          return autoReplyFlag_ == null ? com.teneasyChat.api.common.CMessage.MessageAutoReplyFlag.getDefaultInstance() : autoReplyFlag_;
         } else {
-          return autoReplyBuilder_.getMessage();
+          return autoReplyFlagBuilder_.getMessage();
         }
       }
       /**
        * <pre>
-       * 自动回复相关
+       * 自动回复选项, 历史原因保留(没规划好, 应该放到payload中)
        * </pre>
        *
-       * <code>.api.common.MessageAutoReplyFlag auto_reply = 8;</code>
+       * <code>.api.common.MessageAutoReplyFlag auto_reply_flag = 8;</code>
        */
-      public Builder setAutoReply(com.teneasyChat.api.common.CMessage.MessageAutoReplyFlag value) {
-        if (autoReplyBuilder_ == null) {
+      public Builder setAutoReplyFlag(com.teneasyChat.api.common.CMessage.MessageAutoReplyFlag value) {
+        if (autoReplyFlagBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          autoReply_ = value;
+          autoReplyFlag_ = value;
         } else {
-          autoReplyBuilder_.setMessage(value);
+          autoReplyFlagBuilder_.setMessage(value);
         }
         bitField0_ |= 0x00000080;
         onChanged();
@@ -8084,17 +13740,17 @@ public final class CMessage {
       }
       /**
        * <pre>
-       * 自动回复相关
+       * 自动回复选项, 历史原因保留(没规划好, 应该放到payload中)
        * </pre>
        *
-       * <code>.api.common.MessageAutoReplyFlag auto_reply = 8;</code>
+       * <code>.api.common.MessageAutoReplyFlag auto_reply_flag = 8;</code>
        */
-      public Builder setAutoReply(
+      public Builder setAutoReplyFlag(
           com.teneasyChat.api.common.CMessage.MessageAutoReplyFlag.Builder builderForValue) {
-        if (autoReplyBuilder_ == null) {
-          autoReply_ = builderForValue.build();
+        if (autoReplyFlagBuilder_ == null) {
+          autoReplyFlag_ = builderForValue.build();
         } else {
-          autoReplyBuilder_.setMessage(builderForValue.build());
+          autoReplyFlagBuilder_.setMessage(builderForValue.build());
         }
         bitField0_ |= 0x00000080;
         onChanged();
@@ -8102,22 +13758,22 @@ public final class CMessage {
       }
       /**
        * <pre>
-       * 自动回复相关
+       * 自动回复选项, 历史原因保留(没规划好, 应该放到payload中)
        * </pre>
        *
-       * <code>.api.common.MessageAutoReplyFlag auto_reply = 8;</code>
+       * <code>.api.common.MessageAutoReplyFlag auto_reply_flag = 8;</code>
        */
-      public Builder mergeAutoReply(com.teneasyChat.api.common.CMessage.MessageAutoReplyFlag value) {
-        if (autoReplyBuilder_ == null) {
+      public Builder mergeAutoReplyFlag(com.teneasyChat.api.common.CMessage.MessageAutoReplyFlag value) {
+        if (autoReplyFlagBuilder_ == null) {
           if (((bitField0_ & 0x00000080) != 0) &&
-            autoReply_ != null &&
-            autoReply_ != com.teneasyChat.api.common.CMessage.MessageAutoReplyFlag.getDefaultInstance()) {
-            getAutoReplyBuilder().mergeFrom(value);
+            autoReplyFlag_ != null &&
+            autoReplyFlag_ != com.teneasyChat.api.common.CMessage.MessageAutoReplyFlag.getDefaultInstance()) {
+            getAutoReplyFlagBuilder().mergeFrom(value);
           } else {
-            autoReply_ = value;
+            autoReplyFlag_ = value;
           }
         } else {
-          autoReplyBuilder_.mergeFrom(value);
+          autoReplyFlagBuilder_.mergeFrom(value);
         }
         bitField0_ |= 0x00000080;
         onChanged();
@@ -8125,67 +13781,67 @@ public final class CMessage {
       }
       /**
        * <pre>
-       * 自动回复相关
+       * 自动回复选项, 历史原因保留(没规划好, 应该放到payload中)
        * </pre>
        *
-       * <code>.api.common.MessageAutoReplyFlag auto_reply = 8;</code>
+       * <code>.api.common.MessageAutoReplyFlag auto_reply_flag = 8;</code>
        */
-      public Builder clearAutoReply() {
+      public Builder clearAutoReplyFlag() {
         bitField0_ = (bitField0_ & ~0x00000080);
-        autoReply_ = null;
-        if (autoReplyBuilder_ != null) {
-          autoReplyBuilder_.dispose();
-          autoReplyBuilder_ = null;
+        autoReplyFlag_ = null;
+        if (autoReplyFlagBuilder_ != null) {
+          autoReplyFlagBuilder_.dispose();
+          autoReplyFlagBuilder_ = null;
         }
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * 自动回复相关
+       * 自动回复选项, 历史原因保留(没规划好, 应该放到payload中)
        * </pre>
        *
-       * <code>.api.common.MessageAutoReplyFlag auto_reply = 8;</code>
+       * <code>.api.common.MessageAutoReplyFlag auto_reply_flag = 8;</code>
        */
-      public com.teneasyChat.api.common.CMessage.MessageAutoReplyFlag.Builder getAutoReplyBuilder() {
+      public com.teneasyChat.api.common.CMessage.MessageAutoReplyFlag.Builder getAutoReplyFlagBuilder() {
         bitField0_ |= 0x00000080;
         onChanged();
-        return getAutoReplyFieldBuilder().getBuilder();
+        return getAutoReplyFlagFieldBuilder().getBuilder();
       }
       /**
        * <pre>
-       * 自动回复相关
+       * 自动回复选项, 历史原因保留(没规划好, 应该放到payload中)
        * </pre>
        *
-       * <code>.api.common.MessageAutoReplyFlag auto_reply = 8;</code>
+       * <code>.api.common.MessageAutoReplyFlag auto_reply_flag = 8;</code>
        */
-      public com.teneasyChat.api.common.CMessage.MessageAutoReplyFlagOrBuilder getAutoReplyOrBuilder() {
-        if (autoReplyBuilder_ != null) {
-          return autoReplyBuilder_.getMessageOrBuilder();
+      public com.teneasyChat.api.common.CMessage.MessageAutoReplyFlagOrBuilder getAutoReplyFlagOrBuilder() {
+        if (autoReplyFlagBuilder_ != null) {
+          return autoReplyFlagBuilder_.getMessageOrBuilder();
         } else {
-          return autoReply_ == null ?
-              com.teneasyChat.api.common.CMessage.MessageAutoReplyFlag.getDefaultInstance() : autoReply_;
+          return autoReplyFlag_ == null ?
+              com.teneasyChat.api.common.CMessage.MessageAutoReplyFlag.getDefaultInstance() : autoReplyFlag_;
         }
       }
       /**
        * <pre>
-       * 自动回复相关
+       * 自动回复选项, 历史原因保留(没规划好, 应该放到payload中)
        * </pre>
        *
-       * <code>.api.common.MessageAutoReplyFlag auto_reply = 8;</code>
+       * <code>.api.common.MessageAutoReplyFlag auto_reply_flag = 8;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.teneasyChat.api.common.CMessage.MessageAutoReplyFlag, com.teneasyChat.api.common.CMessage.MessageAutoReplyFlag.Builder, com.teneasyChat.api.common.CMessage.MessageAutoReplyFlagOrBuilder> 
-          getAutoReplyFieldBuilder() {
-        if (autoReplyBuilder_ == null) {
-          autoReplyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+          getAutoReplyFlagFieldBuilder() {
+        if (autoReplyFlagBuilder_ == null) {
+          autoReplyFlagBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               com.teneasyChat.api.common.CMessage.MessageAutoReplyFlag, com.teneasyChat.api.common.CMessage.MessageAutoReplyFlag.Builder, com.teneasyChat.api.common.CMessage.MessageAutoReplyFlagOrBuilder>(
-                  getAutoReply(),
+                  getAutoReplyFlag(),
                   getParentForChildren(),
                   isClean());
-          autoReply_ = null;
+          autoReplyFlag_ = null;
         }
-        return autoReplyBuilder_;
+        return autoReplyFlagBuilder_;
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -9572,6 +15228,362 @@ public final class CMessage {
         payloadCase_ = 108;
         onChanged();
         return blacklistConfirmBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.teneasyChat.api.common.CMessage.MessageAutoReply, com.teneasyChat.api.common.CMessage.MessageAutoReply.Builder, com.teneasyChat.api.common.CMessage.MessageAutoReplyOrBuilder> autoReplyBuilder_;
+      /**
+       * <pre>
+       * 自动回复问题
+       * </pre>
+       *
+       * <code>.api.common.MessageAutoReply auto_reply = 109;</code>
+       * @return Whether the autoReply field is set.
+       */
+      @java.lang.Override
+      public boolean hasAutoReply() {
+        return payloadCase_ == 109;
+      }
+      /**
+       * <pre>
+       * 自动回复问题
+       * </pre>
+       *
+       * <code>.api.common.MessageAutoReply auto_reply = 109;</code>
+       * @return The autoReply.
+       */
+      @java.lang.Override
+      public com.teneasyChat.api.common.CMessage.MessageAutoReply getAutoReply() {
+        if (autoReplyBuilder_ == null) {
+          if (payloadCase_ == 109) {
+            return (com.teneasyChat.api.common.CMessage.MessageAutoReply) payload_;
+          }
+          return com.teneasyChat.api.common.CMessage.MessageAutoReply.getDefaultInstance();
+        } else {
+          if (payloadCase_ == 109) {
+            return autoReplyBuilder_.getMessage();
+          }
+          return com.teneasyChat.api.common.CMessage.MessageAutoReply.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * 自动回复问题
+       * </pre>
+       *
+       * <code>.api.common.MessageAutoReply auto_reply = 109;</code>
+       */
+      public Builder setAutoReply(com.teneasyChat.api.common.CMessage.MessageAutoReply value) {
+        if (autoReplyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          payload_ = value;
+          onChanged();
+        } else {
+          autoReplyBuilder_.setMessage(value);
+        }
+        payloadCase_ = 109;
+        return this;
+      }
+      /**
+       * <pre>
+       * 自动回复问题
+       * </pre>
+       *
+       * <code>.api.common.MessageAutoReply auto_reply = 109;</code>
+       */
+      public Builder setAutoReply(
+          com.teneasyChat.api.common.CMessage.MessageAutoReply.Builder builderForValue) {
+        if (autoReplyBuilder_ == null) {
+          payload_ = builderForValue.build();
+          onChanged();
+        } else {
+          autoReplyBuilder_.setMessage(builderForValue.build());
+        }
+        payloadCase_ = 109;
+        return this;
+      }
+      /**
+       * <pre>
+       * 自动回复问题
+       * </pre>
+       *
+       * <code>.api.common.MessageAutoReply auto_reply = 109;</code>
+       */
+      public Builder mergeAutoReply(com.teneasyChat.api.common.CMessage.MessageAutoReply value) {
+        if (autoReplyBuilder_ == null) {
+          if (payloadCase_ == 109 &&
+              payload_ != com.teneasyChat.api.common.CMessage.MessageAutoReply.getDefaultInstance()) {
+            payload_ = com.teneasyChat.api.common.CMessage.MessageAutoReply.newBuilder((com.teneasyChat.api.common.CMessage.MessageAutoReply) payload_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            payload_ = value;
+          }
+          onChanged();
+        } else {
+          if (payloadCase_ == 109) {
+            autoReplyBuilder_.mergeFrom(value);
+          } else {
+            autoReplyBuilder_.setMessage(value);
+          }
+        }
+        payloadCase_ = 109;
+        return this;
+      }
+      /**
+       * <pre>
+       * 自动回复问题
+       * </pre>
+       *
+       * <code>.api.common.MessageAutoReply auto_reply = 109;</code>
+       */
+      public Builder clearAutoReply() {
+        if (autoReplyBuilder_ == null) {
+          if (payloadCase_ == 109) {
+            payloadCase_ = 0;
+            payload_ = null;
+            onChanged();
+          }
+        } else {
+          if (payloadCase_ == 109) {
+            payloadCase_ = 0;
+            payload_ = null;
+          }
+          autoReplyBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * 自动回复问题
+       * </pre>
+       *
+       * <code>.api.common.MessageAutoReply auto_reply = 109;</code>
+       */
+      public com.teneasyChat.api.common.CMessage.MessageAutoReply.Builder getAutoReplyBuilder() {
+        return getAutoReplyFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * 自动回复问题
+       * </pre>
+       *
+       * <code>.api.common.MessageAutoReply auto_reply = 109;</code>
+       */
+      @java.lang.Override
+      public com.teneasyChat.api.common.CMessage.MessageAutoReplyOrBuilder getAutoReplyOrBuilder() {
+        if ((payloadCase_ == 109) && (autoReplyBuilder_ != null)) {
+          return autoReplyBuilder_.getMessageOrBuilder();
+        } else {
+          if (payloadCase_ == 109) {
+            return (com.teneasyChat.api.common.CMessage.MessageAutoReply) payload_;
+          }
+          return com.teneasyChat.api.common.CMessage.MessageAutoReply.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * 自动回复问题
+       * </pre>
+       *
+       * <code>.api.common.MessageAutoReply auto_reply = 109;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.teneasyChat.api.common.CMessage.MessageAutoReply, com.teneasyChat.api.common.CMessage.MessageAutoReply.Builder, com.teneasyChat.api.common.CMessage.MessageAutoReplyOrBuilder> 
+          getAutoReplyFieldBuilder() {
+        if (autoReplyBuilder_ == null) {
+          if (!(payloadCase_ == 109)) {
+            payload_ = com.teneasyChat.api.common.CMessage.MessageAutoReply.getDefaultInstance();
+          }
+          autoReplyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.teneasyChat.api.common.CMessage.MessageAutoReply, com.teneasyChat.api.common.CMessage.MessageAutoReply.Builder, com.teneasyChat.api.common.CMessage.MessageAutoReplyOrBuilder>(
+                  (com.teneasyChat.api.common.CMessage.MessageAutoReply) payload_,
+                  getParentForChildren(),
+                  isClean());
+          payload_ = null;
+        }
+        payloadCase_ = 109;
+        onChanged();
+        return autoReplyBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.teneasyChat.api.common.CMessage.MessageWorkerChanged, com.teneasyChat.api.common.CMessage.MessageWorkerChanged.Builder, com.teneasyChat.api.common.CMessage.MessageWorkerChangedOrBuilder> workerChangedBuilder_;
+      /**
+       * <pre>
+       * 客服改变
+       * </pre>
+       *
+       * <code>.api.common.MessageWorkerChanged worker_changed = 110;</code>
+       * @return Whether the workerChanged field is set.
+       */
+      @java.lang.Override
+      public boolean hasWorkerChanged() {
+        return payloadCase_ == 110;
+      }
+      /**
+       * <pre>
+       * 客服改变
+       * </pre>
+       *
+       * <code>.api.common.MessageWorkerChanged worker_changed = 110;</code>
+       * @return The workerChanged.
+       */
+      @java.lang.Override
+      public com.teneasyChat.api.common.CMessage.MessageWorkerChanged getWorkerChanged() {
+        if (workerChangedBuilder_ == null) {
+          if (payloadCase_ == 110) {
+            return (com.teneasyChat.api.common.CMessage.MessageWorkerChanged) payload_;
+          }
+          return com.teneasyChat.api.common.CMessage.MessageWorkerChanged.getDefaultInstance();
+        } else {
+          if (payloadCase_ == 110) {
+            return workerChangedBuilder_.getMessage();
+          }
+          return com.teneasyChat.api.common.CMessage.MessageWorkerChanged.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * 客服改变
+       * </pre>
+       *
+       * <code>.api.common.MessageWorkerChanged worker_changed = 110;</code>
+       */
+      public Builder setWorkerChanged(com.teneasyChat.api.common.CMessage.MessageWorkerChanged value) {
+        if (workerChangedBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          payload_ = value;
+          onChanged();
+        } else {
+          workerChangedBuilder_.setMessage(value);
+        }
+        payloadCase_ = 110;
+        return this;
+      }
+      /**
+       * <pre>
+       * 客服改变
+       * </pre>
+       *
+       * <code>.api.common.MessageWorkerChanged worker_changed = 110;</code>
+       */
+      public Builder setWorkerChanged(
+          com.teneasyChat.api.common.CMessage.MessageWorkerChanged.Builder builderForValue) {
+        if (workerChangedBuilder_ == null) {
+          payload_ = builderForValue.build();
+          onChanged();
+        } else {
+          workerChangedBuilder_.setMessage(builderForValue.build());
+        }
+        payloadCase_ = 110;
+        return this;
+      }
+      /**
+       * <pre>
+       * 客服改变
+       * </pre>
+       *
+       * <code>.api.common.MessageWorkerChanged worker_changed = 110;</code>
+       */
+      public Builder mergeWorkerChanged(com.teneasyChat.api.common.CMessage.MessageWorkerChanged value) {
+        if (workerChangedBuilder_ == null) {
+          if (payloadCase_ == 110 &&
+              payload_ != com.teneasyChat.api.common.CMessage.MessageWorkerChanged.getDefaultInstance()) {
+            payload_ = com.teneasyChat.api.common.CMessage.MessageWorkerChanged.newBuilder((com.teneasyChat.api.common.CMessage.MessageWorkerChanged) payload_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            payload_ = value;
+          }
+          onChanged();
+        } else {
+          if (payloadCase_ == 110) {
+            workerChangedBuilder_.mergeFrom(value);
+          } else {
+            workerChangedBuilder_.setMessage(value);
+          }
+        }
+        payloadCase_ = 110;
+        return this;
+      }
+      /**
+       * <pre>
+       * 客服改变
+       * </pre>
+       *
+       * <code>.api.common.MessageWorkerChanged worker_changed = 110;</code>
+       */
+      public Builder clearWorkerChanged() {
+        if (workerChangedBuilder_ == null) {
+          if (payloadCase_ == 110) {
+            payloadCase_ = 0;
+            payload_ = null;
+            onChanged();
+          }
+        } else {
+          if (payloadCase_ == 110) {
+            payloadCase_ = 0;
+            payload_ = null;
+          }
+          workerChangedBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * 客服改变
+       * </pre>
+       *
+       * <code>.api.common.MessageWorkerChanged worker_changed = 110;</code>
+       */
+      public com.teneasyChat.api.common.CMessage.MessageWorkerChanged.Builder getWorkerChangedBuilder() {
+        return getWorkerChangedFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * 客服改变
+       * </pre>
+       *
+       * <code>.api.common.MessageWorkerChanged worker_changed = 110;</code>
+       */
+      @java.lang.Override
+      public com.teneasyChat.api.common.CMessage.MessageWorkerChangedOrBuilder getWorkerChangedOrBuilder() {
+        if ((payloadCase_ == 110) && (workerChangedBuilder_ != null)) {
+          return workerChangedBuilder_.getMessageOrBuilder();
+        } else {
+          if (payloadCase_ == 110) {
+            return (com.teneasyChat.api.common.CMessage.MessageWorkerChanged) payload_;
+          }
+          return com.teneasyChat.api.common.CMessage.MessageWorkerChanged.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * 客服改变
+       * </pre>
+       *
+       * <code>.api.common.MessageWorkerChanged worker_changed = 110;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.teneasyChat.api.common.CMessage.MessageWorkerChanged, com.teneasyChat.api.common.CMessage.MessageWorkerChanged.Builder, com.teneasyChat.api.common.CMessage.MessageWorkerChangedOrBuilder> 
+          getWorkerChangedFieldBuilder() {
+        if (workerChangedBuilder_ == null) {
+          if (!(payloadCase_ == 110)) {
+            payload_ = com.teneasyChat.api.common.CMessage.MessageWorkerChanged.getDefaultInstance();
+          }
+          workerChangedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.teneasyChat.api.common.CMessage.MessageWorkerChanged, com.teneasyChat.api.common.CMessage.MessageWorkerChanged.Builder, com.teneasyChat.api.common.CMessage.MessageWorkerChangedOrBuilder>(
+                  (com.teneasyChat.api.common.CMessage.MessageWorkerChanged) payload_,
+                  getParentForChildren(),
+                  isClean());
+          payload_ = null;
+        }
+        payloadCase_ = 110;
+        onChanged();
+        return workerChangedBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -11453,6 +17465,21 @@ public final class CMessage {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_common_MessageFile_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_common_MessageUnion_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_common_MessageUnion_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_common_MessageAutoReplyQA_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_common_MessageAutoReplyQA_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_common_MessageAutoReply_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_common_MessageAutoReply_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_common_MessageKey_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -11462,6 +17489,11 @@ public final class CMessage {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_common_MessageAutoReplyFlag_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_common_MessageWorkerChanged_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_common_MessageWorkerChanged_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_common_Message_descriptor;
   private static final 
@@ -11494,50 +17526,71 @@ public final class CMessage {
       "\n\032api/common/c_message.proto\022\napi.common" +
       "\032\037google/protobuf/timestamp.proto\032\030api/c" +
       "ommon/c_asset.proto\032\031api/common/c_device" +
-      ".proto\032\036google/protobuf/wrappers.proto\"\036" +
-      "\n\016MessageContent\022\014\n\004data\030\001 \001(\t\"\033\n\014Messag" +
-      "eImage\022\013\n\003uri\030\001 \001(\t\"\033\n\014MessageAudio\022\013\n\003u" +
-      "ri\030\001 \001(\t\"\033\n\014MessageVideo\022\013\n\003uri\030\001 \001(\t\"1\n" +
-      "\nMessageGeo\022\021\n\tlongitude\030\001 \001(\t\022\020\n\010latitu" +
-      "de\030\002 \001(\t\";\n\013MessageFile\022\013\n\003uri\030\001 \001(\t\022\021\n\t" +
-      "file_name\030\002 \001(\t\022\014\n\004size\030\003 \001(\005\"-\n\nMessage" +
-      "Key\022\017\n\007chat_id\030\001 \001(\003\022\016\n\006msg_id\030\002 \001(\003\"1\n\024" +
-      "MessageAutoReplyFlag\022\n\n\002id\030\001 \001(\003\022\r\n\005qa_i" +
-      "d\030\002 \001(\005\"\241\005\n\007Message\022\017\n\007chat_id\030\001 \001(\003\022\016\n\006" +
-      "msg_id\030\002 \001(\003\022,\n\010msg_time\030\003 \001(\0132\032.google." +
-      "protobuf.Timestamp\022\016\n\006sender\030\004 \001(\003\022\024\n\014re" +
-      "ply_msg_id\030\005 \001(\003\022*\n\006msg_op\030\006 \001(\0162\032.api.c" +
-      "ommon.MessageOperate\022\016\n\006worker\030\007 \001(\005\0224\n\n" +
-      "auto_reply\030\010 \001(\0132 .api.common.MessageAut" +
-      "oReplyFlag\022-\n\007content\030d \001(\0132\032.api.common" +
-      ".MessageContentH\000\022)\n\005image\030e \001(\0132\030.api.c" +
-      "ommon.MessageImageH\000\022)\n\005audio\030f \001(\0132\030.ap" +
-      "i.common.MessageAudioH\000\022)\n\005video\030g \001(\0132\030" +
-      ".api.common.MessageVideoH\000\022%\n\003geo\030h \001(\0132" +
-      "\026.api.common.MessageGeoH\000\022\'\n\004file\030i \001(\0132" +
-      "\027.api.common.MessageFileH\000\0222\n\014worker_tra" +
-      "ns\030j \001(\0132\032.api.common.WorkerTransferH\000\0225" +
-      "\n\017blacklist_apply\030k \001(\0132\032.api.common.Bla" +
-      "ckListApplyH\000\0229\n\021blacklist_confirm\030l \001(\013" +
-      "2\034.api.common.BlackListConfirmH\000B\t\n\007payl" +
-      "oad\"O\n\016WorkerTransfer\022\021\n\tworker_id\030\001 \001(\005" +
-      "\022\023\n\013worker_name\030\002 \001(\t\022\025\n\rworker_avatar\030\003" +
-      " \001(\t\"#\n\016BlackListApply\022\021\n\tworker_id\030\001 \001(" +
-      "\005\"%\n\020BlackListConfirm\022\021\n\tworker_id\030\001 \001(\005" +
-      "*\322\001\n\tChatState\022\025\n\021CHAT_STATE_COMMON\020\000\022\027\n" +
-      "\023CHAT_STATE_TRANSFER\020\001\022\037\n\033CHAT_STATE_UNP" +
-      "ROCESSED_3MIN\020\002\022\026\n\022CHAT_STATE_TIMEOUT\020\003\022" +
-      "\030\n\024CHAT_STATE_PROCESSED\020\004\022\036\n\032CHAT_STATE_" +
-      "BLACKLIST_APPLY\020\005\022\"\n\036CHAT_STATE_BLACKLIS" +
-      "T_CONFIRMED\020\006*c\n\rMessageFormat\022\014\n\010MSG_TE" +
-      "XT\020\000\022\013\n\007MSG_IMG\020\001\022\r\n\tMSG_VOICE\020\002\022\r\n\tMSG_" +
-      "VIDEO\020\003\022\013\n\007MSG_GEO\020\004\022\014\n\010MSG_FILE\020\006*f\n\013Me" +
-      "ssageRole\022\023\n\017MSG_ROLE_SYSTEM\020\000\022\023\n\017MSG_RO" +
-      "LE_WORKER\020\001\022\025\n\021MSG_ROLE_CUSTOMER\020\002\022\026\n\022MS" +
-      "G_ROLE_ANONYMOUS\020\003*E\n\016MessageOperate\022\017\n\013" +
-      "MSG_OP_POST\020\000\022\017\n\013MSG_OP_EDIT\020\001\022\021\n\rMSG_OP" +
-      "_DELETE\020\002B<\n\032com.teneasyChat.api.commonZ" +
-      "\025wcs/api/common;common\272\002\006Commonb\006proto3"
+      ".proto\032\036google/protobuf/wrappers.proto\032\027" +
+      "validate/validate.proto\"\036\n\016MessageConten" +
+      "t\022\014\n\004data\030\001 \001(\t\"\033\n\014MessageImage\022\013\n\003uri\030\001" +
+      " \001(\t\"\033\n\014MessageAudio\022\013\n\003uri\030\001 \001(\t\"\033\n\014Mes" +
+      "sageVideo\022\013\n\003uri\030\001 \001(\t\"1\n\nMessageGeo\022\021\n\t" +
+      "longitude\030\001 \001(\t\022\020\n\010latitude\030\002 \001(\t\";\n\013Mes" +
+      "sageFile\022\013\n\003uri\030\001 \001(\t\022\021\n\tfile_name\030\002 \001(\t" +
+      "\022\014\n\004size\030\003 \001(\005\"\231\002\n\014MessageUnion\022-\n\007conte" +
+      "nt\030\001 \001(\0132\032.api.common.MessageContentH\000\022)" +
+      "\n\005image\030\002 \001(\0132\030.api.common.MessageImageH" +
+      "\000\022)\n\005audio\030\003 \001(\0132\030.api.common.MessageAud" +
+      "ioH\000\022)\n\005video\030\004 \001(\0132\030.api.common.Message" +
+      "VideoH\000\022%\n\003geo\030\005 \001(\0132\026.api.common.Messag" +
+      "eGeoH\000\022\'\n\004file\030\006 \001(\0132\027.api.common.Messag" +
+      "eFileH\000B\t\n\007payload\"\200\001\n\022MessageAutoReplyQ" +
+      "A\022\n\n\002id\030\001 \001(\005\022*\n\010question\030\002 \001(\0132\030.api.co" +
+      "mmon.MessageUnion\0222\n\006answer\030\003 \003(\0132\030.api." +
+      "common.MessageUnionB\010\372B\005\222\001\002\020\n\"l\n\020Message" +
+      "AutoReply\022\n\n\002id\030\001 \001(\003\022\r\n\005title\030\002 \001(\t\022\021\n\t" +
+      "delay_sec\030\003 \001(\005\022*\n\002qa\030\004 \003(\0132\036.api.common" +
+      ".MessageAutoReplyQA\"-\n\nMessageKey\022\017\n\007cha" +
+      "t_id\030\001 \001(\003\022\016\n\006msg_id\030\002 \001(\003\"1\n\024MessageAut" +
+      "oReplyFlag\022\n\n\002id\030\001 \001(\003\022\r\n\005qa_id\030\002 \001(\005\"\231\001" +
+      "\n\024MessageWorkerChanged\022\030\n\020worker_client_" +
+      "id\030\001 \001(\003\022\021\n\tworker_id\030\002 \001(\005\022\014\n\004name\030\003 \001(" +
+      "\t\022\016\n\006avatar\030\004 \001(\t\022\020\n\010greeting\030\005 \001(\t\022$\n\005S" +
+      "tate\030\006 \001(\0162\025.api.common.ChatState\"\226\006\n\007Me" +
+      "ssage\022\017\n\007chat_id\030\001 \001(\003\022\016\n\006msg_id\030\002 \001(\003\022," +
+      "\n\010msg_time\030\003 \001(\0132\032.google.protobuf.Times" +
+      "tamp\022\016\n\006sender\030\004 \001(\003\022\024\n\014reply_msg_id\030\005 \001" +
+      "(\003\022*\n\006msg_op\030\006 \001(\0162\032.api.common.MessageO" +
+      "perate\022\016\n\006worker\030\007 \001(\005\0229\n\017auto_reply_fla" +
+      "g\030\010 \001(\0132 .api.common.MessageAutoReplyFla" +
+      "g\022-\n\007content\030d \001(\0132\032.api.common.MessageC" +
+      "ontentH\000\022)\n\005image\030e \001(\0132\030.api.common.Mes" +
+      "sageImageH\000\022)\n\005audio\030f \001(\0132\030.api.common." +
+      "MessageAudioH\000\022)\n\005video\030g \001(\0132\030.api.comm" +
+      "on.MessageVideoH\000\022%\n\003geo\030h \001(\0132\026.api.com" +
+      "mon.MessageGeoH\000\022\'\n\004file\030i \001(\0132\027.api.com" +
+      "mon.MessageFileH\000\0222\n\014worker_trans\030j \001(\0132" +
+      "\032.api.common.WorkerTransferH\000\0225\n\017blackli" +
+      "st_apply\030k \001(\0132\032.api.common.BlackListApp" +
+      "lyH\000\0229\n\021blacklist_confirm\030l \001(\0132\034.api.co" +
+      "mmon.BlackListConfirmH\000\0222\n\nauto_reply\030m " +
+      "\001(\0132\034.api.common.MessageAutoReplyH\000\022:\n\016w" +
+      "orker_changed\030n \001(\0132 .api.common.Message" +
+      "WorkerChangedH\000B\t\n\007payload\"O\n\016WorkerTran" +
+      "sfer\022\021\n\tworker_id\030\001 \001(\005\022\023\n\013worker_name\030\002" +
+      " \001(\t\022\025\n\rworker_avatar\030\003 \001(\t\"#\n\016BlackList" +
+      "Apply\022\021\n\tworker_id\030\001 \001(\005\"%\n\020BlackListCon" +
+      "firm\022\021\n\tworker_id\030\001 \001(\005*\322\001\n\tChatState\022\025\n" +
+      "\021CHAT_STATE_COMMON\020\000\022\027\n\023CHAT_STATE_TRANS" +
+      "FER\020\001\022\037\n\033CHAT_STATE_UNPROCESSED_3MIN\020\002\022\026" +
+      "\n\022CHAT_STATE_TIMEOUT\020\003\022\030\n\024CHAT_STATE_PRO" +
+      "CESSED\020\004\022\036\n\032CHAT_STATE_BLACKLIST_APPLY\020\005" +
+      "\022\"\n\036CHAT_STATE_BLACKLIST_CONFIRMED\020\006*c\n\r" +
+      "MessageFormat\022\014\n\010MSG_TEXT\020\000\022\013\n\007MSG_IMG\020\001" +
+      "\022\r\n\tMSG_VOICE\020\002\022\r\n\tMSG_VIDEO\020\003\022\013\n\007MSG_GE" +
+      "O\020\004\022\014\n\010MSG_FILE\020\006*f\n\013MessageRole\022\023\n\017MSG_" +
+      "ROLE_SYSTEM\020\000\022\023\n\017MSG_ROLE_WORKER\020\001\022\025\n\021MS" +
+      "G_ROLE_CUSTOMER\020\002\022\026\n\022MSG_ROLE_ANONYMOUS\020" +
+      "\003*E\n\016MessageOperate\022\017\n\013MSG_OP_POST\020\000\022\017\n\013" +
+      "MSG_OP_EDIT\020\001\022\021\n\rMSG_OP_DELETE\020\002B<\n\032com." +
+      "teneasyChat.api.commonZ\025wcs/api/common;c" +
+      "ommon\272\002\006Commonb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -11546,6 +17599,7 @@ public final class CMessage {
           com.teneasyChat.api.common.CAsset.getDescriptor(),
           com.teneasyChat.api.common.CDevice.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
+          io.envoyproxy.pgv.validate.Validate.getDescriptor(),
         });
     internal_static_api_common_MessageContent_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -11583,46 +17637,76 @@ public final class CMessage {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_common_MessageFile_descriptor,
         new java.lang.String[] { "Uri", "FileName", "Size", });
-    internal_static_api_common_MessageKey_descriptor =
+    internal_static_api_common_MessageUnion_descriptor =
       getDescriptor().getMessageTypes().get(6);
+    internal_static_api_common_MessageUnion_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_common_MessageUnion_descriptor,
+        new java.lang.String[] { "Content", "Image", "Audio", "Video", "Geo", "File", "Payload", });
+    internal_static_api_common_MessageAutoReplyQA_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_api_common_MessageAutoReplyQA_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_common_MessageAutoReplyQA_descriptor,
+        new java.lang.String[] { "Id", "Question", "Answer", });
+    internal_static_api_common_MessageAutoReply_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_api_common_MessageAutoReply_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_common_MessageAutoReply_descriptor,
+        new java.lang.String[] { "Id", "Title", "DelaySec", "Qa", });
+    internal_static_api_common_MessageKey_descriptor =
+      getDescriptor().getMessageTypes().get(9);
     internal_static_api_common_MessageKey_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_common_MessageKey_descriptor,
         new java.lang.String[] { "ChatId", "MsgId", });
     internal_static_api_common_MessageAutoReplyFlag_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_api_common_MessageAutoReplyFlag_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_common_MessageAutoReplyFlag_descriptor,
         new java.lang.String[] { "Id", "QaId", });
+    internal_static_api_common_MessageWorkerChanged_descriptor =
+      getDescriptor().getMessageTypes().get(11);
+    internal_static_api_common_MessageWorkerChanged_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_common_MessageWorkerChanged_descriptor,
+        new java.lang.String[] { "WorkerClientId", "WorkerId", "Name", "Avatar", "Greeting", "State", });
     internal_static_api_common_Message_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_api_common_Message_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_common_Message_descriptor,
-        new java.lang.String[] { "ChatId", "MsgId", "MsgTime", "Sender", "ReplyMsgId", "MsgOp", "Worker", "AutoReply", "Content", "Image", "Audio", "Video", "Geo", "File", "WorkerTrans", "BlacklistApply", "BlacklistConfirm", "Payload", });
+        new java.lang.String[] { "ChatId", "MsgId", "MsgTime", "Sender", "ReplyMsgId", "MsgOp", "Worker", "AutoReplyFlag", "Content", "Image", "Audio", "Video", "Geo", "File", "WorkerTrans", "BlacklistApply", "BlacklistConfirm", "AutoReply", "WorkerChanged", "Payload", });
     internal_static_api_common_WorkerTransfer_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_api_common_WorkerTransfer_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_common_WorkerTransfer_descriptor,
         new java.lang.String[] { "WorkerId", "WorkerName", "WorkerAvatar", });
     internal_static_api_common_BlackListApply_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_api_common_BlackListApply_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_common_BlackListApply_descriptor,
         new java.lang.String[] { "WorkerId", });
     internal_static_api_common_BlackListConfirm_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_api_common_BlackListConfirm_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_common_BlackListConfirm_descriptor,
         new java.lang.String[] { "WorkerId", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(io.envoyproxy.pgv.validate.Validate.rules);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
     com.google.protobuf.TimestampProto.getDescriptor();
     com.teneasyChat.api.common.CAsset.getDescriptor();
     com.teneasyChat.api.common.CDevice.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
+    io.envoyproxy.pgv.validate.Validate.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

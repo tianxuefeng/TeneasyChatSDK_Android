@@ -369,9 +369,17 @@ class ChatLib constructor(token:String, baseUrl:String = "", chatID: Long = 0){
                         listener?.msgReceipt(cMsg, payLoad.id, scMsg.msgId)
                     }
                 }
+
+                /*
+                his.handle(gateway.Action.ActionSCSimSend, (data) => {
+      self.onSimSend(data);
+    });
+                 */
                 Log.i(TAG, "消息ID: ${scMsg.msgId}")
             } else if(payLoad.act == GAction.Action.ActionSCWorkerChanged){
                 val scMsg = GGateway.SCWorkerChanged.parseFrom(msgData)
+
+
                 scMsg.apply {
                     listener?.workChanged(scMsg);
                 }

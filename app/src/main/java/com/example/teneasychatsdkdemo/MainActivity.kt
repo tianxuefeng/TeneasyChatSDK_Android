@@ -53,6 +53,7 @@ class MainActivity : AppCompatActivity(), TeneasySDKDelegate {
 
         //chatLib.sendMessage("2.mp4", CMessage.MessageFormat.MSG_VIDEO, 564321055359893503)
         //chatLib.deleteMessage(lastMsgId)
+        //chatLib.resendMSg(msg,10000);
     }
 
     override fun receivedMsg(msg: CMessage.Message) {
@@ -61,7 +62,6 @@ class MainActivity : AppCompatActivity(), TeneasySDKDelegate {
         }else if (msg.video != null){
             binding.tvContent.append(msg.video.toString() + "\n")
         }
-        chatLib.resendMSg(msg,10000);
         println(msg)
     }
 

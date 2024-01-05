@@ -5,6 +5,7 @@ import android.content.LocusId
 import android.util.Log
 import android.widget.Toast
 import com.google.protobuf.Timestamp
+import com.teneasyChat.api.common.CEntrance.ClientType
 import com.teneasyChat.api.common.CMessage
 import com.teneasyChat.api.common.CMessage.Message
 import com.teneasyChat.api.common.CMessage.MessageFormat
@@ -86,7 +87,14 @@ class ChatLib constructor(token:String, baseUrl:String = "", chatID: Long = 0){
         val obj = JSONObject()
         obj.put("event", "addChannel")
         obj.put("channel", "ok_btccny_ticker")
-        val url = baseUrl + token
+
+        /*
+        dt==当前日期 Date.now()
+rd === 随即数 Math.floor(Math.random() * 1000000)
+         */
+        var rd = Math.floor(Math.random() * 1000000)
+        var dt = Date().time
+        val url = baseUrl + token + "&ty=" + ClientType.CLIENT_TYPE_USER_APP.number + "&dt=" + dt + "&rd=" + rd
         socket =
             object : WebSocketClient(URI(url), Draft_6455()) {
                 override fun onMessage(message: String) {

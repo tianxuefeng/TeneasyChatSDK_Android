@@ -52,6 +52,10 @@ public final class CEntrance {
      */
     CLIENT_TYPE_USER_WEB(103),
     /**
+     * <code>CLIENT_TYPE_USER_APP = 104;</code>
+     */
+    CLIENT_TYPE_USER_APP(104),
+    /**
      * <pre>
      * 用户端在此加入新类型
      * </pre>
@@ -95,6 +99,10 @@ public final class CEntrance {
      */
     public static final int CLIENT_TYPE_USER_WEB_VALUE = 103;
     /**
+     * <code>CLIENT_TYPE_USER_APP = 104;</code>
+     */
+    public static final int CLIENT_TYPE_USER_APP_VALUE = 104;
+    /**
      * <pre>
      * 用户端在此加入新类型
      * </pre>
@@ -135,6 +143,7 @@ public final class CEntrance {
         case 101: return CLIENT_TYPE_USER_BEGIN;
         case 102: return CLIENT_TYPE_USER_H5;
         case 103: return CLIENT_TYPE_USER_WEB;
+        case 104: return CLIENT_TYPE_USER_APP;
         case 200: return CLIENT_TYPE_USER_END;
         default: return null;
       }
@@ -5079,14 +5088,15 @@ public final class CEntrance {
       "\022\n\nconsult_id\030\001 \001(\r\022\014\n\004name\030\002 \001(\t\022\r\n\005gui" +
       "de\030\003 \001(\t\022\030\n\020worker_group_ids\030\004 \003(\003\022\022\n\nwo" +
       "rker_ids\030\005 \003(\005\022\032\n\022worker_group_names\030\006 \001" +
-      "(\t\022\024\n\014worker_names\030\007 \001(\t*\344\001\n\nClientType\022" +
+      "(\t\022\024\n\014worker_names\030\007 \001(\t*\376\001\n\nClientType\022" +
       "\027\n\023CLIENT_TYPE_UNKNOWN\020\000\022\034\n\030CLIENT_TYPE_" +
       "WORKER_BEGIN\020\001\022\031\n\025CLIENT_TYPE_WORKER_PC\020" +
       "\002\022\032\n\026CLIENT_TYPE_WORKER_END\020d\022\032\n\026CLIENT_" +
       "TYPE_USER_BEGIN\020e\022\027\n\023CLIENT_TYPE_USER_H5" +
-      "\020f\022\030\n\024CLIENT_TYPE_USER_WEB\020g\022\031\n\024CLIENT_T" +
-      "YPE_USER_END\020\310\001B3\n\032com.teneasyChat.api.c" +
-      "ommonZ\025wcs/api/common;commonb\006proto3"
+      "\020f\022\030\n\024CLIENT_TYPE_USER_WEB\020g\022\030\n\024CLIENT_T" +
+      "YPE_USER_APP\020h\022\031\n\024CLIENT_TYPE_USER_END\020\310" +
+      "\001B3\n\032com.teneasyChat.api.commonZ\025wcs/api" +
+      "/common;commonb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

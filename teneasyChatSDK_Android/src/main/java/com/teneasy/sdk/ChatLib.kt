@@ -34,7 +34,7 @@ interface TeneasySDKDelegate {
     @payloadId
     @msgId, 如果是0，表示服务器没有生成消息id, 发送失败
     */
-    fun msgReceipt(msg: CMessage.Message, payloadId: Long, msgId: Long) // 使用Long代替UInt64
+    fun msgReceipt(msg: CMessage.Message, payloadId: Long, msgId: Long, errMsg: String = "") // 使用Long代替UInt64
 
     // 系统消息，用于显示Tip
     fun systemMsg(msg: String)
@@ -358,11 +358,15 @@ class ChatLib constructor(token:String, baseUrl:String = "", chatID: Long = 0){
                 Log.i(TAG, "对方删除了消息： payload ID${payLoad.id}")
             } else if(payLoad.act == GAction.Action.ActionSCSendMsgACK) {//消息回执
                 val scMsg = GGateway.SCSendMessage.parseFrom(msgData)
-                Log.i(TAG, "收到消息回执B msgId: ${scMsg.msgId}")
                 chatId = scMsg.chatId
+                Log.i(TAG, "收到消息回执B msgId: ${scMsg.msgId}")
+
                 var cMsg = msgList[payLoad.id]
                 if (cMsg != null){
-                    if (sendingMessage?.msgOp == CMessage.MessageOperate.MSG_OP_DELETE){
+                    if (scMsg.errMsg != null && !scMsg.errMsg.isNullOrEmpty()){
+                        listener?.msgReceipt(cMsg, payLoad.id, -2, scMsg.errMsg)
+                    }
+                    else if (sendingMessage?.msgOp == CMessage.MessageOperate.MSG_OP_DELETE){
                         listener?.msgReceipt(cMsg, payLoad.id, -1)
                         Log.i(TAG, "删除成功")
                     }else{

@@ -65,7 +65,7 @@ class MainActivity : AppCompatActivity(), TeneasySDKDelegate {
         println(msg)
     }
 
-    override fun msgReceipt(msg: CMessage.Message, payloadId: Long, msgId: Long) {
+    override fun msgReceipt(msg: CMessage.Message, payloadId: Long, msgId: Long, errMsg: String) {
         //println(msg)
         val suc = if (msgId == 0L) "发送失败" else "发送成功"
         println("payloadId："  + payloadId.toString()   +suc)

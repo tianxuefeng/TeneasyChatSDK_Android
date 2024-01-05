@@ -85,9 +85,9 @@ class ChatLib constructor(token:String, baseUrl:String = "", chatID: Long = 0){
      * 启动socket连接
       */
     fun makeConnect(){
-        val obj = JSONObject()
-        obj.put("event", "addChannel")
-        obj.put("channel", "ok_btccny_ticker")
+//        val obj = JSONObject()
+//        obj.put("event", "addChannel")
+//        obj.put("channel", "ok_btccny_ticker")
 
         /*
         dt==当前日期 Date.now()

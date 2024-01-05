@@ -23,6 +23,7 @@ import org.json.JSONObject
 import java.net.URI
 import java.nio.ByteBuffer
 import java.util.*
+import kotlin.math.floor
 
 
 interface TeneasySDKDelegate {
@@ -92,7 +93,7 @@ class ChatLib constructor(token:String, baseUrl:String = "", chatID: Long = 0){
         dt==当前日期 Date.now()
 rd === 随即数 Math.floor(Math.random() * 1000000)
          */
-        var rd = Math.floor(Math.random() * 1000000)
+        var rd = Random().nextInt(1000000) + 1000000
         var dt = Date().time
         val url = baseUrl + token + "&ty=" + ClientType.CLIENT_TYPE_USER_APP.number + "&dt=" + dt + "&rd=" + rd
         socket =

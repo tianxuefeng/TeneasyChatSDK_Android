@@ -81,7 +81,7 @@ class MainActivity : AppCompatActivity(), TeneasySDKDelegate {
             if (msgId > 0){
                 lastMsgId = msgId
             }
-            binding.tvContent.append(payloadId.toString() + " msgId:" + lastMsgId +suc +"\n")
+            binding.tvContent.append(payloadId.toString() + " msgId:" + msgId + " " + errMsg + " "+ suc +"\n")
         })
     }
 

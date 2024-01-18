@@ -51,7 +51,7 @@ interface TeneasySDKDelegate {
 /**
  * 通讯核心类，提供了发送消息、解析消息等功能
  */
-class ChatLib constructor(token:String, baseUrl:String = "", userId: Int,  chatID: Long = 0){
+class ChatLib constructor(token:String, baseUrl:String = "", userId: Int, sing:String,  chatID: Long = 0){
     private val TAG = "ChatLib"
     // 通讯地址
    private var baseUrl = ""
@@ -82,6 +82,7 @@ class ChatLib constructor(token:String, baseUrl:String = "", userId: Int,  chatI
         }
 
         this.userId = userId;
+        this.sign = sign
     }
 
     /**

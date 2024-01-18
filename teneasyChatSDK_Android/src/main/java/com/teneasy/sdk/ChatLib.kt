@@ -51,7 +51,7 @@ interface TeneasySDKDelegate {
 /**
  * 通讯核心类，提供了发送消息、解析消息等功能
  */
-class ChatLib constructor(token:String, baseUrl:String = "", chatID: Long = 0){
+class ChatLib constructor(token:String, baseUrl:String = "", userId: Int,  chatID: Long = 0){
     private val TAG = "ChatLib"
     // 通讯地址
    private var baseUrl = ""
@@ -64,6 +64,7 @@ class ChatLib constructor(token:String, baseUrl:String = "", chatID: Long = 0){
     var sendingMessage: CMessage.Message? = null
     private var chatId: Long = 0L //2692944494608客服下线了
     private var token: String? = ""//qi xin
+    private var userId: Int = 0
 
     private lateinit var socket: WebSocketClient
     var listener: TeneasySDKDelegate? = null
@@ -79,6 +80,8 @@ class ChatLib constructor(token:String, baseUrl:String = "", chatID: Long = 0){
         if (baseUrl.length > 10) {
             this.baseUrl = baseUrl
         }
+
+        this.userId = userId;
     }
 
     /**
@@ -95,7 +98,7 @@ rd === 随即数 Math.floor(Math.random() * 1000000)
          */
         var rd = Random().nextInt(1000000) + 1000000
         var dt = Date().time
-        val url = baseUrl + token + "&ty=" + ClientType.CLIENT_TYPE_USER_APP.number + "&dt=" + dt + "&rd=" + rd
+        val url = baseUrl + token + "&userid=" + this.userId + "&ty=" + ClientType.CLIENT_TYPE_USER_APP.number + "&dt=" + dt + "&rd=" + rd
         socket =
             object : WebSocketClient(URI(url), Draft_6455()) {
                 override fun onMessage(message: String) {

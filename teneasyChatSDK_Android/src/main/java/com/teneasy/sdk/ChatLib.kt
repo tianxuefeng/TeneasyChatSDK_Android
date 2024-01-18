@@ -65,7 +65,7 @@ class ChatLib constructor(token:String, baseUrl:String = "", userId: Int,  chatI
     private var chatId: Long = 0L //2692944494608客服下线了
     private var token: String? = ""//qi xin
     private var userId: Int = 0
-
+    private var sign: String? = ""//qi xin
     private lateinit var socket: WebSocketClient
     var listener: TeneasySDKDelegate? = null
     var payloadId = 0L
@@ -98,7 +98,7 @@ rd === 随即数 Math.floor(Math.random() * 1000000)
          */
         var rd = Random().nextInt(1000000) + 1000000
         var dt = Date().time
-        val url = baseUrl + token + "&userid=" + this.userId + "&ty=" + ClientType.CLIENT_TYPE_USER_APP.number + "&dt=" + dt + "&rd=" + rd
+        val url = baseUrl + token + "&userid=" + this.userId + "&ty=" + ClientType.CLIENT_TYPE_USER_APP.number + "&dt=" + dt + "&sign=" + sign + "&rd=" + rd
         socket =
             object : WebSocketClient(URI(url), Draft_6455()) {
                 override fun onMessage(message: String) {

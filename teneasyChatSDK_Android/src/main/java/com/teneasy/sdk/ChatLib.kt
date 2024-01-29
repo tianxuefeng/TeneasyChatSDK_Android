@@ -39,7 +39,7 @@ interface TeneasySDKDelegate {
     fun msgReceipt(msg: CMessage.Message, payloadId: Long, msgId: Long, errMsg: String = "") // 使用Long代替UInt64
 
     // 系统消息，用于显示Tip
-    fun systemMsg(msg: String)
+    fun systemMsg(msg: Result)
 
     // 连接状态
     fun connected(c: GGateway.SCHi)
@@ -100,6 +100,8 @@ rd === 随即数 Math.floor(Math.random() * 1000000)
         var rd = Random().nextInt(1000000) + 1000000
         var dt = Date().time
         val url = baseUrl + token + "&userid=" + this.userId + "&ty=" + ClientType.CLIENT_TYPE_USER_APP.number + "&dt=" + dt + "&sign=" + sign + "&rd=" + rd
+
+       var result = Result();
         socket =
             object : WebSocketClient(URI(url), Draft_6455()) {
                 override fun onMessage(message: String) {
@@ -112,10 +114,13 @@ rd === 随即数 Math.floor(Math.random() * 1000000)
                 }
                 override fun onOpen(handshake: ServerHandshake?) {
                     Log.i(TAG, "opened connection")
-                    listener?.systemMsg("已连接上服务器")
+                    result.message = "已连接上服务器"
+                    listener?.systemMsg(result)
                 }
                 override fun onClose(code: Int, reason: String, remote: Boolean) {
-                    listener?.systemMsg("已断开通信" + reason)
+                    result.code = 1001
+                    result.message = "已断开通信"
+                    listener?.systemMsg(result)
                 }
                 override fun onError(ex: Exception) {
                     ex.printStackTrace()

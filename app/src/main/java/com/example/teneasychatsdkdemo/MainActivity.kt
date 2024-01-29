@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import com.example.teneasychatsdk.databinding.ActivityMainBinding
 import com.teneasy.sdk.ChatLib
+import com.teneasy.sdk.Result
 import com.teneasy.sdk.TeneasySDKDelegate
 import com.teneasyChat.api.common.CMessage
 import com.teneasyChat.gateway.GGateway
@@ -88,9 +89,10 @@ class MainActivity : AppCompatActivity(), TeneasySDKDelegate {
         })
     }
 
-    override fun systemMsg(msg: String) {
+    override fun systemMsg(msg: Result) {
         //TODO("Not yet implemented")
-        Log.i("MainAct systemMsg", msg)
+        Log.i("MainAct systemMsg", msg.message)
+        binding.tvContent.append(msg.message + "\n")
     }
 
     //成功连接，并返回相关信息，例如workerId

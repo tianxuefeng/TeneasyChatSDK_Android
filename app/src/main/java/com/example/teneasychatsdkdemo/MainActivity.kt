@@ -99,7 +99,7 @@ class MainActivity : AppCompatActivity(), TeneasySDKDelegate {
     override fun connected(c: GGateway.SCHi) {
         val workerId = c.workerId
         Log.i("MainAct connected", "成功连接")
-        chatLib.sendMessage("1.mp4", CMessage.MessageFormat.MSG_VIDEO)
+        //chatLib.sendMessage("1.mp4", CMessage.MessageFormat.MSG_VIDEO)
         runOnUiThread({
             binding.tvContent.append("成功连接\n")
         })

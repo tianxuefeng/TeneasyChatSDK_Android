@@ -51,13 +51,17 @@ interface TeneasySDKDelegate {
 /**
  * 通讯核心类，提供了发送消息、解析消息等功能
  */
-class ChatLib constructor(token:String, baseUrl:String = "", userId: Int, sing:String,  chatID: Long = 0){
+class ChatLib constructor(token:String, baseUrl:String = "", userId: Int, sign:String,  chatID: Long = 0){
     private val TAG = "ChatLib"
     // 通讯地址
    private var baseUrl = ""
-    fun isConnection() : Boolean {
+   private fun isConnection() : Boolean {
         if (socket == null) return false
-        return socket.isOpen
+        try {
+            return socket.isOpen
+        }catch (e: Exception) {
+            return false;
+        }
     }
 
     // 当前发送的消息实体，便于上层调用的逻辑处理
@@ -65,7 +69,7 @@ class ChatLib constructor(token:String, baseUrl:String = "", userId: Int, sing:S
     private var chatId: Long = 0L //2692944494608客服下线了
     private var token: String? = ""//qi xin
     private var userId: Int = 0
-    private var sign: String? = ""//qi xin
+    private var mySign: String? = ""//qi xin
     private lateinit var socket: WebSocketClient
     var listener: TeneasySDKDelegate? = null
     var payloadId = 0L
@@ -82,7 +86,7 @@ class ChatLib constructor(token:String, baseUrl:String = "", userId: Int, sing:S
         }
 
         this.userId = userId;
-        this.sign = sign
+        this.mySign = sign
     }
 
     /**
@@ -99,7 +103,7 @@ rd === 随即数 Math.floor(Math.random() * 1000000)
          */
         var rd = Random().nextInt(1000000) + 1000000
         var dt = Date().time
-        val url = baseUrl + token + "&userid=" + this.userId + "&ty=" + ClientType.CLIENT_TYPE_USER_APP.number + "&dt=" + dt + "&sign=" + sign + "&rd=" + rd
+        val url = baseUrl + token + "&userid=" + this.userId + "&ty=" + ClientType.CLIENT_TYPE_USER_APP.number + "&dt=" + dt + "&sign=" + mySign + "&rd=" + rd
 
        var result = Result();
         socket =

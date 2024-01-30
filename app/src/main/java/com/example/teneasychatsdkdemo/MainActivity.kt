@@ -31,8 +31,9 @@ class MainActivity : AppCompatActivity(), TeneasySDKDelegate {
          */
         /*
         1125324  1125397 1125417
+        //1125324, "9zgd9YUc"
          */
-        chatLib = ChatLib("CH0QARji9w4gogEor4i7mc0x.PKgbr4QAEspllbvDx7bg8RB_qDhkWozBKgWtoOPfVmlTfPbd8nyBZk9uyQvjj-3F6MXHyE9GmZvj0_PRTm_tDA", "wss://csapi.xdev.stream/v1/gateway/h5?token=", 1125324, "")
+        chatLib = ChatLib("CCcQARgOICIowqaSjeIw.9rO3unQwFrUUa-vJ6HvUQAbiAZN7XWBbaE_Oyd48C0Ae4xhzWWSriIGZZdVSvOajS1h_RFlQHZiFzadgBBuwDQ", "wss://csapi.xdev.stream/v1/gateway/h5?token=", 1125324, "9zgd9YUc")
         chatLib.listener = this
         chatLib.makeConnect()
 
